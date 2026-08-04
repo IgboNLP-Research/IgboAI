@@ -59,17 +59,33 @@ jobs:
             African/low-resource NLP work. Discard generic low-resource papers
             with no plausible transfer value; be selective.
 
-            For each KEPT item, append an entry to RELATED_WORK.md under a
-            dated heading (today's date, newest first), formatted as:
-            - **Title** (source, date) — 2–3 sentence summary written for an
-              NLP researcher: what it does, and one sentence on why it matters
-              for Igbo specifically (data, transfer, evaluation, or tooling).
-              Link the URL. Never copy sentences from the abstract; paraphrase.
+            For each KEPT item, append an entry to related-work/<YYYY-MM>.md
+            (create the file with a "# Related work — <Month Year>" heading if
+            absent; newest entries first under a dated subheading) formatted:
+            - **Title** — type: paper|model|dataset · source/venue · date ·
+              tags: [mt|asr|tts|ner|sentiment|llm|corpus|method|eval] ·
+              languages: [...]
+              2–3 sentence summary for an NLP researcher (paraphrase, never
+              copy abstract sentences), then on its own line:
+              *Igbo relevance:* one concrete sentence (data, transfer,
+              evaluation, or tooling). Link the URL.
+            Append the same entry as one JSON object per line to
+            related-work/entries.jsonl with keys: id, title, type, url,
+            source, date, tags, languages, summary, igbo_relevance.
+            Keep RELATED_WORK.md as a short index: a link per monthly file
+            plus total entry counts; update it when a new monthly file is
+            created.
+
+            Relevance bar: keep work on Igbo or other African languages, and
+            non-African low-resource work ONLY if its method or finding
+            plausibly transfers to Igbo (e.g. tonal ASR, data-efficient
+            training, cross-lingual transfer techniques). Discard resource
+            papers for unrelated languages (e.g. a Vietnamese or Khmer corpus
+            with no methodological contribution).
 
             Then update .github/tracking/seen.json: add the "id" of EVERY item
-            in candidates.json (kept and discarded) so nothing is re-processed.
-            Create the file as a JSON array if it does not exist. Do NOT commit
-            candidates.json itself.
+            in candidates.json (kept and discarded). Create it as a JSON array
+            if absent. Do NOT commit candidates.json itself.
 
             Create a branch named tracking/<today's date>, commit both files
             with a conventional commit message, and open a PR titled
