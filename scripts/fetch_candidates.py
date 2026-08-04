@@ -93,7 +93,7 @@ def fetch_arxiv(cutoff: datetime) -> list[dict]:
             items.append(
                 {
                     "source": "arxiv",
-                    "id": f"arxiv:{re.sub(r'v\\d+$', '', arxiv_id)}",
+                    "id": f"arxiv:{re.sub(r'v\d+$', '', arxiv_id)}",
                     "title": " ".join((entry.findtext(f"{ATOM}title") or "").split()),
                     "abstract": " ".join((entry.findtext(f"{ATOM}summary") or "").split()),
                     "authors": [
