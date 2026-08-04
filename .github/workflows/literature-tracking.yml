@@ -74,6 +74,14 @@ jobs:
             kept items and a one-line note of how many were discarded as
             irrelevant.
 
+            Work incrementally: process candidates in batches of ~10. After
+            each batch, update RELATED_WORK.md and seen.json for that batch
+            and commit. Create the branch and open the PR after the FIRST
+            batch, then push each subsequent batch to the same branch. If you
+            sense you are running low on turns, stop starting new batches,
+            ensure everything processed so far is committed and pushed, and
+            note in the PR body how many candidates were left unprocessed.
+
             If, after filtering, NOTHING is worth keeping, still update
             seen.json and open the PR with only that change, titled
             "Literature tracking: <date> (no relevant items)".
