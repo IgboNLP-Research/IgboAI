@@ -1,0 +1,85 @@
+name: Nightly Igbo NLP literature & model tracking
+
+on:
+  schedule:
+    - cron: "0 5 * * *" # 05:00 UTC daily — PR waiting by breakfast
+  workflow_dispatch:
+    inputs:
+      lookback_days:
+        description: "How many days back to scan"
+        default: "2"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: literature-tracking
+  cancel-in-progress: false
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Deterministic layer: fetch + dedupe against .github/tracking/seen.json
+      - name: Fetch candidates from arXiv and HF Hub
+        run: python scripts/fetch_candidates.py "${{ github.event.inputs.lookback_days || '2' }}"
+
+      - name: Check for new candidates
+        id: gate
+        run: |
+          COUNT=$(python -c "import json; print(len(json.load(open('candidates.json'))))")
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+
+      # LLM layer: relevance filtering, summarization, PR authoring
+      - name: Summarize and file PR with Claude Code
+        if: steps.gate.outputs.count != '0'
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            You are maintaining the literature tracker for IgboAI, a research
+            project on Igbo-language NLP (low-resource setting).
+
+            Read candidates.json in the repo root. For each item, judge whether
+            it is genuinely relevant to Igbo NLP or closely transferable
+            African/low-resource NLP work. Discard generic low-resource papers
+            with no plausible transfer value; be selective.
+
+            For each KEPT item, append an entry to RELATED_WORK.md under a
+            dated heading (today's date, newest first), formatted as:
+            - **Title** (source, date) — 2–3 sentence summary written for an
+              NLP researcher: what it does, and one sentence on why it matters
+              for Igbo specifically (data, transfer, evaluation, or tooling).
+              Link the URL. Never copy sentences from the abstract; paraphrase.
+
+            Then update .github/tracking/seen.json: add the "id" of EVERY item
+            in candidates.json (kept and discarded) so nothing is re-processed.
+            Create the file as a JSON array if it does not exist. Do NOT commit
+            candidates.json itself.
+
+            Create a branch named tracking/<today's date>, commit both files
+            with a conventional commit message, and open a PR titled
+            "Literature tracking: <date> (<N> new items)" whose body lists
+            kept items and a one-line note of how many were discarded as
+            irrelevant.
+
+            If, after filtering, NOTHING is worth keeping, still update
+            seen.json and open the PR with only that change, titled
+            "Literature tracking: <date> (no relevant items)".
+          claude_args: |
+            --max-turns 25
+            --allowedTools "Read,Write,Edit,Bash(git:*),Bash(gh pr create:*),Bash(python:*)"
+
+      - name: No new candidates
+        if: steps.gate.outputs.count == '0'
+        run: echo "Nothing new since last run — no Claude invocation, zero API spend."
