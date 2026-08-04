@@ -232,9 +232,12 @@ def main() -> None:
         ids.add(c["id"])
         fresh.append(c)
 
+    MAX_ITEMS_PER_RUN = 40
+    fresh.sort(key=lambda c: c.get("published") or c.get("last_modified") or "", reverse=True)
+    fresh = fresh[:MAX_ITEMS_PER_RUN]
+
     OUT_PATH.write_text(json.dumps(fresh, indent=2, ensure_ascii=False))
     print(f"{len(fresh)} new candidates (of {len(candidates)} fetched)")
-
 
 if __name__ == "__main__":
     main()
