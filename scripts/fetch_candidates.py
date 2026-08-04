@@ -1,85 +1,240 @@
-name: Nightly Igbo NLP literature & model tracking
+#!/usr/bin/env python3
+"""Fetch new papers and models relevant to Igbo / African NLP + speech + LLMs.
 
-on:
-  schedule:
-    - cron: "0 5 * * *" # 05:00 UTC daily — PR waiting by breakfast
-  workflow_dispatch:
-    inputs:
-      lookback_days:
-        description: "How many days back to scan"
-        default: "2"
+Sources:
+  - arXiv API (preprints)
+  - OpenAlex API (venue-published work: ACL Anthology venues incl. TACL,
+    ACL/EMNLP/EACL/COLING/LREC and their workshops, plus journals) -- no key needed
+  - Hugging Face Hub (models and datasets)
 
-permissions:
-  contents: write
-  pull-requests: write
+Deterministic fetch layer: this script only gathers and filters candidates.
+Summarization, relevance ranking, and PR writing are handled by Claude Code
+in the GitHub Actions workflow, keeping LLM behavior auditable and cheap.
 
-concurrency:
-  group: literature-tracking
-  cancel-in-progress: false
+Outputs: candidates.json in the repo root (consumed by the workflow).
+Stdlib only -- no dependencies to install on the runner.
+"""
 
-jobs:
-  track:
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
+import json
+import re
+import sys
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+LOOKBACK_DAYS = int(sys.argv[1]) if len(sys.argv) > 1 else 2  # cron cadence + margin
+SEEN_PATH = Path(".github/tracking/seen.json")
+OUT_PATH = Path("candidates.json")
 
-      # Deterministic layer: fetch + dedupe against .github/tracking/seen.json
-      - name: Fetch candidates from arXiv and HF Hub
-        run: python scripts/fetch_candidates.py "${{ github.event.inputs.lookback_days || '2' }}"
+ARXIV_QUERIES = [
+    'all:"Igbo"',
+    'all:"African NLP" OR all:"African languages" AND cat:cs.CL',
+    'all:"low-resource" AND all:"machine translation" AND cat:cs.CL',
+    '(all:"speech recognition" OR all:"text-to-speech" OR all:"ASR") AND (all:"African" OR all:"low-resource" OR all:"tonal")',
+    'all:"tone" AND all:"tonal languages" AND (cat:eess.AS OR cat:cs.CL)',
+    '(all:"multilingual" AND all:"large language model") AND (all:"African" OR all:"Nigerian")',
+]
+HF_SEARCH_TERMS = [
+    "igbo", "african nlp", "afriberta", "afroxlmr", "nllb igbo",
+    "igbo asr", "igbo tts", "african speech", "naija", "african llm",
+]
+# OpenAlex full-text search strings (covers ACL Anthology venues, LREC, TACL,
+# workshops, and journals that arXiv misses). Plain phrases, not fielded syntax.
+OPENALEX_QUERIES = [
+    '"Igbo"',
+    '"African languages" NLP',
+    '"low-resource" "machine translation"',
+    '"African" "speech recognition"',
+    '"tonal language" speech',
+    '"African" "large language model"',
+]
+OPENALEX_MAILTO = "i.ezeani@lancaster.ac.uk"  # set to a real address (polite pool = faster, no key needed)
 
-      - name: Check for new candidates
-        id: gate
-        run: |
-          COUNT=$(python -c "import json; print(len(json.load(open('candidates.json'))))")
-          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+ATOM = "{http://www.w3.org/2005/Atom}"
+UA = {"User-Agent": "IgboAI-tracker/1.0 (research literature monitor)"}
 
-      # LLM layer: relevance filtering, summarization, PR authoring
-      - name: Summarize and file PR with Claude Code
-        if: steps.gate.outputs.count != '0'
-        uses: anthropics/claude-code-action@v1
-        with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          prompt: |
-            You are maintaining the literature tracker for IgboAI, a research
-            project on Igbo-language NLP (low-resource setting).
 
-            Read candidates.json in the repo root. For each item, judge whether
-            it is genuinely relevant to Igbo NLP or closely transferable
-            African/low-resource NLP work. Discard generic low-resource papers
-            with no plausible transfer value; be selective.
+def http_get(url: str) -> bytes:
+    req = urllib.request.Request(url, headers=UA)
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read()
 
-            For each KEPT item, append an entry to RELATED_WORK.md under a
-            dated heading (today's date, newest first), formatted as:
-            - **Title** (source, date) — 2–3 sentence summary written for an
-              NLP researcher: what it does, and one sentence on why it matters
-              for Igbo specifically (data, transfer, evaluation, or tooling).
-              Link the URL. Never copy sentences from the abstract; paraphrase.
 
-            Then update .github/tracking/seen.json: add the "id" of EVERY item
-            in candidates.json (kept and discarded) so nothing is re-processed.
-            Create the file as a JSON array if it does not exist. Do NOT commit
-            candidates.json itself.
+def fetch_arxiv(cutoff: datetime) -> list[dict]:
+    items = []
+    for q in ARXIV_QUERIES:
+        url = (
+            "http://export.arxiv.org/api/query?"
+            + urllib.parse.urlencode(
+                {
+                    "search_query": q,
+                    "sortBy": "submittedDate",
+                    "sortOrder": "descending",
+                    "max_results": 40 if LOOKBACK_DAYS <= 7 else 250,
+                }
+            )
+        )
+        try:
+            root = ET.fromstring(http_get(url))
+        except Exception as e:  # network hiccups shouldn't kill the whole run
+            print(f"[warn] arXiv query failed ({q}): {e}", file=sys.stderr)
+            continue
+        for entry in root.findall(f"{ATOM}entry"):
+            published = entry.findtext(f"{ATOM}published") or ""
+            try:
+                pub_dt = datetime.fromisoformat(published.replace("Z", "+00:00"))
+            except ValueError:
+                continue
+            if pub_dt < cutoff:
+                continue
+            arxiv_id = (entry.findtext(f"{ATOM}id") or "").rsplit("/", 1)[-1]
+            items.append(
+                {
+                    "source": "arxiv",
+                    "id": f"arxiv:{re.sub(r'v\\d+$', '', arxiv_id)}",
+                    "title": " ".join((entry.findtext(f"{ATOM}title") or "").split()),
+                    "abstract": " ".join((entry.findtext(f"{ATOM}summary") or "").split()),
+                    "authors": [
+                        a.findtext(f"{ATOM}name")
+                        for a in entry.findall(f"{ATOM}author")
+                    ][:12],
+                    "url": f"https://arxiv.org/abs/{arxiv_id}",
+                    "published": published,
+                    "matched_query": q,
+                }
+            )
+    return items
 
-            Create a branch named tracking/<today's date>, commit both files
-            with a conventional commit message, and open a PR titled
-            "Literature tracking: <date> (<N> new items)" whose body lists
-            kept items and a one-line note of how many were discarded as
-            irrelevant.
 
-            If, after filtering, NOTHING is worth keeping, still update
-            seen.json and open the PR with only that change, titled
-            "Literature tracking: <date> (no relevant items)".
-          claude_args: |
-            --max-turns 25
-            --allowedTools "Read,Write,Edit,Bash(git:*),Bash(gh pr create:*),Bash(python:*)"
+def fetch_hf(cutoff: datetime) -> list[dict]:
+    items = []
+    for kind in ("models", "datasets"):
+        for term in HF_SEARCH_TERMS:
+            url = (
+                f"https://huggingface.co/api/{kind}?"
+                + urllib.parse.urlencode(
+                    {"search": term, "sort": "lastModified", "direction": -1, "limit": 25}
+                )
+            )
+            try:
+                data = json.loads(http_get(url))
+            except Exception as e:
+                print(f"[warn] HF query failed ({kind}/{term}): {e}", file=sys.stderr)
+                continue
+            for it in data:
+                last_mod = it.get("lastModified") or it.get("createdAt") or ""
+                try:
+                    mod_dt = datetime.fromisoformat(last_mod.replace("Z", "+00:00"))
+                except ValueError:
+                    continue
+                if mod_dt < cutoff:
+                    continue
+                repo_id = it.get("id") or it.get("modelId", "")
+                items.append(
+                    {
+                        "source": f"hf-{kind}",
+                        "id": f"hf:{kind}:{repo_id}",
+                        "title": repo_id,
+                        "tags": it.get("tags", [])[:20],
+                        "url": f"https://huggingface.co/"
+                        + ("datasets/" if kind == "datasets" else "")
+                        + repo_id,
+                        "downloads": it.get("downloads", 0),
+                        "last_modified": last_mod,
+                        "matched_query": term,
+                    }
+                )
+    return items
 
-      - name: No new candidates
-        if: steps.gate.outputs.count == '0'
-        run: echo "Nothing new since last run — no Claude invocation, zero API spend."
+
+def _deinvert_abstract(inv: dict | None) -> str:
+    """OpenAlex stores abstracts as {word: [positions]}; rebuild plain text."""
+    if not inv:
+        return ""
+    slots: dict[int, str] = {}
+    for word, positions in inv.items():
+        for pos in positions:
+            slots[pos] = word
+    return " ".join(slots[i] for i in sorted(slots))[:2000]
+
+
+def fetch_openalex(cutoff: datetime) -> list[dict]:
+    items = []
+    for q in OPENALEX_QUERIES:
+        cursor = "*"
+        for _ in range(5):  # max 5 pages x 100 = 500/query; plenty even for backfills
+            url = (
+                "https://api.openalex.org/works?"
+                + urllib.parse.urlencode(
+                    {
+                        "search": q,
+                        "filter": f"from_publication_date:{cutoff.date().isoformat()}",
+                        "sort": "publication_date:desc",
+                        "per-page": 100,
+                        "cursor": cursor,
+                        "mailto": OPENALEX_MAILTO,
+                    }
+                )
+            )
+            try:
+                data = json.loads(http_get(url))
+            except Exception as e:
+                print(f"[warn] OpenAlex query failed ({q}): {e}", file=sys.stderr)
+                break
+            for w in data.get("results", []):
+                # Skip arXiv-hosted versions: fetch_arxiv already covers those,
+                # and this avoids preprint/published near-duplicates in one run.
+                venue = (
+                    (w.get("primary_location") or {}).get("source") or {}
+                ).get("display_name") or ""
+                if "arxiv" in venue.lower():
+                    continue
+                wid = (w.get("id") or "").rsplit("/", 1)[-1]  # e.g. W4321...
+                if not wid:
+                    continue
+                items.append(
+                    {
+                        "source": "openalex",
+                        "id": f"openalex:{wid}",
+                        "title": w.get("display_name") or "",
+                        "abstract": _deinvert_abstract(w.get("abstract_inverted_index")),
+                        "authors": [
+                            (a.get("author") or {}).get("display_name")
+                            for a in (w.get("authorships") or [])
+                        ][:12],
+                        "venue": venue,
+                        "url": w.get("doi") or (w.get("id") or ""),
+                        "published": w.get("publication_date") or "",
+                        "matched_query": q,
+                    }
+                )
+            cursor = (data.get("meta") or {}).get("next_cursor")
+            if not cursor:
+                break
+    return items
+
+
+def main() -> None:
+    cutoff = datetime.now(timezone.utc) - timedelta(days=LOOKBACK_DAYS)
+    seen: set[str] = set()
+    if SEEN_PATH.exists():
+        seen = set(json.loads(SEEN_PATH.read_text()))
+
+    candidates = fetch_arxiv(cutoff) + fetch_openalex(cutoff) + fetch_hf(cutoff)
+
+    # dedupe within-run and against history
+    fresh, ids = [], set()
+    for c in candidates:
+        if c["id"] in seen or c["id"] in ids:
+            continue
+        ids.add(c["id"])
+        fresh.append(c)
+
+    OUT_PATH.write_text(json.dumps(fresh, indent=2, ensure_ascii=False))
+    print(f"{len(fresh)} new candidates (of {len(candidates)} fetched)")
+
+
+if __name__ == "__main__":
+    main()
