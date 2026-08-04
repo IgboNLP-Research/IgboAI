@@ -78,7 +78,7 @@ jobs:
             seen.json and open the PR with only that change, titled
             "Literature tracking: <date> (no relevant items)".
           claude_args: |
-            --max-turns 25
+            --max-turns ${{ github.event.inputs.max_turns || '25' }}
             --allowedTools "Read,Write,Edit,Bash(git:*),Bash(gh pr create:*),Bash(python:*)"
 
       - name: No new candidates
