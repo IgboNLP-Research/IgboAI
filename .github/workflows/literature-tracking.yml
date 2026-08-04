@@ -83,6 +83,9 @@ jobs:
             papers for unrelated languages (e.g. a Vietnamese or Khmer corpus
             with no methodological contribution).
 
+            In the PR body, list DISCARDED items too: one line each — title,
+            source, URL — under a "Discarded" heading. No summaries needed.
+
             Then update .github/tracking/seen.json: add the "id" of EVERY item
             in candidates.json (kept and discarded). Create it as a JSON array
             if absent. Do NOT commit candidates.json itself.
