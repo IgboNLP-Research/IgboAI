@@ -19,6 +19,8 @@ import gzip
 import hashlib
 import json
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -45,17 +47,31 @@ TODAY = datetime.now(timezone.utc).date().isoformat()
 IGBO_DIACRITICS = set("ịọụṅỊỌỤṄ")
 
 
+def _http_read(url: str, tries: int = 5) -> bytes:
+    """GET with polite pacing and retry/backoff on 429/5xx (honours Retry-After)."""
+    delay = 2.0
+    for attempt in range(tries):
+        time.sleep(0.7)  # pace every request; shared runner IPs are rate-limited
+        req = urllib.request.Request(url, headers=UA)
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 500, 502, 503) and attempt < tries - 1:
+                retry_after = e.headers.get("Retry-After")
+                time.sleep(min(float(retry_after) if retry_after else delay, 120))
+                delay *= 2
+                continue
+            raise
+    raise RuntimeError(f"unreachable: {url}")
+
+
 def http_json(url: str) -> dict:
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.loads(r.read())
+    return json.loads(_http_read(url))
 
 
 def http_text(url: str) -> str:
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return r.read().decode("utf-8", errors="replace")
-
+    return _http_read(url).decode("utf-8", errors="replace")
 
 def load_state() -> dict:
     return json.loads(STATE_PATH.read_text()) if STATE_PATH.exists() else {}
