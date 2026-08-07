@@ -1,0 +1,117 @@
+name: Weekly corpus ingestion
+
+on:
+  schedule:
+    - cron: "0 4 * * 0" # Sundays 04:00 UTC — before the 05:00 literature run
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Which sources to fetch"
+        type: choice
+        options: [all, wikipedia, hf, news]
+        default: all
+      max_pages:
+        description: "Max Wikipedia pages per language this run"
+        default: "500"
+      max_turns:
+        description: "Max Claude turns for this run"
+        default: "30"
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+concurrency:
+  group: corpus-ingestion
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch sources (deterministic layer)
+        run: >
+          python scripts/corpus_fetch.py
+          "${{ github.event.inputs.mode || 'all' }}"
+          "${{ github.event.inputs.max_pages || '500' }}"
+
+      - name: Check whether anything was fetched
+        id: gate
+        run: |
+          NEW=$(python - <<'EOF'
+          import json
+          s = json.load(open("corpus_run_summary.json"))
+          n = 0
+          for v in (s.get("wikipedia") or {}).values():
+              n += v.get("documents", 0)
+          n += len((s.get("hf_catalog") or {}).get("new_since_last_run", []))
+          for v in (s.get("news") or {}).values():
+              n += v.get("new_urls", 0)
+          print(n)
+          EOF
+          )
+          echo "count=$NEW" >> "$GITHUB_OUTPUT"
+
+      - name: Triage, document, and open PR with Claude Code
+        if: steps.gate.outputs.count != '0'
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            You are the corpus curation assistant for IgboAI. Read
+            corpus_run_summary.json in the repo root; it describes what this
+            run fetched. Also read CLAUDE.md for project scope.
+
+            YOUR ROLE IS QUALITY TRIAGE AND DOCUMENTATION, NOT DATA EDITING.
+            Never modify, delete, or rewrite files under corpus/raw/ or
+            corpus/manifests/ — the deterministic layer owns those. You write
+            data cards, review notes, and the PR.
+
+            1. Wikipedia batches: inspect the "samples" excerpts and stats in
+               the summary. Flag in your review notes anything that looks like
+               wrong-language text, machine-translation artifacts, boilerplate,
+               encoding damage, or implausible diacritic ratios (Igbo prose
+               normally contains ị/ọ/ụ/ṅ; a near-zero ratio in a large batch
+               is suspicious, though short factual stubs can be diacritic-light).
+               Do not judge from stats alone; cite specific sample evidence.
+
+            2. Create or update corpus/cards/<source>.md for each source that
+               produced output this run. A data card contains: source and
+               method of collection, license and attribution requirements,
+               update cadence, cumulative size (documents/tokens; add this
+               run's stats to any existing totals in the card), known
+               limitations and quality flags (dated), and intended uses.
+
+            3. Update corpus/cards/hf_catalog.md with notable NEW datasets
+               from the catalog (license, languages, why relevant), and flag
+               any with UNKNOWN license as "verify before use".
+
+            4. Open a PR on branch corpus/<today's date> titled
+               "Corpus ingestion: <date>" whose body contains: per-source
+               what-was-fetched numbers, your quality flags with sample
+               citations, any items needing human license verification, and
+               a checklist of decisions the reviewer must make. If the
+               summary shows a Wikipedia backfill still in progress
+               (backfill_done: false), say so and note that subsequent runs
+               will continue it.
+
+            Work incrementally and commit as you go. If you sense you are
+            running low on turns, commit and push what is complete and note
+            what remains in the PR body.
+          claude_args: |
+            --max-turns ${{ github.event.inputs.max_turns || '30' }}
+            --allowedTools "Read,Write,Edit,Bash(git:*),Bash(gh pr create:*),Bash(python:*)"
+
+      - name: Commit fetched data even if nothing to triage
+        if: steps.gate.outputs.count == '0'
+        run: echo "No new corpus material this run."
