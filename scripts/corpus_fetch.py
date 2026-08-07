@@ -146,8 +146,10 @@ def fetch_wikipedia(state: dict) -> dict:
             data = http_json(api + "?" + urllib.parse.urlencode(params))
             for page in data.get("query", {}).get("pages", {}).values():
                 text = (page.get("extract") or "").strip()
-                if len(text) < 50:  # skip stubs/empties
+                if len(text) < 300:  # skip stubs and near-empty pages (card F6)
                     continue
+                if "data-mw=" in text or 'typeof="mw:' in text or text.count("Templeeti:") > 1:
+                    continue  # markup leakage / unexpanded templates (card F4)
                 docs.append({
                     "id": f"wiki:{lang}:{page.get('pageid')}",
                     "title": page.get("title", ""),
