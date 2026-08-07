@@ -93,6 +93,18 @@ def text_stats(docs: list[dict]) -> dict:
         "diacritic_char_ratio": round(dia / chars, 5) if chars else 0.0,
     }
 
+def quality_flags(text: str) -> list[str]:
+    """Heuristic per-document flags (seeded from PR #4 findings F3/F5).
+    Deterministic layer applies these; the LLM layer may propose new
+    heuristics in data cards but never edits raw data."""
+    flags = []
+    # Union-Igbo era orthography: combining up-tack (ob͕ū) or archaic forms
+    if "\u0355" in text or " nile " in text or "ulo uku" in text:
+        flags.append("archaic_register")
+    # Non-Igbo open vowels (ɔ/Ɔ/ɛ/Ɛ) betray MT or wrong-language leakage
+    if any(c in text for c in "\u0254\u0186\u025b\u0190"):
+        flags.append("mt_suspect_orthography")
+    return flags
 
 # --------------------------- Wikipedia (full text) ---------------------------
 
@@ -156,6 +168,7 @@ def fetch_wikipedia(state: dict) -> dict:
                     "url": page.get("fullurl", ""),
                     "lang_claimed": lang,
                     "text": text,
+                    "flags": quality_flags(text),
                     "fetched": TODAY,
                     "license": "CC BY-SA 4.0",
                     "provenance": f"{lang}.wikipedia.org API extracts",
@@ -269,7 +282,6 @@ def fetch_news_manifests(state: dict) -> dict:
                 f.write(json.dumps({
                     "url": link,
                     "url_sha1": h,
-                    "title": (item.findtext("title") or "").strip(),
                     "published": (item.findtext("pubDate") or "").strip(),
                     "recorded": TODAY,
                     "note": "manifest only; text not stored (copyright)",
