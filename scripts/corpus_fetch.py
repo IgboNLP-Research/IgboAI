@@ -212,19 +212,26 @@ def fetch_hf_catalog(state: dict) -> dict:
     entries.sort(key=lambda e: -e["downloads"])
     out_path = Path("corpus/catalog/hf_datasets.json")
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    prev_ids = set()
+    prev = []
     if out_path.exists():
-        prev_ids = {e["id"] for e in json.loads(out_path.read_text())}
-    out_path.write_text(json.dumps(entries, indent=2, ensure_ascii=False))
+        prev = json.loads(out_path.read_text())
+    prev_ids = {e["id"] for e in prev}
+    if failed_terms and not entries:
+        # total failure: keep the existing catalog untouched, report loudly
+        return {"output": str(out_path), "total": len(prev),
+                "failed_terms": failed_terms, "new_since_last_run": [],
+                "fetch_failed": True}
+    # merge, never replace: keep previously known datasets absent from this sweep
+    merged = {e["id"]: e for e in prev} | {e["id"]: e for e in entries}
+    out_path.write_text(json.dumps(sorted(merged.values(),
+        key=lambda e: -e.get("downloads", 0)), indent=2, ensure_ascii=False))
     new = [e for e in entries if e["id"] not in prev_ids]
-    return {
-        "output": str(out_path),
-        "total": len(entries),
-        "new_since_last_run": [
-            {k: e[k] for k in ("id", "url", "license", "languages")} for e in new[:40]
-        ],
-    }
-
+    return {"output": str(out_path), "total": len(merged),
+            "failed_terms": failed_terms,
+            "new_since_last_run": [
+                {k: e[k] for k in ("id", "url", "license", "languages")} for e in new[:40]
+            ]
+           }
 
 # -------------------------- News (manifests only) ----------------------------
 
