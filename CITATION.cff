@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use IgboAI infrastructure, data cards, or derived resources, please cite it as below."
+title: "IgboAI: Self-Updating Research Infrastructure for Igbo Language Technology"
+type: software
+authors:
+  - family-names: "Ezeani"
+    given-names: "Ignatius"
+    orcid: "https://orcid.org/0000-0001-8286-9997"
+    affiliation: "Lancaster University, UK"
+
+repository-code: "https://github.com/IgboNLP-Research/IgboAI"
+license: Apache-2.0
+version: 0.1.0
+date-released: "2026-08-07"
+# TODO after first Zenodo-minted release: add the concept DOI, e.g.
+# doi: 10.5281/zenodo.XXXXXXX
+keywords:
+  - Igbo
+  - African NLP
+  - low-resource languages
+  - corpus construction
+  - research infrastructure
