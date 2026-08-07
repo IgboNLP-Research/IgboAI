@@ -1,4 +1,4 @@
-# IgboAI — guidance for Claude
+# IgboAI: guidance for Claude
 
 Research focus: AI for the Igbo language (a low-resource, tonal Niger-Congo
 language of Nigeria). Core tasks: MT, ASR/TTS, NER, sentiment, LM
