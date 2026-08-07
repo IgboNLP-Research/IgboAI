@@ -1,4 +1,4 @@
-# Data card — Igbo Wikipedia (`wikipedia_ig`)
+# Data card - Igbo Wikipedia (`wikipedia_ig`)
 
 ## Source and method of collection
 
