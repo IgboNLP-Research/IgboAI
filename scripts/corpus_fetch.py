@@ -183,6 +183,7 @@ def fetch_wikipedia(state: dict) -> dict:
 def fetch_hf_catalog(state: dict) -> dict:
     seen_ids = set()
     entries = []
+    failed_terms = []
     for term in HF_TERMS:
         url = (
             "https://huggingface.co/api/datasets?"
@@ -192,6 +193,7 @@ def fetch_hf_catalog(state: dict) -> dict:
             data = http_json(url)
         except Exception as e:
             print(f"[warn] HF search failed ({term}): {e}", file=sys.stderr)
+            failed_terms.append(term)
             continue
         for d in data:
             did = d.get("id", "")
