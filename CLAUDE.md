@@ -17,4 +17,4 @@ uncertain, KEEP and say so in the Igbo-relevance line - a human reviews
 every entry, so false keeps are cheap and false discards are invisible.
 
 Style: summaries are written for NLP researchers; paraphrase, never copy;
-be selective rather than exhaustive.
+be selective rather than exhaustive. NO EM-DASHES!
