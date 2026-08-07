@@ -2,7 +2,7 @@
 
 Index of the dated literature log. Full entries live in one Markdown file per
 month under [`related-work/`](related-work/), newest first within each file.
-A machine-readable copy of each entry — one JSON object per line — is kept in
+A machine-readable copy of each entry - one JSON object per line - is kept in
 [`related-work/entries.jsonl`](related-work/entries.jsonl), covering entries
 logged from 2026-08-04 onward.
 
