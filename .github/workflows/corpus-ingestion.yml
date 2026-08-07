@@ -57,6 +57,8 @@ jobs:
           n += len((s.get("hf_catalog") or {}).get("new_since_last_run", []))
           for v in (s.get("news") or {}).values():
               n += v.get("new_urls", 0)
+          if (s.get("hf_catalog") or {}).get("fetch_failed"):
+              n += 1
           print(n)
           EOF
           )
