@@ -1,7 +1,8 @@
 # Corpus sources and storage policy
 
-Each source class is handled according to what its licensing permits in a
-public repository. This file is the policy of record; the pipeline enforces it.
+> **Licensing:** This file is the licensing and storage policy of record for all material under `corpus/`; it governs reuse as well as collection. For general repo licensing, see [Licensing](../README.md#licensing).
+
+Each source class is handled according to what its licensing permits in a public repository. This file is the policy of record; the pipeline enforces it.
 
 | Source class | Example | What we store publicly | License basis |
 |---|---|---|---|
