@@ -28,10 +28,10 @@ Every night, a scheduled GitHub Actions workflow keeps the literature log up to 
 
 This repository carries three distinct licensing regimes; please note which applies to what you intend to use.
 
-**Code** — everything under `scripts/`, `.github/workflows/`, and the branding generator scripts — is licensed under [Apache-2.0](LICENSE).
+**Code**: everything under `scripts/`, `.github/workflows/`, and the branding generator scripts is licensed under [Apache-2.0](LICENSE).
 
-**Data** — corpora, manifests, catalogues, and derived datasets under `corpus/` — is **not** covered by that licence. Each source carries its own terms, documented per source in [`corpus/SOURCES.md`](corpus/SOURCES.md) and per batch in the data cards under `corpus/cards/`. In summary: Wikipedia text is CC BY-SA 4.0 and redistributed with per-document attribution; news is represented by URL manifests only, with no article text stored; Hugging Face and (planned) GitHub datasets are catalogued as metadata and remain under their own licences on their home platforms. Check the relevant data card before reuse.
+**Data**: corpora, manifests, catalogues, and derived datasets under `corpus/` are **not** covered by that licence. Each source carries its own terms, documented per source in [`corpus/SOURCES.md`](corpus/SOURCES.md) and per batch in the data cards under `corpus/cards/`. In summary: Wikipedia text is CC BY-SA 4.0 and redistributed with per-document attribution; news is represented by URL manifests only, with no article text stored; Hugging Face and (planned) GitHub datasets are catalogued as metadata and remain under their own licences on their home platforms. Check the relevant data card before reuse.
 
-**Names and logos** — "IgboAI", "IgboNLP-Research", and the marks in `assets/branding/` — are reserved and excluded from the Apache-2.0 grant. Referring to the project is welcome; using the marks for your own project or implying endorsement is not. See [`assets/branding/LICENSE-BRANDING.md`](assets/branding/LICENSE-BRANDING.md).
+**Names and logos**:  "IgboAI", "IgboNLP-Research", and the marks in `assets/branding/` are reserved and excluded from the Apache-2.0 grant. Referring to the project is welcome; using the marks for your own project or implying endorsement is not. See [`assets/branding/LICENSE-BRANDING.md`](assets/branding/LICENSE-BRANDING.md).
 
 **Citing this work:** see [`CITATION.cff`](CITATION.cff), or use the "Cite this repository" button on the repository page. Releases carry versioned DOIs via Zenodo.
