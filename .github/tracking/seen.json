@@ -104,5 +104,17 @@
   "openalex:W7172490047",
   "openalex:W7172503880",
   "openalex:W7172521232",
-  "openalex:W7172541633"
+  "openalex:W7172541633",
+  "hf:datasets:AfriSpeech/african-speech-ipa",
+  "hf:datasets:SilencioNetwork/igbo-speech",
+  "openalex:W7164034830",
+  "openalex:W7196925638",
+  "openalex:W7196984516",
+  "openalex:W7196988806",
+  "openalex:W7197030418",
+  "openalex:W7197034388",
+  "openalex:W7197049324",
+  "openalex:W7196931875",
+  "openalex:W7196924241",
+  "openalex:W7196950565"
 ]
