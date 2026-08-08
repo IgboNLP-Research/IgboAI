@@ -3,7 +3,8 @@
 Open research on AI for the Igbo language: self-updating literature tracking, corpora, and benchmarks spanning NLP, speech, and language models for a low-resource, tonal language.
 
 > **Status:** early infrastructure stage. Literature tracking is live; corpora and benchmarks are planned. Nothing here should be treated as a stable resource or citable result yet.
-> Licensing differs by artefact: code Apache-2.0, data per-source, names and logos reserved. See [Licensing](#licensing).
+>
+>  **Licensing:** Licensing differs by artefact: code Apache-2.0, data per-source, names and logos reserved. See [Licensing](#licensing).
 
 ## What lives here
 
@@ -16,7 +17,7 @@ Open research on AI for the Igbo language: self-updating literature tracking, co
 
 Every night, a scheduled GitHub Actions workflow keeps the literature log up to date. It is deliberately split into two layers:
 
-**Deterministic fetch, LLM curation.** A stdlib-only Python script queries three sources - the arXiv API (preprints), OpenAlex (venue-published work: ACL Anthology venues such as ACL, EMNLP, EACL, COLING, LREC and TACL, plus workshops and journals), and the Hugging Face Hub (models and datasets). It filters by date, deduplicates against a history file (`.github/tracking/seen.json`), and writes the candidates to a scratch JSON file. Only then, and only if there is anything new, does Claude Code run: it judges relevance to Igbo specifically, writes researcher-oriented summaries into `RELATED_WORK.md`, and opens a pull request. Retrieval failures and summarization failures are therefore easy to tell apart, and days with nothing new cost nothing.
+**Deterministic fetch, LLM curation.** A stdlib-only Python script queries three sources - the arXiv API (preprints), OpenAlex (venue-published work: ACL Anthology venues such as ACL, EMNLP, EACL, COLING, LREC and TACL, plus workshops and journals), and the Hugging Face Hub (models and datasets). It filters by date, deduplicates against a history file (`.github/tracking/seen.json`), and writes the candidates to a scratch JSON file. Only then, and only if there is anything new, does Claude Code run: it judges relevance to Igbo specifically, writes researcher-oriented summaries into `RELATED_WORK.md`, and opens a pull request. Retrieval failures and summarization failures are therefore easy to distinguish, and days with nothing new cost nothing.
 
 **Human-in-the-loop at the merge boundary.** The automation never pushes to `main`. Everything arrives as a pull request for human review; nothing auto-merges. The same principle will apply to future corpus and benchmark automation, where it matters even more - scraped "Igbo" text is often mislanguaged or machine-translated, and silently ingesting it would poison downstream training data.
 
