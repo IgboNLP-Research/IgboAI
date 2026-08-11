@@ -11,7 +11,12 @@ on:
       max_turns:
         description: "Max Claude turns for this run"
         default: "25"
-        
+      force_provider:
+        description: "Override provider selection (for testing the fallback path)"
+        type: choice
+        options: [auto, openrouter, anthropic]
+        default: auto
+
 permissions:
   contents: write
   pull-requests: write
@@ -44,16 +49,27 @@ jobs:
           COUNT=$(python -c "import json; print(len(json.load(open('candidates.json'))))")
           echo "count=$COUNT" >> "$GITHUB_OUTPUT"
 
+      # Routing layer: spend OpenRouter credits first, fall back to the personal
+      # Anthropic key. Runs only when there is work to do, so a quiet night still
+      # costs nothing. Fails the job if neither key is usable.
+      - name: Choose provider
+        id: route
+        if: steps.gate.outputs.count != '0'
+        env:
+          OPENROUTER_API_KEY: ${{ github.event.inputs.force_provider != 'anthropic' && secrets.OPENROUTER_API_KEY || '' }}
+          ANTHROPIC_API_KEY: ${{ github.event.inputs.force_provider != 'openrouter' && secrets.ANTHROPIC_API_KEY || '' }}
+        run: python scripts/select_provider.py
+
       # LLM layer: relevance filtering, summarization, PR authoring
       - name: Summarize and file PR with Claude Code
         if: steps.gate.outputs.count != '0'
         uses: anthropics/claude-code-action@v1
         env:
-          ANTHROPIC_BASE_URL: https://openrouter.ai/api
-          ANTHROPIC_AUTH_TOKEN: ${{ secrets.OPENROUTER_API_KEY }}
-          ANTHROPIC_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          ANTHROPIC_MODEL: anthropic/claude-sonnet-5
-          ANTHROPIC_SMALL_FAST_MODEL: anthropic/claude-haiku-4.5
+          ANTHROPIC_BASE_URL: ${{ steps.route.outputs.base_url }}
+          ANTHROPIC_MODEL: ${{ steps.route.outputs.model }}
+          ANTHROPIC_SMALL_FAST_MODEL: ${{ steps.route.outputs.small_model }}
+          ANTHROPIC_API_KEY: ${{ steps.route.outputs.use_openrouter == 'true' && secrets.OPENROUTER_API_KEY || secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_AUTH_TOKEN: ${{ steps.route.outputs.use_openrouter == 'true' && secrets.OPENROUTER_API_KEY || '' }}
         with:
           prompt: |
             You are maintaining the literature tracker for IgboAI, a research
@@ -115,6 +131,12 @@ jobs:
           claude_args: |
             --max-turns ${{ github.event.inputs.max_turns || '25' }}
             --allowedTools "Read,Write,Edit,Bash(git:*),Bash(gh pr create:*),Bash(python:*)"
+
+      - name: Record which provider served this run
+        if: always() && steps.gate.outputs.count != '0'
+        run: |
+          echo "Provider: ${{ steps.route.outputs.provider || 'not selected' }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "Model: ${{ steps.route.outputs.model || 'n/a' }}" >> "$GITHUB_STEP_SUMMARY"
 
       - name: No new candidates
         if: steps.gate.outputs.count == '0'

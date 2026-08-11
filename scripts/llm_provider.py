@@ -18,21 +18,29 @@ restricted to Anthropic first-party and fail closed (404) rather than being
 load-balanced across Vertex, Azure, or Bedrock. Use pin=True for anything you
 intend to report; use pin=False for exploration, where failover is a feature.
 
-Requires: pip install "anthropic>=0.40" httpx
+Note that the pin rides in the request body and therefore applies to SDK calls
+only. Claude Code traffic (the GitHub Actions layer) cannot carry it; enforce
+provider preferences at the OpenRouter account level if that matters there.
+
+Dependency policy: importing this module and calling probe_openrouter() or
+reading MODEL_MAP requires the standard library only, so CI can import it on a
+bare runner (see scripts/select_provider.py). The `anthropic` SDK is imported
+lazily and is needed only to actually send requests.
+
+Requires (for sending requests, not for importing): pip install "anthropic>=0.40"
 """
 
 from __future__ import annotations
 
+import json
 import logging
 import os
 import random
 import time
+import urllib.error
+import urllib.request
 from dataclasses import dataclass, field
 from typing import Any, Iterable
-
-import httpx
-from anthropic import Anthropic
-from anthropic import APIStatusError, AuthenticationError, APIConnectionError
 
 log = logging.getLogger(__name__)
 
@@ -43,7 +51,8 @@ ANTHROPIC_BASE_URL = "https://api.anthropic.com"
 # try-priority; allow_fallbacks=False is what makes it a pin.
 ANTHROPIC_1P_PIN = {"only": ["anthropic"], "allow_fallbacks": False}
 
-# Verify against https://openrouter.ai/models and
+# Single source of truth for model slugs, shared by the SDK path and the CI
+# routing step. Verify against https://openrouter.ai/models and
 # https://docs.claude.com/en/docs/about-claude/models. Use dated snapshots, not
 # moving aliases, for anything you will report.
 MODEL_MAP: dict[str, dict[str, str]] = {
@@ -58,6 +67,9 @@ MODEL_MAP: dict[str, dict[str, str]] = {
         "haiku": "claude-haiku-4-5-20251001",
     },
 }
+
+BASE_URLS = {"openrouter": OPENROUTER_BASE_URL, "anthropic": ANTHROPIC_BASE_URL}
+KEY_ENV = {"openrouter": "OPENROUTER_API_KEY", "anthropic": "ANTHROPIC_API_KEY"}
 
 
 class NoProviderAvailable(RuntimeError):
@@ -83,11 +95,13 @@ class Provider:
     base_url: str
     models: dict[str, str]
     note: str = ""
-    _client: Anthropic | None = field(default=None, repr=False)
+    _client: Any = field(default=None, repr=False)
 
     @property
-    def client(self) -> Anthropic:
+    def client(self):
         if self._client is None:
+            from anthropic import Anthropic  # lazy: keeps import-time deps stdlib-only
+
             headers: dict[str, str] = {}
             if self.name == "openrouter":
                 # OpenRouter's skin authenticates with a bearer token; the SDK
@@ -110,30 +124,40 @@ class Provider:
 # ---------------------------------------------------------------- key probes
 
 
-def _probe_openrouter(key: str, timeout: float = 5.0) -> tuple[bool, str]:
-    """GET /api/v1/key: cheap, no tokens spent. Reports remaining per-key credit."""
+def probe_openrouter(key: str, timeout: float = 5.0) -> tuple[bool, str]:
+    """
+    GET /api/v1/key: cheap, no tokens spent, no third-party imports.
+
+    Reports remaining per-key credit. Stdlib only so CI can call it on a bare
+    runner. Returns (usable, human-readable detail).
+    """
+    req = urllib.request.Request(
+        f"{OPENROUTER_BASE_URL}/v1/key",
+        headers={"Authorization": f"Bearer {key}"},
+    )
     try:
-        r = httpx.get(
-            f"{OPENROUTER_BASE_URL}/v1/key",
-            headers={"Authorization": f"Bearer {key}"},
-            timeout=timeout,
-        )
-    except httpx.HTTPError as exc:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            body = json.loads(r.read())
+    except urllib.error.HTTPError as exc:
+        if exc.code in (401, 403):
+            return False, "key rejected (401/403)"
+        return False, f"unexpected status {exc.code}"
+    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
         return False, f"could not reach OpenRouter ({exc.__class__.__name__})"
-    if r.status_code in (401, 403):
-        return False, "key rejected (401/403)"
-    if r.status_code != 200:
-        return False, f"unexpected status {r.status_code}"
-    data = r.json().get("data", {})
-    remaining = data.get("limit_remaining")
+
+    remaining = (body.get("data") or {}).get("limit_remaining")
     if remaining is not None and remaining <= 0:
         return False, "per-key credit limit exhausted"
     left = "unlimited" if remaining is None else f"{remaining:.4f} credits left on key"
     return True, left
 
 
-def _probe_anthropic(key: str) -> tuple[bool, str]:
+def probe_anthropic(key: str) -> tuple[bool, str]:
     """One-token call. Costs a fraction of a cent and confirms auth plus balance."""
+    from anthropic import (  # lazy
+        Anthropic, APIConnectionError, APIStatusError, AuthenticationError,
+    )
+
     try:
         Anthropic(api_key=key, timeout=20.0, max_retries=0).messages.create(
             model=MODEL_MAP["anthropic"]["haiku"],
@@ -152,6 +176,9 @@ def _probe_anthropic(key: str) -> tuple[bool, str]:
     return True, "key valid"
 
 
+PROBES = {"openrouter": probe_openrouter, "anthropic": probe_anthropic}
+
+
 # ------------------------------------------------------------ resolution
 
 
@@ -168,23 +195,17 @@ def resolve_provider(
     failures: list[str] = []
 
     for name in order:
-        if name == "openrouter":
-            key = os.getenv("OPENROUTER_API_KEY", "").strip()
-            base, probe = OPENROUTER_BASE_URL, _probe_openrouter
-            env_name = "OPENROUTER_API_KEY"
-        elif name == "anthropic":
-            key = os.getenv("ANTHROPIC_API_KEY", "").strip()
-            base, probe = ANTHROPIC_BASE_URL, _probe_anthropic
-            env_name = "ANTHROPIC_API_KEY"
-        else:
+        if name not in BASE_URLS:
             raise ValueError(f"unknown provider: {name}")
+        env_name = KEY_ENV[name]
+        key = os.getenv(env_name, "").strip()
 
         if not key:
             failures.append(f"  {name:<11} {env_name} not set")
             continue
 
         if verify:
-            ok, detail = probe(key)
+            ok, detail = PROBES[name](key)
             if not ok:
                 failures.append(f"  {name:<11} {detail}")
                 log.warning("provider %s unavailable: %s", name, detail)
@@ -193,7 +214,7 @@ def resolve_provider(
             detail = "not verified"
 
         log.info("using provider: %s (%s)", name, detail)
-        return Provider(name=name, api_key=key, base_url=base,
+        return Provider(name=name, api_key=key, base_url=BASE_URLS[name],
                         models=MODEL_MAP[name], note=detail)
 
     raise NoProviderAvailable(
@@ -245,6 +266,8 @@ class LLM:
         return kwargs
 
     def complete(self, prompt: str, alias: str = "sonnet", **kwargs: Any) -> str:
+        from anthropic import APIStatusError  # lazy
+
         attempt = 0
         while True:
             try:
