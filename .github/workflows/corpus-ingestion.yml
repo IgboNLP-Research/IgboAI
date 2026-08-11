@@ -67,8 +67,13 @@ jobs:
       - name: Triage, document, and open PR with Claude Code
         if: steps.gate.outputs.count != '0'
         uses: anthropics/claude-code-action@v1
+        env:
+          ANTHROPIC_BASE_URL: https://openrouter.ai/api
+          ANTHROPIC_AUTH_TOKEN: ${{ secrets.OPENROUTER_API_KEY }}
+          ANTHROPIC_API_KEY: ""
+          ANTHROPIC_MODEL: anthropic/claude-sonnet-5
+          ANTHROPIC_SMALL_FAST_MODEL: anthropic/claude-haiku-4.5
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
             You are the corpus curation assistant for IgboAI. Read
             corpus_run_summary.json in the repo root; it describes what this
