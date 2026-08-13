@@ -1,0 +1,798 @@
+{
+  "run_date": "2026-08-13",
+  "mode": "all",
+  "wikipedia": {
+    "wikipedia_ig": {
+      "output": "corpus/raw/wikipedia_ig/2026-08-13.jsonl.gz",
+      "documents": 20,
+      "tokens_ws": 9203,
+      "chars": 49313,
+      "diacritic_char_ratio": 0.07641,
+      "samples": [
+        {
+          "title": "2000 Sacagawea dollar - Washington quarter mule",
+          "url": "https://ig.wikipedia.org/wiki/2000_Sacagawea_dollar_-_Washington_quarter_mule",
+          "excerpt": "Dollar Sacagawea nke 2000 - Mule nkeji iri na ise bụ mkpụrụ ego njehie nke na-egosipụta ihe dị iche iche nke nkeji iri na ise nke Washington (kpọmkwem otu nkeji iri na ise) na ntụgharị nke dollar Sacagawea gburu na atụmatụ mkpụrụ ego dollar na-acha ọla edo. Ọ bụ otu n'ime ezigbo mkpụrụ ego inyinya mule nke United States Mint ga-ewepụta na mgbasa.\n\n\n== Akụkọ ihe mere eme ==\nNdị ọrụ Mint US ji ụma mepụta mkpụrụ ego inyinya maka irere ndị na-anakọta mkpụrụ ego n'etiti afọ 1800.[1] Agbanyeghị, ọ nweghị ezigbo mule (ihe mberede) nke ego United States amaara na ọ dị. Nke a gbanwere na 1990s, mgbe ac"
+        },
+        {
+          "title": "2003 Nhọrọ gọvanọ Kebbi Steeti",
+          "url": "https://ig.wikipedia.org/wiki/2003_Nh%E1%BB%8Dr%E1%BB%8D_g%E1%BB%8Dvan%E1%BB%8D_Kebbi_Steeti",
+          "excerpt": ".      Nhọpụta mmetụta steeti Kebbi nke afọ 2003 mere na-abụ 19, 2003. Onye ndọrọndọrọ ANPP bụ Adamu Aliero meri na preaka ahụ, meri PDP Saidu Samaila Sambawa na mmadụ abụọ ọzọ    \nNgụkọta ọnụ ọgụgụ ndị debanyere aha votu na steeti ahụ bụ 1,343,549, ngụkọta ndị e mere bụ 886,324, votu ziri ezi bụ 802,509 na votu jụrụ bụ 83,815."
+        },
+        {
+          "title": "2007 Nhọrọ Senate nke Naijiria na Ekiti Steeti",
+          "url": "https://ig.wikipedia.org/wiki/2007_Nh%E1%BB%8Dr%E1%BB%8D_Senate_nke_Naijiria_na_Ekiti_Steeti",
+          "excerpt": ".   Emere ọhụrụ aka ndị omebe iwu ndị omebe iwu Naijiria nke afọ 2007 na steeti Ekiti n'April 21, 2007, iji họpụta ndị otu Sineti na Naijiria ga-5 anya steeti Ekiti .  Sylvester Ayodele Arise na- ይምረጡ anya Ekiti North, Adefemi Kila na- anya anya Ekiti Central na Sola Akinyede na- anya anya Ekiti South niile n'elu ikpo okwu nke Peoples Democratic Party"
+        },
+        {
+          "title": "2008 ACC Championship Game",
+          "url": "https://ig.wikipedia.org/wiki/2008_ACC_Championship_Game",
+          "excerpt": "2008 ACC Championship Game bụ egwuregwu bọọlụ kọleji n'etiti Virginia Tech Hokies na Boston College Eagles . Egwuregwu ahụ, nke Dr Pepper kwadoro, bụ asọmpi ikpeazụ nke oge bọọlụ kọleji nke afọ 2008 maka Nzukọ Atlantic Coast. Virginia Tech meriri Boston College, merie asọmpi bọọlụ Atlantic Coast Conference, 30 o12. Ruo 2021, nke a bụ egwuregwu ikpeazụ nke ACC Championship na-enweghị Clemson ma ọ bụ Florida State site na Atlantic Division.\nA họpụtara Virginia Tech Hokies ka ọ nọchite anya ngalaba Coastal site na mmeri nke agbaji isi na isi megide ndị na-asọmpi Georgia Tech wee bata n'egwuregwu "
+        },
+        {
+          "title": "2011 International Women's Football Tournament nke obodo São Paulo",
+          "url": "https://ig.wikipedia.org/wiki/2011_International_Women%27s_Football_Tournament_nke_obodo_S%C3%A3o_Paulo",
+          "excerpt": "Torneio Internacional Cidade de São Paulo 2011 (nke a makwaara dị ka asọmpi mba ụwa nke 2011 nke São Paulo) bụ mbipụta nke atọ nke Torneio Internacional Cidade de São Paulo de Futebol Feminino, asọmpi bọọlụ ụmụ nwanyị na-eme kwa afọ na Brazil. Ọ malitere na 8 Disemba wee kwụsị na 18 Disemba 2011.\n\n\n== Ọdịdị ya ==\nNdị otu anọ a kpọrọ òkù nọ na nke mbụ, ndị otu a na-egwuri egwu n'ime otu n'otu agba. Otu abụọ a kacha nweta akara n'otu dị iche iche, tozuru oke maka nkeji na-esote\nN'ọkwa ikpeazụ, ndị otu nke mbụ na nke abụọ etinyere na Group. Egwuru naanị otu egwuregwu, bụrụ onye mmeri, otu mmeri. "
+        },
+        {
+          "title": "2012: Oge maka Mgbanwe",
+          "url": "https://ig.wikipedia.org/wiki/2012:_Oge_maka_Mgbanwe",
+          "excerpt": "2012: Oge maka mgbanwe bụ ihe nkiri 2010 nwere ogologo ihe nkiri nke João G. Amorim duziri. Dabere na akụkụ nke akwụkwọ Daniel Pinchbeck, ọ malitere na Eprel 9, 2010, na Lumiere Theatre na San Francisco. Ihe nkiri a na-enye ụzọ dị mma maka mbibi apocalyptic na ọchịchịrị, na njirimara, n'etiti ndị ọzọ, David Lynch, Sting, Elliot Page, Gilberto Gil, Barbara Marx Hubbard, Michael Dorsey na Paul Stamets.\n\n\n== Njikọ mpụga ==\nOfficial website\n 2012: Oge maka Mgbanwe  na IMDb\nTrailer: \"Trailer ihe nkiri nke 2012\""
+        },
+        {
+          "title": "2017 Benue State flooding",
+          "url": "https://ig.wikipedia.org/wiki/2017_Benue_State_flooding",
+          "excerpt": "Idei mmiri nke Benue Steeti nke afọ 2017 mere na ọnwa Septemba afo 2017 na Benue Steeti , Naịjiria. Ọ chụpụrụ ma dog -arịa ala na mmadụ ruru ọnụ Ọgụgụ nke a100,000,ma mebie ihe karịrị ụlọ 2,000.\n\n\n== Ihe Ndị Na-akpata ya ==\nIzu ụka ole na ole nke mmiri ozuzo mere ka e nwee idei mmiri, nsị mmiri na osimiri na-asọba na Benue Steeti dị n'ebe ugwu etiti Naịjirịa. Ọnụ Ọgụgụ iri abụọ na otu n'ime mpaghara gọọmentị ọnụ Ọgụgụ iri abụọ na atọ dị na Benue na-emetụta. Idei mmiri n'ógbè ahụ bụ ihe a na-ahụkarị n'ihi nnukwu mmiri ozuzo na Osimiri Benue na-agafe n'óù ahụ.\n\n\n== Mmetụta na mgbanwe ihu igwe =="
+        },
+        {
+          "title": "2019 Nchịkọta ndị nnọchi anya Naijiria na steeti Kano",
+          "url": "https://ig.wikipedia.org/wiki/2019_Nch%E1%BB%8Bk%E1%BB%8Dta_nd%E1%BB%8B_nn%E1%BB%8Dchi_anya_Naijiria_na_steeti_Kano",
+          "excerpt": ".    Emere ụlọaka ụlọ omebe iwu Naijiria nke afọ 2019 na Kano steeti na February 23, 2019, iji họpụta ndị otu ụlọ omebe iwu na-anya anya Kano State, Nigeria  \n\n\n== Nchịkọta ==\n.Ngụkọta ndị mmadụ iri abụọ na otu debanyere aha ha na Independent National Electoral Commission ka ha so na ntuliaka ahụ.  Onye ndọrọ ndọrọ ọchịchị APC bụ Abdullahi Mahmud Gaya meriri na ntuliaka ahụ, meriri PDP Usman Mohammed Adamu na ndị otu pati iri na itoolu ndị ọzọ"
+        }
+      ],
+      "backfill_done": false
+    }
+  },
+  "hf_catalog": {
+    "output": "corpus/catalog/hf_datasets.json",
+    "total": 274,
+    "failed_terms": [],
+    "new_since_last_run": [
+      {
+        "id": "masakhane/afrimgsm",
+        "url": "https://huggingface.co/datasets/masakhane/afrimgsm",
+        "license": "apache-2.0",
+        "languages": [
+          "am",
+          "ee",
+          "ha",
+          "ig",
+          "kin",
+          "ln",
+          "lug",
+          "orm",
+          "sna",
+          "sot",
+          "sw",
+          "tw",
+          "wo",
+          "xh",
+          "vai",
+          "yo",
+          "zu",
+          "en",
+          "fr"
+        ]
+      },
+      {
+        "id": "masakhane/masakhanews",
+        "url": "https://huggingface.co/datasets/masakhane/masakhanews",
+        "license": [
+          "afl-3.0"
+        ],
+        "languages": [
+          "am",
+          "en",
+          "fr",
+          "ha",
+          "ig",
+          "ln",
+          "lg",
+          "om",
+          "pcm",
+          "rn",
+          "sn",
+          "so",
+          "sw",
+          "ti",
+          "xh",
+          "yo"
+        ]
+      },
+      {
+        "id": "naijavoices/naijavoices-dataset",
+        "url": "https://huggingface.co/datasets/naijavoices/naijavoices-dataset",
+        "license": "cc-by-nc-sa-4.0",
+        "languages": []
+      },
+      {
+        "id": "masakhane/masakhaner2",
+        "url": "https://huggingface.co/datasets/masakhane/masakhaner2",
+        "license": [
+          "afl-3.0"
+        ],
+        "languages": [
+          "bm",
+          "bbj",
+          "ee",
+          "fon",
+          "ha",
+          "ig",
+          "rw",
+          "lg",
+          "luo",
+          "mos",
+          "ny",
+          "pcm",
+          "sn",
+          "sw",
+          "tn",
+          "tw",
+          "wo",
+          "xh",
+          "yo",
+          "zu"
+        ]
+      },
+      {
+        "id": "masakhane/afrimmlu",
+        "url": "https://huggingface.co/datasets/masakhane/afrimmlu",
+        "license": "apache-2.0",
+        "languages": [
+          "am",
+          "ee",
+          "ha",
+          "ig",
+          "kin",
+          "ln",
+          "lug",
+          "orm",
+          "sna",
+          "sot",
+          "tw",
+          "wo",
+          "xh",
+          "yo",
+          "zu",
+          "en",
+          "fr",
+          "sw"
+        ]
+      },
+      {
+        "id": "mteb/masakhanews",
+        "url": "https://huggingface.co/datasets/mteb/masakhanews",
+        "license": "cc-by-nc-4.0",
+        "languages": [
+          "amh",
+          "eng",
+          "fra",
+          "hau",
+          "ibo",
+          "lin",
+          "lug",
+          "orm",
+          "pcm",
+          "run",
+          "sna",
+          "som",
+          "swa",
+          "tir",
+          "xho",
+          "yor"
+        ]
+      },
+      {
+        "id": "masakhane/afrixnli",
+        "url": "https://huggingface.co/datasets/masakhane/afrixnli",
+        "license": "apache-2.0",
+        "languages": [
+          "en",
+          "am",
+          "ig",
+          "fr",
+          "sn",
+          "ln",
+          "lug",
+          "wo",
+          "ee",
+          "xh",
+          "kin",
+          "tw",
+          "zu",
+          "orm",
+          "yo",
+          "ha",
+          "sot",
+          "sw"
+        ]
+      },
+      {
+        "id": "masakhane/afrisenti",
+        "url": "https://huggingface.co/datasets/masakhane/afrisenti",
+        "license": "cc-by-nc-sa-2.0",
+        "languages": [
+          "am",
+          "ha",
+          "ig",
+          "om",
+          "pt",
+          "sw",
+          "ti",
+          "ts",
+          "tw",
+          "yo"
+        ]
+      },
+      {
+        "id": "mteb/MasakhaNEWSClusteringS2S",
+        "url": "https://huggingface.co/datasets/mteb/MasakhaNEWSClusteringS2S",
+        "license": "afl-3.0",
+        "languages": [
+          "amh",
+          "eng",
+          "fra",
+          "hau",
+          "ibo",
+          "lin",
+          "lug",
+          "orm",
+          "pcm",
+          "run",
+          "sna",
+          "som",
+          "swa",
+          "tir",
+          "xho",
+          "yor"
+        ]
+      },
+      {
+        "id": "masakhane/masakhaner",
+        "url": "https://huggingface.co/datasets/masakhane/masakhaner",
+        "license": [
+          "unknown"
+        ],
+        "languages": [
+          "am",
+          "ha",
+          "ig",
+          "lg",
+          "luo",
+          "pcm",
+          "rw",
+          "sw",
+          "wo",
+          "yo"
+        ]
+      },
+      {
+        "id": "masakhane/InjongoIntent",
+        "url": "https://huggingface.co/datasets/masakhane/InjongoIntent",
+        "license": "apache-2.0",
+        "languages": [
+          "am",
+          "ee",
+          "ha",
+          "ig",
+          "rw",
+          "ln",
+          "lg",
+          "om",
+          "sn",
+          "st",
+          "sw",
+          "tw",
+          "wo",
+          "xh",
+          "yo",
+          "zu",
+          "en"
+        ]
+      },
+      {
+        "id": "masakhane/mafand",
+        "url": "https://huggingface.co/datasets/masakhane/mafand",
+        "license": [
+          "cc-by-nc-4.0"
+        ],
+        "languages": [
+          "en",
+          "fr",
+          "am",
+          "bm",
+          "bbj",
+          "ee",
+          "fon",
+          "ha",
+          "ig",
+          "lg",
+          "mos",
+          "ny",
+          "pcm",
+          "rw",
+          "sn",
+          "sw",
+          "tn",
+          "tw",
+          "wo",
+          "xh",
+          "yo",
+          "zu"
+        ]
+      },
+      {
+        "id": "mangaphd/hausa_aug_lex",
+        "url": "https://huggingface.co/datasets/mangaphd/hausa_aug_lex",
+        "license": "cc-by-nd-4.0",
+        "languages": [
+          "ha"
+        ]
+      },
+      {
+        "id": "masakhane/AfrIFact",
+        "url": "https://huggingface.co/datasets/masakhane/AfrIFact",
+        "license": "cc-by-4.0",
+        "languages": []
+      },
+      {
+        "id": "Aletheia-ng/african_languages_translation",
+        "url": "https://huggingface.co/datasets/Aletheia-ng/african_languages_translation",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "vpetukhov/bible_tts_hausa",
+        "url": "https://huggingface.co/datasets/vpetukhov/bible_tts_hausa",
+        "license": [
+          "cc-by-sa-4.0"
+        ],
+        "languages": [
+          "ha"
+        ]
+      },
+      {
+        "id": "sbmaruf/forai_ml_masakhane_mafand",
+        "url": "https://huggingface.co/datasets/sbmaruf/forai_ml_masakhane_mafand",
+        "license": [
+          "cc-by-nc-4.0"
+        ],
+        "languages": [
+          "en",
+          "fr",
+          "am",
+          "bm",
+          "bbj",
+          "ee",
+          "fon",
+          "ha",
+          "ig",
+          "lg",
+          "mos",
+          "ny",
+          "pcm",
+          "rw",
+          "sn",
+          "sw",
+          "tn",
+          "tw",
+          "wo",
+          "xh",
+          "yo",
+          "zu"
+        ]
+      },
+      {
+        "id": "masakhane/AfriDocMT",
+        "url": "https://huggingface.co/datasets/masakhane/AfriDocMT",
+        "license": "UNKNOWN",
+        "languages": [
+          "en",
+          "am",
+          "ha",
+          "sw",
+          "yo",
+          "zu"
+        ]
+      },
+      {
+        "id": "mteb/MasakhaNEWSClusteringP2P",
+        "url": "https://huggingface.co/datasets/mteb/MasakhaNEWSClusteringP2P",
+        "license": "afl-3.0",
+        "languages": [
+          "amh",
+          "eng",
+          "fra",
+          "hau",
+          "ibo",
+          "lin",
+          "lug",
+          "orm",
+          "pcm",
+          "run",
+          "sna",
+          "som",
+          "swa",
+          "tir",
+          "xho",
+          "yor"
+        ]
+      },
+      {
+        "id": "masakhane/afriqa",
+        "url": "https://huggingface.co/datasets/masakhane/afriqa",
+        "license": "cc-by-sa-4.0",
+        "languages": [
+          "bem",
+          "fon",
+          "ha",
+          "ig",
+          "kin",
+          "sw",
+          "wo",
+          "yo",
+          "zu",
+          "tw"
+        ]
+      },
+      {
+        "id": "eldad-akhaumere/hausa_2_eng_2",
+        "url": "https://huggingface.co/datasets/eldad-akhaumere/hausa_2_eng_2",
+        "license": "apache-2.0",
+        "languages": [
+          "ab",
+          "af",
+          "am",
+          "ar",
+          "as",
+          "ast",
+          "az",
+          "ba",
+          "bas",
+          "be",
+          "bg",
+          "bn",
+          "br",
+          "ca",
+          "ckb",
+          "cnh",
+          "cs",
+          "cv",
+          "cy",
+          "da",
+          "de",
+          "dv",
+          "dyu",
+          "el",
+          "en",
+          "eo",
+          "es",
+          "et",
+          "eu",
+          "fa",
+          "fi",
+          "fr",
+          "fy",
+          "ga",
+          "gl",
+          "gn",
+          "ha",
+          "he",
+          "hi",
+          "hsb",
+          "hu",
+          "hy",
+          "ia",
+          "id",
+          "ig",
+          "is",
+          "it",
+          "ja",
+          "ka",
+          "kab",
+          "kk",
+          "kmr",
+          "ko",
+          "ky",
+          "lg",
+          "lij",
+          "lo",
+          "lt",
+          "ltg",
+          "lv",
+          "mdf",
+          "mhr",
+          "mk",
+          "ml",
+          "mn",
+          "mr",
+          "mrj",
+          "mt",
+          "myv",
+          "nan",
+          "ne",
+          "nhi",
+          "nl",
+          "nn",
+          "oc",
+          "or",
+          "os",
+          "pa",
+          "pl",
+          "ps",
+          "pt",
+          "quy",
+          "rm",
+          "ro",
+          "ru",
+          "rw",
+          "sah",
+          "tig",
+          "yue",
+          "zgh",
+          "zh"
+        ]
+      },
+      {
+        "id": "whoisjones/masakhaner",
+        "url": "https://huggingface.co/datasets/whoisjones/masakhaner",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "masakhane/afrimgsm-translate-test",
+        "url": "https://huggingface.co/datasets/masakhane/afrimgsm-translate-test",
+        "license": "apache-2.0",
+        "languages": [
+          "am",
+          "ig",
+          "fr",
+          "sn",
+          "ln",
+          "lug",
+          "wo",
+          "ee",
+          "xh",
+          "kin",
+          "tw",
+          "zu",
+          "orm",
+          "yo",
+          "ha",
+          "sot",
+          "sw"
+        ]
+      },
+      {
+        "id": "ajesujoba/yoruba_gv_ner",
+        "url": "https://huggingface.co/datasets/ajesujoba/yoruba_gv_ner",
+        "license": [
+          "cc-by-3.0"
+        ],
+        "languages": [
+          "yo"
+        ]
+      },
+      {
+        "id": "masakhane/ntrex_african",
+        "url": "https://huggingface.co/datasets/masakhane/ntrex_african",
+        "license": [
+          "cc-by-sa-4.0"
+        ],
+        "languages": [
+          "afr",
+          "amh",
+          "arb",
+          "bem",
+          "ewe",
+          "fra",
+          "hau",
+          "ibo",
+          "kin",
+          "mey",
+          "mlg",
+          "msa",
+          "nde",
+          "nso",
+          "nya",
+          "orm",
+          "shi",
+          "sna",
+          "som",
+          "ssw",
+          "swa",
+          "tam",
+          "tel",
+          "tir",
+          "ton",
+          "tsn",
+          "urd",
+          "ven",
+          "wol",
+          "xho",
+          "yor",
+          "zul"
+        ]
+      },
+      {
+        "id": "UdS-LSV/hausa_voa_topics",
+        "url": "https://huggingface.co/datasets/UdS-LSV/hausa_voa_topics",
+        "license": [
+          "unknown"
+        ],
+        "languages": [
+          "ha"
+        ]
+      },
+      {
+        "id": "Davlan/NaijaRC",
+        "url": "https://huggingface.co/datasets/Davlan/NaijaRC",
+        "license": "cc-by-nc-4.0",
+        "languages": [
+          "ig",
+          "yo",
+          "ha"
+        ]
+      },
+      {
+        "id": "UdS-LSV/yoruba_bbc_topics",
+        "url": "https://huggingface.co/datasets/UdS-LSV/yoruba_bbc_topics",
+        "license": [
+          "unknown"
+        ],
+        "languages": [
+          "yo"
+        ]
+      },
+      {
+        "id": "UdS-LSV/hausa_voa_ner",
+        "url": "https://huggingface.co/datasets/UdS-LSV/hausa_voa_ner",
+        "license": [
+          "cc-by-4.0"
+        ],
+        "languages": [
+          "ha"
+        ]
+      },
+      {
+        "id": "masakhane/african-ultrachat",
+        "url": "https://huggingface.co/datasets/masakhane/african-ultrachat",
+        "license": "mit",
+        "languages": [
+          "am",
+          "ha",
+          "ig",
+          "rw",
+          "st",
+          "sn",
+          "so",
+          "sw",
+          "xh",
+          "yo",
+          "zu"
+        ]
+      },
+      {
+        "id": "HausaNLP/AfriSenti-Twitter",
+        "url": "https://huggingface.co/datasets/HausaNLP/AfriSenti-Twitter",
+        "license": "cc-by-nc-sa-4.0",
+        "languages": [
+          "amh",
+          "ary",
+          "arq",
+          "hau",
+          "ibo",
+          "kin",
+          "por",
+          "pcm",
+          "oro",
+          "swa",
+          "tir",
+          "twi",
+          "tso",
+          "yor"
+        ]
+      },
+      {
+        "id": "ignatius/igbo_ner",
+        "url": "https://huggingface.co/datasets/ignatius/igbo_ner",
+        "license": [
+          "unknown"
+        ],
+        "languages": [
+          "ig"
+        ]
+      },
+      {
+        "id": "ajesujoba/yoruba_wordsim353",
+        "url": "https://huggingface.co/datasets/ajesujoba/yoruba_wordsim353",
+        "license": [
+          "unknown"
+        ],
+        "languages": [
+          "en",
+          "yo"
+        ]
+      },
+      {
+        "id": "ajesujoba/yoruba_text_c3",
+        "url": "https://huggingface.co/datasets/ajesujoba/yoruba_text_c3",
+        "license": [
+          "cc-by-nc-4.0"
+        ],
+        "languages": [
+          "yo"
+        ]
+      },
+      {
+        "id": "Tommy0201/igbo_to_english_split",
+        "url": "https://huggingface.co/datasets/Tommy0201/igbo_to_english_split",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "ignatius/igbo_monolingual",
+        "url": "https://huggingface.co/datasets/ignatius/igbo_monolingual",
+        "license": [
+          "unknown"
+        ],
+        "languages": [
+          "ig"
+        ]
+      },
+      {
+        "id": "Arnold/hausa_common_voice",
+        "url": "https://huggingface.co/datasets/Arnold/hausa_common_voice",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "ignatius/igbo_english_machine_translation",
+        "url": "https://huggingface.co/datasets/ignatius/igbo_english_machine_translation",
+        "license": [
+          "unknown"
+        ],
+        "languages": [
+          "en",
+          "ig"
+        ]
+      },
+      {
+        "id": "masakhane/afriscience_mt",
+        "url": "https://huggingface.co/datasets/masakhane/afriscience_mt",
+        "license": "apache-2.0",
+        "languages": [
+          "eng",
+          "amh",
+          "hau",
+          "lug",
+          "nso",
+          "yor",
+          "zul"
+        ]
+      },
+      {
+        "id": "asr-nigerian-pidgin/nigerian-pidgin-1.0",
+        "url": "https://huggingface.co/datasets/asr-nigerian-pidgin/nigerian-pidgin-1.0",
+        "license": "cc-by-4.0",
+        "languages": []
+      }
+    ]
+  },
+  "news": {
+    "bbc_igbo": {
+      "output": "corpus/manifests/bbc_igbo.jsonl",
+      "new_urls": 3
+    }
+  }
+}
