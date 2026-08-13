@@ -90,6 +90,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ steps.route.outputs.use_openrouter == 'true' && secrets.OPENROUTER_API_KEY || secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_AUTH_TOKEN: ${{ steps.route.outputs.use_openrouter == 'true' && secrets.OPENROUTER_API_KEY || '' }}
         with:
+          show_full_output: true
           prompt: |
             You are the corpus curation assistant for IgboAI. Read
             corpus_run_summary.json in the repo root; it describes what this
@@ -99,6 +100,13 @@ jobs:
             Never modify, delete, or rewrite files under corpus/raw/ or
             corpus/manifests/ — the deterministic layer owns those. You write
             data cards, review notes, and the PR.
+
+            0. FIRST, before any analysis: create branch corpus/<today's date>,
+               commit a placeholder note to corpus/cards/README.md if nothing
+               else has changed yet, push, and open a PR titled
+               "Corpus ingestion: <date> (in progress)" with a body saying work
+               is underway. Everything below then pushes to that same branch and
+               updates the PR body as you go.
 
             1. Wikipedia batches: inspect the "samples" excerpts and stats in
                the summary. Flag in your review notes anything that looks like
@@ -119,21 +127,21 @@ jobs:
                from the catalog (license, languages, why relevant), and flag
                any with UNKNOWN license as "verify before use".
 
-            4. Open a PR on branch corpus/<today's date> titled
-               "Corpus ingestion: <date>" whose body contains: per-source
-               what-was-fetched numbers, your quality flags with sample
-               citations, any items needing human license verification, and
-               a checklist of decisions the reviewer must make. If the
+            4. When the work is complete, update the PR title to
+               "Corpus ingestion: <date>" and rewrite the body to contain:
+               per-source what-was-fetched numbers, your quality flags with
+               sample citations, any items needing human license verification,
+               and a checklist of decisions the reviewer must make. If the
                summary shows a Wikipedia backfill still in progress
                (backfill_done: false), say so and note that subsequent runs
                will continue it.
 
-            Work incrementally and commit as you go. If you sense you are
-            running low on turns, commit and push what is complete and note
-            what remains in the PR body.
+            Work incrementally and push after each card you complete. If you are
+            running low on turns, stop starting new work, push what is finished,
+            and note what remains in the PR body.
           claude_args: |
             --max-turns ${{ github.event.inputs.max_turns || '30' }}
-            --allowedTools "Read,Write,Edit,Bash(git:*),Bash(gh pr create:*),Bash(python:*)"
+            --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh pr:*),Bash(python:*),Bash(python3:*),Bash(ls:*),Bash(mkdir:*),Bash(cat:*),Bash(date:*)"
 
       - name: Record which provider served this run
         if: always() && steps.gate.outputs.count != '0'
