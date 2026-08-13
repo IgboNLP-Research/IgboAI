@@ -75,6 +75,16 @@ jobs:
             You are maintaining the literature tracker for IgboAI, a research
             project on Igbo-language NLP (low-resource setting).
 
+            STEP 0 — DO THIS FIRST, BEFORE READING OR JUDGING ANYTHING.
+            Create a branch named tracking/<today's date>. Make an empty commit
+            (git commit --allow-empty -m "chore: begin tracking run <date>"),
+            push the branch, and open a PR titled
+            "Literature tracking: <date> (in progress)" whose body says the run
+            is underway and the summary will follow. Every step below pushes to
+            this same branch and updates this same PR. Do not defer PR creation
+            until the end: if you run out of turns later, this PR is the only
+            record of what was done.
+
             Read candidates.json in the repo root. For each item, judge whether
             it is genuinely relevant to Igbo NLP or closely transferable
             African/low-resource NLP work. Discard generic low-resource papers
@@ -111,27 +121,26 @@ jobs:
             in candidates.json (kept and discarded). Create it as a JSON array
             if absent. Do NOT commit candidates.json itself.
 
-            Create a branch named tracking/<today's date>, commit both files
-            with a conventional commit message, and open a PR titled
-            "Literature tracking: <date> (<N> new items)" whose body lists
-            kept items and a one-line note of how many were discarded as
-            irrelevant.
+            When every candidate has been processed, finalise the PR created in
+            Step 0: retitle it "Literature tracking: <date> (<N> new items)" and
+            rewrite the body to list the kept items plus a one-line note of how
+            many were discarded as irrelevant. Use conventional commit messages
+            throughout.
 
             Work incrementally: process candidates in batches of ~10. After
-            each batch, update RELATED_WORK.md and seen.json for that batch
-            and commit. Create the branch and open the PR after the FIRST
-            batch, then push each subsequent batch to the same branch. If you
+            each batch, update RELATED_WORK.md and seen.json for that batch,
+            commit, and push to the branch created in Step 0. If you
             sense you are running low on turns, stop starting new batches,
             ensure everything processed so far is committed and pushed, and
             note in the PR body how many candidates were left unprocessed.
 
-            If, after filtering, NOTHING is worth keeping, still update
-            seen.json and open the PR with only that change, titled
+            If, after filtering, NOTHING is worth keeping, still update and push
+            seen.json, then retitle the PR
             "Literature tracking: <date> (no relevant items)".
           claude_args: |
             --max-turns ${{ github.event.inputs.max_turns || '25' }}
-            --allowedTools "Read,Write,Edit,Bash(git:*),Bash(gh pr create:*),Bash(python:*)"
-
+            --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh pr:*),Bash(python:*),Bash(python3:*),Bash(ls:*),Bash(mkdir:*),Bash(cat:*),Bash(date:*)"
+            
       - name: Record which provider served this run
         if: always() && steps.gate.outputs.count != '0'
         run: |
