@@ -42,19 +42,23 @@ at `max_pages` titles per language per run (default 500). Manual runs via
 | As of | Documents | Whitespace tokens | Characters |
 |---|---|---|---|
 | 2026-08-07 | 19 | 10,922 | 58,848 |
+| 2026-08-13 | 39 | 20,125 | 108,161 |
 
-*(First run of this source. Later runs add their batch to these totals.)*
+*(2026-08-13 run added 20 documents, 9,203 whitespace tokens, 49,313
+characters.)*
 
 **Backfill status: IN PROGRESS.** `backfill_done: false`; the `allpages`
-cursor sits at `2000_Sacagawea_dollar_-_Washington_quarter_mule`, i.e. still
-in the numeric/early-alphabet range. The batch composition below is therefore
-*not* representative of Igbo Wikipedia as a whole — it is the head of an
-alphabetical walk, which is why it is dominated by date and year stubs.
+cursor advanced from `2000_Sacagawea_dollar_-_Washington_quarter_mule` to
+`24_Julaị` this run — still inside the numeric/date-title range of the
+alphabetical walk. The batch composition below is therefore still *not*
+representative of Igbo Wikipedia as a whole.
 
 ## Known limitations and quality flags
 
-All flags dated **2026-08-07**, from direct inspection of
-`corpus/raw/wikipedia_ig/2026-08-07.jsonl.gz`.
+Flags dated **2026-08-07** are from the first run
+(`corpus/raw/wikipedia_ig/2026-08-07.jsonl.gz`); flags dated **2026-08-13**
+are from direct inspection of the 20 documents in
+`corpus/raw/wikipedia_ig/2026-08-13.jsonl.gz`.
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
@@ -149,6 +153,67 @@ under-marking, not an encoding fault.
 **Recommendation:** near-duplicate detection and downweighting before any LM
 pre-training use; the alphabetical backfill will surface many hundreds more
 of these.
+
+### 7. 2026-08-13 — Non-Igbo script leakage: a full Ethiopic (Ge'ez) word mid-sentence
+
+*2007 Nhọrọ Senate nke Naijiria na Ekiti Steeti* reads:
+
+> Sylvester Ayodele Arise na- **ይምረጡ** anya Ekiti North, Adefemi Kila na-
+> anya anya Ekiti Central na Sola Akinyede na- anya anya Ekiti South niile
+> n'elu ikpo okwu nke Peoples Democratic Party
+
+`ይምረጡ` is four Ethiopic syllabary characters (U+12ED, U+121D, U+1228,
+U+1321 — "yä", "mə", "rä", "ṭu"), not a rendering glitch on Latin script.
+This is a more severe version of the flag-5 pattern from 2026-08-07 (Yoruba/
+IPA open-o characters signalling MT): here an MT/templating pipeline
+substituted a wrong-script token for the verb slot entirely.
+
+### 8. 2026-08-13 — Same templated verb slot renders inconsistently across a whole article category
+
+This run's 20 documents include **8 formulaic Nigerian election-result
+stubs** (Senate/governor/state-assembly, 2003–2019), all built from what is
+evidently one shared template with a "represents constituency X" verb slot.
+That slot renders differently — sometimes wrongly — in every instance:
+
+- `na-ele anya Bauchi North` / `na- anya anya Bauchi Central` (word dropped,
+  leaving a bare repeated `anya anya`)
+- `na-amị anya Adamawa Central` (`amị` is not a standard Igbo verb form here)
+- `na- ይምረጡ anya Ekiti North` (flag 7, wrong script entirely)
+- `Olusola Adeyeye na- ndị Osun Central` (verb dropped completely)
+
+Four distinct renderings of what should be one consistent phrase, within a
+single 20-document batch. This points to a systematic generation defect
+(bot-authored or MT-assisted template) affecting an entire Wikipedia article
+category, not isolated typos. These 8 stubs are 3,394 of this run's 49,313
+characters (6.9%) but the category is large — Nigeria has 36 states across
+many election years and types — so the backfill should be expected to
+surface hundreds more.
+
+### 9. 2026-08-13 — Batch is heavily skewed toward violent-crime narratives, by volume
+
+5 of this run's 20 documents concern killings or sexual assault (*2014
+Ikpe ndina n'ike nke ndị òtù Birbhum* — gang rape; *2019 ndina n'ike na igbu
+ọchụ na Ampang* — rape and murder; *2020 Patna-Bhabua Intercity Express
+ndina n'ike* — rape; *2022 University of Idaho Massacre*; *2024 Ogbugbu
+Ottawa* — mass killing). By document count that is 25%, but these are
+disproportionately the batch's *longest* articles: together they account for
+**33,327 of 49,313 characters (67.6%)** of this run's text. Combined with
+the equivalent skew already flagged in the BBC Igbo manifest headlines (see
+[bbc_igbo.md](bbc_igbo.md)), this is a second, independent signal that
+readily available Igbo text sources over-represent violent-crime content
+relative to general prose. Relevant for anyone drawing sentiment-label
+priors or generative fine-tuning data from either source without rebalancing.
+
+### 10. 2026-08-13 — Diacritic ratio remains volatile at this batch size, not a reliable per-run signal
+
+This run's reported `diacritic_char_ratio` is 0.0764 (character-weighted),
+but per-document ratios in the same batch range from 0.0063 to 0.1033
+(unweighted mean 0.0602). The 8 election stubs (flag 8) average lower
+(0.069 combined) than the batch as a whole but are not the zero-diacritic
+extreme seen in last run's date stubs — under-marking severity varies by
+template, not just by document length. Confirms last run's caution: do not
+read the headline ratio as a corpus-health metric until batch sizes are much
+larger.
 
 ## Intended uses
 
