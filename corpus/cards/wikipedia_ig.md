@@ -43,22 +43,27 @@ at `max_pages` titles per language per run (default 500). Manual runs via
 |---|---|---|---|
 | 2026-08-07 | 19 | 10,922 | 58,848 |
 | 2026-08-13 | 39 | 20,125 | 108,161 |
+| 2026-08-15 | 43 | 22,012 | 118,610 |
 
-*(2026-08-13 run added 20 documents, 9,203 whitespace tokens, 49,313
+*(2026-08-15 run added 4 documents, 1,887 whitespace tokens, 10,449
 characters.)*
 
 **Backfill status: IN PROGRESS.** `backfill_done: false`; the `allpages`
-cursor advanced from `2000_Sacagawea_dollar_-_Washington_quarter_mule` to
-`24_Julaị` this run — still inside the numeric/date-title range of the
-alphabetical walk. The batch composition below is therefore still *not*
-representative of Igbo Wikipedia as a whole.
+cursor advanced from `24_Julaị` to `A_Child_Is_Born` this run — the walk has
+now crossed out of the numeric/date-title range flagged in prior cards and
+into ordinary alphabetical titles. Batch composition should be watched for
+whether the stub-heavy, MT-suspect pattern from the date range (flags 5, 6)
+persists once the walk is fully past it; this run's 4 documents are too few
+to tell either way.
 
 ## Known limitations and quality flags
 
 Flags dated **2026-08-07** are from the first run
 (`corpus/raw/wikipedia_ig/2026-08-07.jsonl.gz`); flags dated **2026-08-13**
 are from direct inspection of the 20 documents in
-`corpus/raw/wikipedia_ig/2026-08-13.jsonl.gz`.
+`corpus/raw/wikipedia_ig/2026-08-13.jsonl.gz`; flags dated **2026-08-15**
+are from direct inspection of the 4 documents in
+`corpus/raw/wikipedia_ig/2026-08-15.jsonl.gz`.
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
@@ -214,6 +219,49 @@ extreme seen in last run's date stubs — under-marking severity varies by
 template, not just by document length. Confirms last run's caution: do not
 read the headline ratio as a corpus-health metric until batch sizes are much
 larger.
+
+### 11. 2026-08-15 — First run out of the date-stub range: no zero-diacritic stubs this batch, but n is tiny
+
+This run's 4 documents (*2Baba*, *A-One (graffiti artist)*, *ABii National*,
+*ART Holdings*) all have per-document diacritic ratios between 0.044 and
+0.099 — none show the near-zero ratio or the empty-section templated-stub
+shape of flag 6. This is consistent with the `allpages` cursor having moved
+past the numeric/date-title range, but 4 documents is far too small a
+sample to call the stub problem resolved; treat as a hypothesis for the next
+several runs to confirm or refute, not a conclusion.
+
+### 12. 2026-08-15 — Object replacement characters (U+FFFC) inline in running text (`2Baba`)
+
+`2Baba` contains two U+FFFC OBJECT REPLACEMENT CHARACTER glyphs (`￼￼`)
+embedded directly in a sentence: `Ọ bụkwa onye nnọchi anya akara maka
+￼￼"National Agency for Food and Drug And Administration and Control"`. This
+is the extractor's placeholder for a stripped inline image/icon (a common
+MediaWiki pattern for flag or logo templates) that survived into
+`explaintext` output rather than being removed. Same failure family as the
+markup leakage in flag 3, different manifestation.
+
+### 13. 2026-08-15 — Non-Igbo Unicode letter and a split-word artifact, same document
+
+Also in `2Baba`: `Ȯra Benue` uses U+022E LATIN CAPITAL LETTER O WITH DOT
+ABOVE — not an Igbo character (Igbo's dot diacritics are dot-*below*,
+ọ/Ọ U+1ECD/U+1ECC); likely OCR- or copy-paste-origin corruption from a
+source that used dot-above Yoruba/Africanist orthography, echoing the
+wrong-orthography-letter pattern in flag 5. Separately, `"The Unstop
+pable"` appears with a stray space mid-word (correct elsewhere in the same
+document as `The Unstoppable`) — an extraction-side line-wrap artifact, not
+a spelling variant.
+
+### 14. 2026-08-15 — Grave-accent tone marking inconsistent within one document (`A-One (graffiti artist)`)
+
+`màkà` (grave accent on both vowels) appears twice, alongside unmarked
+`maka` used with the same meaning elsewhere in the batch (e.g. throughout
+`ABii National`, `ART Holdings`). Grave accent for low tone is a legitimate
+Igbo tone-marking convention, but its sporadic, document-local use next to
+otherwise-unmarked text is the same inconsistent-marking pattern flagged at
+batch level in flag 10 — here confirmed at the single-document level. Useful
+as another positive example for tone-restoration research (see Intended
+uses), but a caution against assuming any one document's tone marking is
+complete or consistent.
 
 ## Intended uses
 
