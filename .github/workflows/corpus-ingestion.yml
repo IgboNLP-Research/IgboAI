@@ -15,7 +15,7 @@ on:
         default: "500"
       max_turns:
         description: "Max Claude turns for this run"
-        default: "30"
+        default: "50"
       force_provider:
         description: "Override provider selection (for testing the fallback path)"
         type: choice
@@ -112,6 +112,15 @@ jobs:
                "Corpus ingestion: <date> (in progress)" with a body saying work
                is underway. Everything below then pushes to that same branch and
                updates the PR body as you go.
+
+               EFFICIENCY: each raw file should be opened once. Before triaging,
+               write a single Python script that walks every file this run produced
+               and prints, per document: title, character count, diacritic ratio,
+               and the first 500 characters. Run it once and work from that output.
+               Do not re-open a .jsonl.gz to compute one more statistic; add the
+               statistic to the script and rerun it only if genuinely necessary.
+               Read `candidates.json` once at the start and work from that content;
+               do not re-read it between batches.
 
             1. Wikipedia batches: inspect the "samples" excerpts and stats in
                the summary. Flag in your review notes anything that looks like
