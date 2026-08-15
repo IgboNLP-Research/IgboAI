@@ -6,16 +6,18 @@
 - **Method:** `scripts/corpus_fetch.py` parses the feed and appends one
   record per *previously unseen* article URL to
   `corpus/manifests/bbc_igbo.jsonl`. Deduplication is by SHA-1 of the URL.
-- **What is stored:** `url`, `url_sha1`, `title`, `published`, `recorded`,
-  and a fixed `note`. **Article body text is never fetched or stored.**
-- **What is not stored:** article text, images, author bylines, comments.
-
-The stored `title` field is the headline as it appears in the RSS feed. This
-is the one piece of BBC-authored prose the manifest retains; it is kept
-because it is the only human-readable handle on an entry, and headline-length
-quotation for indexing purposes is a narrow use. If a reviewer judges even
-this too much, the field can be dropped without affecting rebuild ability
-(`url` alone is sufficient).
+- **What is stored:** `url`, `url_sha1`, `published`, `recorded`, and a
+  fixed `note`. **Article body text is never fetched or stored.**
+- **What is not stored:** article text, images, author bylines, comments,
+  and — contrary to this card's previous description — **no `title`
+  field**. Checked directly against `corpus/manifests/bbc_igbo.jsonl` on
+  2026-08-15: every one of the 15 records to date has exactly the five
+  fields above; none has a `title` key. The card previously described a
+  stored headline field and reasoned about its narrowness as an
+  attribution/privacy question. That description did not match the data
+  on disk. Corrected here; if a `title` field is added to the fetcher in
+  future, the license/attribution reasoning below about headline
+  quotation would need to be revisited at that point, not before.
 
 ## License and attribution
 
@@ -43,17 +45,35 @@ which suggests the window currently holds more than a week of output and the
 weekly cadence is adequate *for now*. This should be re-checked as volume
 changes; a gap in `published` dates between consecutive runs is the symptom.
 
+**2026-08-15 update:** runs are in practice landing every 2-8 days, not
+weekly (2026-08-07, 2026-08-13, 2026-08-15 so far), so the sliding-window
+risk above is being tested more often than the nominal cadence implies.
+The three batches' `published` ranges are 2026-07-21 to 2026-08-06,
+2026-08-07 to 2026-08-11, and 2026-08-15 (a single item) respectively — the
+first two are contiguous, but there is a **4-day silence, 2026-08-12 to
+2026-08-14, with zero recorded items** between the second and third batch.
+At the batch-1 long-run rate (11 items / 17 days ≈ 0.65/day) a 4-day gap
+with nothing published is plausible on its own, so this is flagged as an
+observation to watch, not a confirmed miss — but it is exactly the symptom
+the caveat above says to watch for, and it should be rechecked against the
+live feed if it recurs or lengthens.
+
 ## Cumulative size
 
 | As of | New URLs this run | Cumulative URLs |
 |---|---|---|
 | 2026-08-07 | 11 | 11 |
+| 2026-08-13 | 3 | 14 |
+| 2026-08-15 | 1 | 15 |
 
 No token or character counts apply — no text is stored.
 
 ## Known limitations and quality flags
 
-Flags dated **2026-08-07**.
+Flags dated **2026-08-07** unless noted. The topical-skew and register
+observations below were made against the live RSS feed at fetch time; they
+are **not reproducible from the manifest alone**, since (see above) no
+`title` field is actually persisted to `corpus/manifests/bbc_igbo.jsonl`.
 
 - **Manifest only — zero tokens.** This source contributes nothing to corpus
   size until someone rebuilds it locally. It is a *pointer* asset.
@@ -76,6 +96,14 @@ Flags dated **2026-08-07**.
 - **Not verified:** whether BBC Igbo articles are human-written or partly
   translated from BBC English. Worth establishing before treating this as
   gold-standard native Igbo.
+- **2026-08-15 — no headline field is actually stored.** See the corrected
+  "Source and method" section above. Practical effect: nothing in
+  `bbc_igbo.jsonl` itself supports topic filtering, keyword search, or the
+  kind of per-item skew check performed for this card at fetch time (the
+  topical-skew and register flags above). A reviewer or future card author
+  working from the manifest alone, without also capturing feed content at
+  fetch time, cannot repeat that check — only `url` and `published` are
+  available for any such analysis going forward.
 
 ## Intended uses
 
