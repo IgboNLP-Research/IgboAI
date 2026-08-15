@@ -36,12 +36,53 @@ previous file.
 | As of | Datasets catalogued | New this run |
 |---|---|---|
 | 2026-08-07 | **0 (fetch failed — see below)** | 0 |
+| 2026-08-15 | 278 | 0 |
 
-## Notable new datasets this run
+**Provenance gap:** the fetch recovered from the 2026-08-07 rate-limit
+failure at some point before this run (the committed
+`corpus/catalog/hf_datasets.json` already held 278 entries at the start of
+this run, and `new_since_last_run` is empty), but no card update recorded
+that recovery or an intermediate count. The table above cannot show when the
+catalog actually filled in; treat the 278 figure as "current as of
+2026-08-15" rather than as a stable long-run trend point.
 
-**None — the catalog is empty because every Hub query failed.** This is a
-pipeline failure, not a finding that no relevant datasets exist. The section
-below should be populated on the first successful run.
+## Notable datasets (first full listing — populated 2026-08-15)
+
+This section was never filled in previously because every prior run either
+failed (2026-08-07) or landed without a card update. With 278 entries now on
+file and `new_since_last_run` empty, this is a survey of the current catalog
+rather than a diff. By search term: `igbo` 50, `yoruba` 51, `hausa` 51,
+`naija` 47, `masakhane` 46, `african languages` 22, `pidgin nigerian` 11
+(terms overlap; totals don't sum to 278).
+
+- **`HausaNLP/NaijaSenti-Twitter`, `HausaNLP/AfriSenti-Twitter`** — CC-BY-NC-
+  SA-4.0, multi-way sentiment over Hausa/Igbo/Yoruba/Pidgin (and, for
+  AfriSenti, a dozen more African languages) Twitter text. Directly relevant
+  to Igbo sentiment work; non-commercial license restricts downstream use.
+- **`Davlan/masakhanerV1`, `BlakBot/masakhaner`** — MasakhaNER, the standard
+  African-language NER benchmark, includes Igbo. License field is `UNKNOWN`
+  on both listings despite the underlying MasakhaNER release being CC-BY-
+  4.0-ish in its paper/repo — **verify against the original MasakhaNER
+  release before treating the Hub license field as authoritative.**
+- **`Davlan/NaijaRC`** — CC-BY-NC-4.0 reading-comprehension set covering
+  Igbo, Yoruba, and Hausa. Non-commercial.
+- **`HausaNLP/Naija-Lex`, `HausaNLP/Naija-Stopwords`** — CC-BY-NC-SA-4.0
+  lexicon/stopword resources spanning Igbo, Hausa, Yoruba.
+- **`ccibeekeoc42/TinyStories_igbo`, `ccibeekeoc42/DollyHHRLHF_igbo`,
+  `ccibeekeoc42/english_to_igbo`** — Apache-2.0/MIT Igbo instruction- and
+  story-style parallel data, apparently machine-translated from the English
+  originals (TinyStories, Dolly). Permissively licensed but MT provenance
+  means the same MT-laundering caution as this card's Wikipedia sibling
+  applies if used for MT training.
+- **`Tommy0201/JW300_Igbo_To_Eng`** — built from JW300, a dataset whose
+  withdrawal is already flagged as a standing precedent in
+  `corpus/SOURCES.md`; this re-upload's `UNKNOWN` license needs verification
+  regardless of the parent corpus's own history.
+- **Long tail of `UNKNOWN`-license, low-download re-uploads**, notably the
+  `michsethowusu/igbo-<lang>_sentence-pairs` series (Igbo paired with Shona,
+  Tumbuka, Xhosa, Pedi, Yoruba, Kikuyu, etc.) — plausible bitext but
+  unverified license and unverified sentence-alignment quality; "verify
+  before use" per the license policy below.
 
 ## Known limitations and quality flags
 
