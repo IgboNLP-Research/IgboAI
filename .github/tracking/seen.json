@@ -147,5 +147,20 @@
   "openalex:W7202149296",
   "openalex:W7202163791",
   "openalex:W7202182043",
-  "openalex:W7202209073"
+  "openalex:W7202209073",
+  "hf:models:Nwada1/igbo-yoruba-proverb-afriteva",
+  "hf:models:PeaceMmesoma-15/Igbo-qwen-finetuned",
+  "hf:datasets:Kasaba6330/yoruba-naija-svc-benchmark",
+  "hf:datasets:AdaobiU/ada_igbo_literacy_dataset",
+  "hf:datasets:Khaycee/adaption-igbo-biblical-texts",
+  "openalex:W7202365821",
+  "openalex:W4400064705",
+  "openalex:W7202341273",
+  "openalex:W7202346852",
+  "openalex:W7202268220",
+  "openalex:W7202369154",
+  "openalex:W7202369829",
+  "openalex:W7202388201",
+  "openalex:W7202393583",
+  "openalex:W7202400293"
 ]
