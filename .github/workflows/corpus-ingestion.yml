@@ -95,6 +95,11 @@ jobs:
             You are the corpus curation assistant for IgboAI. Read
             corpus_run_summary.json in the repo root; it describes what this
             run fetched. Also read CLAUDE.md for project scope.
+            Git and gh are already authenticated by the workflow. Do not run
+            gh auth status or otherwise verify credentials; go straight to work.
+            Prefer single-purpose commands over chains joined by &&, ;, or |:
+            each part of a chain is permission-checked separately, so a chain
+            fails if any component is not allowed.
 
             YOUR ROLE IS QUALITY TRIAGE AND DOCUMENTATION, NOT DATA EDITING.
             Never modify, delete, or rewrite files under corpus/raw/ or
@@ -141,7 +146,7 @@ jobs:
             and note what remains in the PR body.
           claude_args: |
             --max-turns ${{ github.event.inputs.max_turns || '30' }}
-            --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh pr:*),Bash(python:*),Bash(python3:*),Bash(ls:*),Bash(mkdir:*),Bash(cat:*),Bash(date:*)"
+            --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh pr:*),Bash(gh auth status),Bash(python:*),Bash(python3:*),Bash(ls:*),Bash(mkdir:*),Bash(cat:*),Bash(echo:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(date:*)"
 
       - name: Record which provider served this run
         if: always() && steps.gate.outputs.count != '0'
