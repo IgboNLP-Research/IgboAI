@@ -74,6 +74,11 @@ jobs:
           prompt: |
             You are maintaining the literature tracker for IgboAI, a research
             project on Igbo-language NLP (low-resource setting).
+            Git and gh are already authenticated by the workflow. Do not run
+            gh auth status or otherwise verify credentials; go straight to work.
+            Prefer single-purpose commands over chains joined by &&, ;, or |:
+            each part of a chain is permission-checked separately, so a chain
+            fails if any component is not allowed.
 
             STEP 0 — DO THIS FIRST, BEFORE READING OR JUDGING ANYTHING.
             Create a branch named tracking/<today's date>. Make an empty commit
@@ -139,7 +144,7 @@ jobs:
             "Literature tracking: <date> (no relevant items)".
           claude_args: |
             --max-turns ${{ github.event.inputs.max_turns || '25' }}
-            --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh pr:*),Bash(python:*),Bash(python3:*),Bash(ls:*),Bash(mkdir:*),Bash(cat:*),Bash(date:*)"
+            --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh pr:*),Bash(gh auth status),Bash(python:*),Bash(python3:*),Bash(ls:*),Bash(mkdir:*),Bash(cat:*),Bash(echo:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(date:*)"
             
       - name: Record which provider served this run
         if: always() && steps.gate.outputs.count != '0'
