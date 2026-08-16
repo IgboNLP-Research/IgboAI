@@ -1,33 +1,53 @@
 {
-  "run_date": "2026-08-15",
+  "run_date": "2026-08-16",
   "mode": "all",
   "wikipedia": {
     "wikipedia_ig": {
-      "output": "corpus/raw/wikipedia_ig/2026-08-15.jsonl.gz",
-      "documents": 4,
-      "tokens_ws": 1887,
-      "chars": 10449,
-      "diacritic_char_ratio": 0.06163,
+      "output": "corpus/raw/wikipedia_ig/2026-08-16.jsonl.gz",
+      "documents": 22,
+      "tokens_ws": 10457,
+      "chars": 59538,
+      "diacritic_char_ratio": 0.06388,
       "samples": [
         {
-          "title": "2Baba",
-          "url": "https://ig.wikipedia.org/wiki/2Baba",
-          "excerpt": "Innocent Ujah Idibia  (Amụrụ na 18 Septemba 1975), nke a maara site n' aha egwu ya 2Baba, bụ onye Naijiria na-eti ma na-edekwa egwu. A na-ewere ya dịka otu n'ime ndị egwu kachasị ukwuu na Naịjirịa. Ọ bụ onye kachasị ewu ewu maka igụ egwu na afọ 2000, site na egwú nke mbụ ya bụ Face2Face. O bụ n'ime albọm ahu ka enwere egwu, \"African Queen\", nke ewerụrụ dika egwu butere mmata ọhụrụ na nsọpụrụ maka egwu Naijiria n'Afrịka na Mba uwa niile. Tupu Julaị 2014, 2Baba na aza 2face Idibia. Ọ bụ onye mmeri asambodo di iche íchè dika MTV Europe Music Awards na afọ 2005.\nN'afọ 2019, 2baba, na mmekorita ya "
+          "title": "A Child Is Born",
+          "url": "https://ig.wikipedia.org/wiki/A_Child_Is_Born",
+          "excerpt": "Amụrụ Nwata (utu aha: A Mụrụ Nwa: Ihe nkiri nke ndụ tupu a mụọ nwa na foto a na-enwetụbeghị ụdị ya. Ntuziaka bara uru maka nne dị ime; aha Swedish mbụ: Ett barn blir till) bụ akwụkwọ foto nke 1965 nke onye nta akụkọ Sweden bụ Lennart Nilsson dere. . Akwụkwọ ahụ nwere foto ndị na-akọwa nzụlite embrayo na nwa ebu n'afọ site na afọ ime ruo n'ọmụmụ; a na-akọ na ọ bụ akwụkwọ ihe atụ kacha ere nke ebipụtarala.[1] Foto Nilsson na-esonyere ya na ederede, nke ndị dọkịta dere, na-akọwa mmepe nwa na-enye ndụmọdụ gbasara nlekọta nwa.[2] Onyonyo ndị a so na nke mbụ ụmụ ebu n'afọ na-etolite iji ruo ọtụtụ nd"
         },
         {
-          "title": "A-One (graffiti artist)",
-          "url": "https://ig.wikipedia.org/wiki/A-One_(graffiti_artist)",
-          "excerpt": "Anthony Clark (1964 rụọ úbọchị irí nà otu n'ọnwa Novemba, 2001), nke a maara dị ka A-One, bụ ónyé America na-ese ihe. Ọ mepụtara ụdị ọ kpọrọ \"aerosol expressionism\".\n\n\n== Ndụ na ọrụ ==\nA mụrụ A-One na Manhattan na 1964 ma too na Mitchel Houses na South Bronx. Ọ bụ nwa Janette Gordon Clark na nwa nwa Mannie Clark Sr., ónyé isi caddy na Mayfair Golf Course na Sanford, Florida na ngwụcha afọ 1950. Ọ malitere ise ihe mgbè ọ dị afọ isii, ma dee ihe odide n'ụgbọ oloko n'etiti afọ ndị 1970. A-One sonyeere ndị ọrụ Rammellzee na-ede ihe Tag Master Killers, nke nwekwara Delta2, Kool Koor, na Toxic. Onye"
+          "title": "A kwadoro ya ka ọ na-etolite",
+          "url": "https://ig.wikipedia.org/wiki/A_kwadoro_ya_ka_%E1%BB%8D_na-etolite",
+          "excerpt": "Certified Naturally Grown (CNG), \"The Grassroots Alternative to Certified Organic\", bụ mmemme mmesi obi ike nke ugbo sitere na US na-akwado iwu, anụ ụlọ na apiaries maka ndị na-ahụ organic na-ere na mpaghara yana nye ndị  aha ha.  [1] E hiwere CNG na 2002 site n'aka ndị ọrụ ugbo sitere n'okike Kate na Ron Khosla, dị ka ihe dị mfe iji nye ma dị ọnụ ala ọzọ na ndụ USDA's National Organic Programme (NOP), na-  eji ụkpụrụ dabere na NOP.  [2] [3] A na-arụ ya dị ka ụlọ ọrụ nnyonye anya, nke nwere isi na Brooklyn, New York . \n\n\n== Akụkọ ihe mere eme ==\nDị ka Ron Khosla si kwuo, e kere CNG dị ka mmegh"
         },
         {
-          "title": "ABii National",
-          "url": "https://ig.wikipedia.org/wiki/ABii_National",
-          "excerpt": "ABii National bụ ụlọ ọrụ ego na mgbazinye ego na Ghana na-enye ọha mmadụ ọrụ ego\nE hiwere ABii National dị ka ụlọ ọrụ ego na mgbazinye ego, dịka akọwara na iwu Ghana, na 2011.N'ọnwa Febụwarị afọ 2013, ụlọ akụ Ghana nyere ụlọ ọrụ ahụ ikike nwa oge dị ka ụlọ akụ na Septemba nke afọ ahụ ka a gbanwere nke a ka ọ bụrụ ikike zuru oke. Ka ọ na-erule n'oge ahụ, o nwere alaka isii. E meghere alaka nke asaa na Takoradi na Machị 2015, mgbe ụlọ ọrụ ahụ nwere ihe fọrọ nke nta ka ọ bụrụ ndị ahịa 10,000.\nDabere na Accra, ụlọ ọrụ ahụ bụ enyemaka nke Tobinco.\n\n\n== Edensibia ==\n\nOfficial website"
+          "title": "Aay Preston-Myint",
+          "url": "https://ig.wikipedia.org/wiki/Aay_Preston-Myint",
+          "excerpt": "Aay Preston-Myint ( banyere 1981) bụ onye na-ese ihe na onye nkuzi nka.  Ụlọ na Oakland, California .\n\n\n== Ihe gbasara ==\nAay Preston-Myint ajụjụ na 1981 na New York City, New York.  Ọbụrụ ọrụ nke ukwuu na Chicago, Illinois ma bụrụkwa onye rụpụtara ihe ngosi nka nke Chicago .  Emere akwụkwọ ngosi nka nke Chicago kwa afɔ 2017 wee pụta na akara nbipụta No Coast .  [1] Preston-Myint bụ prọfesọ na Akwụkwọ nke Art Institute of Chicago;  na ọ bụ onye njikwa mmemme na Headlands Center for Arts na Sausalito, California.\nỌ tọrọ ntọala Chances Dances, otu nnọkọ nke \"na-akwado ma gosipụta ọrụ ndị na-ese "
         },
         {
-          "title": "ART Holdings",
-          "url": "https://ig.wikipedia.org/wiki/ART_Holdings",
-          "excerpt": "ART Holdings (Amalgamated Regional Trading) bụ ụlọ ọrụ dị na Zimbabwe .  Ọ bụ onye na-emepụta akwụkwọ, gụnyere akwụkwọ edemede na ntụgharị anụ ahụ.  Òtù ụlọ ọrụ ART na-arụsi ọrụ ike na Zimbabwe, Malawi na Southern Africa dum.\n\"ART\" na-anọchi anya \"Amalgamated Regional Trading\" ART Group hiwere isi na Harare na ọ na-arụ ọrụ ide akwụkwọ na Mutare na Kadoma. A na-edepụta ngwaahịa ya na Zimbabwe Stock Exchange ma bụrụ akụkụ nke isi ngwaahịa ngwaahịa ya, Zimbabwe Industrial Index.\n\n\n== Ọrụ ha ==\n\n\n=== Ndị enyemaka na ụdị ===\nỤdị ART gụnyere\nAkpụkpọ anụ softex;\nEversharp ball pens na ihe ụlọ akwụkwọ"
+          "title": "Abayomi Ajayi",
+          "url": "https://ig.wikipedia.org/wiki/Abayomi_Ajayi",
+          "excerpt": "Dr. Abayomi Ajayi (amuru March 16, 1961) bu onye Naijiria obstetrician / dibia bekee\n\n\n== Ndụ mmalite na agụmakwụkwọ ==\nỌ gara ụlọ akwụkwọ CMS Grammar, Lagos site na 1973 ruo 1978, wee gụchaa na College of Medicine, University of Lagos na 1984. Ọ gụchara akara postgraduate ya na ụlọ ọgwụ dị na Ibadan na 1994 na isi nke West African College of Surgeons na  Obstetrics na Gynecology.  Isi ihe na in-vitro Fertilisation na Iscare Center for Assisted Reproduction, Bratislava, Slovak Republic yana Institute of Human Reproduction Symbion, Fruebjerguej (ebe ngwaahịa) na Clinic Fertility nke Mahadum Cop"
+        },
+        {
+          "title": "Abby Chin",
+          "url": "https://ig.wikipedia.org/wiki/Abby_Chin",
+          "excerpt": "Abby Chin (amụrụ 1982) bụ onye nta akụkọ egwuregwu America.    Ọ bụ onye egwuregwu bọọlụ Boston Celtics tupu egwuregwu bọọlụ na onye nta akụkọ postgame yana onye nta akụkọ n'akụkụ ụlọ ikpe. Ọ gụrụ akwụkwọ mgbasa ozi na Mahadum Colorado Boulder wee banye na redio egwuregwu Colorado na telivishọn tupu ọ bụrụ onye nta akụkọ sideline na-ekpuchi NBA. Ọ lụọla nwaanyị, mụtakwa ụmụ abụọ. \n\n\n== Ntụaka ==\npostgame yana onye nta akụkọ n'akụkụ ụlọ ikpe. Ọ gụrụ akwụkwọ mgbasa"
+        },
+        {
+          "title": "Abdellatif Ben Ammar",
+          "url": "https://ig.wikipedia.org/wiki/Abdellatif_Ben_Ammar",
+          "excerpt": "Abdellatif Ben Ammar ( Arabic </link> ; 25 mota 1943 - 6 Febrụwarị 2023) bụ onye ntụzi ihe nkiri na onye na-ese ihe nkiri Tunisia. \n\n\n== Akụkọ ndụ ==\nAmụrụ na Tunis na 25 ụgbọ 1943, Ben Ammar mmetụta na amụma na Lycée Alaoui [ fr ] .  Ọ tụ́Gaa na sinima wee nwee diplọma n'ihe nkiri site na Institut des hautes études cinématographiques na Paris na 1965.\nMgbe ọ la ihie na Tunisia, Ben Ammar goro ya site na ụlọ ọrụ Tunisian maka ihie Cinematic Production na Mgbasawanye wee malite ịgbapụ obere ihe nkiri na inyere ndị Tunisian na ndị mba ọzọ aka.  Na 1970, o ji ihe nkiri mbụ ya, A Simple Story, wee"
+        },
+        {
+          "title": "Abdul-Karim Gharaybeh",
+          "url": "https://ig.wikipedia.org/wiki/Abdul-Karim_Gharaybeh",
+          "excerpt": "Abdul-Karim Mahmud Gharaybeh (20 June 1923 - 22 February 2014) bụ onye Jordan na-akọ akụkọ ihe mere eme, agụmakwụkwọ na onye ndọrọ ndọrọ ọchịchị.\n\n\n== Oge ọ malitere ==\n mụrụ Gharaybeh na Irbid na 20 June 1923.Ọ malitere ịmụ ọgwụ mana mgbe nkuzi mbụ ya gbasara ahụike gbanwere isi ya gaa n'akụkọ ihe mere eme. N'afọ 1950, ọ nwetara Ph.D. ya na School of Oriental and African Studies na Mahadum London.  bụ otu n'ime ndị Jọdan mbụ nwetara Ph.D. . [1]\n\n\n== Ọrụ ==\n'afọ 1956, ọ bụ onye Jọdan mbụ a kpọrọ Director General nke Ngalaba Antiquities nke Jọdan. Ọ nọchiri Gerald Lankester Harding, onye duziri"
+        },
+        {
+          "title": "Abdul Yahaya",
+          "url": "https://ig.wikipedia.org/wiki/Abdul_Yahaya",
+          "excerpt": "Abdul Yahaya (amụrụ ya n'ụbọchị iri abụọ na anọ n'ọnwa Eprel n'afọ 1990) bụ onye Naijiria na-agba basketbọọlụ na Abidjan Basket Club na Naijiria.\n\n\n== Ọrụ ọkachamara ==\nN'afọ 2015, Yahaya duuru Mark Mentors gaa n'ọkwa 2015 NPL wee pụta dị ka onye ọkpụkpọ kacha baa uru na asọmpi ahụ.↵Na February 2019, Yahaya bịanyere aka na Rivers Hoopers.. N'ọnwa Nọvemba 2019, Yahaya meriri iko onye isi ala na Hoopers, a na-akpọ ya onye egwuregwu kacha baa uru n'ụzọ.\nNa 20 Eprel 2020, Yahaya bịnyere aka na Abidjan Basket Club na Ivory Coast.\n\n\n== Ọrụ ndị otu mba ==\nDị ka onye egwuregwu maka Naịjirịa, Yahaya so"
         }
       ],
       "backfill_done": false
@@ -37,43 +57,12 @@
     "output": "corpus/catalog/hf_datasets.json",
     "total": 278,
     "failed_terms": [],
-    "new_since_last_run": [
-      {
-        "id": "IntelResearchLab/Hausa",
-        "url": "https://huggingface.co/datasets/IntelResearchLab/Hausa",
-        "license": "UNKNOWN",
-        "languages": [
-          "ha"
-        ]
-      },
-      {
-        "id": "voicedata/final_yoruba",
-        "url": "https://huggingface.co/datasets/voicedata/final_yoruba",
-        "license": "UNKNOWN",
-        "languages": []
-      },
-      {
-        "id": "African-Languages-Lab/proxy-mt-eval-scores",
-        "url": "https://huggingface.co/datasets/African-Languages-Lab/proxy-mt-eval-scores",
-        "license": "other",
-        "languages": []
-      },
-      {
-        "id": "ChiamakaNwokolo/adaption-african-languages-narratives",
-        "url": "https://huggingface.co/datasets/ChiamakaNwokolo/adaption-african-languages-narratives",
-        "license": "UNKNOWN",
-        "languages": [
-          "rm",
-          "gd",
-          "yo"
-        ]
-      }
-    ]
+    "new_since_last_run": []
   },
   "news": {
     "bbc_igbo": {
       "output": "corpus/manifests/bbc_igbo.jsonl",
-      "new_urls": 1
+      "new_urls": 0
     }
   }
 }

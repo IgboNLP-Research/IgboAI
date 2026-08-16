@@ -3618,6 +3618,25 @@
     "matched_term": "yoruba"
   },
   {
+    "id": "michsethowusu/kimbundu-yoruba_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/kimbundu-yoruba_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 36,
+    "last_modified": "2025-03-30T19:42:58.000Z",
+    "matched_term": "yoruba"
+  },
+  {
     "id": "mteb/naija_senti",
     "url": "https://huggingface.co/datasets/mteb/naija_senti",
     "license": "UNKNOWN",
@@ -3680,25 +3699,6 @@
     "downloads": 35,
     "last_modified": "2024-12-24T23:13:02.000Z",
     "matched_term": "hausa"
-  },
-  {
-    "id": "michsethowusu/kimbundu-yoruba_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/kimbundu-yoruba_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 34,
-    "last_modified": "2025-03-30T19:42:58.000Z",
-    "matched_term": "yoruba"
   },
   {
     "id": "Aletheia-ng/naijaweb",
@@ -5741,10 +5741,17 @@
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
+      "size_categories:n<1K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:polars",
+      "library:mlcroissant",
       "region:us"
     ],
     "downloads": 13,
-    "last_modified": "2024-09-28T16:51:51.000Z",
+    "last_modified": "2026-08-16T03:17:37.000Z",
     "matched_term": "yoruba"
   },
   {
