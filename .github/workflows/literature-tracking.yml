@@ -10,7 +10,7 @@ on:
         default: "2"
       max_turns:
         description: "Max Claude turns for this run"
-        default: "25"
+        default: "40"
       force_provider:
         description: "Override provider selection (for testing the fallback path)"
         type: choice
@@ -143,7 +143,7 @@ jobs:
             seen.json, then retitle the PR
             "Literature tracking: <date> (no relevant items)".
           claude_args: |
-            --max-turns ${{ github.event.inputs.max_turns || '25' }}
+            --max-turns ${{ github.event.inputs.max_turns || '40' }}
             --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh pr:*),Bash(gh auth status),Bash(python:*),Bash(python3:*),Bash(ls:*),Bash(mkdir:*),Bash(cat:*),Bash(echo:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(date:*)"
             
       - name: Record which provider served this run
