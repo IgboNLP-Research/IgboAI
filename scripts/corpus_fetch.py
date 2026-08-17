@@ -156,7 +156,8 @@ def fetch_wikipedia(state: dict) -> dict:
         for i in range(0, len(titles), 20):  # extracts allows 20 titles/request
             params = {
                 "action": "query", "prop": "extracts|info", "inprop": "url",
-                "explaintext": 1, "titles": "|".join(titles[i:i + 20]),
+                "explaintext": 1, "exlimit": "max",
+                "titles": "|".join(titles[i:i + 20]),
                 "format": "json",
             }
             data = http_json(api + "?" + urllib.parse.urlencode(params))
