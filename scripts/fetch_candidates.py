@@ -221,6 +221,12 @@ def main() -> None:
     seen: set[str] = set()
     if SEEN_PATH.exists():
         seen = set(json.loads(SEEN_PATH.read_text()))
+        try:
+            seen = set(json.loads(SEEN_PATH.read_text()))
+        except (json.JSONDecodeError, FileNotFoundError) as exc:
+            print(f"WARNING: {SEEN_PATH} unreadable ({exc}); treating as empty. "
+                  "Duplicates may appear in this run's candidates.", file=sys.stderr)
+            seen = set()
 
     candidates = fetch_arxiv(cutoff) + fetch_openalex(cutoff) + fetch_hf(cutoff)
 

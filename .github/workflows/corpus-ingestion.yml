@@ -154,7 +154,7 @@ jobs:
             running low on turns, stop starting new work, push what is finished,
             and note what remains in the PR body.
           claude_args: |
-            --max-turns ${{ github.event.inputs.max_turns || '30' }}
+            --max-turns ${{ github.event.inputs.max_turns || '50' }}
             --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh pr:*),Bash(gh auth status),Bash(python:*),Bash(python3:*),Bash(ls:*),Bash(mkdir:*),Bash(cat:*),Bash(echo:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(date:*)"
 
       - name: Record which provider served this run

@@ -162,9 +162,7 @@
   "openalex:W7202369829",
   "openalex:W7202388201",
   "openalex:W7202393583",
-  "openalex:W7202400293"
-  "hf:datasets:Khaycee/adaption-igbo-biblical-texts",
-  "hf:datasets:AdaobiU/ada_igbo_literacy_dataset",
+  "openalex:W7202400293",
   "hf:models:AdaobiU/ada_igbo_literacy_adapter",
   "arxiv:2608.12623",
   "arxiv:2608.12018",
