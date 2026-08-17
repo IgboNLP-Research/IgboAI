@@ -188,12 +188,17 @@ def fetch_wikipedia(state: dict) -> dict:
             with gzip.open(out_path, "at", encoding="utf-8") as f:
                 for d in docs:
                     f.write(json.dumps(d, ensure_ascii=False) + "\n")
-            out = {"output": str(out_path), **text_stats(docs)}
+            out = {"output": str(out_path), "titles_listed": len(titles),
+                   "skipped_stub": skipped_stub, "skipped_markup": skipped_markup,
+                   **text_stats(docs)}
             # small sample for LLM triage (uncommitted, via summary file)
             out["samples"] = [
                 {"title": d["title"], "url": d["url"], "excerpt": d["text"][:600]}
                 for d in docs[:: max(1, len(docs) // 8)][:8]
             ]
+        out.setdefault("titles_listed", len(titles))
+        out.setdefault("skipped_stub", skipped_stub)
+        out.setdefault("skipped_markup", skipped_markup)
         out["backfill_done"] = st["backfill_done"]
         report[skey] = out
     return report
