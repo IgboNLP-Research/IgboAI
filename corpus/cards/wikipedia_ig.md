@@ -43,27 +43,36 @@ at `max_pages` titles per language per run (default 500). Manual runs via
 |---|---|---|---|
 | 2026-08-07 | 19 | 10,922 | 58,848 |
 | 2026-08-13 | 39 | 20,125 | 108,161 |
-| 2026-08-15 | 43 | 22,012 | 118,610 |
+| 2026-08-15 (run 1) | 43 | 22,012 | 118,610 |
+| 2026-08-15 (run 2) | 65 | 32,469 | 178,148 |
 
-*(2026-08-15 run added 4 documents, 1,887 whitespace tokens, 10,449
-characters.)*
+*(2026-08-15 run 1 added 4 documents, 1,887 whitespace tokens, 10,449
+characters. A second run landed later the same day — hence "run 1"/"run 2" —
+adding a further 22 documents, 10,457 whitespace tokens, 59,538 characters,
+per-document diacritic ratios ranging 0.0070–0.1135.)*
 
 **Backfill status: IN PROGRESS.** `backfill_done: false`; the `allpages`
-cursor advanced from `24_Julaị` to `A_Child_Is_Born` this run — the walk has
-now crossed out of the numeric/date-title range flagged in prior cards and
-into ordinary alphabetical titles. Batch composition should be watched for
-whether the stub-heavy, MT-suspect pattern from the date range (flags 5, 6)
-persists once the walk is fully past it; this run's 4 documents are too few
-to tell either way.
+cursor advanced `24_Julaị` → `A_Child_Is_Born` (run 1) → `Abiodun_Essiet`
+(run 2). The walk is now fully into ordinary alphabetical biography/topic
+titles ("Ab-" surnames), well past the numeric/date-title range. Run 2's 22
+documents contain **no zero-diacritic date stubs and no empty-section
+templated stubs** (the flag 6 pattern) — every document is a genuine
+biography or topic article. This confirms, with a much larger sample than
+run 1's 4 documents, the hypothesis in flag 11 below: the stub-heavy pattern
+was specific to the date/numeric-title range the walk has now left. The
+MT-suspect and markup-leakage patterns (flags 3, 5, 7, 8), however, persist
+at similar or higher rates in ordinary articles — see flags 15–20.
 
 ## Known limitations and quality flags
 
 Flags dated **2026-08-07** are from the first run
 (`corpus/raw/wikipedia_ig/2026-08-07.jsonl.gz`); flags dated **2026-08-13**
 are from direct inspection of the 20 documents in
-`corpus/raw/wikipedia_ig/2026-08-13.jsonl.gz`; flags dated **2026-08-15**
-are from direct inspection of the 4 documents in
-`corpus/raw/wikipedia_ig/2026-08-15.jsonl.gz`.
+`corpus/raw/wikipedia_ig/2026-08-13.jsonl.gz`; flags dated **2026-08-15
+(run 1)** are from direct inspection of the first 4 documents in
+`corpus/raw/wikipedia_ig/2026-08-15.jsonl.gz`; flags dated **2026-08-15
+(run 2)** are from direct inspection of the 22 documents a second same-day
+run appended to that file (indices 4–25).
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
@@ -262,6 +271,74 @@ batch level in flag 10 — here confirmed at the single-document level. Useful
 as another positive example for tone-restoration research (see Intended
 uses), but a caution against assuming any one document's tone marking is
 complete or consistent.
+
+### 15. 2026-08-15 (run 2) — Ethiopic-script substitution recurs outside the election-template category (flag 7 was not isolated)
+
+`Abena Takyiwa` reads:
+
+> Abena Takyiwa ( **ከውጭ** 25 Disemba 1958) bụ onye ike ụzọ Ghana...
+
+`ከውጭ` is three Ethiopic (Amharic) syllable characters (U+12A8, U+12CD,
+U+132D — "ka", "we", "che"), standing in for what should be a birth-date
+marker word (compare `amụrụ`/`a mụrụ` used in this same batch's other
+biographies, e.g. `Abby Chin`, `Abba Musa Rimi`). Flag 7 (2026-08-13) found
+the same wrong-script substitution in an election-result template's verb
+slot; here it appears in an unrelated birth-parenthetical construction in a
+different document type. Two independent occurrences across two runs and two
+template families point to a systematic defect somewhere upstream (MT
+pipeline or template engine) that occasionally emits Ethiopic script for a
+missing token, rather than a one-off glitch.
+
+### 16. 2026-08-15 (run 2) — Literal arrow glyph (U+21B5) leaks into running text as a paragraph-break placeholder
+
+`Abdul Yahaya`: `"...kacha baa uru na asọmpi ahụ.↵Na February 2019, Yahaya
+bịanyere aka..."`. U+21B5 DOWNWARDS ARROW WITH CORNER LEFTWARDS appears
+mid-sentence where a paragraph or line break should be. Same failure family
+as the U+FFFC object-replacement-character leakage in flag 12 (an
+extractor/serialisation placeholder surviving into `explaintext` output) but
+a different specific glyph and a different underlying markup construct.
+
+### 17. 2026-08-15 (run 2) — Title spelling absent from body; three inconsistent spellings of the same place name in one document
+
+The document titled `Abakaléké` (URL-encoded `Abakal%C3%A9k%C3%A9`) never
+once uses that spelling in its body text. Instead the body alternates
+between `Abakaliki` (2 occurrences) and `Abakeleke` (5 occurrences) for the
+same Ebonyi State city, e.g. `Abakaliki bụ isi obodo nke Ebonyi Steeti...`
+opening the article, then `Aha Abakeleke pụtara 'Aba Nkaleke'...` two
+sentences later. Three distinct spellings of one place name, none matching
+the canonical title, within a single short document. Likely a
+redirect/alternate-title artifact in the source wiki rather than an
+extraction bug, but it means naive title-body consistency checks or
+title-based entity linking will fail on this document.
+
+### 18. 2026-08-15 (run 2) — Same markup-leakage family as flag 3, in a biography infobox pronunciation widget
+
+`Abdulmumin Jibrin` opens: `". Abdulmumin Jibrin pronunciation ⓘ</link> (
+mmalite 9 September 1976) bụ onye ike ọchịchị Naijiria..."` — a stray
+leading period, the English word "pronunciation", an ⓘ info-icon glyph, and
+an unclosed `</link>` tag all survive from what was presumably an audio
+pronunciation template. Same defect class as flag 3 (Parsoid/MediaWiki
+markup not stripped by `explaintext`), different template.
+
+### 19. 2026-08-15 (run 2) — Open-o (U+0254) recurs a third time, in unrelated prose
+
+`Aay Preston-Myint`: `"Emere akwụkwọ ngosi nka nke Chicago kwa afɔ 2017..."`
+— `afɔ` for `afọ` ("year"), using the Yoruba/IPA open-o (U+0254) instead of
+Igbo's `ọ` (U+1ECD). Flag 5 (2026-08-07) and flag 10's election stubs
+(2026-08-13) already documented this substitution; this is a third,
+unrelated document, reinforcing that it is a low-level recurring
+character-substitution error spread across the corpus rather than isolated
+to one article or template.
+
+### 20. 2026-08-15 (run 2) — Dropped leading pronoun, same defect family as flag 8 but outside a template
+
+`Abdul-Karim Gharaybeh`: the "Oge ọ malitere" section begins `" mụrụ
+Gharaybeh na Irbid na 20 June 1923."` — missing the expected leading `Ọ`/`A`
+subject pronoun before the verb (compare `A mụrụ Salih na Wad Madani...` in
+the same run's `Abdin Mohamed Ali Salih`, correctly formed). Flag 8
+attributed this dropped-word pattern to a specific election-result template;
+seeing it in ordinary narrative prose here suggests the dropped-token defect
+is broader than that one template category.
 
 ## Intended uses
 
