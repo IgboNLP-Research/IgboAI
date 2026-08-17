@@ -113,6 +113,11 @@ jobs:
                is underway. Everything below then pushes to that same branch and
                updates the PR body as you go.
 
+               Before using corpus_run_summary.json, verify that each "output"
+               path it names contains the same date as its "run_date" field. If
+               they disagree, say so prominently in the PR body and treat the
+               filename as authoritative for which file to read.
+
                EFFICIENCY: each raw file should be opened once. Before triaging,
                write a single Python script that walks every file this run produced
                and prints, per document: title, character count, diacritic ratio,
@@ -121,6 +126,19 @@ jobs:
                statistic to the script and rerun it only if genuinely necessary.
                Read `candidates.json` once at the start and work from that content;
                do not re-read it between batches.
+
+               CUMULATIVE TOTALS ARE DERIVED, NEVER ACCUMULATED. Do not add this
+               run's figures to the totals already in a data card. Compute them
+               from source by reading every file in corpus/raw/<source>/ in the
+               single-pass script from the EFFICIENCY step, and report what that
+               script prints. A run file may contain more documents than this run
+               fetched (two runs on the same date append to one file), so the
+               per-run figure in corpus_run_summary.json and the file's contents
+               are different quantities: report both and say which is which. If
+               your derived total disagrees with the total currently written in
+               the card, the derived figure wins; correct the card and note the
+               correction, with the old and new values, in the card's dated
+               limitations section.
 
             1. Wikipedia batches: inspect the "samples" excerpts and stats in
                the summary. Flag in your review notes anything that looks like
@@ -133,8 +151,7 @@ jobs:
             2. Create or update corpus/cards/<source>.md for each source that
                produced output this run. A data card contains: source and
                method of collection, license and attribution requirements,
-               update cadence, cumulative size (documents/tokens; add this
-               run's stats to any existing totals in the card), known
+               update cadence, cumulative size (documents/tokens), known
                limitations and quality flags (dated), and intended uses.
 
             3. Update corpus/cards/hf_catalog.md with notable NEW datasets
