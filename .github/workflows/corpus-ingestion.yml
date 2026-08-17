@@ -11,7 +11,7 @@ on:
         options: [all, wikipedia, hf, news]
         default: all
       max_pages:
-        description: "Max Wikipedia pages per language this run"
+        description: "Max Wikipedia titles to list per language per run (documents produced will be far fewer)"
         default: "500"
       max_turns:
         description: "Max Claude turns for this run"
