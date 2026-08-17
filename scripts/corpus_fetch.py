@@ -120,20 +120,24 @@ def fetch_wikipedia(state: dict) -> dict:
         titles: list[str] = []
 
         if not st["backfill_done"]:
-            params = {
-                "action": "query", "list": "allpages", "apnamespace": 0,
-                "aplimit": min(MAX_PAGES, 500), "format": "json",
-            }
-            if st["apcontinue"]:
-                params["apcontinue"] = st["apcontinue"]
-            data = http_json(api + "?" + urllib.parse.urlencode(params))
-            titles = [p["title"] for p in data.get("query", {}).get("allpages", [])]
-            cont = data.get("continue", {}).get("apcontinue")
-            if cont:
+            while len(titles) < MAX_PAGES:
+                params = {
+                    "action": "query", "list": "allpages", "apnamespace": 0,
+                    "aplimit": min(MAX_PAGES - len(titles), 500), "format": "json",
+                }
+                if st["apcontinue"]:
+                    params["apcontinue"] = st["apcontinue"]
+                data = http_json(api + "?" + urllib.parse.urlencode(params))
+                batch = [p["title"] for p in data.get("query", {}).get("allpages", [])]
+                titles.extend(batch)
+                cont = data.get("continue", {}).get("apcontinue")
+                if not cont:
+                    st["backfill_done"] = True
+                    st["rc_ts"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+                    break
                 st["apcontinue"] = cont
-            else:
-                st["backfill_done"] = True
-                st["rc_ts"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+                if not batch:
+                    break
         else:
             params = {
                 "action": "query", "list": "recentchanges", "rcnamespace": 0,
