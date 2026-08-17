@@ -152,7 +152,7 @@ def fetch_wikipedia(state: dict) -> dict:
             if changes:
                 st["rc_ts"] = max(c["timestamp"] for c in changes)
 
-        docs = []
+        docs, skipped_stub, skipped_markup = [], 0, 0
         for i in range(0, len(titles), 20):  # extracts allows 20 titles/request
             params = {
                 "action": "query", "prop": "extracts|info", "inprop": "url",
@@ -163,8 +163,10 @@ def fetch_wikipedia(state: dict) -> dict:
             for page in data.get("query", {}).get("pages", {}).values():
                 text = (page.get("extract") or "").strip()
                 if len(text) < 300:  # skip stubs and near-empty pages (card F6)
+                    skipped_stub += 1
                     continue
                 if "data-mw=" in text or 'typeof="mw:' in text or text.count("Templeeti:") > 1:
+                    skipped_markup += 1
                     continue  # markup leakage / unexpanded templates (card F4)
                 docs.append({
                     "id": f"wiki:{lang}:{page.get('pageid')}",
