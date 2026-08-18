@@ -1,0 +1,42 @@
+{
+  "shard_dir": "corpus/raw/wikipedia_ig/dump-2026-08-18",
+  "documents": 50623,
+  "buckets": {
+    "clean": {
+      "count": 16271,
+      "share": 0.3214,
+      "en_ratio_range": [
+        0.0,
+        0.002
+      ]
+    },
+    "trace": {
+      "count": 15989,
+      "share": 0.3158,
+      "en_ratio_range": [
+        0.002,
+        0.01
+      ]
+    },
+    "moderate": {
+      "count": 14375,
+      "share": 0.284,
+      "en_ratio_range": [
+        0.01,
+        0.03
+      ]
+    },
+    "heavy": {
+      "count": 3988,
+      "share": 0.0788,
+      "en_ratio_range": [
+        0.03,
+        1.001
+      ]
+    }
+  },
+  "docs_with_repeated_char_garble": 178,
+  "garble_share": 0.0035,
+  "method": "lexical proxy: English function-word ratio; see module docstring",
+  "caveat": "lower bound on visible MT residue; fluent MT leaves no trace"
+}
