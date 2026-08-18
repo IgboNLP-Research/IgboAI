@@ -41,7 +41,7 @@
       "language:sw",
       "language:tw"
     ],
-    "downloads": 2709,
+    "downloads": 2851,
     "last_modified": "2025-05-26T18:41:40.000Z",
     "matched_term": "masakhane"
   },
@@ -64,7 +64,7 @@
       "library:mlcroissant",
       "region:us"
     ],
-    "downloads": 1609,
+    "downloads": 1883,
     "last_modified": "2026-07-28T22:52:31.000Z",
     "matched_term": "hausa"
   },
@@ -109,7 +109,7 @@
       "language:om",
       "language:pcm"
     ],
-    "downloads": 1300,
+    "downloads": 1424,
     "last_modified": "2025-12-03T05:40:39.000Z",
     "matched_term": "masakhane"
   },
@@ -132,9 +132,54 @@
       "doi:10.57967/hf/3257",
       "region:us"
     ],
-    "downloads": 1206,
+    "downloads": 1237,
     "last_modified": "2025-08-07T00:31:48.000Z",
     "matched_term": "naija"
+  },
+  {
+    "id": "masakhane/afrimmlu",
+    "url": "https://huggingface.co/datasets/masakhane/afrimmlu",
+    "license": "apache-2.0",
+    "languages": [
+      "am",
+      "ee",
+      "ha",
+      "ig",
+      "kin",
+      "ln",
+      "lug",
+      "orm",
+      "sna",
+      "sot",
+      "tw",
+      "wo",
+      "xh",
+      "yo",
+      "zu",
+      "en",
+      "fr",
+      "sw"
+    ],
+    "tags": [
+      "task_categories:question-answering",
+      "task_ids:multiple-choice-qa",
+      "multilinguality:multilingual",
+      "source_datasets:mmlu",
+      "language:am",
+      "language:ee",
+      "language:ha",
+      "language:ig",
+      "language:kin",
+      "language:ln",
+      "language:lug",
+      "language:orm",
+      "language:sna",
+      "language:sot",
+      "language:tw"
+    ],
+    "downloads": 1170,
+    "last_modified": "2025-04-15T03:05:01.000Z",
+    "matched_term": "masakhane"
   },
   {
     "id": "masakhane/masakhaner2",
@@ -181,96 +226,8 @@
       "language:lg",
       "language:luo"
     ],
-    "downloads": 1146,
+    "downloads": 1070,
     "last_modified": "2023-09-11T18:00:07.000Z",
-    "matched_term": "masakhane"
-  },
-  {
-    "id": "masakhane/afrimmlu",
-    "url": "https://huggingface.co/datasets/masakhane/afrimmlu",
-    "license": "apache-2.0",
-    "languages": [
-      "am",
-      "ee",
-      "ha",
-      "ig",
-      "kin",
-      "ln",
-      "lug",
-      "orm",
-      "sna",
-      "sot",
-      "tw",
-      "wo",
-      "xh",
-      "yo",
-      "zu",
-      "en",
-      "fr",
-      "sw"
-    ],
-    "tags": [
-      "task_categories:question-answering",
-      "task_ids:multiple-choice-qa",
-      "multilinguality:multilingual",
-      "source_datasets:mmlu",
-      "language:am",
-      "language:ee",
-      "language:ha",
-      "language:ig",
-      "language:kin",
-      "language:ln",
-      "language:lug",
-      "language:orm",
-      "language:sna",
-      "language:sot",
-      "language:tw"
-    ],
-    "downloads": 1018,
-    "last_modified": "2025-04-15T03:05:01.000Z",
-    "matched_term": "masakhane"
-  },
-  {
-    "id": "mteb/masakhanews",
-    "url": "https://huggingface.co/datasets/mteb/masakhanews",
-    "license": "cc-by-nc-4.0",
-    "languages": [
-      "amh",
-      "eng",
-      "fra",
-      "hau",
-      "ibo",
-      "lin",
-      "lug",
-      "orm",
-      "pcm",
-      "run",
-      "sna",
-      "som",
-      "swa",
-      "tir",
-      "xho",
-      "yor"
-    ],
-    "tags": [
-      "task_categories:text-classification",
-      "annotations_creators:expert-annotated",
-      "multilinguality:multilingual",
-      "language:amh",
-      "language:eng",
-      "language:fra",
-      "language:hau",
-      "language:ibo",
-      "language:lin",
-      "language:lug",
-      "language:orm",
-      "language:pcm",
-      "language:run",
-      "language:sna",
-      "language:som"
-    ],
-    "downloads": 885,
-    "last_modified": "2026-02-24T21:18:24.000Z",
     "matched_term": "masakhane"
   },
   {
@@ -314,29 +271,9 @@
       "language:xh",
       "language:kin"
     ],
-    "downloads": 849,
+    "downloads": 878,
     "last_modified": "2024-05-12T10:53:59.000Z",
     "matched_term": "masakhane"
-  },
-  {
-    "id": "voicedata/final_yoruba",
-    "url": "https://huggingface.co/datasets/voicedata/final_yoruba",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:polars",
-      "library:mlcroissant",
-      "region:us"
-    ],
-    "downloads": 812,
-    "last_modified": "2026-07-21T08:44:00.000Z",
-    "matched_term": "yoruba"
   },
   {
     "id": "masakhane/afrisenti",
@@ -371,8 +308,51 @@
       "language:sw",
       "language:ti"
     ],
-    "downloads": 769,
+    "downloads": 797,
     "last_modified": "2024-09-18T23:01:40.000Z",
+    "matched_term": "masakhane"
+  },
+  {
+    "id": "mteb/masakhanews",
+    "url": "https://huggingface.co/datasets/mteb/masakhanews",
+    "license": "cc-by-nc-4.0",
+    "languages": [
+      "amh",
+      "eng",
+      "fra",
+      "hau",
+      "ibo",
+      "lin",
+      "lug",
+      "orm",
+      "pcm",
+      "run",
+      "sna",
+      "som",
+      "swa",
+      "tir",
+      "xho",
+      "yor"
+    ],
+    "tags": [
+      "task_categories:text-classification",
+      "annotations_creators:expert-annotated",
+      "multilinguality:multilingual",
+      "language:amh",
+      "language:eng",
+      "language:fra",
+      "language:hau",
+      "language:ibo",
+      "language:lin",
+      "language:lug",
+      "language:orm",
+      "language:pcm",
+      "language:run",
+      "language:sna",
+      "language:som"
+    ],
+    "downloads": 784,
+    "last_modified": "2026-02-24T21:18:24.000Z",
     "matched_term": "masakhane"
   },
   {
@@ -414,7 +394,7 @@
       "language:pcm",
       "language:run"
     ],
-    "downloads": 603,
+    "downloads": 621,
     "last_modified": "2026-02-24T21:18:41.000Z",
     "matched_term": "masakhane"
   },
@@ -453,7 +433,7 @@
       "language:sw",
       "language:wo"
     ],
-    "downloads": 538,
+    "downloads": 553,
     "last_modified": "2024-01-18T11:08:34.000Z",
     "matched_term": "masakhane"
   },
@@ -497,7 +477,7 @@
       "language:sn",
       "language:st"
     ],
-    "downloads": 448,
+    "downloads": 431,
     "last_modified": "2025-01-04T18:04:01.000Z",
     "matched_term": "masakhane"
   },
@@ -548,9 +528,28 @@
       "language:ha",
       "language:ig"
     ],
-    "downloads": 398,
+    "downloads": 427,
     "last_modified": "2023-09-11T18:01:53.000Z",
     "matched_term": "masakhane"
+  },
+  {
+    "id": "Aletheia-ng/african_languages_translation",
+    "url": "https://huggingface.co/datasets/Aletheia-ng/african_languages_translation",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:1M<n<10M",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:polars",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "downloads": 306,
+    "last_modified": "2025-04-30T01:12:44.000Z",
+    "matched_term": "african languages"
   },
   {
     "id": "vpetukhov/bible_tts_hausa",
@@ -578,18 +577,19 @@
       "library:polars",
       "arxiv:2207.03546"
     ],
-    "downloads": 371,
+    "downloads": 292,
     "last_modified": "2022-12-05T12:51:17.000Z",
     "matched_term": "hausa"
   },
   {
-    "id": "Aletheia-ng/african_languages_translation",
-    "url": "https://huggingface.co/datasets/Aletheia-ng/african_languages_translation",
+    "id": "voicedata/final_yoruba",
+    "url": "https://huggingface.co/datasets/voicedata/final_yoruba",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
-      "size_categories:1M<n<10M",
+      "size_categories:100K<n<1M",
       "format:parquet",
+      "modality:audio",
       "modality:text",
       "library:datasets",
       "library:dask",
@@ -597,9 +597,9 @@
       "library:mlcroissant",
       "region:us"
     ],
-    "downloads": 302,
-    "last_modified": "2025-04-30T01:12:44.000Z",
-    "matched_term": "african languages"
+    "downloads": 273,
+    "last_modified": "2026-07-21T08:44:00.000Z",
+    "matched_term": "yoruba"
   },
   {
     "id": "sbmaruf/forai_ml_masakhane_mafand",
@@ -648,7 +648,7 @@
       "language:ha",
       "language:ig"
     ],
-    "downloads": 295,
+    "downloads": 269,
     "last_modified": "2023-05-25T00:11:20.000Z",
     "matched_term": "masakhane"
   },
@@ -672,7 +672,7 @@
       "doi:10.57967/hf/1541",
       "region:us"
     ],
-    "downloads": 290,
+    "downloads": 263,
     "last_modified": "2024-01-20T17:09:03.000Z",
     "matched_term": "hausa"
   },
@@ -693,41 +693,45 @@
       "arxiv:2604.00706",
       "region:us"
     ],
-    "downloads": 288,
+    "downloads": 262,
     "last_modified": "2026-04-02T08:29:01.000Z",
     "matched_term": "masakhane"
   },
   {
-    "id": "masakhane/AfriDocMT",
-    "url": "https://huggingface.co/datasets/masakhane/AfriDocMT",
-    "license": "UNKNOWN",
+    "id": "masakhane/afriqa",
+    "url": "https://huggingface.co/datasets/masakhane/afriqa",
+    "license": "cc-by-sa-4.0",
     "languages": [
-      "en",
-      "am",
+      "bem",
+      "fon",
       "ha",
+      "ig",
+      "kin",
       "sw",
+      "wo",
       "yo",
-      "zu"
+      "zu",
+      "tw"
     ],
     "tags": [
-      "task_categories:translation",
-      "language:en",
-      "language:am",
+      "task_categories:question-answering",
+      "multilinguality:multilingual",
+      "language:bem",
+      "language:fon",
       "language:ha",
+      "language:ig",
+      "language:kin",
       "language:sw",
+      "language:wo",
       "language:yo",
       "language:zu",
+      "language:tw",
+      "license:cc-by-sa-4.0",
       "size_categories:10K<n<100K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "arxiv:2501.06374"
+      "modality:text"
     ],
-    "downloads": 286,
-    "last_modified": "2025-10-14T12:10:37.000Z",
+    "downloads": 252,
+    "last_modified": "2023-07-07T16:57:28.000Z",
     "matched_term": "masakhane"
   },
   {
@@ -769,45 +773,8 @@
       "language:sna",
       "language:som"
     ],
-    "downloads": 248,
+    "downloads": 239,
     "last_modified": "2025-05-06T16:15:53.000Z",
-    "matched_term": "masakhane"
-  },
-  {
-    "id": "masakhane/afriqa",
-    "url": "https://huggingface.co/datasets/masakhane/afriqa",
-    "license": "cc-by-sa-4.0",
-    "languages": [
-      "bem",
-      "fon",
-      "ha",
-      "ig",
-      "kin",
-      "sw",
-      "wo",
-      "yo",
-      "zu",
-      "tw"
-    ],
-    "tags": [
-      "task_categories:question-answering",
-      "multilinguality:multilingual",
-      "language:bem",
-      "language:fon",
-      "language:ha",
-      "language:ig",
-      "language:kin",
-      "language:sw",
-      "language:wo",
-      "language:yo",
-      "language:zu",
-      "language:tw",
-      "license:cc-by-sa-4.0",
-      "size_categories:10K<n<100K",
-      "modality:text"
-    ],
-    "downloads": 237,
-    "last_modified": "2023-07-07T16:57:28.000Z",
     "matched_term": "masakhane"
   },
   {
@@ -924,72 +891,41 @@
       "language:bg",
       "language:bn"
     ],
-    "downloads": 236,
+    "downloads": 231,
     "last_modified": "2024-05-27T09:46:30.000Z",
     "matched_term": "hausa"
   },
   {
-    "id": "whoisjones/masakhaner",
-    "url": "https://huggingface.co/datasets/whoisjones/masakhaner",
+    "id": "masakhane/AfriDocMT",
+    "url": "https://huggingface.co/datasets/masakhane/AfriDocMT",
     "license": "UNKNOWN",
-    "languages": [],
+    "languages": [
+      "en",
+      "am",
+      "ha",
+      "sw",
+      "yo",
+      "zu"
+    ],
     "tags": [
-      "size_categories:100K<n<1M",
-      "format:parquet",
-      "format:optimized-parquet",
+      "task_categories:translation",
+      "language:en",
+      "language:am",
+      "language:ha",
+      "language:sw",
+      "language:yo",
+      "language:zu",
+      "size_categories:10K<n<100K",
+      "format:csv",
       "modality:text",
       "library:datasets",
       "library:pandas",
-      "library:polars",
       "library:mlcroissant",
-      "region:us"
+      "library:polars",
+      "arxiv:2501.06374"
     ],
-    "downloads": 219,
-    "last_modified": "2026-01-09T15:00:31.000Z",
-    "matched_term": "masakhane"
-  },
-  {
-    "id": "masakhane/afrimgsm-translate-test",
-    "url": "https://huggingface.co/datasets/masakhane/afrimgsm-translate-test",
-    "license": "apache-2.0",
-    "languages": [
-      "am",
-      "ig",
-      "fr",
-      "sn",
-      "ln",
-      "lug",
-      "wo",
-      "ee",
-      "xh",
-      "kin",
-      "tw",
-      "zu",
-      "orm",
-      "yo",
-      "ha",
-      "sot",
-      "sw"
-    ],
-    "tags": [
-      "task_categories:text-classification",
-      "task_ids:natural-language-inference",
-      "multilinguality:monolingual",
-      "source_datasets:afrimgsm",
-      "language:am",
-      "language:ig",
-      "language:fr",
-      "language:sn",
-      "language:ln",
-      "language:lug",
-      "language:wo",
-      "language:ee",
-      "language:xh",
-      "language:kin",
-      "language:tw"
-    ],
-    "downloads": 215,
-    "last_modified": "2024-05-21T05:20:38.000Z",
+    "downloads": 217,
+    "last_modified": "2025-10-14T12:10:37.000Z",
     "matched_term": "masakhane"
   },
   {
@@ -1013,34 +949,9 @@
       "size_categories:1K<n<10K",
       "region:us"
     ],
-    "downloads": 207,
+    "downloads": 214,
     "last_modified": "2024-01-18T11:18:53.000Z",
     "matched_term": "yoruba"
-  },
-  {
-    "id": "UdS-LSV/hausa_voa_ner",
-    "url": "https://huggingface.co/datasets/UdS-LSV/hausa_voa_ner",
-    "license": [
-      "cc-by-4.0"
-    ],
-    "languages": [
-      "ha"
-    ],
-    "tags": [
-      "task_categories:token-classification",
-      "task_ids:named-entity-recognition",
-      "annotations_creators:expert-generated",
-      "language_creators:expert-generated",
-      "multilinguality:monolingual",
-      "source_datasets:original",
-      "language:ha",
-      "license:cc-by-4.0",
-      "size_categories:1K<n<10K",
-      "region:us"
-    ],
-    "downloads": 203,
-    "last_modified": "2024-01-18T11:05:04.000Z",
-    "matched_term": "hausa"
   },
   {
     "id": "masakhane/ntrex_african",
@@ -1099,7 +1010,7 @@
       "language:mlg",
       "language:msa"
     ],
-    "downloads": 202,
+    "downloads": 199,
     "last_modified": "2024-12-18T18:07:50.000Z",
     "matched_term": "masakhane"
   },
@@ -1129,9 +1040,53 @@
       "library:mlcroissant",
       "library:polars"
     ],
-    "downloads": 201,
+    "downloads": 198,
     "last_modified": "2024-08-08T06:09:58.000Z",
     "matched_term": "hausa"
+  },
+  {
+    "id": "masakhane/afrimgsm-translate-test",
+    "url": "https://huggingface.co/datasets/masakhane/afrimgsm-translate-test",
+    "license": "apache-2.0",
+    "languages": [
+      "am",
+      "ig",
+      "fr",
+      "sn",
+      "ln",
+      "lug",
+      "wo",
+      "ee",
+      "xh",
+      "kin",
+      "tw",
+      "zu",
+      "orm",
+      "yo",
+      "ha",
+      "sot",
+      "sw"
+    ],
+    "tags": [
+      "task_categories:text-classification",
+      "task_ids:natural-language-inference",
+      "multilinguality:monolingual",
+      "source_datasets:afrimgsm",
+      "language:am",
+      "language:ig",
+      "language:fr",
+      "language:sn",
+      "language:ln",
+      "language:lug",
+      "language:wo",
+      "language:ee",
+      "language:xh",
+      "language:kin",
+      "language:tw"
+    ],
+    "downloads": 197,
+    "last_modified": "2024-05-21T05:20:38.000Z",
+    "matched_term": "masakhane"
   },
   {
     "id": "UdS-LSV/yoruba_bbc_topics",
@@ -1154,77 +1109,65 @@
       "size_categories:1K<n<10K",
       "region:us"
     ],
-    "downloads": 201,
+    "downloads": 194,
     "last_modified": "2024-01-18T11:18:52.000Z",
     "matched_term": "yoruba"
   },
   {
-    "id": "Davlan/NaijaRC",
-    "url": "https://huggingface.co/datasets/Davlan/NaijaRC",
-    "license": "cc-by-nc-4.0",
+    "id": "UdS-LSV/hausa_voa_ner",
+    "url": "https://huggingface.co/datasets/UdS-LSV/hausa_voa_ner",
+    "license": [
+      "cc-by-4.0"
+    ],
     "languages": [
-      "ig",
-      "yo",
       "ha"
     ],
     "tags": [
-      "task_categories:multiple-choice",
-      "task_ids:multiple-choice-qa",
-      "multilinguality:multilingual",
-      "language:ig",
-      "language:yo",
+      "task_categories:token-classification",
+      "task_ids:named-entity-recognition",
+      "annotations_creators:expert-generated",
+      "language_creators:expert-generated",
+      "multilinguality:monolingual",
+      "source_datasets:original",
       "language:ha",
-      "license:cc-by-nc-4.0",
-      "size_categories:n<1K",
-      "format:csv",
-      "modality:tabular",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars"
+      "license:cc-by-4.0",
+      "size_categories:1K<n<10K",
+      "region:us"
     ],
-    "downloads": 180,
-    "last_modified": "2024-10-22T00:16:50.000Z",
-    "matched_term": "naija"
+    "downloads": 192,
+    "last_modified": "2024-01-18T11:05:04.000Z",
+    "matched_term": "hausa"
   },
   {
-    "id": "masakhane/african-ultrachat",
-    "url": "https://huggingface.co/datasets/masakhane/african-ultrachat",
-    "license": "mit",
+    "id": "HausaNLP/NaijaSenti-Twitter",
+    "url": "https://huggingface.co/datasets/HausaNLP/NaijaSenti-Twitter",
+    "license": "cc-by-nc-sa-4.0",
     "languages": [
-      "am",
-      "ha",
-      "ig",
-      "rw",
-      "st",
-      "sn",
-      "so",
-      "sw",
-      "xh",
-      "yo",
-      "zu"
+      "hau",
+      "ibo",
+      "pcm",
+      "yor"
     ],
     "tags": [
-      "language:am",
-      "language:ha",
-      "language:ig",
-      "language:rw",
-      "language:st",
-      "language:sn",
-      "language:so",
-      "language:sw",
-      "language:xh",
-      "language:yo",
-      "language:zu",
-      "license:mit",
+      "task_categories:text-classification",
+      "task_ids:sentiment-analysis",
+      "task_ids:sentiment-classification",
+      "task_ids:sentiment-scoring",
+      "task_ids:semantic-similarity-classification",
+      "task_ids:semantic-similarity-scoring",
+      "multilinguality:monolingual",
+      "multilinguality:multilingual",
+      "language:hau",
+      "language:ibo",
+      "language:pcm",
+      "language:yor",
+      "license:cc-by-nc-sa-4.0",
       "size_categories:10K<n<100K",
-      "format:json",
       "modality:text"
     ],
-    "downloads": 180,
-    "last_modified": "2024-04-04T15:53:51.000Z",
-    "matched_term": "masakhane"
+    "downloads": 183,
+    "last_modified": "2023-06-16T16:42:04.000Z",
+    "matched_term": "hausa"
   },
   {
     "id": "HausaNLP/AfriSenti-Twitter",
@@ -1263,9 +1206,47 @@
       "language:kin",
       "language:por"
     ],
-    "downloads": 180,
+    "downloads": 177,
     "last_modified": "2023-09-03T10:39:19.000Z",
     "matched_term": "hausa"
+  },
+  {
+    "id": "masakhane/african-ultrachat",
+    "url": "https://huggingface.co/datasets/masakhane/african-ultrachat",
+    "license": "mit",
+    "languages": [
+      "am",
+      "ha",
+      "ig",
+      "rw",
+      "st",
+      "sn",
+      "so",
+      "sw",
+      "xh",
+      "yo",
+      "zu"
+    ],
+    "tags": [
+      "language:am",
+      "language:ha",
+      "language:ig",
+      "language:rw",
+      "language:st",
+      "language:sn",
+      "language:so",
+      "language:sw",
+      "language:xh",
+      "language:yo",
+      "language:zu",
+      "license:mit",
+      "size_categories:10K<n<100K",
+      "format:json",
+      "modality:text"
+    ],
+    "downloads": 175,
+    "last_modified": "2024-04-04T15:53:51.000Z",
+    "matched_term": "masakhane"
   },
   {
     "id": "ignatius/igbo_monolingual",
@@ -1291,108 +1272,8 @@
       "arxiv:2004.00648",
       "region:us"
     ],
-    "downloads": 178,
+    "downloads": 171,
     "last_modified": "2024-01-18T11:06:21.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "ajesujoba/yoruba_wordsim353",
-    "url": "https://huggingface.co/datasets/ajesujoba/yoruba_wordsim353",
-    "license": [
-      "unknown"
-    ],
-    "languages": [
-      "en",
-      "yo"
-    ],
-    "tags": [
-      "task_categories:text-classification",
-      "task_ids:text-scoring",
-      "task_ids:semantic-similarity-scoring",
-      "annotations_creators:crowdsourced",
-      "language_creators:expert-generated",
-      "multilinguality:multilingual",
-      "source_datasets:original",
-      "language:en",
-      "language:yo",
-      "license:unknown",
-      "size_categories:n<1K",
-      "region:us"
-    ],
-    "downloads": 176,
-    "last_modified": "2024-01-18T11:18:55.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "ignatius/igbo_ner",
-    "url": "https://huggingface.co/datasets/ignatius/igbo_ner",
-    "license": [
-      "unknown"
-    ],
-    "languages": [
-      "ig"
-    ],
-    "tags": [
-      "task_categories:token-classification",
-      "task_ids:named-entity-recognition",
-      "annotations_creators:found",
-      "language_creators:found",
-      "multilinguality:monolingual",
-      "source_datasets:original",
-      "language:ig",
-      "license:unknown",
-      "size_categories:10K<n<100K",
-      "arxiv:2004.00648",
-      "region:us"
-    ],
-    "downloads": 174,
-    "last_modified": "2024-01-18T11:06:23.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "ajesujoba/yoruba_text_c3",
-    "url": "https://huggingface.co/datasets/ajesujoba/yoruba_text_c3",
-    "license": [
-      "cc-by-nc-4.0"
-    ],
-    "languages": [
-      "yo"
-    ],
-    "tags": [
-      "task_categories:text-generation",
-      "task_categories:fill-mask",
-      "task_ids:language-modeling",
-      "task_ids:masked-language-modeling",
-      "annotations_creators:expert-generated",
-      "language_creators:found",
-      "multilinguality:monolingual",
-      "source_datasets:original",
-      "language:yo",
-      "license:cc-by-nc-4.0",
-      "size_categories:100K<n<1M",
-      "region:us"
-    ],
-    "downloads": 173,
-    "last_modified": "2023-06-16T15:06:58.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "Tommy0201/igbo_to_english_split",
-    "url": "https://huggingface.co/datasets/Tommy0201/igbo_to_english_split",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 170,
-    "last_modified": "2024-02-23T06:20:41.000Z",
     "matched_term": "igbo"
   },
   {
@@ -1418,8 +1299,119 @@
       "arxiv:2004.00648",
       "region:us"
     ],
-    "downloads": 169,
+    "downloads": 171,
     "last_modified": "2024-01-18T11:06:15.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "Davlan/NaijaRC",
+    "url": "https://huggingface.co/datasets/Davlan/NaijaRC",
+    "license": "cc-by-nc-4.0",
+    "languages": [
+      "ig",
+      "yo",
+      "ha"
+    ],
+    "tags": [
+      "task_categories:multiple-choice",
+      "task_ids:multiple-choice-qa",
+      "multilinguality:multilingual",
+      "language:ig",
+      "language:yo",
+      "language:ha",
+      "license:cc-by-nc-4.0",
+      "size_categories:n<1K",
+      "format:csv",
+      "modality:tabular",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars"
+    ],
+    "downloads": 170,
+    "last_modified": "2024-10-22T00:16:50.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "ajesujoba/yoruba_text_c3",
+    "url": "https://huggingface.co/datasets/ajesujoba/yoruba_text_c3",
+    "license": [
+      "cc-by-nc-4.0"
+    ],
+    "languages": [
+      "yo"
+    ],
+    "tags": [
+      "task_categories:text-generation",
+      "task_categories:fill-mask",
+      "task_ids:language-modeling",
+      "task_ids:masked-language-modeling",
+      "annotations_creators:expert-generated",
+      "language_creators:found",
+      "multilinguality:monolingual",
+      "source_datasets:original",
+      "language:yo",
+      "license:cc-by-nc-4.0",
+      "size_categories:100K<n<1M",
+      "region:us"
+    ],
+    "downloads": 168,
+    "last_modified": "2023-06-16T15:06:58.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "ajesujoba/yoruba_wordsim353",
+    "url": "https://huggingface.co/datasets/ajesujoba/yoruba_wordsim353",
+    "license": [
+      "unknown"
+    ],
+    "languages": [
+      "en",
+      "yo"
+    ],
+    "tags": [
+      "task_categories:text-classification",
+      "task_ids:text-scoring",
+      "task_ids:semantic-similarity-scoring",
+      "annotations_creators:crowdsourced",
+      "language_creators:expert-generated",
+      "multilinguality:multilingual",
+      "source_datasets:original",
+      "language:en",
+      "language:yo",
+      "license:unknown",
+      "size_categories:n<1K",
+      "region:us"
+    ],
+    "downloads": 167,
+    "last_modified": "2024-01-18T11:18:55.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "ignatius/igbo_ner",
+    "url": "https://huggingface.co/datasets/ignatius/igbo_ner",
+    "license": [
+      "unknown"
+    ],
+    "languages": [
+      "ig"
+    ],
+    "tags": [
+      "task_categories:token-classification",
+      "task_ids:named-entity-recognition",
+      "annotations_creators:found",
+      "language_creators:found",
+      "multilinguality:monolingual",
+      "source_datasets:original",
+      "language:ig",
+      "license:unknown",
+      "size_categories:10K<n<100K",
+      "arxiv:2004.00648",
+      "region:us"
+    ],
+    "downloads": 165,
+    "last_modified": "2024-01-18T11:06:23.000Z",
     "matched_term": "igbo"
   },
   {
@@ -1438,8 +1430,248 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 167,
+    "downloads": 155,
     "last_modified": "2022-02-10T03:28:22.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "Tommy0201/igbo_to_english_split",
+    "url": "https://huggingface.co/datasets/Tommy0201/igbo_to_english_split",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 152,
+    "last_modified": "2024-02-23T06:20:41.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "cdleong/temp_africaNLP_keyword_spotting_for_african_languages",
+    "url": "https://huggingface.co/datasets/cdleong/temp_africaNLP_keyword_spotting_for_african_languages",
+    "license": "UNKNOWN",
+    "languages": [
+      "wo",
+      "fuc",
+      "srr",
+      "mnk",
+      "snk"
+    ],
+    "tags": [
+      "language:wo",
+      "language:fuc",
+      "language:srr",
+      "language:mnk",
+      "language:snk",
+      "region:us"
+    ],
+    "downloads": 145,
+    "last_modified": "2022-10-25T09:07:32.000Z",
+    "matched_term": "african languages"
+  },
+  {
+    "id": "masakhane/uhura-arc-easy",
+    "url": "https://huggingface.co/datasets/masakhane/uhura-arc-easy",
+    "license": "mit",
+    "languages": [
+      "am",
+      "en",
+      "nso",
+      "ha",
+      "sw",
+      "yo",
+      "zu"
+    ],
+    "tags": [
+      "task_categories:multiple-choice",
+      "task_categories:question-answering",
+      "task_ids:multiple-choice-qa",
+      "multilinguality:multilingual",
+      "language:am",
+      "language:en",
+      "language:nso",
+      "language:ha",
+      "language:sw",
+      "language:yo",
+      "language:zu",
+      "license:mit",
+      "size_categories:1K<n<10K",
+      "format:json",
+      "modality:text"
+    ],
+    "downloads": 145,
+    "last_modified": "2024-12-03T18:04:38.000Z",
+    "matched_term": "masakhane"
+  },
+  {
+    "id": "masakhane/AfriADR",
+    "url": "https://huggingface.co/datasets/masakhane/AfriADR",
+    "license": "apache-2.0",
+    "languages": [
+      "bbj",
+      "ibo",
+      "fon",
+      "wol",
+      "yor"
+    ],
+    "tags": [
+      "task_categories:text-generation",
+      "source_datasets:mafand",
+      "language:bbj",
+      "language:ibo",
+      "language:fon",
+      "language:wol",
+      "language:yor",
+      "license:apache-2.0",
+      "size_categories:10K<n<100K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars"
+    ],
+    "downloads": 145,
+    "last_modified": "2025-01-10T12:01:09.000Z",
+    "matched_term": "masakhane"
+  },
+  {
+    "id": "HausaNLP/HausaVG",
+    "url": "https://huggingface.co/datasets/HausaNLP/HausaVG",
+    "license": "cc-by-nc-sa-4.0",
+    "languages": [
+      "ha"
+    ],
+    "tags": [
+      "task_categories:translation",
+      "task_categories:image-to-text",
+      "task_categories:text-to-image",
+      "language:ha",
+      "license:cc-by-nc-sa-4.0",
+      "size_categories:10K<n<100K",
+      "modality:image",
+      "modality:text",
+      "library:datasets",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "downloads": 141,
+    "last_modified": "2023-06-16T11:44:52.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "masakhane/uhura-truthfulqa",
+    "url": "https://huggingface.co/datasets/masakhane/uhura-truthfulqa",
+    "license": "mit",
+    "languages": [
+      "am",
+      "ha",
+      "en",
+      "nso",
+      "sw",
+      "yo",
+      "zu"
+    ],
+    "tags": [
+      "task_categories:multiple-choice",
+      "task_categories:question-answering",
+      "task_categories:text-generation",
+      "task_ids:multiple-choice-qa",
+      "multilinguality:multilingual",
+      "language:am",
+      "language:ha",
+      "language:en",
+      "language:nso",
+      "language:sw",
+      "language:yo",
+      "language:zu",
+      "license:mit",
+      "size_categories:10K<n<100K",
+      "format:json"
+    ],
+    "downloads": 139,
+    "last_modified": "2024-12-03T17:46:27.000Z",
+    "matched_term": "masakhane"
+  },
+  {
+    "id": "masakhane/afrixnli-translate-test",
+    "url": "https://huggingface.co/datasets/masakhane/afrixnli-translate-test",
+    "license": "apache-2.0",
+    "languages": [
+      "am",
+      "ig",
+      "fr",
+      "sn",
+      "ln",
+      "lug",
+      "wo",
+      "ee",
+      "xh",
+      "kin",
+      "tw",
+      "zu",
+      "orm",
+      "yo",
+      "ha",
+      "sot",
+      "sw"
+    ],
+    "tags": [
+      "task_categories:text-classification",
+      "task_ids:natural-language-inference",
+      "multilinguality:monolingual",
+      "source_datasets:afrixnli",
+      "language:am",
+      "language:ig",
+      "language:fr",
+      "language:sn",
+      "language:ln",
+      "language:lug",
+      "language:wo",
+      "language:ee",
+      "language:xh",
+      "language:kin",
+      "language:tw"
+    ],
+    "downloads": 139,
+    "last_modified": "2024-05-14T08:56:51.000Z",
+    "matched_term": "masakhane"
+  },
+  {
+    "id": "HausaNLP/Naija-Stopwords",
+    "url": "https://huggingface.co/datasets/HausaNLP/Naija-Stopwords",
+    "license": "cc-by-nc-sa-4.0",
+    "languages": [
+      "hau",
+      "ibo",
+      "pcm",
+      "yor"
+    ],
+    "tags": [
+      "multilinguality:monolingual",
+      "multilinguality:multilingual",
+      "language:hau",
+      "language:ibo",
+      "language:pcm",
+      "language:yor",
+      "license:cc-by-nc-sa-4.0",
+      "size_categories:n<1K",
+      "modality:text",
+      "library:datasets",
+      "library:mlcroissant",
+      "region:us",
+      "sentiment analysis, Twitter, tweets",
+      "stopwords"
+    ],
+    "downloads": 138,
+    "last_modified": "2023-06-18T15:38:04.000Z",
     "matched_term": "hausa"
   },
   {
@@ -1464,97 +1696,43 @@
       "low-resource",
       "nlp"
     ],
-    "downloads": 167,
+    "downloads": 137,
     "last_modified": "2025-07-18T16:43:40.000Z",
     "matched_term": "pidgin nigerian"
   },
   {
-    "id": "masakhane/afriscience_mt",
-    "url": "https://huggingface.co/datasets/masakhane/afriscience_mt",
-    "license": "apache-2.0",
-    "languages": [
-      "eng",
-      "amh",
-      "hau",
-      "lug",
-      "nso",
-      "yor",
-      "zul"
-    ],
+    "id": "Davlan/masakhanerV1",
+    "url": "https://huggingface.co/datasets/Davlan/masakhanerV1",
+    "license": "UNKNOWN",
+    "languages": [],
     "tags": [
-      "task_categories:translation",
-      "language:eng",
-      "language:amh",
-      "language:hau",
-      "language:lug",
-      "language:nso",
-      "language:yor",
-      "language:zul",
-      "license:apache-2.0",
-      "size_categories:1M<n<10M",
-      "format:parquet",
-      "modality:tabular",
-      "modality:text",
-      "library:datasets",
-      "library:dask"
+      "region:us"
     ],
-    "downloads": 159,
-    "last_modified": "2026-06-09T19:03:35.000Z",
+    "downloads": 136,
+    "last_modified": "2021-09-18T19:13:11.000Z",
     "matched_term": "masakhane"
   },
   {
-    "id": "HausaNLP/NaijaSenti-Twitter",
-    "url": "https://huggingface.co/datasets/HausaNLP/NaijaSenti-Twitter",
-    "license": "cc-by-nc-sa-4.0",
-    "languages": [
-      "hau",
-      "ibo",
-      "pcm",
-      "yor"
-    ],
+    "id": "HausaNLP/HausaVQA",
+    "url": "https://huggingface.co/datasets/HausaNLP/HausaVQA",
+    "license": "cc-by-sa-4.0",
+    "languages": [],
     "tags": [
-      "task_categories:text-classification",
-      "task_ids:sentiment-analysis",
-      "task_ids:sentiment-classification",
-      "task_ids:sentiment-scoring",
-      "task_ids:semantic-similarity-classification",
-      "task_ids:semantic-similarity-scoring",
-      "multilinguality:monolingual",
-      "multilinguality:multilingual",
-      "language:hau",
-      "language:ibo",
-      "language:pcm",
-      "language:yor",
-      "license:cc-by-nc-sa-4.0",
-      "size_categories:10K<n<100K",
-      "modality:text"
-    ],
-    "downloads": 153,
-    "last_modified": "2023-06-16T16:42:04.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "cdleong/temp_africaNLP_keyword_spotting_for_african_languages",
-    "url": "https://huggingface.co/datasets/cdleong/temp_africaNLP_keyword_spotting_for_african_languages",
-    "license": "UNKNOWN",
-    "languages": [
-      "wo",
-      "fuc",
-      "srr",
-      "mnk",
-      "snk"
-    ],
-    "tags": [
-      "language:wo",
-      "language:fuc",
-      "language:srr",
-      "language:mnk",
-      "language:snk",
+      "license:cc-by-sa-4.0",
+      "size_categories:1K<n<10K",
+      "format:parquet",
+      "modality:image",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "doi:10.57967/hf/2019",
       "region:us"
     ],
-    "downloads": 152,
-    "last_modified": "2022-10-25T09:07:32.000Z",
-    "matched_term": "african languages"
+    "downloads": 136,
+    "last_modified": "2024-03-02T13:08:02.000Z",
+    "matched_term": "hausa"
   },
   {
     "id": "masakhane/masakhapos",
@@ -1601,213 +1779,8 @@
       "language:lg",
       "language:luo"
     ],
-    "downloads": 147,
-    "last_modified": "2024-02-05T11:09:55.000Z",
-    "matched_term": "masakhane"
-  },
-  {
-    "id": "Davlan/masakhanerV1",
-    "url": "https://huggingface.co/datasets/Davlan/masakhanerV1",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "region:us"
-    ],
-    "downloads": 147,
-    "last_modified": "2021-09-18T19:13:11.000Z",
-    "matched_term": "masakhane"
-  },
-  {
-    "id": "masakhane/uhura-truthfulqa",
-    "url": "https://huggingface.co/datasets/masakhane/uhura-truthfulqa",
-    "license": "mit",
-    "languages": [
-      "am",
-      "ha",
-      "en",
-      "nso",
-      "sw",
-      "yo",
-      "zu"
-    ],
-    "tags": [
-      "task_categories:multiple-choice",
-      "task_categories:question-answering",
-      "task_categories:text-generation",
-      "task_ids:multiple-choice-qa",
-      "multilinguality:multilingual",
-      "language:am",
-      "language:ha",
-      "language:en",
-      "language:nso",
-      "language:sw",
-      "language:yo",
-      "language:zu",
-      "license:mit",
-      "size_categories:10K<n<100K",
-      "format:json"
-    ],
-    "downloads": 139,
-    "last_modified": "2024-12-03T17:46:27.000Z",
-    "matched_term": "masakhane"
-  },
-  {
-    "id": "masakhane/uhura-arc-easy",
-    "url": "https://huggingface.co/datasets/masakhane/uhura-arc-easy",
-    "license": "mit",
-    "languages": [
-      "am",
-      "en",
-      "nso",
-      "ha",
-      "sw",
-      "yo",
-      "zu"
-    ],
-    "tags": [
-      "task_categories:multiple-choice",
-      "task_categories:question-answering",
-      "task_ids:multiple-choice-qa",
-      "multilinguality:multilingual",
-      "language:am",
-      "language:en",
-      "language:nso",
-      "language:ha",
-      "language:sw",
-      "language:yo",
-      "language:zu",
-      "license:mit",
-      "size_categories:1K<n<10K",
-      "format:json",
-      "modality:text"
-    ],
     "downloads": 133,
-    "last_modified": "2024-12-03T18:04:38.000Z",
-    "matched_term": "masakhane"
-  },
-  {
-    "id": "HausaNLP/HausaVQA",
-    "url": "https://huggingface.co/datasets/HausaNLP/HausaVQA",
-    "license": "cc-by-sa-4.0",
-    "languages": [],
-    "tags": [
-      "license:cc-by-sa-4.0",
-      "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:image",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "doi:10.57967/hf/2019",
-      "region:us"
-    ],
-    "downloads": 131,
-    "last_modified": "2024-03-02T13:08:02.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "masakhane/afrixnli-translate-test",
-    "url": "https://huggingface.co/datasets/masakhane/afrixnli-translate-test",
-    "license": "apache-2.0",
-    "languages": [
-      "am",
-      "ig",
-      "fr",
-      "sn",
-      "ln",
-      "lug",
-      "wo",
-      "ee",
-      "xh",
-      "kin",
-      "tw",
-      "zu",
-      "orm",
-      "yo",
-      "ha",
-      "sot",
-      "sw"
-    ],
-    "tags": [
-      "task_categories:text-classification",
-      "task_ids:natural-language-inference",
-      "multilinguality:monolingual",
-      "source_datasets:afrixnli",
-      "language:am",
-      "language:ig",
-      "language:fr",
-      "language:sn",
-      "language:ln",
-      "language:lug",
-      "language:wo",
-      "language:ee",
-      "language:xh",
-      "language:kin",
-      "language:tw"
-    ],
-    "downloads": 129,
-    "last_modified": "2024-05-14T08:56:51.000Z",
-    "matched_term": "masakhane"
-  },
-  {
-    "id": "masakhane/AfriMTE-WMT2024",
-    "url": "https://huggingface.co/datasets/masakhane/AfriMTE-WMT2024",
-    "license": "cc-by-4.0",
-    "languages": [
-      "ary",
-      "arz",
-      "en",
-      "fr",
-      "ha",
-      "ig",
-      "ki",
-      "luo",
-      "so",
-      "sw",
-      "tw",
-      "xh",
-      "yo"
-    ],
-    "tags": [
-      "task_categories:translation",
-      "language:ary",
-      "language:arz",
-      "language:en",
-      "language:fr",
-      "language:ha",
-      "language:ig",
-      "language:ki",
-      "language:luo",
-      "language:so",
-      "language:sw",
-      "language:tw",
-      "language:xh",
-      "language:yo",
-      "license:cc-by-4.0"
-    ],
-    "downloads": 128,
-    "last_modified": "2026-01-06T13:03:18.000Z",
-    "matched_term": "masakhane"
-  },
-  {
-    "id": "anrilombard/masakhaner-x-parquet",
-    "url": "https://huggingface.co/datasets/anrilombard/masakhaner-x-parquet",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:polars",
-      "library:mlcroissant",
-      "region:us"
-    ],
-    "downloads": 128,
-    "last_modified": "2026-01-23T18:19:00.000Z",
+    "last_modified": "2024-02-05T11:09:55.000Z",
     "matched_term": "masakhane"
   },
   {
@@ -1850,33 +1823,28 @@
       "language:kin",
       "language:tw"
     ],
-    "downloads": 121,
+    "downloads": 133,
     "last_modified": "2024-05-11T19:11:05.000Z",
     "matched_term": "masakhane"
   },
   {
-    "id": "HausaNLP/HausaVG",
-    "url": "https://huggingface.co/datasets/HausaNLP/HausaVG",
-    "license": "cc-by-nc-sa-4.0",
-    "languages": [
-      "ha"
-    ],
+    "id": "anrilombard/masakhaner-x-parquet",
+    "url": "https://huggingface.co/datasets/anrilombard/masakhaner-x-parquet",
+    "license": "UNKNOWN",
+    "languages": [],
     "tags": [
-      "task_categories:translation",
-      "task_categories:image-to-text",
-      "task_categories:text-to-image",
-      "language:ha",
-      "license:cc-by-nc-sa-4.0",
       "size_categories:10K<n<100K",
-      "modality:image",
+      "format:parquet",
       "modality:text",
       "library:datasets",
+      "library:dask",
+      "library:polars",
       "library:mlcroissant",
       "region:us"
     ],
-    "downloads": 120,
-    "last_modified": "2023-06-16T11:44:52.000Z",
-    "matched_term": "hausa"
+    "downloads": 119,
+    "last_modified": "2026-01-23T18:19:00.000Z",
+    "matched_term": "masakhane"
   },
   {
     "id": "African-Languages-Lab/multi-open",
@@ -1933,7 +1901,7 @@
       "language:bm",
       "language:wo"
     ],
-    "downloads": 118,
+    "downloads": 113,
     "last_modified": "2026-07-09T13:59:48.000Z",
     "matched_term": "african languages"
   },
@@ -1957,36 +1925,41 @@
     "matched_term": "masakhane"
   },
   {
-    "id": "masakhane/AfriADR",
-    "url": "https://huggingface.co/datasets/masakhane/AfriADR",
-    "license": "apache-2.0",
+    "id": "ketanmore/LLaVA-Pretrain-558k-10-African-Languages",
+    "url": "https://huggingface.co/datasets/ketanmore/LLaVA-Pretrain-558k-10-African-Languages",
+    "license": "cc-by-4.0",
     "languages": [
-      "bbj",
-      "ibo",
-      "fon",
-      "wol",
-      "yor"
+      "tum",
+      "nso",
+      "tw",
+      "ny",
+      "ig",
+      "pcm",
+      "ary",
+      "xh",
+      "rw",
+      "yo"
     ],
     "tags": [
-      "task_categories:text-generation",
-      "source_datasets:mafand",
-      "language:bbj",
-      "language:ibo",
-      "language:fon",
-      "language:wol",
-      "language:yor",
-      "license:apache-2.0",
-      "size_categories:10K<n<100K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars"
+      "task_categories:image-to-text",
+      "task_categories:visual-question-answering",
+      "language:tum",
+      "language:nso",
+      "language:tw",
+      "language:ny",
+      "language:ig",
+      "language:pcm",
+      "language:ary",
+      "language:xh",
+      "language:rw",
+      "language:yo",
+      "license:cc-by-4.0",
+      "size_categories:1M<n<10M",
+      "modality:text"
     ],
     "downloads": 109,
-    "last_modified": "2025-01-10T12:01:09.000Z",
-    "matched_term": "masakhane"
+    "last_modified": "2026-08-01T15:02:19.000Z",
+    "matched_term": "african languages"
   },
   {
     "id": "Or4kool/english-south-african-languages",
@@ -2009,8 +1982,68 @@
     "matched_term": "african languages"
   },
   {
-    "id": "damilojohn/naijaai_dataset",
-    "url": "https://huggingface.co/datasets/damilojohn/naijaai_dataset",
+    "id": "masakhane/AfriMTE-WMT2024",
+    "url": "https://huggingface.co/datasets/masakhane/AfriMTE-WMT2024",
+    "license": "cc-by-4.0",
+    "languages": [
+      "ary",
+      "arz",
+      "en",
+      "fr",
+      "ha",
+      "ig",
+      "ki",
+      "luo",
+      "so",
+      "sw",
+      "tw",
+      "xh",
+      "yo"
+    ],
+    "tags": [
+      "task_categories:translation",
+      "language:ary",
+      "language:arz",
+      "language:en",
+      "language:fr",
+      "language:ha",
+      "language:ig",
+      "language:ki",
+      "language:luo",
+      "language:so",
+      "language:sw",
+      "language:tw",
+      "language:xh",
+      "language:yo",
+      "license:cc-by-4.0"
+    ],
+    "downloads": 104,
+    "last_modified": "2026-01-06T13:03:18.000Z",
+    "matched_term": "masakhane"
+  },
+  {
+    "id": "whoisjones/masakhaner",
+    "url": "https://huggingface.co/datasets/whoisjones/masakhaner",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:parquet",
+      "format:optimized-parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:polars",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "downloads": 103,
+    "last_modified": "2026-01-09T15:00:31.000Z",
+    "matched_term": "masakhane"
+  },
+  {
+    "id": "SimbaMaw1547/masakhane",
+    "url": "https://huggingface.co/datasets/SimbaMaw1547/masakhane",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
@@ -2024,57 +2057,42 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 102,
-    "last_modified": "2024-04-24T13:53:09.000Z",
-    "matched_term": "naija"
+    "downloads": 103,
+    "last_modified": "2024-11-18T09:46:59.000Z",
+    "matched_term": "masakhane"
   },
   {
-    "id": "masakhane/masakhaner-x",
-    "url": "https://huggingface.co/datasets/masakhane/masakhaner-x",
-    "license": [
-      "unknown"
-    ],
+    "id": "masakhane/afriscience_mt",
+    "url": "https://huggingface.co/datasets/masakhane/afriscience_mt",
+    "license": "apache-2.0",
     "languages": [
-      "am",
-      "bbj",
-      "bm",
-      "ee",
-      "ha",
-      "ig",
-      "lg",
-      "luo",
-      "mos",
-      "ny",
-      "pcm",
-      "rw",
-      "sn",
-      "sw",
-      "tn",
-      "tw",
-      "wo",
-      "xh",
-      "yo",
-      "zu"
+      "eng",
+      "amh",
+      "hau",
+      "lug",
+      "nso",
+      "yor",
+      "zul"
     ],
     "tags": [
-      "task_categories:token-classification",
-      "task_ids:named-entity-recognition",
-      "annotations_creators:expert-generated",
-      "language_creators:expert-generated",
-      "multilinguality:multilingual",
-      "source_datasets:original",
-      "language:am",
-      "language:bbj",
-      "language:bm",
-      "language:ee",
-      "language:ha",
-      "language:ig",
-      "language:lg",
-      "language:luo",
-      "language:mos"
+      "task_categories:translation",
+      "language:eng",
+      "language:amh",
+      "language:hau",
+      "language:lug",
+      "language:nso",
+      "language:yor",
+      "language:zul",
+      "license:apache-2.0",
+      "size_categories:1M<n<10M",
+      "format:parquet",
+      "modality:tabular",
+      "modality:text",
+      "library:datasets",
+      "library:dask"
     ],
     "downloads": 100,
-    "last_modified": "2024-11-21T00:11:51.000Z",
+    "last_modified": "2026-06-09T19:03:35.000Z",
     "matched_term": "masakhane"
   },
   {
@@ -2104,25 +2122,6 @@
     "downloads": 99,
     "last_modified": "2026-08-12T16:10:17.000Z",
     "matched_term": "pidgin nigerian"
-  },
-  {
-    "id": "mteb/masakha_news",
-    "url": "https://huggingface.co/datasets/mteb/masakha_news",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 97,
-    "last_modified": "2025-07-19T20:12:12.000Z",
-    "matched_term": "masakhane"
   },
   {
     "id": "African-Languages-Lab/proxy-mt-translations",
@@ -2239,9 +2238,126 @@
       "language:el",
       "language:et"
     ],
-    "downloads": 95,
+    "downloads": 97,
     "last_modified": "2026-08-14T19:22:53.000Z",
     "matched_term": "african languages"
+  },
+  {
+    "id": "masakhane/masakhaner-x",
+    "url": "https://huggingface.co/datasets/masakhane/masakhaner-x",
+    "license": [
+      "unknown"
+    ],
+    "languages": [
+      "am",
+      "bbj",
+      "bm",
+      "ee",
+      "ha",
+      "ig",
+      "lg",
+      "luo",
+      "mos",
+      "ny",
+      "pcm",
+      "rw",
+      "sn",
+      "sw",
+      "tn",
+      "tw",
+      "wo",
+      "xh",
+      "yo",
+      "zu"
+    ],
+    "tags": [
+      "task_categories:token-classification",
+      "task_ids:named-entity-recognition",
+      "annotations_creators:expert-generated",
+      "language_creators:expert-generated",
+      "multilinguality:multilingual",
+      "source_datasets:original",
+      "language:am",
+      "language:bbj",
+      "language:bm",
+      "language:ee",
+      "language:ha",
+      "language:ig",
+      "language:lg",
+      "language:luo",
+      "language:mos"
+    ],
+    "downloads": 93,
+    "last_modified": "2024-11-21T00:11:51.000Z",
+    "matched_term": "masakhane"
+  },
+  {
+    "id": "saheedniyi/naijaweb",
+    "url": "https://huggingface.co/datasets/saheedniyi/naijaweb",
+    "license": "mit",
+    "languages": [
+      "en",
+      "yo",
+      "ha",
+      "ig"
+    ],
+    "tags": [
+      "task_categories:text-generation",
+      "language:en",
+      "language:yo",
+      "language:ha",
+      "language:ig",
+      "license:mit",
+      "size_categories:100K<n<1M",
+      "format:parquet",
+      "modality:tabular",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 92,
+    "last_modified": "2024-10-23T23:09:54.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "Arowoshola/yoruba-set",
+    "url": "https://huggingface.co/datasets/Arowoshola/yoruba-set",
+    "license": "other",
+    "languages": [],
+    "tags": [
+      "license:other",
+      "size_categories:10K<n<100K",
+      "format:text",
+      "modality:text",
+      "library:datasets",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "downloads": 90,
+    "last_modified": "2023-08-12T17:01:48.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "mteb/masakha_news",
+    "url": "https://huggingface.co/datasets/mteb/masakha_news",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 89,
+    "last_modified": "2025-07-19T20:12:12.000Z",
+    "matched_term": "masakhane"
   },
   {
     "id": "mteb/NaijaSenti",
@@ -2270,37 +2386,46 @@
       "format:parquet",
       "modality:text"
     ],
-    "downloads": 91,
+    "downloads": 83,
     "last_modified": "2025-05-06T20:20:00.000Z",
     "matched_term": "naija"
   },
   {
-    "id": "Arowoshola/yoruba-set",
-    "url": "https://huggingface.co/datasets/Arowoshola/yoruba-set",
-    "license": "other",
-    "languages": [],
+    "id": "bytel0rd/yoruba_audio_translated",
+    "url": "https://huggingface.co/datasets/bytel0rd/yoruba_audio_translated",
+    "license": "UNKNOWN",
+    "languages": [
+      "yo",
+      "en"
+    ],
     "tags": [
-      "license:other",
+      "task_categories:translation",
+      "language:yo",
+      "language:en",
       "size_categories:10K<n<100K",
-      "format:text",
+      "format:arrow",
+      "modality:audio",
       "modality:text",
       "library:datasets",
       "library:mlcroissant",
-      "region:us"
+      "region:us",
+      "ASR",
+      "yoruba",
+      "translate"
     ],
-    "downloads": 90,
-    "last_modified": "2023-08-12T17:01:48.000Z",
+    "downloads": 81,
+    "last_modified": "2024-09-07T18:18:09.000Z",
     "matched_term": "yoruba"
   },
   {
-    "id": "SimbaMaw1547/masakhane",
-    "url": "https://huggingface.co/datasets/SimbaMaw1547/masakhane",
-    "license": "UNKNOWN",
+    "id": "bumie-e/Yoruba-diacritics-vs-non-diacritics",
+    "url": "https://huggingface.co/datasets/bumie-e/Yoruba-diacritics-vs-non-diacritics",
+    "license": "gpl-3.0",
     "languages": [],
     "tags": [
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:tabular",
+      "license:gpl-3.0",
+      "size_categories:100K<n<1M",
+      "format:csv",
       "modality:text",
       "library:datasets",
       "library:pandas",
@@ -2308,9 +2433,39 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 88,
-    "last_modified": "2024-11-18T09:46:59.000Z",
-    "matched_term": "masakhane"
+    "downloads": 79,
+    "last_modified": "2024-01-22T01:20:44.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "gospelgit/African-Languages_Sentiments",
+    "url": "https://huggingface.co/datasets/gospelgit/African-Languages_Sentiments",
+    "license": "cc-by-4.0",
+    "languages": [
+      "ha",
+      "yo",
+      "sw"
+    ],
+    "tags": [
+      "task_categories:text-classification",
+      "language:ha",
+      "language:yo",
+      "language:sw",
+      "license:cc-by-4.0",
+      "size_categories:10K<n<100K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:polars",
+      "library:mlcroissant",
+      "region:us",
+      "sentiment-analysis",
+      "african-languages"
+    ],
+    "downloads": 78,
+    "last_modified": "2026-07-06T14:45:27.000Z",
+    "matched_term": "african languages"
   },
   {
     "id": "taresco/big_math_translated_african_languages",
@@ -2343,117 +2498,9 @@
       "library:datasets",
       "library:pandas"
     ],
-    "downloads": 85,
+    "downloads": 74,
     "last_modified": "2025-12-25T21:39:23.000Z",
     "matched_term": "african languages"
-  },
-  {
-    "id": "saheedniyi/naijaweb",
-    "url": "https://huggingface.co/datasets/saheedniyi/naijaweb",
-    "license": "mit",
-    "languages": [
-      "en",
-      "yo",
-      "ha",
-      "ig"
-    ],
-    "tags": [
-      "task_categories:text-generation",
-      "language:en",
-      "language:yo",
-      "language:ha",
-      "language:ig",
-      "license:mit",
-      "size_categories:100K<n<1M",
-      "format:parquet",
-      "modality:tabular",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 84,
-    "last_modified": "2024-10-23T23:09:54.000Z",
-    "matched_term": "naija"
-  },
-  {
-    "id": "HausaNLP/Naija-Stopwords",
-    "url": "https://huggingface.co/datasets/HausaNLP/Naija-Stopwords",
-    "license": "cc-by-nc-sa-4.0",
-    "languages": [
-      "hau",
-      "ibo",
-      "pcm",
-      "yor"
-    ],
-    "tags": [
-      "multilinguality:monolingual",
-      "multilinguality:multilingual",
-      "language:hau",
-      "language:ibo",
-      "language:pcm",
-      "language:yor",
-      "license:cc-by-nc-sa-4.0",
-      "size_categories:n<1K",
-      "modality:text",
-      "library:datasets",
-      "library:mlcroissant",
-      "region:us",
-      "sentiment analysis, Twitter, tweets",
-      "stopwords"
-    ],
-    "downloads": 84,
-    "last_modified": "2023-06-18T15:38:04.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "bumie-e/Yoruba-diacritics-vs-non-diacritics",
-    "url": "https://huggingface.co/datasets/bumie-e/Yoruba-diacritics-vs-non-diacritics",
-    "license": "gpl-3.0",
-    "languages": [],
-    "tags": [
-      "license:gpl-3.0",
-      "size_categories:100K<n<1M",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 83,
-    "last_modified": "2024-01-22T01:20:44.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "bytel0rd/yoruba_audio_translated",
-    "url": "https://huggingface.co/datasets/bytel0rd/yoruba_audio_translated",
-    "license": "UNKNOWN",
-    "languages": [
-      "yo",
-      "en"
-    ],
-    "tags": [
-      "task_categories:translation",
-      "language:yo",
-      "language:en",
-      "size_categories:10K<n<100K",
-      "format:arrow",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:mlcroissant",
-      "region:us",
-      "ASR",
-      "yoruba",
-      "translate"
-    ],
-    "downloads": 82,
-    "last_modified": "2024-09-07T18:18:09.000Z",
-    "matched_term": "yoruba"
   },
   {
     "id": "WAZOBIALABS/nigerian-pidgin-voice-text",
@@ -2480,74 +2527,9 @@
       "code-switching",
       "igbo"
     ],
-    "downloads": 81,
+    "downloads": 74,
     "last_modified": "2026-05-26T09:41:45.000Z",
     "matched_term": "pidgin nigerian"
-  },
-  {
-    "id": "taresco/open_math_instruct_v2_translated_african_languages",
-    "url": "https://huggingface.co/datasets/taresco/open_math_instruct_v2_translated_african_languages",
-    "license": "cc-by-4.0",
-    "languages": [
-      "sw",
-      "af",
-      "zu",
-      "yo",
-      "ig",
-      "ha",
-      "ar",
-      "so"
-    ],
-    "tags": [
-      "language:sw",
-      "language:af",
-      "language:zu",
-      "language:yo",
-      "language:ig",
-      "language:ha",
-      "language:ar",
-      "language:so",
-      "license:cc-by-4.0",
-      "size_categories:10K<n<100K",
-      "format:json",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:polars"
-    ],
-    "downloads": 80,
-    "last_modified": "2026-01-10T18:42:17.000Z",
-    "matched_term": "african languages"
-  },
-  {
-    "id": "gospelgit/African-Languages_Sentiments",
-    "url": "https://huggingface.co/datasets/gospelgit/African-Languages_Sentiments",
-    "license": "cc-by-4.0",
-    "languages": [
-      "ha",
-      "yo",
-      "sw"
-    ],
-    "tags": [
-      "task_categories:text-classification",
-      "language:ha",
-      "language:yo",
-      "language:sw",
-      "license:cc-by-4.0",
-      "size_categories:10K<n<100K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:polars",
-      "library:mlcroissant",
-      "region:us",
-      "sentiment-analysis",
-      "african-languages"
-    ],
-    "downloads": 78,
-    "last_modified": "2026-07-06T14:45:27.000Z",
-    "matched_term": "african languages"
   },
   {
     "id": "masakhane/afriqa-gold-passages",
@@ -2582,9 +2564,44 @@
       "size_categories:10K<n<100K",
       "arxiv:2305.06897"
     ],
-    "downloads": 77,
+    "downloads": 74,
     "last_modified": "2024-09-27T16:47:12.000Z",
     "matched_term": "masakhane"
+  },
+  {
+    "id": "taresco/open_math_instruct_v2_translated_african_languages",
+    "url": "https://huggingface.co/datasets/taresco/open_math_instruct_v2_translated_african_languages",
+    "license": "cc-by-4.0",
+    "languages": [
+      "sw",
+      "af",
+      "zu",
+      "yo",
+      "ig",
+      "ha",
+      "ar",
+      "so"
+    ],
+    "tags": [
+      "language:sw",
+      "language:af",
+      "language:zu",
+      "language:yo",
+      "language:ig",
+      "language:ha",
+      "language:ar",
+      "language:so",
+      "license:cc-by-4.0",
+      "size_categories:10K<n<100K",
+      "format:json",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:polars"
+    ],
+    "downloads": 69,
+    "last_modified": "2026-01-10T18:42:17.000Z",
+    "matched_term": "african languages"
   },
   {
     "id": "African-Languages-Lab/all-lab-speech",
@@ -2610,7 +2627,7 @@
       "speech",
       "african-languages"
     ],
-    "downloads": 71,
+    "downloads": 69,
     "last_modified": "2026-07-03T17:17:37.000Z",
     "matched_term": "african languages"
   },
@@ -2639,9 +2656,29 @@
       "arxiv:2505.20564",
       "region:us"
     ],
-    "downloads": 68,
+    "downloads": 69,
     "last_modified": "2025-08-07T00:32:22.000Z",
     "matched_term": "naija"
+  },
+  {
+    "id": "IwajuAI/English-Yoruba-Dictionary",
+    "url": "https://huggingface.co/datasets/IwajuAI/English-Yoruba-Dictionary",
+    "license": "apache-2.0",
+    "languages": [],
+    "tags": [
+      "license:apache-2.0",
+      "size_categories:1K<n<10K",
+      "format:json",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 66,
+    "last_modified": "2024-06-06T16:46:09.000Z",
+    "matched_term": "yoruba"
   },
   {
     "id": "franciellevargas/HausaHate",
@@ -2667,29 +2704,9 @@
       "hausalanguage",
       "africanlanguages"
     ],
-    "downloads": 66,
+    "downloads": 63,
     "last_modified": "2025-01-31T11:16:40.000Z",
     "matched_term": "hausa"
-  },
-  {
-    "id": "IwajuAI/English-Yoruba-Dictionary",
-    "url": "https://huggingface.co/datasets/IwajuAI/English-Yoruba-Dictionary",
-    "license": "apache-2.0",
-    "languages": [],
-    "tags": [
-      "license:apache-2.0",
-      "size_categories:1K<n<10K",
-      "format:json",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 62,
-    "last_modified": "2024-06-06T16:46:09.000Z",
-    "matched_term": "yoruba"
   },
   {
     "id": "aremuadeolajr/NaijaRC",
@@ -2717,9 +2734,44 @@
       "library:mlcroissant",
       "library:polars"
     ],
-    "downloads": 58,
+    "downloads": 60,
     "last_modified": "2024-05-07T17:42:19.000Z",
     "matched_term": "naija"
+  },
+  {
+    "id": "abbeydupsys/yorubaadage",
+    "url": "https://huggingface.co/datasets/abbeydupsys/yorubaadage",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:n<1K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:polars",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "downloads": 57,
+    "last_modified": "2026-08-16T03:17:37.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "chrisjay/ratman-stopword-lists-for-african-languages",
+    "url": "https://huggingface.co/datasets/chrisjay/ratman-stopword-lists-for-african-languages",
+    "license": [
+      "other"
+    ],
+    "languages": [],
+    "tags": [
+      "license:other",
+      "modality:text",
+      "region:us"
+    ],
+    "downloads": 55,
+    "last_modified": "2022-10-25T10:39:52.000Z",
+    "matched_term": "african languages"
   },
   {
     "id": "ccibeekeoc42/TinyStories_igbo",
@@ -2746,33 +2798,8 @@
       "igbo",
       "English"
     ],
-    "downloads": 57,
+    "downloads": 54,
     "last_modified": "2024-04-07T22:09:45.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "iamwille/igbo_language_translation_dataset",
-    "url": "https://huggingface.co/datasets/iamwille/igbo_language_translation_dataset",
-    "license": "mit",
-    "languages": [
-      "ig",
-      "en"
-    ],
-    "tags": [
-      "language:ig",
-      "language:en",
-      "license:mit",
-      "size_categories:100K<n<1M",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 56,
-    "last_modified": "2025-03-07T20:35:25.000Z",
     "matched_term": "igbo"
   },
   {
@@ -2796,74 +2823,9 @@
       "arxiv:2304.06845",
       "region:us"
     ],
-    "downloads": 56,
+    "downloads": 54,
     "last_modified": "2024-05-30T10:56:37.000Z",
     "matched_term": "yoruba"
-  },
-  {
-    "id": "davidpig/lnl-hausa",
-    "url": "https://huggingface.co/datasets/davidpig/lnl-hausa",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:tabular",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 55,
-    "last_modified": "2024-01-21T03:01:42.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "chrisjay/ratman-stopword-lists-for-african-languages",
-    "url": "https://huggingface.co/datasets/chrisjay/ratman-stopword-lists-for-african-languages",
-    "license": [
-      "other"
-    ],
-    "languages": [],
-    "tags": [
-      "license:other",
-      "modality:text",
-      "region:us"
-    ],
-    "downloads": 54,
-    "last_modified": "2022-10-25T10:39:52.000Z",
-    "matched_term": "african languages"
-  },
-  {
-    "id": "Rexe/nigerian-pidgin-speech",
-    "url": "https://huggingface.co/datasets/Rexe/nigerian-pidgin-speech",
-    "license": "UNKNOWN",
-    "languages": [
-      "en",
-      "pcm"
-    ],
-    "tags": [
-      "task_categories:automatic-speech-recognition",
-      "task_categories:text-generation",
-      "language:en",
-      "language:pcm",
-      "size_categories:n<1K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us",
-      "whisper",
-      "nigerian-pidgin"
-    ],
-    "downloads": 54,
-    "last_modified": "2025-07-06T20:24:02.000Z",
-    "matched_term": "pidgin nigerian"
   },
   {
     "id": "michsethowusu/english-nigerian-pidgin_sentence-pairs_mt560",
@@ -2890,28 +2852,68 @@
       "parallel-corpus",
       "translation"
     ],
-    "downloads": 53,
+    "downloads": 54,
     "last_modified": "2025-07-06T07:52:23.000Z",
     "matched_term": "pidgin nigerian"
   },
   {
-    "id": "FarmerlineML/igbo_filtered_dataset_2",
-    "url": "https://huggingface.co/datasets/FarmerlineML/igbo_filtered_dataset_2",
-    "license": "UNKNOWN",
-    "languages": [],
+    "id": "ccibeekeoc42/TinyStories_yoruba",
+    "url": "https://huggingface.co/datasets/ccibeekeoc42/TinyStories_yoruba",
+    "license": "apache-2.0",
+    "languages": [
+      "en",
+      "ig"
+    ],
     "tags": [
+      "language:en",
+      "language:ig",
+      "license:apache-2.0",
       "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:audio",
+      "format:json",
       "modality:text",
       "library:datasets",
       "library:pandas",
       "library:mlcroissant",
       "library:polars",
-      "region:us"
+      "region:us",
+      "machine-translation",
+      "low-resource-languages",
+      "igbo",
+      "English"
     ],
-    "downloads": 53,
-    "last_modified": "2024-07-03T16:14:59.000Z",
+    "downloads": 54,
+    "last_modified": "2024-04-07T22:05:29.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "iamwille/igbo-translation",
+    "url": "https://huggingface.co/datasets/iamwille/igbo-translation",
+    "license": [
+      "apache-2.0"
+    ],
+    "languages": [
+      "en",
+      "ig"
+    ],
+    "tags": [
+      "task_categories:translation",
+      "annotations_creators:found",
+      "annotations_creators:crowdsourced",
+      "language_creators:crowdsourced",
+      "language_creators:found",
+      "multilinguality:translation",
+      "source_datasets:extended|igbo_english_machine_translation",
+      "language:en",
+      "language:ig",
+      "license:apache-2.0",
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas"
+    ],
+    "downloads": 54,
+    "last_modified": "2023-04-01T14:40:26.000Z",
     "matched_term": "igbo"
   },
   {
@@ -2962,57 +2964,6 @@
     "matched_term": "hausa"
   },
   {
-    "id": "ccibeekeoc42/TinyStories_yoruba",
-    "url": "https://huggingface.co/datasets/ccibeekeoc42/TinyStories_yoruba",
-    "license": "apache-2.0",
-    "languages": [
-      "en",
-      "ig"
-    ],
-    "tags": [
-      "language:en",
-      "language:ig",
-      "license:apache-2.0",
-      "size_categories:1K<n<10K",
-      "format:json",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us",
-      "machine-translation",
-      "low-resource-languages",
-      "igbo",
-      "English"
-    ],
-    "downloads": 52,
-    "last_modified": "2024-04-07T22:05:29.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "saillab/alpaca-igbo-cleaned",
-    "url": "https://huggingface.co/datasets/saillab/alpaca-igbo-cleaned",
-    "license": "UNKNOWN",
-    "languages": [
-      "ig"
-    ],
-    "tags": [
-      "language:ig",
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 50,
-    "last_modified": "2024-09-20T23:32:45.000Z",
-    "matched_term": "igbo"
-  },
-  {
     "id": "saillab/alpaca-hausa-cleaned",
     "url": "https://huggingface.co/datasets/saillab/alpaca-hausa-cleaned",
     "license": "UNKNOWN",
@@ -3030,9 +2981,34 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 50,
+    "downloads": 52,
     "last_modified": "2024-09-20T23:32:54.000Z",
     "matched_term": "hausa"
+  },
+  {
+    "id": "iamwille/igbo_language_translation_dataset",
+    "url": "https://huggingface.co/datasets/iamwille/igbo_language_translation_dataset",
+    "license": "mit",
+    "languages": [
+      "ig",
+      "en"
+    ],
+    "tags": [
+      "language:ig",
+      "language:en",
+      "license:mit",
+      "size_categories:100K<n<1M",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 51,
+    "last_modified": "2025-03-07T20:35:25.000Z",
+    "matched_term": "igbo"
   },
   {
     "id": "ChrisToukmaji/hausa_instruction_tuning",
@@ -3050,40 +3026,67 @@
       "arxiv:2506.19187",
       "region:us"
     ],
-    "downloads": 50,
+    "downloads": 51,
     "last_modified": "2025-07-23T00:44:40.000Z",
     "matched_term": "hausa"
   },
   {
-    "id": "saheedniyi/naijaweb-edu2",
-    "url": "https://huggingface.co/datasets/saheedniyi/naijaweb-edu2",
-    "license": "mit",
+    "id": "ccibeekeoc42/DollyHHRLHF_igbo",
+    "url": "https://huggingface.co/datasets/ccibeekeoc42/DollyHHRLHF_igbo",
+    "license": "apache-2.0",
     "languages": [
       "en",
-      "yo",
-      "ig",
-      "ha"
+      "ig"
     ],
     "tags": [
-      "task_categories:text-generation",
-      "task_categories:text-classification",
       "language:en",
-      "language:yo",
       "language:ig",
-      "language:ha",
-      "license:mit",
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:tabular",
+      "license:apache-2.0",
+      "size_categories:n<1K",
+      "format:json",
       "modality:text",
       "library:datasets",
       "library:pandas",
       "library:mlcroissant",
-      "library:polars"
+      "library:polars",
+      "region:us",
+      "machine-translation",
+      "low-resource-languages",
+      "igbo",
+      "English"
     ],
-    "downloads": 49,
-    "last_modified": "2024-10-23T23:12:41.000Z",
-    "matched_term": "naija"
+    "downloads": 48,
+    "last_modified": "2024-05-06T12:57:48.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "Rexe/nigerian-pidgin-speech",
+    "url": "https://huggingface.co/datasets/Rexe/nigerian-pidgin-speech",
+    "license": "UNKNOWN",
+    "languages": [
+      "en",
+      "pcm"
+    ],
+    "tags": [
+      "task_categories:automatic-speech-recognition",
+      "task_categories:text-generation",
+      "language:en",
+      "language:pcm",
+      "size_categories:n<1K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us",
+      "whisper",
+      "nigerian-pidgin"
+    ],
+    "downloads": 47,
+    "last_modified": "2025-07-06T20:24:02.000Z",
+    "matched_term": "pidgin nigerian"
   },
   {
     "id": "Tommy0201/JW300_Igbo_To_Eng",
@@ -3100,9 +3103,28 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 48,
+    "downloads": 47,
     "last_modified": "2024-07-02T04:22:53.000Z",
     "matched_term": "igbo"
+  },
+  {
+    "id": "odunola/yoruba-english-pairs",
+    "url": "https://huggingface.co/datasets/odunola/yoruba-english-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 47,
+    "last_modified": "2023-12-17T23:05:52.000Z",
+    "matched_term": "yoruba"
   },
   {
     "id": "BlakBot/masakhaner",
@@ -3139,9 +3161,57 @@
       "language:sw",
       "language:wo"
     ],
-    "downloads": 47,
+    "downloads": 46,
     "last_modified": "2026-03-20T17:07:28.000Z",
     "matched_term": "masakhane"
+  },
+  {
+    "id": "suleiman2003/Naija_hausa_tts_dataset",
+    "url": "https://huggingface.co/datasets/suleiman2003/Naija_hausa_tts_dataset",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:1K<n<10K",
+      "format:arrow",
+      "modality:text",
+      "library:datasets",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "downloads": 46,
+    "last_modified": "2025-04-24T11:48:46.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "saheedniyi/naijaweb-edu2",
+    "url": "https://huggingface.co/datasets/saheedniyi/naijaweb-edu2",
+    "license": "mit",
+    "languages": [
+      "en",
+      "yo",
+      "ig",
+      "ha"
+    ],
+    "tags": [
+      "task_categories:text-generation",
+      "task_categories:text-classification",
+      "language:en",
+      "language:yo",
+      "language:ig",
+      "language:ha",
+      "license:mit",
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:tabular",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars"
+    ],
+    "downloads": 45,
+    "last_modified": "2024-10-23T23:12:41.000Z",
+    "matched_term": "naija"
   },
   {
     "id": "michsethowusu/hausa-zulu_sentence-pairs",
@@ -3158,21 +3228,19 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 46,
+    "downloads": 45,
     "last_modified": "2025-04-02T10:22:05.000Z",
     "matched_term": "hausa"
   },
   {
-    "id": "ccibeekeoc42/DollyHHRLHF_igbo",
-    "url": "https://huggingface.co/datasets/ccibeekeoc42/DollyHHRLHF_igbo",
+    "id": "mxronga/yoruba-proverbs-parallel-corpora",
+    "url": "https://huggingface.co/datasets/mxronga/yoruba-proverbs-parallel-corpora",
     "license": "apache-2.0",
     "languages": [
-      "en",
-      "ig"
+      "yo"
     ],
     "tags": [
-      "language:en",
-      "language:ig",
+      "language:yo",
       "license:apache-2.0",
       "size_categories:n<1K",
       "format:json",
@@ -3182,32 +3250,10 @@
       "library:mlcroissant",
       "library:polars",
       "region:us",
-      "machine-translation",
-      "low-resource-languages",
-      "igbo",
-      "English"
+      "pretrain"
     ],
-    "downloads": 46,
-    "last_modified": "2024-05-06T12:57:48.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "odunola/yoruba-english-pairs",
-    "url": "https://huggingface.co/datasets/odunola/yoruba-english-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 45,
-    "last_modified": "2023-12-17T23:05:52.000Z",
+    "downloads": 44,
+    "last_modified": "2024-03-09T21:26:32.000Z",
     "matched_term": "yoruba"
   },
   {
@@ -3235,33 +3281,66 @@
       "english",
       "nlp"
     ],
-    "downloads": 44,
+    "downloads": 43,
     "last_modified": "2023-11-25T05:36:07.000Z",
     "matched_term": "igbo"
   },
   {
-    "id": "mxronga/yoruba-proverbs-parallel-corpora",
-    "url": "https://huggingface.co/datasets/mxronga/yoruba-proverbs-parallel-corpora",
-    "license": "apache-2.0",
+    "id": "orionweller/masakhane-afriqa-gold-passages",
+    "url": "https://huggingface.co/datasets/orionweller/masakhane-afriqa-gold-passages",
+    "license": "cc-by-sa-4.0",
     "languages": [
-      "yo"
+      "bem",
+      "fon",
+      "ha",
+      "ig",
+      "kin",
+      "sw",
+      "wo",
+      "yo",
+      "zu",
+      "tw"
     ],
     "tags": [
+      "task_categories:question-answering",
+      "multilinguality:multilingual",
+      "language:bem",
+      "language:fon",
+      "language:ha",
+      "language:ig",
+      "language:kin",
+      "language:sw",
+      "language:wo",
       "language:yo",
-      "license:apache-2.0",
-      "size_categories:n<1K",
-      "format:json",
+      "language:zu",
+      "language:tw",
+      "license:cc-by-sa-4.0",
+      "size_categories:10K<n<100K",
+      "arxiv:2305.06897"
+    ],
+    "downloads": 43,
+    "last_modified": "2025-08-05T15:48:43.000Z",
+    "matched_term": "masakhane"
+  },
+  {
+    "id": "davidpig/lnl-hausa",
+    "url": "https://huggingface.co/datasets/davidpig/lnl-hausa",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:1K<n<10K",
+      "format:parquet",
+      "modality:tabular",
       "modality:text",
       "library:datasets",
       "library:pandas",
       "library:mlcroissant",
       "library:polars",
-      "region:us",
-      "pretrain"
+      "region:us"
     ],
-    "downloads": 44,
-    "last_modified": "2024-03-09T21:26:32.000Z",
-    "matched_term": "yoruba"
+    "downloads": 41,
+    "last_modified": "2024-01-21T03:01:42.000Z",
+    "matched_term": "hausa"
   },
   {
     "id": "jaypee01/masakhaner2",
@@ -3308,63 +3387,226 @@
       "language:lg",
       "language:luo"
     ],
-    "downloads": 43,
+    "downloads": 40,
     "last_modified": "2026-06-13T09:19:29.000Z",
     "matched_term": "masakhane"
   },
   {
-    "id": "suleiman2003/Naija_hausa_tts_dataset",
-    "url": "https://huggingface.co/datasets/suleiman2003/Naija_hausa_tts_dataset",
+    "id": "FarmerlineML/igbo_filtered_dataset_2",
+    "url": "https://huggingface.co/datasets/FarmerlineML/igbo_filtered_dataset_2",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
       "size_categories:1K<n<10K",
-      "format:arrow",
+      "format:parquet",
+      "modality:audio",
       "modality:text",
       "library:datasets",
+      "library:pandas",
       "library:mlcroissant",
+      "library:polars",
       "region:us"
     ],
-    "downloads": 41,
-    "last_modified": "2025-04-24T11:48:46.000Z",
+    "downloads": 38,
+    "last_modified": "2024-07-03T16:14:59.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "yaya-sy/Hausa_SRK",
+    "url": "https://huggingface.co/datasets/yaya-sy/Hausa_SRK",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:1K<n<10K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 38,
+    "last_modified": "2024-12-24T23:13:02.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "IwajuAI/owe-yoruba-training-data",
+    "url": "https://huggingface.co/datasets/IwajuAI/owe-yoruba-training-data",
+    "license": "apache-2.0",
+    "languages": [],
+    "tags": [
+      "license:apache-2.0",
+      "size_categories:10K<n<100K",
+      "format:json",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 38,
+    "last_modified": "2024-06-06T17:06:26.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "saheedniyi/naijaweb-edu",
+    "url": "https://huggingface.co/datasets/saheedniyi/naijaweb-edu",
+    "license": "mit",
+    "languages": [
+      "en",
+      "yo",
+      "ig",
+      "ha"
+    ],
+    "tags": [
+      "task_categories:text-classification",
+      "task_categories:text-generation",
+      "language:en",
+      "language:yo",
+      "language:ig",
+      "language:ha",
+      "license:mit",
+      "size_categories:1K<n<10K",
+      "format:parquet",
+      "modality:tabular",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars"
+    ],
+    "downloads": 37,
+    "last_modified": "2024-10-23T23:11:39.000Z",
     "matched_term": "naija"
   },
   {
-    "id": "orionweller/masakhane-afriqa-gold-passages",
-    "url": "https://huggingface.co/datasets/orionweller/masakhane-afriqa-gold-passages",
-    "license": "cc-by-sa-4.0",
+    "id": "ccibeekeoc42/DollyHHRLHF_yoruba",
+    "url": "https://huggingface.co/datasets/ccibeekeoc42/DollyHHRLHF_yoruba",
+    "license": "apache-2.0",
     "languages": [
-      "bem",
-      "fon",
-      "ha",
-      "ig",
-      "kin",
-      "sw",
-      "wo",
-      "yo",
-      "zu",
-      "tw"
+      "en",
+      "ig"
     ],
     "tags": [
-      "task_categories:question-answering",
-      "multilinguality:multilingual",
-      "language:bem",
-      "language:fon",
-      "language:ha",
+      "language:en",
       "language:ig",
-      "language:kin",
-      "language:sw",
-      "language:wo",
-      "language:yo",
-      "language:zu",
-      "language:tw",
-      "license:cc-by-sa-4.0",
-      "size_categories:10K<n<100K",
-      "arxiv:2305.06897"
+      "license:apache-2.0",
+      "size_categories:n<1K",
+      "format:json",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us",
+      "machine-translation",
+      "low-resource-languages",
+      "igbo",
+      "English"
     ],
-    "downloads": 41,
-    "last_modified": "2025-08-05T15:48:43.000Z",
-    "matched_term": "masakhane"
+    "downloads": 37,
+    "last_modified": "2024-05-05T23:08:41.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "michsethowusu/kinyarwanda-yoruba_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/kinyarwanda-yoruba_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 37,
+    "last_modified": "2025-03-30T19:49:54.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "HausaNLP/Naija-Lex",
+    "url": "https://huggingface.co/datasets/HausaNLP/Naija-Lex",
+    "license": "cc-by-nc-sa-4.0",
+    "languages": [
+      "hau",
+      "ibo",
+      "yor"
+    ],
+    "tags": [
+      "multilinguality:monolingual",
+      "multilinguality:multilingual",
+      "language:hau",
+      "language:ibo",
+      "language:yor",
+      "license:cc-by-nc-sa-4.0",
+      "region:us",
+      "sentiment analysis, Twitter, tweets",
+      "stopwords"
+    ],
+    "downloads": 36,
+    "last_modified": "2023-06-18T16:13:08.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "michsethowusu/kimbundu-yoruba_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/kimbundu-yoruba_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 36,
+    "last_modified": "2025-03-30T19:42:58.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "African-Languages-Lab/proxy-mt-benchmark-scores",
+    "url": "https://huggingface.co/datasets/African-Languages-Lab/proxy-mt-benchmark-scores",
+    "license": "other",
+    "languages": [],
+    "tags": [
+      "task_categories:text-generation",
+      "task_categories:multiple-choice",
+      "task_categories:question-answering",
+      "license:other",
+      "size_categories:n<1K",
+      "region:us",
+      "evaluation",
+      "lm-eval-harness",
+      "african-languages",
+      "multilingual",
+      "benchmark"
+    ],
+    "downloads": 36,
+    "last_modified": "2026-08-14T19:22:45.000Z",
+    "matched_term": "african languages"
+  },
+  {
+    "id": "chymaks/Igbo_ner",
+    "url": "https://huggingface.co/datasets/chymaks/Igbo_ner",
+    "license": "cc-by-nc-2.0",
+    "languages": [],
+    "tags": [
+      "license:cc-by-nc-2.0",
+      "region:us"
+    ],
+    "downloads": 35,
+    "last_modified": "2023-12-21T11:20:20.000Z",
+    "matched_term": "igbo"
   },
   {
     "id": "worldbank/NaijaHate",
@@ -3394,246 +3636,8 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 40,
+    "downloads": 34,
     "last_modified": "2025-01-17T12:23:37.000Z",
-    "matched_term": "naija"
-  },
-  {
-    "id": "Ayomidejoe/NaijaMed_QA_Dataset",
-    "url": "https://huggingface.co/datasets/Ayomidejoe/NaijaMed_QA_Dataset",
-    "license": "mit",
-    "languages": [
-      "en"
-    ],
-    "tags": [
-      "task_categories:text-classification",
-      "task_categories:feature-extraction",
-      "task_categories:question-answering",
-      "language:en",
-      "license:mit",
-      "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:tabular",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "doi:10.57967/hf/3345",
-      "region:us"
-    ],
-    "downloads": 40,
-    "last_modified": "2024-10-28T14:07:14.000Z",
-    "matched_term": "naija"
-  },
-  {
-    "id": "saheedniyi/naijaweb-edu",
-    "url": "https://huggingface.co/datasets/saheedniyi/naijaweb-edu",
-    "license": "mit",
-    "languages": [
-      "en",
-      "yo",
-      "ig",
-      "ha"
-    ],
-    "tags": [
-      "task_categories:text-classification",
-      "task_categories:text-generation",
-      "language:en",
-      "language:yo",
-      "language:ig",
-      "language:ha",
-      "license:mit",
-      "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:tabular",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars"
-    ],
-    "downloads": 40,
-    "last_modified": "2024-10-23T23:11:39.000Z",
-    "matched_term": "naija"
-  },
-  {
-    "id": "MKAlbani/hausa-subul",
-    "url": "https://huggingface.co/datasets/MKAlbani/hausa-subul",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:n<1K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 38,
-    "last_modified": "2024-06-10T15:12:28.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "ketanmore/LLaVA-Pretrain-558k-10-African-Languages",
-    "url": "https://huggingface.co/datasets/ketanmore/LLaVA-Pretrain-558k-10-African-Languages",
-    "license": "cc-by-4.0",
-    "languages": [
-      "tum",
-      "nso",
-      "tw",
-      "ny",
-      "ig",
-      "pcm",
-      "ary",
-      "xh",
-      "rw",
-      "yo"
-    ],
-    "tags": [
-      "task_categories:image-to-text",
-      "task_categories:visual-question-answering",
-      "language:tum",
-      "language:nso",
-      "language:tw",
-      "language:ny",
-      "language:ig",
-      "language:pcm",
-      "language:ary",
-      "language:xh",
-      "language:rw",
-      "language:yo",
-      "license:cc-by-4.0",
-      "size_categories:1M<n<10M",
-      "modality:text"
-    ],
-    "downloads": 38,
-    "last_modified": "2026-08-01T15:02:19.000Z",
-    "matched_term": "african languages"
-  },
-  {
-    "id": "iamwille/igbo-translation",
-    "url": "https://huggingface.co/datasets/iamwille/igbo-translation",
-    "license": [
-      "apache-2.0"
-    ],
-    "languages": [
-      "en",
-      "ig"
-    ],
-    "tags": [
-      "task_categories:translation",
-      "annotations_creators:found",
-      "annotations_creators:crowdsourced",
-      "language_creators:crowdsourced",
-      "language_creators:found",
-      "multilinguality:translation",
-      "source_datasets:extended|igbo_english_machine_translation",
-      "language:en",
-      "language:ig",
-      "license:apache-2.0",
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas"
-    ],
-    "downloads": 37,
-    "last_modified": "2023-04-01T14:40:26.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "HausaNLP/Naija-Lex",
-    "url": "https://huggingface.co/datasets/HausaNLP/Naija-Lex",
-    "license": "cc-by-nc-sa-4.0",
-    "languages": [
-      "hau",
-      "ibo",
-      "yor"
-    ],
-    "tags": [
-      "multilinguality:monolingual",
-      "multilinguality:multilingual",
-      "language:hau",
-      "language:ibo",
-      "language:yor",
-      "license:cc-by-nc-sa-4.0",
-      "region:us",
-      "sentiment analysis, Twitter, tweets",
-      "stopwords"
-    ],
-    "downloads": 36,
-    "last_modified": "2023-06-18T16:13:08.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "ccibeekeoc42/DollyHHRLHF_yoruba",
-    "url": "https://huggingface.co/datasets/ccibeekeoc42/DollyHHRLHF_yoruba",
-    "license": "apache-2.0",
-    "languages": [
-      "en",
-      "ig"
-    ],
-    "tags": [
-      "language:en",
-      "language:ig",
-      "license:apache-2.0",
-      "size_categories:n<1K",
-      "format:json",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us",
-      "machine-translation",
-      "low-resource-languages",
-      "igbo",
-      "English"
-    ],
-    "downloads": 36,
-    "last_modified": "2024-05-05T23:08:41.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "michsethowusu/kinyarwanda-yoruba_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/kinyarwanda-yoruba_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 36,
-    "last_modified": "2025-03-30T19:49:54.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "mteb/naija_senti",
-    "url": "https://huggingface.co/datasets/mteb/naija_senti",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 35,
-    "last_modified": "2025-07-19T20:42:17.000Z",
     "matched_term": "naija"
   },
   {
@@ -3657,88 +3661,9 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 35,
+    "downloads": 33,
     "last_modified": "2024-07-02T02:53:59.000Z",
     "matched_term": "igbo"
-  },
-  {
-    "id": "yaya-sy/Hausa_SRK",
-    "url": "https://huggingface.co/datasets/yaya-sy/Hausa_SRK",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 35,
-    "last_modified": "2024-12-24T23:13:02.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "michsethowusu/kimbundu-yoruba_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/kimbundu-yoruba_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 34,
-    "last_modified": "2025-03-30T19:42:58.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "Aletheia-ng/naijaweb",
-    "url": "https://huggingface.co/datasets/Aletheia-ng/naijaweb",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:parquet",
-      "modality:tabular",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 34,
-    "last_modified": "2024-11-08T10:38:20.000Z",
-    "matched_term": "naija"
-  },
-  {
-    "id": "IwajuAI/owe-yoruba-training-data",
-    "url": "https://huggingface.co/datasets/IwajuAI/owe-yoruba-training-data",
-    "license": "apache-2.0",
-    "languages": [],
-    "tags": [
-      "license:apache-2.0",
-      "size_categories:10K<n<100K",
-      "format:json",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 34,
-    "last_modified": "2024-06-06T17:06:26.000Z",
-    "matched_term": "yoruba"
   },
   {
     "id": "Hidi-agili/yoruba_tts_dataset",
@@ -3771,9 +3696,89 @@
       "modality:text",
       "region:us"
     ],
-    "downloads": 32,
+    "downloads": 31,
     "last_modified": "2025-03-01T12:49:02.000Z",
     "matched_term": "hausa"
+  },
+  {
+    "id": "danwils/hausa-multipacked",
+    "url": "https://huggingface.co/datasets/danwils/hausa-multipacked",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "region:us"
+    ],
+    "downloads": 31,
+    "last_modified": "2025-03-22T21:48:16.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "masakhane/afriqa_wiki_en_fr_100",
+    "url": "https://huggingface.co/datasets/masakhane/afriqa_wiki_en_fr_100",
+    "license": "apache-2.0",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "tags": [
+      "task_categories:text-retrieval",
+      "multilinguality:multilingual",
+      "language:en",
+      "language:fr",
+      "license:apache-2.0",
+      "size_categories:1M<n<10M",
+      "format:json",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 31,
+    "last_modified": "2023-03-31T17:26:05.000Z",
+    "matched_term": "masakhane"
+  },
+  {
+    "id": "saillab/alpaca-igbo-cleaned",
+    "url": "https://huggingface.co/datasets/saillab/alpaca-igbo-cleaned",
+    "license": "UNKNOWN",
+    "languages": [
+      "ig"
+    ],
+    "tags": [
+      "language:ig",
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 30,
+    "last_modified": "2024-09-20T23:32:45.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "mteb/naija_senti",
+    "url": "https://huggingface.co/datasets/mteb/naija_senti",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 30,
+    "last_modified": "2025-07-19T20:42:17.000Z",
+    "matched_term": "naija"
   },
   {
     "id": "mtek2000/hausa_newsclass_topic",
@@ -3791,51 +3796,8 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 31,
-    "last_modified": "2024-02-01T09:32:33.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "jonathansuru/yoruba_bert",
-    "url": "https://huggingface.co/datasets/jonathansuru/yoruba_bert",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
     "downloads": 30,
-    "last_modified": "2024-12-01T19:00:29.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "jojo-ai-mst/Roleplay-Hausa",
-    "url": "https://huggingface.co/datasets/jojo-ai-mst/Roleplay-Hausa",
-    "license": "mit",
-    "languages": [
-      "ha"
-    ],
-    "tags": [
-      "task_categories:text-generation",
-      "language:ha",
-      "license:mit",
-      "size_categories:1K<n<10K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 29,
-    "last_modified": "2024-10-04T15:21:27.000Z",
+    "last_modified": "2024-02-01T09:32:33.000Z",
     "matched_term": "hausa"
   },
   {
@@ -3854,40 +3816,29 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 29,
+    "downloads": 30,
     "last_modified": "2024-01-02T14:49:42.000Z",
     "matched_term": "yoruba"
   },
   {
-    "id": "danwils/hausa-multipacked",
-    "url": "https://huggingface.co/datasets/danwils/hausa-multipacked",
+    "id": "MKAlbani/hausa-subul",
+    "url": "https://huggingface.co/datasets/MKAlbani/hausa-subul",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
-      "region:us"
-    ],
-    "downloads": 29,
-    "last_modified": "2025-03-22T21:48:16.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "rufatronics/mt5_nigerian_pidgin",
-    "url": "https://huggingface.co/datasets/rufatronics/mt5_nigerian_pidgin",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:json",
+      "size_categories:n<1K",
+      "format:parquet",
+      "modality:audio",
       "modality:text",
       "library:datasets",
       "library:pandas",
-      "library:polars",
       "library:mlcroissant",
+      "library:polars",
       "region:us"
     ],
     "downloads": 28,
-    "last_modified": "2026-07-02T20:22:46.000Z",
-    "matched_term": "pidgin nigerian"
+    "last_modified": "2024-06-10T15:12:28.000Z",
+    "matched_term": "hausa"
   },
   {
     "id": "Lots-of-LoRAs/task612_yorubabbc_classification",
@@ -3915,7 +3866,7 @@
       "arxiv:2407.00066",
       "region:us"
     ],
-    "downloads": 27,
+    "downloads": 28,
     "last_modified": "2024-12-30T23:14:18.000Z",
     "matched_term": "yoruba"
   },
@@ -3935,9 +3886,137 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 27,
+    "downloads": 28,
     "last_modified": "2025-03-19T12:11:17.000Z",
     "matched_term": "naija"
+  },
+  {
+    "id": "Ayomidejoe/NaijaMed_QA_Dataset",
+    "url": "https://huggingface.co/datasets/Ayomidejoe/NaijaMed_QA_Dataset",
+    "license": "mit",
+    "languages": [
+      "en"
+    ],
+    "tags": [
+      "task_categories:text-classification",
+      "task_categories:feature-extraction",
+      "task_categories:question-answering",
+      "language:en",
+      "license:mit",
+      "size_categories:1K<n<10K",
+      "format:parquet",
+      "modality:tabular",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "doi:10.57967/hf/3345",
+      "region:us"
+    ],
+    "downloads": 27,
+    "last_modified": "2024-10-28T14:07:14.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "rufatronics/mt5_nigerian_pidgin",
+    "url": "https://huggingface.co/datasets/rufatronics/mt5_nigerian_pidgin",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:json",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:polars",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "downloads": 27,
+    "last_modified": "2026-07-02T20:22:46.000Z",
+    "matched_term": "pidgin nigerian"
+  },
+  {
+    "id": "michsethowusu/kongo-yoruba_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/kongo-yoruba_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 26,
+    "last_modified": "2025-03-30T19:54:34.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "michsethowusu/igbo-tumbuka_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/igbo-tumbuka_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 26,
+    "last_modified": "2025-03-31T07:50:25.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "jonathansuru/yoruba_bert",
+    "url": "https://huggingface.co/datasets/jonathansuru/yoruba_bert",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:1K<n<10K",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 25,
+    "last_modified": "2024-12-01T19:00:29.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "jojo-ai-mst/Roleplay-Hausa",
+    "url": "https://huggingface.co/datasets/jojo-ai-mst/Roleplay-Hausa",
+    "license": "mit",
+    "languages": [
+      "ha"
+    ],
+    "tags": [
+      "task_categories:text-generation",
+      "language:ha",
+      "license:mit",
+      "size_categories:1K<n<10K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 25,
+    "last_modified": "2024-10-04T15:21:27.000Z",
+    "matched_term": "hausa"
   },
   {
     "id": "michsethowusu/igbo-shona_sentence-pairs",
@@ -3954,31 +4033,9 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 26,
+    "downloads": 25,
     "last_modified": "2025-04-02T10:08:00.000Z",
     "matched_term": "igbo"
-  },
-  {
-    "id": "saillab/alpaca_yoruba_taco",
-    "url": "https://huggingface.co/datasets/saillab/alpaca_yoruba_taco",
-    "license": "UNKNOWN",
-    "languages": [
-      "yo"
-    ],
-    "tags": [
-      "language:yo",
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 26,
-    "last_modified": "2024-09-20T22:08:35.000Z",
-    "matched_term": "yoruba"
   },
   {
     "id": "Twelve2five/nigerian-pidgin-tts-dataset",
@@ -4013,44 +4070,6 @@
     "matched_term": "hausa"
   },
   {
-    "id": "michsethowusu/kongo-yoruba_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/kongo-yoruba_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 25,
-    "last_modified": "2025-03-30T19:54:34.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "michsethowusu/igbo-tumbuka_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/igbo-tumbuka_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 25,
-    "last_modified": "2025-03-31T07:50:25.000Z",
-    "matched_term": "igbo"
-  },
-  {
     "id": "moro23/Hausa-ASR-flags",
     "url": "https://huggingface.co/datasets/moro23/Hausa-ASR-flags",
     "license": "UNKNOWN",
@@ -4068,6 +4087,102 @@
     "matched_term": "hausa"
   },
   {
+    "id": "michsethowusu/nuer-yoruba_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/nuer-yoruba_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 25,
+    "last_modified": "2025-03-30T20:04:59.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "ML-GOD/English_Hausa_Translation",
+    "url": "https://huggingface.co/datasets/ML-GOD/English_Hausa_Translation",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:1M<n<10M",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 25,
+    "last_modified": "2025-03-01T07:53:37.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "WAZOBIALABS/nigerian-pidgin-eval",
+    "url": "https://huggingface.co/datasets/WAZOBIALABS/nigerian-pidgin-eval",
+    "license": "cc-by-4.0",
+    "languages": [
+      "pcm"
+    ],
+    "tags": [
+      "language:pcm",
+      "license:cc-by-4.0",
+      "size_categories:n<1K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:polars",
+      "library:mlcroissant",
+      "region:us",
+      "nigerian-pidgin",
+      "naija",
+      "evaluation",
+      "benchmark",
+      "sarcasm-detection"
+    ],
+    "downloads": 25,
+    "last_modified": "2026-05-26T09:26:03.000Z",
+    "matched_term": "pidgin nigerian"
+  },
+  {
+    "id": "ChiamakaNwokolo/adaption-african-languages-narratives",
+    "url": "https://huggingface.co/datasets/ChiamakaNwokolo/adaption-african-languages-narratives",
+    "license": "UNKNOWN",
+    "languages": [
+      "rm",
+      "gd",
+      "yo"
+    ],
+    "tags": [
+      "multilinguality:multilingual",
+      "source_datasets:original",
+      "language:rm",
+      "language:gd",
+      "language:yo",
+      "size_categories:n<1K",
+      "format:json",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:polars",
+      "library:mlcroissant",
+      "region:us",
+      "adaption",
+      "instruction-tuning"
+    ],
+    "downloads": 25,
+    "last_modified": "2026-08-15T11:19:31.000Z",
+    "matched_term": "african languages"
+  },
+  {
     "id": "Al-Mahi/hausa_turbandb",
     "url": "https://huggingface.co/datasets/Al-Mahi/hausa_turbandb",
     "license": "UNKNOWN",
@@ -4083,28 +4198,29 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 24,
+    "downloads": 23,
     "last_modified": "2024-08-08T16:25:49.000Z",
     "matched_term": "hausa"
   },
   {
-    "id": "michsethowusu/nuer-yoruba_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/nuer-yoruba_sentence-pairs",
+    "id": "okezieowen/misc_naija_english_audio",
+    "url": "https://huggingface.co/datasets/okezieowen/misc_naija_english_audio",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
-      "size_categories:10K<n<100K",
-      "format:csv",
+      "size_categories:1K<n<10K",
+      "format:parquet",
+      "modality:audio",
       "modality:text",
       "library:datasets",
-      "library:pandas",
+      "library:dask",
       "library:mlcroissant",
       "library:polars",
       "region:us"
     ],
-    "downloads": 24,
-    "last_modified": "2025-03-30T20:04:59.000Z",
-    "matched_term": "yoruba"
+    "downloads": 23,
+    "last_modified": "2024-10-19T14:56:37.000Z",
+    "matched_term": "naija"
   },
   {
     "id": "EYEDOL/mozilla_commonvoice_naijaHausa0_preprocessed_train_batch_6",
@@ -4122,50 +4238,9 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 24,
+    "downloads": 22,
     "last_modified": "2025-04-30T17:47:04.000Z",
     "matched_term": "naija"
-  },
-  {
-    "id": "African-Languages-Lab/proxy-mt-benchmark-scores",
-    "url": "https://huggingface.co/datasets/African-Languages-Lab/proxy-mt-benchmark-scores",
-    "license": "other",
-    "languages": [],
-    "tags": [
-      "task_categories:text-generation",
-      "task_categories:multiple-choice",
-      "task_categories:question-answering",
-      "license:other",
-      "size_categories:n<1K",
-      "region:us",
-      "evaluation",
-      "lm-eval-harness",
-      "african-languages",
-      "multilingual",
-      "benchmark"
-    ],
-    "downloads": 24,
-    "last_modified": "2026-08-14T19:22:45.000Z",
-    "matched_term": "african languages"
-  },
-  {
-    "id": "ML-GOD/English_Hausa_Translation",
-    "url": "https://huggingface.co/datasets/ML-GOD/English_Hausa_Translation",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:1M<n<10M",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 23,
-    "last_modified": "2025-03-01T07:53:37.000Z",
-    "matched_term": "hausa"
   },
   {
     "id": "michsethowusu/shona-yoruba_sentence-pairs",
@@ -4182,49 +4257,8 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 23,
+    "downloads": 22,
     "last_modified": "2025-03-31T04:52:59.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "michsethowusu/lingala-yoruba_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/lingala-yoruba_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 23,
-    "last_modified": "2025-03-30T20:00:12.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "saillab/alpaca-yoruba-cleaned",
-    "url": "https://huggingface.co/datasets/saillab/alpaca-yoruba-cleaned",
-    "license": "UNKNOWN",
-    "languages": [
-      "yo"
-    ],
-    "tags": [
-      "language:yo",
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 23,
-    "last_modified": "2024-09-20T23:32:33.000Z",
     "matched_term": "yoruba"
   },
   {
@@ -4242,7 +4276,7 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 23,
+    "downloads": 22,
     "last_modified": "2025-03-31T05:09:22.000Z",
     "matched_term": "yoruba"
   },
@@ -4285,25 +4319,6 @@
     "matched_term": "igbo"
   },
   {
-    "id": "michsethowusu/igbo-yoruba_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/igbo-yoruba_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 22,
-    "last_modified": "2025-03-31T07:44:43.000Z",
-    "matched_term": "igbo"
-  },
-  {
     "id": "michsethowusu/igbo-kikuyu_sentence-pairs",
     "url": "https://huggingface.co/datasets/michsethowusu/igbo-kikuyu_sentence-pairs",
     "license": "UNKNOWN",
@@ -4323,14 +4338,16 @@
     "matched_term": "igbo"
   },
   {
-    "id": "oyemade/test-yoruba-tts",
-    "url": "https://huggingface.co/datasets/oyemade/test-yoruba-tts",
+    "id": "saillab/alpaca_yoruba_taco",
+    "url": "https://huggingface.co/datasets/saillab/alpaca_yoruba_taco",
     "license": "UNKNOWN",
-    "languages": [],
+    "languages": [
+      "yo"
+    ],
     "tags": [
-      "size_categories:n<1K",
+      "language:yo",
+      "size_categories:10K<n<100K",
       "format:parquet",
-      "modality:audio",
       "modality:text",
       "library:datasets",
       "library:pandas",
@@ -4338,8 +4355,27 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 22,
-    "last_modified": "2024-03-17T11:49:39.000Z",
+    "downloads": 21,
+    "last_modified": "2024-09-20T22:08:35.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "michsethowusu/lingala-yoruba_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/lingala-yoruba_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 21,
+    "last_modified": "2025-03-30T20:00:12.000Z",
     "matched_term": "yoruba"
   },
   {
@@ -4357,37 +4393,9 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 22,
+    "downloads": 21,
     "last_modified": "2025-04-02T10:24:22.000Z",
     "matched_term": "hausa"
-  },
-  {
-    "id": "WAZOBIALABS/nigerian-pidgin-eval",
-    "url": "https://huggingface.co/datasets/WAZOBIALABS/nigerian-pidgin-eval",
-    "license": "cc-by-4.0",
-    "languages": [
-      "pcm"
-    ],
-    "tags": [
-      "language:pcm",
-      "license:cc-by-4.0",
-      "size_categories:n<1K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:polars",
-      "library:mlcroissant",
-      "region:us",
-      "nigerian-pidgin",
-      "naija",
-      "evaluation",
-      "benchmark",
-      "sarcasm-detection"
-    ],
-    "downloads": 22,
-    "last_modified": "2026-05-26T09:26:03.000Z",
-    "matched_term": "pidgin nigerian"
   },
   {
     "id": "EYEDOL/mozilla_commonvoice_naijaHausa0_preprocessed_train_batch_4",
@@ -4405,68 +4413,9 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 22,
+    "downloads": 21,
     "last_modified": "2025-04-30T16:22:28.000Z",
     "matched_term": "naija"
-  },
-  {
-    "id": "grazef6/nigerian_pidgin_asr_v2",
-    "url": "https://huggingface.co/datasets/grazef6/nigerian_pidgin_asr_v2",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 22,
-    "last_modified": "2025-12-02T21:17:51.000Z",
-    "matched_term": "pidgin nigerian"
-  },
-  {
-    "id": "MKAlbani/hausa-asr-new",
-    "url": "https://huggingface.co/datasets/MKAlbani/hausa-asr-new",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:n<1K",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 21,
-    "last_modified": "2024-06-13T10:15:01.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "UmarBaba1/Hausa-EnglishCodeswitch",
-    "url": "https://huggingface.co/datasets/UmarBaba1/Hausa-EnglishCodeswitch",
-    "license": "apache-2.0",
-    "languages": [],
-    "tags": [
-      "license:apache-2.0",
-      "size_categories:1K<n<10K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 21,
-    "last_modified": "2024-10-13T06:37:33.000Z",
-    "matched_term": "hausa"
   },
   {
     "id": "michsethowusu/hausa-wolof_sentence-pairs",
@@ -4488,8 +4437,115 @@
     "matched_term": "hausa"
   },
   {
-    "id": "okezieowen/misc_naija_english_audio",
-    "url": "https://huggingface.co/datasets/okezieowen/misc_naija_english_audio",
+    "id": "michsethowusu/igbo-swahili_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/igbo-swahili_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 21,
+    "last_modified": "2025-04-02T10:05:46.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "African-Languages-Lab/proxy-mt-eval-scores",
+    "url": "https://huggingface.co/datasets/African-Languages-Lab/proxy-mt-eval-scores",
+    "license": "other",
+    "languages": [],
+    "tags": [
+      "task_categories:translation",
+      "license:other",
+      "size_categories:10K<n<100K",
+      "format:csv",
+      "modality:tabular",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:polars",
+      "library:mlcroissant",
+      "region:us",
+      "machine-translation",
+      "evaluation",
+      "bleu",
+      "comet"
+    ],
+    "downloads": 21,
+    "last_modified": "2026-08-14T19:22:29.000Z",
+    "matched_term": "african languages"
+  },
+  {
+    "id": "Aletheia-ng/naijaweb",
+    "url": "https://huggingface.co/datasets/Aletheia-ng/naijaweb",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:parquet",
+      "modality:tabular",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 20,
+    "last_modified": "2024-11-08T10:38:20.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "saillab/alpaca-yoruba-cleaned",
+    "url": "https://huggingface.co/datasets/saillab/alpaca-yoruba-cleaned",
+    "license": "UNKNOWN",
+    "languages": [
+      "yo"
+    ],
+    "tags": [
+      "language:yo",
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 20,
+    "last_modified": "2024-09-20T23:32:33.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "oyemade/test-yoruba-tts",
+    "url": "https://huggingface.co/datasets/oyemade/test-yoruba-tts",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:n<1K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 20,
+    "last_modified": "2024-03-17T11:49:39.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "grazef6/nigerian_pidgin_asr_v2",
+    "url": "https://huggingface.co/datasets/grazef6/nigerian_pidgin_asr_v2",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
@@ -4503,21 +4559,36 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 21,
-    "last_modified": "2024-10-19T14:56:37.000Z",
-    "matched_term": "naija"
+    "downloads": 20,
+    "last_modified": "2025-12-02T21:17:51.000Z",
+    "matched_term": "pidgin nigerian"
   },
   {
-    "id": "DGurgurov/igbo_sa",
-    "url": "https://huggingface.co/datasets/DGurgurov/igbo_sa",
-    "license": "mit",
-    "languages": [
-      "ig"
-    ],
+    "id": "MKAlbani/hausa-asr-new",
+    "url": "https://huggingface.co/datasets/MKAlbani/hausa-asr-new",
+    "license": "UNKNOWN",
+    "languages": [],
     "tags": [
-      "task_categories:text-classification",
-      "language:ig",
-      "license:mit",
+      "size_categories:n<1K",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 20,
+    "last_modified": "2024-06-13T10:15:01.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "UmarBaba1/Hausa-EnglishCodeswitch",
+    "url": "https://huggingface.co/datasets/UmarBaba1/Hausa-EnglishCodeswitch",
+    "license": "apache-2.0",
+    "languages": [],
+    "tags": [
+      "license:apache-2.0",
       "size_categories:1K<n<10K",
       "format:csv",
       "modality:text",
@@ -4525,12 +4596,11 @@
       "library:pandas",
       "library:mlcroissant",
       "library:polars",
-      "arxiv:2304.06845",
       "region:us"
     ],
-    "downloads": 21,
-    "last_modified": "2024-05-30T10:57:57.000Z",
-    "matched_term": "igbo"
+    "downloads": 20,
+    "last_modified": "2024-10-13T06:37:33.000Z",
+    "matched_term": "hausa"
   },
   {
     "id": "DiCeyIII/Additional_Yoruba_Data",
@@ -4548,7 +4618,7 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 21,
+    "downloads": 20,
     "last_modified": "2024-09-16T02:11:56.000Z",
     "matched_term": "yoruba"
   },
@@ -4572,28 +4642,6 @@
     "matched_term": "hausa"
   },
   {
-    "id": "saillab/alpaca_hausa_taco",
-    "url": "https://huggingface.co/datasets/saillab/alpaca_hausa_taco",
-    "license": "UNKNOWN",
-    "languages": [
-      "ha"
-    ],
-    "tags": [
-      "language:ha",
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 20,
-    "last_modified": "2024-09-20T22:09:02.000Z",
-    "matched_term": "hausa"
-  },
-  {
     "id": "michsethowusu/igbo-zulu_sentence-pairs",
     "url": "https://huggingface.co/datasets/michsethowusu/igbo-zulu_sentence-pairs",
     "license": "UNKNOWN",
@@ -4611,63 +4659,6 @@
     "downloads": 20,
     "last_modified": "2025-03-31T07:43:34.000Z",
     "matched_term": "igbo"
-  },
-  {
-    "id": "michsethowusu/igbo-twi_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/igbo-twi_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 20,
-    "last_modified": "2025-03-31T07:49:12.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "michsethowusu/igbo-swahili_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/igbo-swahili_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 20,
-    "last_modified": "2025-04-02T10:05:46.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "michsethowusu/oromo-yoruba_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/oromo-yoruba_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 20,
-    "last_modified": "2025-03-30T20:09:11.000Z",
-    "matched_term": "yoruba"
   },
   {
     "id": "michsethowusu/hausa-twi_sentence-pairs",
@@ -4714,33 +4705,6 @@
     "matched_term": "igbo"
   },
   {
-    "id": "masakhane/afriqa_wiki_en_fr_100",
-    "url": "https://huggingface.co/datasets/masakhane/afriqa_wiki_en_fr_100",
-    "license": "apache-2.0",
-    "languages": [
-      "en",
-      "fr"
-    ],
-    "tags": [
-      "task_categories:text-retrieval",
-      "multilinguality:multilingual",
-      "language:en",
-      "language:fr",
-      "license:apache-2.0",
-      "size_categories:1M<n<10M",
-      "format:json",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 20,
-    "last_modified": "2023-03-31T17:26:05.000Z",
-    "matched_term": "masakhane"
-  },
-  {
     "id": "masakhane/african-translated-alpaca",
     "url": "https://huggingface.co/datasets/masakhane/african-translated-alpaca",
     "license": "cc-by-nc-4.0",
@@ -4768,18 +4732,52 @@
       "library:mlcroissant",
       "region:us"
     ],
-    "downloads": 19,
+    "downloads": 20,
     "last_modified": "2024-04-10T07:47:19.000Z",
     "matched_term": "masakhane"
   },
   {
-    "id": "michsethowusu/swati-yoruba_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/swati-yoruba_sentence-pairs",
+    "id": "ML-GOD/Hausa_translate_analysis",
+    "url": "https://huggingface.co/datasets/ML-GOD/Hausa_translate_analysis",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
       "size_categories:10K<n<100K",
-      "format:csv",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 20,
+    "last_modified": "2025-03-03T01:17:11.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "aspmirlab/NaijaFaceVoiceDB",
+    "url": "https://huggingface.co/datasets/aspmirlab/NaijaFaceVoiceDB",
+    "license": "apache-2.0",
+    "languages": [],
+    "tags": [
+      "license:apache-2.0",
+      "doi:10.57967/hf/7036",
+      "region:us"
+    ],
+    "downloads": 20,
+    "last_modified": "2025-01-19T01:34:59.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "damilojohn/naijaai_dataset",
+    "url": "https://huggingface.co/datasets/damilojohn/naijaai_dataset",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:tabular",
       "modality:text",
       "library:datasets",
       "library:pandas",
@@ -4788,12 +4786,12 @@
       "region:us"
     ],
     "downloads": 19,
-    "last_modified": "2025-03-31T05:04:23.000Z",
-    "matched_term": "yoruba"
+    "last_modified": "2024-04-24T13:53:09.000Z",
+    "matched_term": "naija"
   },
   {
-    "id": "michsethowusu/swahili-yoruba_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/swahili-yoruba_sentence-pairs",
+    "id": "michsethowusu/igbo-yoruba_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/igbo-yoruba_sentence-pairs",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
@@ -4807,48 +4805,74 @@
       "region:us"
     ],
     "downloads": 19,
-    "last_modified": "2025-03-31T05:01:12.000Z",
-    "matched_term": "yoruba"
+    "last_modified": "2025-03-31T07:44:43.000Z",
+    "matched_term": "igbo"
   },
   {
-    "id": "EYEDOL/naija_commonvoice_naijaEnglish1_preprocessed_train_batch_1",
-    "url": "https://huggingface.co/datasets/EYEDOL/naija_commonvoice_naijaEnglish1_preprocessed_train_batch_1",
-    "license": "UNKNOWN",
-    "languages": [],
+    "id": "DGurgurov/igbo_sa",
+    "url": "https://huggingface.co/datasets/DGurgurov/igbo_sa",
+    "license": "mit",
+    "languages": [
+      "ig"
+    ],
     "tags": [
+      "task_categories:text-classification",
+      "language:ig",
+      "license:mit",
       "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:audio",
+      "format:csv",
       "modality:text",
       "library:datasets",
-      "library:dask",
+      "library:pandas",
       "library:mlcroissant",
       "library:polars",
+      "arxiv:2304.06845",
       "region:us"
     ],
     "downloads": 19,
-    "last_modified": "2025-04-30T09:53:46.000Z",
-    "matched_term": "naija"
+    "last_modified": "2024-05-30T10:57:57.000Z",
+    "matched_term": "igbo"
   },
   {
-    "id": "EYEDOL/mozilla_commonvoice_naijaHausa2_preprocessed_train_batch_4",
-    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa2_preprocessed_train_batch_4",
+    "id": "saillab/alpaca_hausa_taco",
+    "url": "https://huggingface.co/datasets/saillab/alpaca_hausa_taco",
     "license": "UNKNOWN",
-    "languages": [],
+    "languages": [
+      "ha"
+    ],
     "tags": [
+      "language:ha",
       "size_categories:10K<n<100K",
       "format:parquet",
-      "modality:audio",
       "modality:text",
       "library:datasets",
-      "library:dask",
+      "library:pandas",
       "library:mlcroissant",
       "library:polars",
       "region:us"
     ],
     "downloads": 19,
-    "last_modified": "2025-05-01T16:11:44.000Z",
-    "matched_term": "naija"
+    "last_modified": "2024-09-20T22:09:02.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "michsethowusu/igbo-twi_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/igbo-twi_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 19,
+    "last_modified": "2025-03-31T07:49:12.000Z",
+    "matched_term": "igbo"
   },
   {
     "id": "African-Languages-Lab/kasagadi",
@@ -4881,65 +4905,6 @@
     "matched_term": "african languages"
   },
   {
-    "id": "adaadig/igbo_CJtags",
-    "url": "https://huggingface.co/datasets/adaadig/igbo_CJtags",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 18,
-    "last_modified": "2025-02-18T22:06:19.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "michsethowusu/igbo-umbundu_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/igbo-umbundu_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 18,
-    "last_modified": "2025-03-31T07:48:07.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "EYEDOL/NaijaAccent",
-    "url": "https://huggingface.co/datasets/EYEDOL/NaijaAccent",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 18,
-    "last_modified": "2025-05-18T21:14:43.000Z",
-    "matched_term": "naija"
-  },
-  {
     "id": "EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_7",
     "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_7",
     "license": "UNKNOWN",
@@ -4955,7 +4920,7 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 18,
+    "downloads": 19,
     "last_modified": "2025-04-30T13:30:12.000Z",
     "matched_term": "naija"
   },
@@ -4974,28 +4939,9 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 18,
+    "downloads": 19,
     "last_modified": "2025-03-31T05:07:11.000Z",
     "matched_term": "yoruba"
-  },
-  {
-    "id": "Aletheia-ng/WebScraped_Igbo_To_Eng",
-    "url": "https://huggingface.co/datasets/Aletheia-ng/WebScraped_Igbo_To_Eng",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:polars",
-      "library:mlcroissant",
-      "region:us"
-    ],
-    "downloads": 17,
-    "last_modified": "2024-11-08T15:41:38.000Z",
-    "matched_term": "igbo"
   },
   {
     "id": "Twelve2five/nigerian_pidgin_tts",
@@ -5006,9 +4952,125 @@
       "license:mit",
       "region:us"
     ],
-    "downloads": 17,
+    "downloads": 19,
     "last_modified": "2025-01-26T02:41:51.000Z",
     "matched_term": "pidgin nigerian"
+  },
+  {
+    "id": "michsethowusu/oromo-yoruba_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/oromo-yoruba_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 18,
+    "last_modified": "2025-03-30T20:09:11.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "michsethowusu/swahili-yoruba_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/swahili-yoruba_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 18,
+    "last_modified": "2025-03-31T05:01:12.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "michsethowusu/swati-yoruba_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/swati-yoruba_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 17,
+    "last_modified": "2025-03-31T05:04:23.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "EYEDOL/mozilla_commonvoice_naijaHausa2_preprocessed_train_batch_4",
+    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa2_preprocessed_train_batch_4",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 17,
+    "last_modified": "2025-05-01T16:11:44.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "adaadig/igbo_CJtags",
+    "url": "https://huggingface.co/datasets/adaadig/igbo_CJtags",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:1K<n<10K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 17,
+    "last_modified": "2025-02-18T22:06:19.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "michsethowusu/igbo-umbundu_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/igbo-umbundu_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 17,
+    "last_modified": "2025-03-31T07:48:07.000Z",
+    "matched_term": "igbo"
   },
   {
     "id": "michsethowusu/igbo-kongo_sentence-pairs",
@@ -5030,30 +5092,8 @@
     "matched_term": "igbo"
   },
   {
-    "id": "saillab/alpaca_igbo_taco",
-    "url": "https://huggingface.co/datasets/saillab/alpaca_igbo_taco",
-    "license": "UNKNOWN",
-    "languages": [
-      "ig"
-    ],
-    "tags": [
-      "language:ig",
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 17,
-    "last_modified": "2024-09-20T22:08:49.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "michsethowusu/igbo-kinyarwanda_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/igbo-kinyarwanda_sentence-pairs",
+    "id": "michsethowusu/rundi-yoruba_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/rundi-yoruba_sentence-pairs",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
@@ -5067,21 +5107,46 @@
       "region:us"
     ],
     "downloads": 17,
-    "last_modified": "2025-04-02T10:15:30.000Z",
-    "matched_term": "igbo"
+    "last_modified": "2025-03-31T04:46:54.000Z",
+    "matched_term": "yoruba"
   },
   {
-    "id": "Arjuna17/lepala-ai-swahili-hausa-dataset",
-    "url": "https://huggingface.co/datasets/Arjuna17/lepala-ai-swahili-hausa-dataset",
-    "license": "apache-2.0",
+    "id": "Ozinex/yorubao",
+    "url": "https://huggingface.co/datasets/Ozinex/yorubao",
+    "license": "openrail",
     "languages": [],
     "tags": [
-      "license:apache-2.0",
+      "license:openrail",
+      "size_categories:n<1K",
+      "format:audiofolder",
+      "modality:audio",
+      "library:datasets",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "downloads": 17,
+    "last_modified": "2024-07-24T19:31:56.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "EYEDOL/NaijaAccent",
+    "url": "https://huggingface.co/datasets/EYEDOL/NaijaAccent",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:1K<n<10K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
       "region:us"
     ],
     "downloads": 16,
-    "last_modified": "2025-03-01T07:11:27.000Z",
-    "matched_term": "hausa"
+    "last_modified": "2025-05-18T21:14:43.000Z",
+    "matched_term": "naija"
   },
   {
     "id": "michsethowusu/igbo-wolof_sentence-pairs",
@@ -5122,44 +5187,6 @@
     "matched_term": "igbo"
   },
   {
-    "id": "michsethowusu/rundi-yoruba_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/rundi-yoruba_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 16,
-    "last_modified": "2025-03-31T04:46:54.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "ML-GOD/Hausa_translate_analysis",
-    "url": "https://huggingface.co/datasets/ML-GOD/Hausa_translate_analysis",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 16,
-    "last_modified": "2025-03-03T01:17:11.000Z",
-    "matched_term": "hausa"
-  },
-  {
     "id": "Uriath/g2p-african-languages",
     "url": "https://huggingface.co/datasets/Uriath/g2p-african-languages",
     "license": "cc-by-4.0",
@@ -5190,26 +5217,6 @@
     "matched_term": "african languages"
   },
   {
-    "id": "EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_4",
-    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_4",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 16,
-    "last_modified": "2025-04-30T04:51:59.000Z",
-    "matched_term": "naija"
-  },
-  {
     "id": "EYEDOL/mozilla_commonvoice_naijaHausa2_preprocessed_train_batch_5",
     "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa2_preprocessed_train_batch_5",
     "license": "UNKNOWN",
@@ -5230,8 +5237,92 @@
     "matched_term": "naija"
   },
   {
-    "id": "toyrem/naija_english",
-    "url": "https://huggingface.co/datasets/toyrem/naija_english",
+    "id": "EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_6",
+    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_6",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 16,
+    "last_modified": "2025-04-30T13:12:17.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "michsethowusu/pedi-yoruba_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/pedi-yoruba_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 16,
+    "last_modified": "2025-03-30T20:14:42.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "masakhane/africa-news",
+    "url": "https://huggingface.co/datasets/masakhane/africa-news",
+    "license": "apache-2.0",
+    "languages": [],
+    "tags": [
+      "license:apache-2.0",
+      "region:us"
+    ],
+    "downloads": 16,
+    "last_modified": "2025-08-27T17:18:41.000Z",
+    "matched_term": "masakhane"
+  },
+  {
+    "id": "michsethowusu/igbo-kinyarwanda_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/igbo-kinyarwanda_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 15,
+    "last_modified": "2025-04-02T10:15:30.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "Arjuna17/lepala-ai-swahili-hausa-dataset",
+    "url": "https://huggingface.co/datasets/Arjuna17/lepala-ai-swahili-hausa-dataset",
+    "license": "apache-2.0",
+    "languages": [],
+    "tags": [
+      "license:apache-2.0",
+      "region:us"
+    ],
+    "downloads": 15,
+    "last_modified": "2025-03-01T07:11:27.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_4",
+    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_4",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
@@ -5246,42 +5337,8 @@
       "region:us"
     ],
     "downloads": 15,
-    "last_modified": "2025-02-26T12:50:40.000Z",
+    "last_modified": "2025-04-30T04:51:59.000Z",
     "matched_term": "naija"
-  },
-  {
-    "id": "Aletheia-ng/nigerian-pidgin-corpus-synth",
-    "url": "https://huggingface.co/datasets/Aletheia-ng/nigerian-pidgin-corpus-synth",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "region:us",
-      "fastdata",
-      "synthetic"
-    ],
-    "downloads": 15,
-    "last_modified": "2025-12-27T22:05:28.000Z",
-    "matched_term": "pidgin nigerian"
-  },
-  {
-    "id": "mtek2000/yoruba_newsclass_topic",
-    "url": "https://huggingface.co/datasets/mtek2000/yoruba_newsclass_topic",
-    "license": "mit",
-    "languages": [],
-    "tags": [
-      "license:mit",
-      "size_categories:1K<n<10K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 15,
-    "last_modified": "2024-01-27T10:10:32.000Z",
-    "matched_term": "yoruba"
   },
   {
     "id": "michsethowusu/somali-yoruba_sentence-pairs",
@@ -5301,26 +5358,6 @@
     "downloads": 15,
     "last_modified": "2025-03-31T04:57:18.000Z",
     "matched_term": "yoruba"
-  },
-  {
-    "id": "FarmerlineML/tts_hausa_dataset",
-    "url": "https://huggingface.co/datasets/FarmerlineML/tts_hausa_dataset",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 15,
-    "last_modified": "2024-05-12T13:15:42.000Z",
-    "matched_term": "hausa"
   },
   {
     "id": "michsethowusu/hausa-yoruba_sentence-pairs",
@@ -5362,6 +5399,159 @@
     "matched_term": "naija"
   },
   {
+    "id": "michsethowusu/tswana-yoruba_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/tswana-yoruba_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 15,
+    "last_modified": "2025-03-31T05:12:01.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "moro23/hausa_ng",
+    "url": "https://huggingface.co/datasets/moro23/hausa_ng",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:n<1K",
+      "format:webdataset",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:webdataset",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "downloads": 15,
+    "last_modified": "2022-07-06T11:58:19.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "EYEDOL/naija_commonvoice_naijaEnglish1_preprocessed_train_batch_2",
+    "url": "https://huggingface.co/datasets/EYEDOL/naija_commonvoice_naijaEnglish1_preprocessed_train_batch_2",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:n<1K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 15,
+    "last_modified": "2025-04-30T09:55:17.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_3",
+    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_3",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 15,
+    "last_modified": "2025-04-30T04:11:06.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "EYEDOL/mozilla_commonvoice_naijaHausa0_preprocessed_train_batch_1",
+    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa0_preprocessed_train_batch_1",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 15,
+    "last_modified": "2025-04-30T15:18:50.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "Kejihela/yoruba-TTS",
+    "url": "https://huggingface.co/datasets/Kejihela/yoruba-TTS",
+    "license": "mit",
+    "languages": [],
+    "tags": [
+      "license:mit",
+      "size_categories:1K<n<10K",
+      "format:parquet",
+      "modality:tabular",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 15,
+    "last_modified": "2025-03-14T08:47:08.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "EYEDOL/naija_commonvoice_naijaEnglish1_preprocessed_train_batch_1",
+    "url": "https://huggingface.co/datasets/EYEDOL/naija_commonvoice_naijaEnglish1_preprocessed_train_batch_1",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:1K<n<10K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 14,
+    "last_modified": "2025-04-30T09:53:46.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "Aletheia-ng/nigerian-pidgin-corpus-synth",
+    "url": "https://huggingface.co/datasets/Aletheia-ng/nigerian-pidgin-corpus-synth",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "region:us",
+      "fastdata",
+      "synthetic"
+    ],
+    "downloads": 14,
+    "last_modified": "2025-12-27T22:05:28.000Z",
+    "matched_term": "pidgin nigerian"
+  },
+  {
     "id": "EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_3",
     "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_3",
     "license": "UNKNOWN",
@@ -5377,7 +5567,7 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 15,
+    "downloads": 14,
     "last_modified": "2025-04-30T12:18:52.000Z",
     "matched_term": "naija"
   },
@@ -5397,28 +5587,8 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 15,
+    "downloads": 14,
     "last_modified": "2025-04-30T12:36:01.000Z",
-    "matched_term": "naija"
-  },
-  {
-    "id": "EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_6",
-    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_6",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 15,
-    "last_modified": "2025-04-30T13:12:17.000Z",
     "matched_term": "naija"
   },
   {
@@ -5437,7 +5607,7 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 15,
+    "downloads": 14,
     "last_modified": "2025-04-30T15:42:10.000Z",
     "matched_term": "naija"
   },
@@ -5457,29 +5627,9 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 15,
+    "downloads": 14,
     "last_modified": "2025-05-01T17:03:49.000Z",
     "matched_term": "naija"
-  },
-  {
-    "id": "FarmerlineML/TTS_hausa_new",
-    "url": "https://huggingface.co/datasets/FarmerlineML/TTS_hausa_new",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 14,
-    "last_modified": "2024-08-27T11:26:25.000Z",
-    "matched_term": "hausa"
   },
   {
     "id": "mangaphd/hausaBERTdatatrain",
@@ -5520,142 +5670,6 @@
     "matched_term": "hausa"
   },
   {
-    "id": "michsethowusu/igbo-oromo_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/igbo-oromo_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 14,
-    "last_modified": "2025-04-02T10:11:11.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "michsethowusu/tswana-yoruba_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/tswana-yoruba_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 14,
-    "last_modified": "2025-03-31T05:12:01.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "michsethowusu/hausa-umbundu_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/hausa-umbundu_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 14,
-    "last_modified": "2025-04-02T10:26:28.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "moro23/hausa_ng",
-    "url": "https://huggingface.co/datasets/moro23/hausa_ng",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:n<1K",
-      "format:webdataset",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:webdataset",
-      "library:mlcroissant",
-      "region:us"
-    ],
-    "downloads": 14,
-    "last_modified": "2022-07-06T11:58:19.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "EYEDOL/naija_commonvoice_naijaEnglish1_preprocessed_train_batch_2",
-    "url": "https://huggingface.co/datasets/EYEDOL/naija_commonvoice_naijaEnglish1_preprocessed_train_batch_2",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:n<1K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 14,
-    "last_modified": "2025-04-30T09:55:17.000Z",
-    "matched_term": "naija"
-  },
-  {
-    "id": "EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_3",
-    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_3",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 14,
-    "last_modified": "2025-04-30T04:11:06.000Z",
-    "matched_term": "naija"
-  },
-  {
-    "id": "EYEDOL/mozilla_commonvoice_naijaHausa0_preprocessed_train_batch_1",
-    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa0_preprocessed_train_batch_1",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 14,
-    "last_modified": "2025-04-30T15:18:50.000Z",
-    "matched_term": "naija"
-  },
-  {
     "id": "EYEDOL/mozilla_commonvoice_naijaHausa2_preprocessed_train_batch_3",
     "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa2_preprocessed_train_batch_3",
     "license": "UNKNOWN",
@@ -5676,28 +5690,6 @@
     "matched_term": "naija"
   },
   {
-    "id": "African-Languages-Lab/all-lab-text-multi",
-    "url": "https://huggingface.co/datasets/African-Languages-Lab/all-lab-text-multi",
-    "license": "mit",
-    "languages": [],
-    "tags": [
-      "license:mit",
-      "size_categories:100M<n<1B",
-      "format:parquet",
-      "format:optimized-parquet",
-      "modality:tabular",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:polars",
-      "library:mlcroissant",
-      "region:us"
-    ],
-    "downloads": 13,
-    "last_modified": "2026-06-17T15:34:59.000Z",
-    "matched_term": "african languages"
-  },
-  {
     "id": "michsethowusu/igbo-tsonga_sentence-pairs",
     "url": "https://huggingface.co/datasets/michsethowusu/igbo-tsonga_sentence-pairs",
     "license": "UNKNOWN",
@@ -5712,9 +5704,224 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 13,
+    "downloads": 14,
     "last_modified": "2025-03-31T07:52:40.000Z",
     "matched_term": "igbo"
+  },
+  {
+    "id": "Aletheia-ng/naijaweb-edu",
+    "url": "https://huggingface.co/datasets/Aletheia-ng/naijaweb-edu",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:1K<n<10K",
+      "format:parquet",
+      "modality:tabular",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 14,
+    "last_modified": "2024-11-08T10:33:06.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "michsethowusu/igbo-lingala_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/igbo-lingala_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 14,
+    "last_modified": "2025-04-02T10:13:18.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_1",
+    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_1",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 14,
+    "last_modified": "2025-04-30T11:42:42.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_5",
+    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_5",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 14,
+    "last_modified": "2025-04-30T12:53:56.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_1",
+    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_1",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 14,
+    "last_modified": "2025-04-30T02:49:34.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "ratsamm666/igboaudio",
+    "url": "https://huggingface.co/datasets/ratsamm666/igboaudio",
+    "license": "mit",
+    "languages": [],
+    "tags": [
+      "license:mit",
+      "size_categories:n<1K",
+      "format:audiofolder",
+      "modality:audio",
+      "library:datasets",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "downloads": 14,
+    "last_modified": "2024-12-27T17:08:58.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "toyrem/naija_english",
+    "url": "https://huggingface.co/datasets/toyrem/naija_english",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 13,
+    "last_modified": "2025-02-26T12:50:40.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "mtek2000/yoruba_newsclass_topic",
+    "url": "https://huggingface.co/datasets/mtek2000/yoruba_newsclass_topic",
+    "license": "mit",
+    "languages": [],
+    "tags": [
+      "license:mit",
+      "size_categories:1K<n<10K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 13,
+    "last_modified": "2024-01-27T10:10:32.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "FarmerlineML/tts_hausa_dataset",
+    "url": "https://huggingface.co/datasets/FarmerlineML/tts_hausa_dataset",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:1K<n<10K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 13,
+    "last_modified": "2024-05-12T13:15:42.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "michsethowusu/igbo-oromo_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/igbo-oromo_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 13,
+    "last_modified": "2025-04-02T10:11:11.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "michsethowusu/hausa-umbundu_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/hausa-umbundu_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 13,
+    "last_modified": "2025-04-02T10:26:28.000Z",
+    "matched_term": "hausa"
   },
   {
     "id": "michsethowusu/igbo-somali_sentence-pairs",
@@ -5736,58 +5943,6 @@
     "matched_term": "igbo"
   },
   {
-    "id": "abbeydupsys/yorubaadage",
-    "url": "https://huggingface.co/datasets/abbeydupsys/yorubaadage",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "region:us"
-    ],
-    "downloads": 13,
-    "last_modified": "2024-09-28T16:51:51.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "Kejihela/yoruba-TTS",
-    "url": "https://huggingface.co/datasets/Kejihela/yoruba-TTS",
-    "license": "mit",
-    "languages": [],
-    "tags": [
-      "license:mit",
-      "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:tabular",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 13,
-    "last_modified": "2025-03-14T08:47:08.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "michsethowusu/pedi-yoruba_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/pedi-yoruba_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 13,
-    "last_modified": "2025-03-30T20:14:42.000Z",
-    "matched_term": "yoruba"
-  },
-  {
     "id": "Blaze100/hausa_dataset.csv",
     "url": "https://huggingface.co/datasets/Blaze100/hausa_dataset.csv",
     "license": "UNKNOWN",
@@ -5798,53 +5953,6 @@
     "downloads": 13,
     "last_modified": "2025-03-19T19:07:25.000Z",
     "matched_term": "hausa"
-  },
-  {
-    "id": "Aletheia-ng/naijaweb-edu",
-    "url": "https://huggingface.co/datasets/Aletheia-ng/naijaweb-edu",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:tabular",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 13,
-    "last_modified": "2024-11-08T10:33:06.000Z",
-    "matched_term": "naija"
-  },
-  {
-    "id": "SerahAKojenu/Masakhane-news",
-    "url": "https://huggingface.co/datasets/SerahAKojenu/Masakhane-news",
-    "license": "UNKNOWN",
-    "languages": [
-      "en",
-      "yo"
-    ],
-    "tags": [
-      "task_categories:text-classification",
-      "language:en",
-      "language:yo",
-      "size_categories:1K<n<10K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us",
-      "biology",
-      "finance"
-    ],
-    "downloads": 13,
-    "last_modified": "2023-11-07T10:41:51.000Z",
-    "matched_term": "masakhane"
   },
   {
     "id": "LocaleNLP/afrilion-african-languages",
@@ -5858,44 +5966,6 @@
     "downloads": 13,
     "last_modified": "2026-04-17T16:26:24.000Z",
     "matched_term": "african languages"
-  },
-  {
-    "id": "Tommy0201/Igbo_To_Eng_Amazon_Translator",
-    "url": "https://huggingface.co/datasets/Tommy0201/Igbo_To_Eng_Amazon_Translator",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:1K<n<10K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 13,
-    "last_modified": "2024-10-02T20:06:55.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "michsethowusu/igbo-lingala_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/igbo-lingala_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 13,
-    "last_modified": "2025-04-02T10:13:18.000Z",
-    "matched_term": "igbo"
   },
   {
     "id": "vadewumi/YorubaTTS2",
@@ -5920,46 +5990,6 @@
     "matched_term": "yoruba"
   },
   {
-    "id": "EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_1",
-    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_1",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 13,
-    "last_modified": "2025-04-30T11:42:42.000Z",
-    "matched_term": "naija"
-  },
-  {
-    "id": "EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_5",
-    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_5",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 13,
-    "last_modified": "2025-04-30T12:53:56.000Z",
-    "matched_term": "naija"
-  },
-  {
     "id": "EYEDOL/mozilla_commonvoice_naijaHausa0_preprocessed_train_batch_8",
     "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa0_preprocessed_train_batch_8",
     "license": "UNKNOWN",
@@ -5977,45 +6007,6 @@
     ],
     "downloads": 13,
     "last_modified": "2025-04-30T18:20:19.000Z",
-    "matched_term": "naija"
-  },
-  {
-    "id": "Kamsi08/african-languages-natlas",
-    "url": "https://huggingface.co/datasets/Kamsi08/african-languages-natlas",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:n<1K",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:polars",
-      "library:mlcroissant",
-      "region:us"
-    ],
-    "downloads": 13,
-    "last_modified": "2025-12-30T11:45:00.000Z",
-    "matched_term": "african languages"
-  },
-  {
-    "id": "EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_1",
-    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_1",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 13,
-    "last_modified": "2025-04-30T02:49:34.000Z",
     "matched_term": "naija"
   },
   {
@@ -6039,14 +6030,96 @@
     "matched_term": "naija"
   },
   {
-    "id": "African-Languages-Lab/all-lab-text-mono",
-    "url": "https://huggingface.co/datasets/African-Languages-Lab/all-lab-text-mono",
+    "id": "EYEDOL/mozilla_commonvoice_naijaHausa0_preprocessed_train_batch_5",
+    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa0_preprocessed_train_batch_5",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 13,
+    "last_modified": "2025-04-30T17:23:08.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "michsethowusu/igbo-tswana_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/igbo-tswana_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 13,
+    "last_modified": "2025-03-31T07:51:33.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "Aletheia-ng/WebScraped_Igbo_To_Eng",
+    "url": "https://huggingface.co/datasets/Aletheia-ng/WebScraped_Igbo_To_Eng",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100K<n<1M",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:polars",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "downloads": 12,
+    "last_modified": "2024-11-08T15:41:38.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "saillab/alpaca_igbo_taco",
+    "url": "https://huggingface.co/datasets/saillab/alpaca_igbo_taco",
+    "license": "UNKNOWN",
+    "languages": [
+      "ig"
+    ],
+    "tags": [
+      "language:ig",
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 12,
+    "last_modified": "2024-09-20T22:08:49.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "African-Languages-Lab/all-lab-text-multi",
+    "url": "https://huggingface.co/datasets/African-Languages-Lab/all-lab-text-multi",
+    "license": "mit",
+    "languages": [],
+    "tags": [
+      "license:mit",
       "size_categories:100M<n<1B",
       "format:parquet",
       "format:optimized-parquet",
+      "modality:tabular",
       "modality:text",
       "library:datasets",
       "library:dask",
@@ -6055,7 +6128,105 @@
       "region:us"
     ],
     "downloads": 12,
-    "last_modified": "2026-06-17T15:34:57.000Z",
+    "last_modified": "2026-06-17T15:34:59.000Z",
+    "matched_term": "african languages"
+  },
+  {
+    "id": "SerahAKojenu/Masakhane-news",
+    "url": "https://huggingface.co/datasets/SerahAKojenu/Masakhane-news",
+    "license": "UNKNOWN",
+    "languages": [
+      "en",
+      "yo"
+    ],
+    "tags": [
+      "task_categories:text-classification",
+      "language:en",
+      "language:yo",
+      "size_categories:1K<n<10K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us",
+      "biology",
+      "finance"
+    ],
+    "downloads": 12,
+    "last_modified": "2023-11-07T10:41:51.000Z",
+    "matched_term": "masakhane"
+  },
+  {
+    "id": "danwils/hausa-tts",
+    "url": "https://huggingface.co/datasets/danwils/hausa-tts",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "region:us"
+    ],
+    "downloads": 12,
+    "last_modified": "2025-03-22T21:09:04.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "ouilyh/qwen-blindspots-african-languages",
+    "url": "https://huggingface.co/datasets/ouilyh/qwen-blindspots-african-languages",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:n<1K",
+      "format:parquet",
+      "format:optimized-parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:polars",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "downloads": 12,
+    "last_modified": "2026-03-14T21:50:05.000Z",
+    "matched_term": "african languages"
+  },
+  {
+    "id": "FarmerlineML/TTS_hausa_new",
+    "url": "https://huggingface.co/datasets/FarmerlineML/TTS_hausa_new",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:1K<n<10K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 11,
+    "last_modified": "2024-08-27T11:26:25.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "Kamsi08/african-languages-natlas",
+    "url": "https://huggingface.co/datasets/Kamsi08/african-languages-natlas",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:n<1K",
+      "format:parquet",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:polars",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "downloads": 11,
+    "last_modified": "2025-12-30T11:45:00.000Z",
     "matched_term": "african languages"
   },
   {
@@ -6072,47 +6243,141 @@
       "size_categories:1K<n<10K",
       "region:us"
     ],
-    "downloads": 12,
+    "downloads": 11,
     "last_modified": "2023-12-18T10:16:10.000Z",
     "matched_term": "hausa"
   },
   {
-    "id": "danwils/hausa-tts",
-    "url": "https://huggingface.co/datasets/danwils/hausa-tts",
+    "id": "EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_2",
+    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_2",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
       "region:us"
     ],
-    "downloads": 12,
-    "last_modified": "2025-03-22T21:09:04.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "aspmirlab/NaijaFaceVoiceDB",
-    "url": "https://huggingface.co/datasets/aspmirlab/NaijaFaceVoiceDB",
-    "license": "apache-2.0",
-    "languages": [],
-    "tags": [
-      "license:apache-2.0",
-      "doi:10.57967/hf/7036",
-      "region:us"
-    ],
-    "downloads": 12,
-    "last_modified": "2025-01-19T01:34:59.000Z",
+    "downloads": 11,
+    "last_modified": "2025-04-30T03:29:29.000Z",
     "matched_term": "naija"
   },
   {
-    "id": "BeardedMonster/masakhanews_eval",
-    "url": "https://huggingface.co/datasets/BeardedMonster/masakhanews_eval",
+    "id": "tevien/misc_naija_english_audio_50",
+    "url": "https://huggingface.co/datasets/tevien/misc_naija_english_audio_50",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
+      "size_categories:n<1K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
       "region:us"
     ],
-    "downloads": 12,
-    "last_modified": "2025-05-03T14:25:03.000Z",
-    "matched_term": "masakhane"
+    "downloads": 11,
+    "last_modified": "2025-02-21T14:23:53.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "michsethowusu/igbo-kimbundu_sentence-pairs",
+    "url": "https://huggingface.co/datasets/michsethowusu/igbo-kimbundu_sentence-pairs",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 11,
+    "last_modified": "2025-04-02T10:16:33.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "mangaphd/HausaLexicons",
+    "url": "https://huggingface.co/datasets/mangaphd/HausaLexicons",
+    "license": "ecl-2.0",
+    "languages": [],
+    "tags": [
+      "license:ecl-2.0",
+      "doi:10.57967/hf/1390",
+      "region:us"
+    ],
+    "downloads": 11,
+    "last_modified": "2023-11-25T15:00:35.000Z",
+    "matched_term": "hausa"
+  },
+  {
+    "id": "EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_2",
+    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_2",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:10K<n<100K",
+      "format:parquet",
+      "modality:audio",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 11,
+    "last_modified": "2025-04-30T12:02:00.000Z",
+    "matched_term": "naija"
+  },
+  {
+    "id": "Tommy0201/Igbo_To_Eng_Amazon_Translator",
+    "url": "https://huggingface.co/datasets/Tommy0201/Igbo_To_Eng_Amazon_Translator",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:1K<n<10K",
+      "format:csv",
+      "modality:text",
+      "library:datasets",
+      "library:pandas",
+      "library:mlcroissant",
+      "library:polars",
+      "region:us"
+    ],
+    "downloads": 10,
+    "last_modified": "2024-10-02T20:06:55.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "African-Languages-Lab/all-lab-text-mono",
+    "url": "https://huggingface.co/datasets/African-Languages-Lab/all-lab-text-mono",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:100M<n<1B",
+      "format:parquet",
+      "format:optimized-parquet",
+      "modality:text",
+      "library:datasets",
+      "library:dask",
+      "library:polars",
+      "library:mlcroissant",
+      "region:us"
+    ],
+    "downloads": 10,
+    "last_modified": "2026-06-17T15:34:57.000Z",
+    "matched_term": "african languages"
   },
   {
     "id": "Ifyokoh/IgboSenti-BBC",
@@ -6134,67 +6399,9 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 12,
+    "downloads": 10,
     "last_modified": "2024-07-24T17:37:56.000Z",
     "matched_term": "igbo"
-  },
-  {
-    "id": "Ozinex/yorubao",
-    "url": "https://huggingface.co/datasets/Ozinex/yorubao",
-    "license": "openrail",
-    "languages": [],
-    "tags": [
-      "license:openrail",
-      "size_categories:n<1K",
-      "format:audiofolder",
-      "modality:audio",
-      "library:datasets",
-      "library:mlcroissant",
-      "region:us"
-    ],
-    "downloads": 12,
-    "last_modified": "2024-07-24T19:31:56.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_2",
-    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa1_preprocessed_train_batch_2",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 12,
-    "last_modified": "2025-04-30T03:29:29.000Z",
-    "matched_term": "naija"
-  },
-  {
-    "id": "EYEDOL/mozilla_commonvoice_naijaHausa0_preprocessed_train_batch_5",
-    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaHausa0_preprocessed_train_batch_5",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:dask",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 12,
-    "last_modified": "2025-04-30T17:23:08.000Z",
-    "matched_term": "naija"
   },
   {
     "id": "michsethowusu/igbo-rundi_sentence-pairs",
@@ -6211,59 +6418,9 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 11,
+    "downloads": 10,
     "last_modified": "2025-04-02T10:09:04.000Z",
     "matched_term": "igbo"
-  },
-  {
-    "id": "ratsamm666/igboaudio",
-    "url": "https://huggingface.co/datasets/ratsamm666/igboaudio",
-    "license": "mit",
-    "languages": [],
-    "tags": [
-      "license:mit",
-      "size_categories:n<1K",
-      "format:audiofolder",
-      "modality:audio",
-      "library:datasets",
-      "library:mlcroissant",
-      "region:us"
-    ],
-    "downloads": 11,
-    "last_modified": "2024-12-27T17:08:58.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "michsethowusu/igbo-tswana_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/igbo-tswana_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:100K<n<1M",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 11,
-    "last_modified": "2025-03-31T07:51:33.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "masakhane/africa-news",
-    "url": "https://huggingface.co/datasets/masakhane/africa-news",
-    "license": "apache-2.0",
-    "languages": [],
-    "tags": [
-      "license:apache-2.0",
-      "region:us"
-    ],
-    "downloads": 11,
-    "last_modified": "2025-08-27T17:18:41.000Z",
-    "matched_term": "masakhane"
   },
   {
     "id": "EYEDOL/mozilla_commonvoice_naijaHausa2_preprocessed_train_batch_1",
@@ -6280,61 +6437,9 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 11,
+    "downloads": 10,
     "last_modified": "2025-05-01T21:53:30.000Z",
     "matched_term": "naija"
-  },
-  {
-    "id": "tevien/misc_naija_english_audio_50",
-    "url": "https://huggingface.co/datasets/tevien/misc_naija_english_audio_50",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:n<1K",
-      "format:parquet",
-      "modality:audio",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 10,
-    "last_modified": "2025-02-21T14:23:53.000Z",
-    "matched_term": "naija"
-  },
-  {
-    "id": "chymaks/Igbo_ner",
-    "url": "https://huggingface.co/datasets/chymaks/Igbo_ner",
-    "license": "cc-by-nc-2.0",
-    "languages": [],
-    "tags": [
-      "license:cc-by-nc-2.0",
-      "region:us"
-    ],
-    "downloads": 10,
-    "last_modified": "2023-12-21T11:20:20.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "michsethowusu/igbo-kimbundu_sentence-pairs",
-    "url": "https://huggingface.co/datasets/michsethowusu/igbo-kimbundu_sentence-pairs",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 10,
-    "last_modified": "2025-04-02T10:16:33.000Z",
-    "matched_term": "igbo"
   },
   {
     "id": "odunola/extra_yoruba_data",
@@ -6368,71 +6473,78 @@
     "matched_term": "yoruba"
   },
   {
-    "id": "mangaphd/HausaLexicons",
-    "url": "https://huggingface.co/datasets/mangaphd/HausaLexicons",
-    "license": "ecl-2.0",
-    "languages": [],
-    "tags": [
-      "license:ecl-2.0",
-      "doi:10.57967/hf/1390",
-      "region:us"
-    ],
-    "downloads": 10,
-    "last_modified": "2023-11-25T15:00:35.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "mtek2000/hausa_topic_classification",
-    "url": "https://huggingface.co/datasets/mtek2000/hausa_topic_classification",
-    "license": "mit",
-    "languages": [],
-    "tags": [
-      "license:mit",
-      "region:us"
-    ],
-    "downloads": 10,
-    "last_modified": "2024-01-26T22:25:43.000Z",
-    "matched_term": "hausa"
-  },
-  {
-    "id": "ouilyh/qwen-blindspots-african-languages",
-    "url": "https://huggingface.co/datasets/ouilyh/qwen-blindspots-african-languages",
+    "id": "supergoose/flan_combined_task612_yorubabbc_classification",
+    "url": "https://huggingface.co/datasets/supergoose/flan_combined_task612_yorubabbc_classification",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
-      "size_categories:n<1K",
+      "size_categories:1K<n<10K",
       "format:parquet",
-      "format:optimized-parquet",
       "modality:text",
       "library:datasets",
       "library:pandas",
-      "library:polars",
       "library:mlcroissant",
+      "library:polars",
       "region:us"
     ],
     "downloads": 10,
-    "last_modified": "2026-03-14T21:50:05.000Z",
-    "matched_term": "african languages"
+    "last_modified": "2025-03-03T01:11:45.000Z",
+    "matched_term": "yoruba"
   },
   {
-    "id": "EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_2",
-    "url": "https://huggingface.co/datasets/EYEDOL/mozilla_commonvoice_naijaYoruba1_preprocessed_train_batch_2",
+    "id": "Harcuracy/openai_whisper_yoruba_asr",
+    "url": "https://huggingface.co/datasets/Harcuracy/openai_whisper_yoruba_asr",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "region:us"
+    ],
+    "downloads": 10,
+    "last_modified": "2024-12-05T12:46:18.000Z",
+    "matched_term": "yoruba"
+  },
+  {
+    "id": "Tni998/IgboLLM2",
+    "url": "https://huggingface.co/datasets/Tni998/IgboLLM2",
     "license": "UNKNOWN",
     "languages": [],
     "tags": [
       "size_categories:10K<n<100K",
-      "format:parquet",
-      "modality:audio",
+      "format:csv",
       "modality:text",
       "library:datasets",
-      "library:dask",
+      "library:pandas",
       "library:mlcroissant",
       "library:polars",
       "region:us"
     ],
     "downloads": 10,
-    "last_modified": "2025-04-30T12:02:00.000Z",
-    "matched_term": "naija"
+    "last_modified": "2024-08-19T21:58:00.000Z",
+    "matched_term": "igbo"
+  },
+  {
+    "id": "BeardedMonster/masakhanews_eval",
+    "url": "https://huggingface.co/datasets/BeardedMonster/masakhanews_eval",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "region:us"
+    ],
+    "downloads": 9,
+    "last_modified": "2025-05-03T14:25:03.000Z",
+    "matched_term": "masakhane"
+  },
+  {
+    "id": "BeardedMonster/african_languages_translation",
+    "url": "https://huggingface.co/datasets/BeardedMonster/african_languages_translation",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "region:us"
+    ],
+    "downloads": 9,
+    "last_modified": "2025-04-29T20:20:15.000Z",
+    "matched_term": "african languages"
   },
   {
     "id": "michsethowusu/igbo-kamba_sentence-pairs",
@@ -6449,7 +6561,7 @@
       "library:polars",
       "region:us"
     ],
-    "downloads": 9,
+    "downloads": 8,
     "last_modified": "2025-04-02T10:18:39.000Z",
     "matched_term": "igbo"
   },
@@ -6462,51 +6574,8 @@
       "license:cc-by-nc-sa-3.0",
       "region:us"
     ],
-    "downloads": 9,
-    "last_modified": "2024-10-04T21:29:21.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "Aletheia-ng/masakhaner_eval",
-    "url": "https://huggingface.co/datasets/Aletheia-ng/masakhaner_eval",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "region:us"
-    ],
-    "downloads": 9,
-    "last_modified": "2025-05-03T15:54:27.000Z",
-    "matched_term": "masakhane"
-  },
-  {
-    "id": "BeardedMonster/african_languages_translation",
-    "url": "https://huggingface.co/datasets/BeardedMonster/african_languages_translation",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "region:us"
-    ],
-    "downloads": 9,
-    "last_modified": "2025-04-29T20:20:15.000Z",
-    "matched_term": "african languages"
-  },
-  {
-    "id": "supergoose/flan_combined_task612_yorubabbc_classification",
-    "url": "https://huggingface.co/datasets/supergoose/flan_combined_task612_yorubabbc_classification",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:1K<n<10K",
-      "format:parquet",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
     "downloads": 8,
-    "last_modified": "2025-03-03T01:11:45.000Z",
+    "last_modified": "2024-10-04T21:29:21.000Z",
     "matched_term": "yoruba"
   },
   {
@@ -6548,6 +6617,19 @@
     "matched_term": "igbo"
   },
   {
+    "id": "mtek2000/hausa_topic_classification",
+    "url": "https://huggingface.co/datasets/mtek2000/hausa_topic_classification",
+    "license": "mit",
+    "languages": [],
+    "tags": [
+      "license:mit",
+      "region:us"
+    ],
+    "downloads": 7,
+    "last_modified": "2024-01-26T22:25:43.000Z",
+    "matched_term": "hausa"
+  },
+  {
     "id": "IwajuAI/Yoruba-Dictionary",
     "url": "https://huggingface.co/datasets/IwajuAI/Yoruba-Dictionary",
     "license": "UNKNOWN",
@@ -6559,59 +6641,9 @@
       "library:mlcroissant",
       "region:us"
     ],
-    "downloads": 8,
+    "downloads": 7,
     "last_modified": "2024-04-25T11:54:43.000Z",
     "matched_term": "yoruba"
-  },
-  {
-    "id": "Harcuracy/openai_whisper_yoruba_asr",
-    "url": "https://huggingface.co/datasets/Harcuracy/openai_whisper_yoruba_asr",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "region:us"
-    ],
-    "downloads": 8,
-    "last_modified": "2024-12-05T12:46:18.000Z",
-    "matched_term": "yoruba"
-  },
-  {
-    "id": "Tni998/IgboLLM",
-    "url": "https://huggingface.co/datasets/Tni998/IgboLLM",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:n<1K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 7,
-    "last_modified": "2024-06-10T14:06:06.000Z",
-    "matched_term": "igbo"
-  },
-  {
-    "id": "Tni998/IgboLLM2",
-    "url": "https://huggingface.co/datasets/Tni998/IgboLLM2",
-    "license": "UNKNOWN",
-    "languages": [],
-    "tags": [
-      "size_categories:10K<n<100K",
-      "format:csv",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:mlcroissant",
-      "library:polars",
-      "region:us"
-    ],
-    "downloads": 7,
-    "last_modified": "2024-08-19T21:58:00.000Z",
-    "matched_term": "igbo"
   },
   {
     "id": "gracefulibk/yorubamt",
@@ -6642,30 +6674,35 @@
     "matched_term": "masakhane"
   },
   {
-    "id": "African-Languages-Lab/proxy-mt-eval-scores",
-    "url": "https://huggingface.co/datasets/African-Languages-Lab/proxy-mt-eval-scores",
-    "license": "other",
+    "id": "Aletheia-ng/masakhaner_eval",
+    "url": "https://huggingface.co/datasets/Aletheia-ng/masakhaner_eval",
+    "license": "UNKNOWN",
     "languages": [],
     "tags": [
-      "task_categories:translation",
-      "license:other",
-      "size_categories:10K<n<100K",
+      "region:us"
+    ],
+    "downloads": 6,
+    "last_modified": "2025-05-03T15:54:27.000Z",
+    "matched_term": "masakhane"
+  },
+  {
+    "id": "Tni998/IgboLLM",
+    "url": "https://huggingface.co/datasets/Tni998/IgboLLM",
+    "license": "UNKNOWN",
+    "languages": [],
+    "tags": [
+      "size_categories:n<1K",
       "format:csv",
-      "modality:tabular",
       "modality:text",
       "library:datasets",
-      "library:dask",
-      "library:polars",
+      "library:pandas",
       "library:mlcroissant",
-      "region:us",
-      "machine-translation",
-      "evaluation",
-      "bleu",
-      "comet"
+      "library:polars",
+      "region:us"
     ],
-    "downloads": 7,
-    "last_modified": "2026-08-14T19:22:29.000Z",
-    "matched_term": "african languages"
+    "downloads": 6,
+    "last_modified": "2024-06-10T14:06:06.000Z",
+    "matched_term": "igbo"
   },
   {
     "id": "mangaphd/HausaLexiconDataset",
@@ -6707,7 +6744,7 @@
       "license:bigscience-bloom-rail-1.0",
       "region:us"
     ],
-    "downloads": 4,
+    "downloads": 5,
     "last_modified": "2025-01-27T14:07:07.000Z",
     "matched_term": "igbo"
   },
@@ -6730,35 +6767,5 @@
     "downloads": 3,
     "last_modified": "2023-03-31T17:29:39.000Z",
     "matched_term": "masakhane"
-  },
-  {
-    "id": "ChiamakaNwokolo/adaption-african-languages-narratives",
-    "url": "https://huggingface.co/datasets/ChiamakaNwokolo/adaption-african-languages-narratives",
-    "license": "UNKNOWN",
-    "languages": [
-      "rm",
-      "gd",
-      "yo"
-    ],
-    "tags": [
-      "multilinguality:multilingual",
-      "source_datasets:original",
-      "language:rm",
-      "language:gd",
-      "language:yo",
-      "size_categories:n<1K",
-      "format:json",
-      "modality:text",
-      "library:datasets",
-      "library:pandas",
-      "library:polars",
-      "library:mlcroissant",
-      "region:us",
-      "adaption",
-      "instruction-tuning"
-    ],
-    "downloads": 0,
-    "last_modified": "2026-08-15T11:19:31.000Z",
-    "matched_term": "african languages"
   }
 ]
