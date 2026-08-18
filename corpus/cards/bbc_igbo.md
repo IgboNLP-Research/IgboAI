@@ -65,8 +65,16 @@ live feed if it recurs or lengthens.
 | 2026-08-07 | 11 | 11 |
 | 2026-08-13 | 3 | 14 |
 | 2026-08-15 | 1 | 15 |
+| 2026-08-18 | 2 | 17 |
 
+Cumulative figure derived by counting lines in
+`corpus/manifests/bbc_igbo.jsonl` directly (17), matching 15 + this run's 2.
 No token or character counts apply — no text is stored.
+
+**2026-08-18 gap check:** the two new items are published 2026-08-17 and
+2026-08-18, a 2-3 day gap since the last recorded item (2026-08-15). This is
+back to the normal cadence the coverage caveat above expects, unlike the
+4-day silent gap flagged on 2026-08-15.
 
 ## Known limitations and quality flags
 
