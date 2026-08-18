@@ -101,6 +101,18 @@ jobs:
             each part of a chain is permission-checked separately, so a chain
             fails if any component is not allowed.
 
+            corpus_run_summary.json already contains corpus-wide totals
+            (documents, tokens_ws, chars, diacritic_char_ratio, all skip counts)
+            and eight samples spread across the corpus. For dump ingests these
+            aggregates are authoritative and complete. Do NOT open, scan, or
+            decompress anything under corpus/raw/: the shards are 5MB each and
+            scanning them will exhaust the turn budget. Work from the summary.
+
+            Do not write scratch files or redirect command output. The sandbox
+            blocks writes outside the repo and redirection generally. If you
+            need a computed value, print it directly from a single python3 -c
+            invocation and read it from the output.
+
             YOUR ROLE IS QUALITY TRIAGE AND DOCUMENTATION, NOT DATA EDITING.
             Never modify, delete, or rewrite files under corpus/raw/ or
             corpus/manifests/ — the deterministic layer owns those. You write
