@@ -174,5 +174,9 @@
   "openalex:W7202292527",
   "openalex:W7202260461",
   "openalex:W4412810130",
-  "openalex:W7202277480"
+  "openalex:W7202277480",
+  "hf:datasets:voicedata/new-naijavoices-kanitts2-tokenized",
+  "arxiv:2608.15910",
+  "arxiv:2608.15738",
+  "hf:datasets:voicedata/naijavoices_yoruba_nanocodec"
 ]
