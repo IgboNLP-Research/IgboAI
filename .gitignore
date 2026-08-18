@@ -1,5 +1,6 @@
 # Project files
 candidates.json
+mt_probe_sample.tsv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
