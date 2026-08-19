@@ -37,6 +37,16 @@ previous file.
 |---|---|---|
 | 2026-08-07 | **0 (fetch failed — see below)** | 0 |
 | 2026-08-15 | 278 | 0 |
+| 2026-08-18 | 278 | 0 |
+
+**2026-08-18:** verified directly by diffing dataset ids between this run's
+`corpus/catalog/hf_datasets.json` and the prior commit's: identical 278-id
+set, zero additions, zero removals. The file still shows as fully changed
+in `git diff` because the catalog is rebuilt from scratch each run (per-
+dataset fields like `downloads` and `last_modified` refresh even when the
+member set doesn't change) — a byte-level diff is not evidence of new
+datasets; `new_since_last_run` is the field to trust, and it agrees with the
+id-set check here.
 
 **Provenance gap:** the fetch recovered from the 2026-08-07 rate-limit
 failure at some point before this run (the committed
