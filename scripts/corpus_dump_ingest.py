@@ -245,6 +245,17 @@ def main() -> int:
     key = f"wikipedia_{args.lang}"
     summary = {"run_date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
                "mode": "dump", "wikipedia": {key: result}}
+    existing = {}
+    if SUMMARY_PATH.exists():
+        try:
+            existing = json.loads(SUMMARY_PATH.read_text())
+        except json.JSONDecodeError:
+            pass
+    summary = {**existing,
+               "run_date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+               "mode": "dump"}
+    summary.setdefault("wikipedia", {})
+    summary["wikipedia"][key] = result
     SUMMARY_PATH.write_text(json.dumps(summary, ensure_ascii=False, indent=2))
 
     if not args.max_pages:
