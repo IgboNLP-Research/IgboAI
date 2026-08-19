@@ -48,7 +48,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 _argv = sys.argv
 sys.argv = [_argv[0]]                     # corpus_fetch reads sys.argv at import time
 try:
-    from corpus_fetch import IGBO_DIACRITICS, text_stats   # noqa: E402  shared metrics; keeps cards comparable
+    from corpus_fetch import IGBO_DIACRITICS, quality_flags, text_stats   # noqa: E402  shared metrics; keeps cards comparable
 finally:
     sys.argv = _argv
 
@@ -189,6 +189,7 @@ def ingest(lang: str, max_pages: int | None) -> dict:
                                + urllib.parse.quote(title.replace(" ", "_")),
                         "lang_claimed": lang,
                         "text": text,
+                        "flags": quality_flags(text),
                         "source": "dump",
                         "dump_modified": dump_modified,
                     }
@@ -243,21 +244,18 @@ def main() -> int:
     result = ingest(args.lang, args.max_pages)
 
     key = f"wikipedia_{args.lang}"
-    summary = {"run_date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-               "mode": "dump", "wikipedia": {key: result}}
-    existing = {}
+    summary = {}
     if SUMMARY_PATH.exists():
         try:
-            existing = json.loads(SUMMARY_PATH.read_text())
+            summary = json.loads(SUMMARY_PATH.read_text())
         except json.JSONDecodeError:
             pass
-    summary = {**existing,
-               "run_date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-               "mode": "dump"}
-    summary.setdefault("wikipedia", {})
-    summary["wikipedia"][key] = result
+    summary["run_date"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    summary["mode"] = "dump"
+    summary.setdefault("wikipedia_dump", {})
+    summary["wikipedia_dump"][key] = result
     SUMMARY_PATH.write_text(json.dumps(summary, ensure_ascii=False, indent=2))
-
+    
     if not args.max_pages:
         state = json.loads(STATE_PATH.read_text()) if STATE_PATH.exists() else {}
         state[key] = {

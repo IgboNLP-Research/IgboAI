@@ -1,6 +1,6 @@
 {
-  "run_date": "2026-08-18",
-  "mode": "all",
+  "run_date": "2026-08-19",
+  "mode": "dump",
   "wikipedia": {
     "wikipedia_ig": {
       "output": "corpus/raw/wikipedia_ig/2026-08-18.jsonl.gz",
@@ -66,6 +66,83 @@
     "bbc_igbo": {
       "output": "corpus/manifests/bbc_igbo.jsonl",
       "new_urls": 2
+    }
+  },
+  "wikipedia_dump": {
+    "wikipedia_ig": {
+      "output_dir": "corpus/raw/wikipedia_ig/dump-2026-08-19",
+      "shards": [
+        "corpus/raw/wikipedia_ig/dump-2026-08-19/shard-000.jsonl.gz",
+        "corpus/raw/wikipedia_ig/dump-2026-08-19/shard-001.jsonl.gz",
+        "corpus/raw/wikipedia_ig/dump-2026-08-19/shard-002.jsonl.gz",
+        "corpus/raw/wikipedia_ig/dump-2026-08-19/shard-003.jsonl.gz",
+        "corpus/raw/wikipedia_ig/dump-2026-08-19/shard-004.jsonl.gz",
+        "corpus/raw/wikipedia_ig/dump-2026-08-19/shard-005.jsonl.gz",
+        "corpus/raw/wikipedia_ig/dump-2026-08-19/shard-006.jsonl.gz",
+        "corpus/raw/wikipedia_ig/dump-2026-08-19/shard-007.jsonl.gz",
+        "corpus/raw/wikipedia_ig/dump-2026-08-19/shard-008.jsonl.gz",
+        "corpus/raw/wikipedia_ig/dump-2026-08-19/shard-009.jsonl.gz",
+        "corpus/raw/wikipedia_ig/dump-2026-08-19/shard-010.jsonl.gz"
+      ],
+      "dump_url": "https://dumps.wikimedia.org/igwiki/latest/igwiki-latest-pages-articles.xml.bz2",
+      "dump_modified": "Tue, 04 Aug 2026 19:55:40 GMT",
+      "dump_bytes": 85997218,
+      "dump_sha256": "e6a692af79aa00ab19c7fc9c802d6464b7982662abe8de10ac23935108e7ddc5",
+      "min_chars": 300,
+      "pages_seen": 63930,
+      "non_mainspace": 5912,
+      "redirects": 1930,
+      "empty": 2,
+      "skipped_short": 4678,
+      "skipped_residue": 785,
+      "kept": 50623,
+      "documents": 50623,
+      "tokens_ws": 25099035,
+      "chars": 146216445,
+      "diacritic_char_ratio": 0.06489,
+      "samples": [
+        {
+          "title": "Chineke",
+          "url": "https://ig.wikipedia.org/wiki/Chineke",
+          "excerpt": "Chineke bụ aha ọzọ ndi Igbo n' omenala Igbo kpọrọ Chukwu. Mgbe ndị bekee bịara, ha mee ya nke ndi okpukpere ụka. N'echiche ndi okpukpere chi nke Omenala Ndi Igbo, Christianity, Judaism, ma Islam, Chineke nwere ọtụtụ utu aha, ma nwee nanị otu aha. Ụzọ abụọ e si akpọ aha ahụ bụ \"Jehovah maọbụ Yahweh\". N' ọtụtụ Akwụkwọ Nsọ, e wepụla aha Chineke ma jiri utu aha bụ \"Onyenwe Anyị\" maọbụ \"Chineke\" dochie ya. Ma mgbe e dere akwụkwọ nsọ, aha ahụ bụ Jehova pụtara n’ime ya, ihe dịka ugboro pụkụ asaa(7,000).\n\nN'ime akwụkwọ nsọ nke ọhụrụ nke edere n'asụsụ ndi girik, aha Chineke, dika Jehova na Yaweh apụtag"
+        },
+        {
+          "title": "Elyes Baccar",
+          "url": "https://ig.wikipedia.org/wiki/Elyes_Baccar",
+          "excerpt": "Category:Articles with hCards\nElyes Baccar bụ onye Tunisia na-eme ihe nkiri na onye nduzi ihe nkiri, odee na onye na-emepụta ihe. A maara ya nke ọma maka ọrụ ya na ihe nkiri She & He, Lost in Tunisia na Tunis by Night .\n\n Ndụ na ọrụ \nA mụrụ Elyes na Tunis, Tunisia. Ọ gụrụ Directing na French CLCF na Paris. Ọ gakwara mmemme ọzụzụ FEMIS na Paris na mmemme njikwa ọdịbendị na Goethe-Institut na Berlin. Ọ malitere ọrụ ya dị ka onye na-enyere onye nduzi aka na ihe nkiri dịka Star Wars na Tunisia.\n\nN'afọ 2006, Elyes duziri ihe nkiri mbụ ya She & he (Elle et Lui), nke emere na mmemme ihe nkiri mba ụwa"
+        },
+        {
+          "title": "Nigeria women's national under-20 football team",
+          "url": "https://ig.wikipedia.org/wiki/Nigeria_women%27s_national_under-20_football_team",
+          "excerpt": "Ndị otu egwuregwu bọọlụ ụmụ nwanyị Naijirịa na-erubeghị afọ iri abụọ, nke a na-akpọ Falconets, na-anọchite anya Naijirịa na asọmpi bọọlụ ndị ntorobịa mba ụwa. Ọrụ ya bụ isi bụ mmepe nke ndị egwuregwu na nkwadebe maka ndị otu ụmụ nwanyị nke mba. Ndị otu ahụ na-asọmpi n'asọmpi dịgasị iche iche, gụnyere FIFA U-20 Women's World Cup na African U-20 Womenʼs World Cup qualification, nke bụ asọmpi kachasị elu maka ọgbọ a. \n\nNdị otu ahụ eruola maka mbipụta ọ bụla ṅke FIFA U-20 Women's World Cup ma bụrụ ndị na-esote ugboro abụọ, Germany meriri ha n'oge abụọ ahụ na 2010 na 2014.\n\n Nhazi na nsonaazụ \n\n Ak"
+        },
+        {
+          "title": "Emanuel Oletu",
+          "url": "https://ig.wikipedia.org/wiki/Emanuel_Oletu",
+          "excerpt": "Emanuel Oletu ma ọ bụ Emmanuel Oletu (akpa 8 Disemba 1983) bụ onye na-akpa Naijiria na otu SC Hainfeld nke Austria na-egwu egwu.\n\n Ọrụ \n. Differdange vs Spartak match report at UEFA.comAmụrụ na Lagos .  N'oge eze 2003 ọ kwagara Austria.  Mgbe ọtụtụ oge n'ebe ahụ, na-egwu maka SV Kapfenberg, SV Donau na SC Eisenstadt, Oletu kwagara, na 2008, na Serbia ka ọ nwetara na FK Spartak Subotica ihe mere eme, n'oge a mara site na onye nkwado.  aha Spartak Zlatibor Voda.  Mgbe oge izizi gara nke ọma ebe ọ bụ ogidi nke nchekwa otu ahụ, ahụ ahụ ikike nkwalite na Serbian SuperLiga na 2009. N'oge ụmụ 2010 ọ "
+        },
+        {
+          "title": "Tako Taal",
+          "url": "https://ig.wikipedia.org/wiki/Tako_Taal",
+          "excerpt": "Tako Taal bụ onye na-ese ihe na Welsh-Gambia, onye na-ese ihe nkiri na onye mmemme dabere na Glasgow, Scotland .  Ọrụ ya na-eleba anya na ụmụaka ndị na ibe ya nke colonialism.  [1] Atụlela ọrụ ya na Art Monthly, Scotsman, na Studio International.\n\n Ndụ mmalite na agụmakwụkwọ \nTako Taal na Wales na 1989 ya na akara sitere na Jufureh, na Gambia . Ọ gara Grey's School of Art na Aberdeen, na-amụ nka nke oge a, wee gụchaa na 2015.  \n\n Mee omume \nIhe nkiri Taal na-eleba anya n'ọtụtụ njirimara, wee nyochaa mkpa ọha na eze na akụkọ ihe mere eme nke ụlọ nna ya, Jufureh, na akụkọ ifo banyere ịlaghachi n"
+        },
+        {
+          "title": "Alvia Wardlaw",
+          "url": "https://ig.wikipedia.org/wiki/Alvia_Wardlaw",
+          "excerpt": "Alvia J. Wardlaw (amuru na Nọvemba 5, 1947) bu onye okachamara nka nke America, na otu n’ime ndi okachamara kachasi obodo n’ihe nka n’Afrika-American.  [1] Ọ bụ Curator na onye isi ụlọ ihe ngosi nka nke Mahadum na Texas Southern University, ụlọ ọrụ etiti na nka nke ndị America America na Houston.  Ọ bụkwa prọfesọ nke Art History na Texas Southern University.  Wardlaw bụ onye otu Council Advisory Council of the National Museum of African American History and Culture, wee kwadoo National Alliance of African and African American Art Support groups na 1998. [2] Wardlaw bụ Mahadum Texas na Austin '"
+        },
+        {
+          "title": "Krishna Chandra Santra",
+          "url": "https://ig.wikipedia.org/wiki/Krishna_Chandra_Santra",
+          "excerpt": "Krishna Chandra Santra bu onye agụmakwụkwọ India na onye ndọrọ ndọrọ ọchịchị si West Bengal nke All India Trinamool Congress. Ọ bụ onye otu West Bengal Legislative Assembly.\n\nỌ gụsịrị akwụkwọ na Mahadum Burdwan na 1974.[1] A họpụtara ya ka onye otu West Bengal Legislative Assembly si Arambag na 2011 na 2016..\n\n Ebem si dee \n\nÒtù:Mmadụ ndi di ndụ"
+        },
+        {
+          "title": "Tiv people beliefs and religion",
+          "url": "https://ig.wikipedia.org/wiki/Tiv_people_beliefs_and_religion",
+          "excerpt": "Nkwenkwe ndị Tiv ma ọ bụ Jighjigh u nan u Tiv, ihe ngosi na nke ime echiche nke Ndị Tiv.  Na àjà afụ nke abụọ na otu, ọtụtụ ndị Tiv bụ Ndị lashe, mana ụfọdụ ndị Tiv na-eme omenala.\n\n Na Central Africa \nNdị Tiv bụ ndị na-efe otu chi, obodo na-ekwu na ndị Tiv sitere n'aka onye a na-akpọ Takuluku.  Akụkọ ha yiri nke ndị ọzọ nke ndị Bantu;  [1] ndị Zulu, dịka ọmụmaatụ, na-ezo aka na onye mbụ dị ka Unkulunkulu.  [2] Ọ bụ Chineke a na-akpọ Aondo kere Takuluku.  Site na ndị Laura Bohannan, ndị Tiv na-ekwu na Aondo akarazi na ha ma hapụ ha wee gaa biri n'ibe, ihe ha onwe ha ngwaọrụ na Aondo.[3]  Chine"
+        }
+      ],
+      "keep_rate": 0.7919
     }
   }
 }
