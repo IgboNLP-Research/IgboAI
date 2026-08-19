@@ -178,5 +178,18 @@
   "hf:datasets:voicedata/new-naijavoices-kanitts2-tokenized",
   "arxiv:2608.15910",
   "arxiv:2608.15738",
-  "hf:datasets:voicedata/naijavoices_yoruba_nanocodec"
+  "hf:datasets:voicedata/naijavoices_yoruba_nanocodec",
+  "hf:datasets:Professor/igbo-speech-data",
+  "hf:datasets:Africanvoice/African_voices_naija",
+  "hf:datasets:Africanvoice/African_voices_igbo",
+  "openalex:W7203606095",
+  "openalex:W7203619208",
+  "openalex:W7203621923",
+  "openalex:W7203635112",
+  "openalex:W7203615021",
+  "openalex:W7203646544",
+  "openalex:W7125569087",
+  "openalex:W7203606024",
+  "openalex:W7203629039",
+  "openalex:W7203652607"
 ]
