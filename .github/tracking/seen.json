@@ -191,5 +191,9 @@
   "openalex:W7125569087",
   "openalex:W7203606024",
   "openalex:W7203629039",
-  "openalex:W7203652607"
+  "openalex:W7203652607",
+  "hf:models:CodeWithSiya/afriberta-large-cpt-xho",
+  "arxiv:2608.19003",
+  "arxiv:2608.18655",
+  "hf:models:Toadoum/naija-tts"
 ]
