@@ -195,5 +195,9 @@
   "hf:models:CodeWithSiya/afriberta-large-cpt-xho",
   "arxiv:2608.19003",
   "arxiv:2608.18655",
-  "hf:models:Toadoum/naija-tts"
+  "hf:models:Toadoum/naija-tts",
+  "hf:datasets:iamwille/igbo-tts-speecht5-processed-v3",
+  "hf:datasets:iamwille/igbo-tts-speecht5-processed-v2",
+  "hf:datasets:iamwille/igbo-tts-speecht5-processed",
+  "arxiv:2608.19361"
 ]
