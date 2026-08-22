@@ -199,5 +199,12 @@
   "hf:datasets:iamwille/igbo-tts-speecht5-processed-v3",
   "hf:datasets:iamwille/igbo-tts-speecht5-processed-v2",
   "hf:datasets:iamwille/igbo-tts-speecht5-processed",
-  "arxiv:2608.19361"
+  "arxiv:2608.19361",
+  "hf:datasets:VelkroLM/african-languages-speech",
+  "hf:datasets:Anyibaba/Igbo_Proverbs_Sample_V1",
+  "hf:datasets:voicedata/naijavoices-kanitts2-tokenized",
+  "openalex:W7203823026",
+  "openalex:W4388110379",
+  "openalex:W7203823295",
+  "openalex:W4406381904"
 ]
