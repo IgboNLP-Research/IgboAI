@@ -535,6 +535,45 @@ prose is left as originally written, since the events they describe are
 otherwise accurate; the cumulative-size table above is corrected to
 "2026-08-19, dump".
 
+### 29. 2026-08-23 — Zero of the 21 incremental documents carry either heuristic flag, though at least two should
+
+Checked directly: every document in both `2026-08-18.jsonl.gz` and
+`2026-08-23.jsonl.gz` has `"flags": []`. Yet this same 21-document batch
+contains documents this card already flags as clear quality issues:
+
+- `Nnamdi Azikiwe` (flag 26) — this batch's lowest diacritic ratio (0.0103),
+  incoherent proverb-register prose ("Zik na agho aghugho dika mbe"), and
+  legacy ogonek diacritics (ų, ǫ) not used in modern Ọnwụ orthography. This
+  is close to the textbook definition of `archaic_register`, by the flag's
+  own name, and it is not caught.
+- `Karin Lochte` and `Yenagoa` (flag 25) — raw, unclosed markup surviving
+  extraction (`</ref>`, an `href="./Local_government_area"` HTML anchor).
+  Neither existing flag name (`archaic_register`, `mt_suspect_orthography`)
+  obviously covers markup leakage, which suggests it needs its own heuristic
+  rather than being folded into `mt_suspect_orthography`.
+
+**Proposed heuristic patterns, for the reviewer to evaluate against a larger
+sample before wiring in:**
+
+1. `archaic_register`: flag when `diacritic_char_ratio < 0.02` for a
+   document over some minimum length (to avoid penalizing short, legitimately
+   diacritic-light stubs) **and** the text contains at least one of the
+   legacy-orthography markers already catalogued in this card — U+0355
+   (combining up-tack, flag 2), U+0173/U+01EB (ogonek ų/ǫ, flag 26), or the
+   lexical markers `nile`, `we je`, `ulo uku` (flag 2).
+2. A new flag, e.g. `markup_leakage` (distinct from `mt_suspect_orthography`):
+   trigger on residual-markup regexes that have now recurred across four
+   separate documents in this card (flags 3, 18, 22, 25) —
+   `</ref>`, `href="\./`, `data-mw=`, `typeof="mw:`, literal `Templeeti:`.
+   This defect is specific to the `prop=extracts` incremental path (flag 22
+   already notes the dump path has its own, different residue filter), so
+   scoping the heuristic to incremental documents only would reduce false
+   positives.
+
+Not fixed here — this card's author does quality triage, not pipeline edits
+(see the hf_catalog card's flag 2 for the same division of labour applied
+there).
+
 ## Intended uses
 
 - **Suitable:** language-model pre-training (after dedup, MT-residue
