@@ -223,4 +223,10 @@
   "openalex:W7203898525",
   "openalex:W7203904983",
   "openalex:W7203908435"
+  "hf:datasets:Anyibaba/Igbo_Proverbs_Sample_V1",
+  "hf:datasets:voicedata/naijavoices-kanitts2-tokenized",
+  "openalex:W7203823026",
+  "openalex:W4388110379",
+  "openalex:W7203823295",
+  "openalex:W4406381904"
 ]
