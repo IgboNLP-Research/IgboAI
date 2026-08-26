@@ -8,6 +8,6 @@ logged from 2026-08-04 onward.
 
 | Month | Entries |
 | --- | --- |
-| [August 2026](related-work/2026-08.md) | 67 |
+| [August 2026](related-work/2026-08.md) | 66 |
 
-**Total: 67 entries.**
+**Total: 66 entries.**
