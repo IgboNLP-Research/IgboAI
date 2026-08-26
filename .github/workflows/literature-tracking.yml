@@ -145,7 +145,24 @@ jobs:
           claude_args: |
             --max-turns ${{ github.event.inputs.max_turns || '40' }}
             --allowedTools "Read,Write,Edit,Glob,Grep,Bash(git:*),Bash(gh pr:*),Bash(gh auth status),Bash(python:*),Bash(python3:*),Bash(ls:*),Bash(mkdir:*),Bash(cat:*),Bash(echo:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(date:*)"
-            
+
+      - name: Sync seen.json to main
+        if: always() && steps.gate.outputs.count != '0'
+        run: |
+          BR="tracking/$(date -u +%F)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main "$BR" || exit 0
+          git checkout -B sync-seen origin/main
+          git checkout "origin/$BR" -- .github/tracking/seen.json || exit 0
+          if git diff --cached --quiet; then
+            echo "seen.json unchanged."
+          else
+            git commit -m "chore: sync seen.json from $BR"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+          
       - name: Record which provider served this run
         if: always() && steps.gate.outputs.count != '0'
         run: |
