@@ -306,7 +306,13 @@ def fetch_news_manifests(state: dict) -> dict:
 
 def main() -> None:
     state = load_state()
-    summary = {"run_date": TODAY, "mode": MODE}
+    summary = {}
+    if SUMMARY_PATH.exists():
+        try:
+            summary = json.loads(SUMMARY_PATH.read_text())
+        except json.JSONDecodeError:
+            pass
+    summary.update({"run_date": TODAY, "mode": MODE})
     if MODE in ("wikipedia", "all"):
         summary["wikipedia"] = fetch_wikipedia(state)
     if MODE in ("hf", "all"):
