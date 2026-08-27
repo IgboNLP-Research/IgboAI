@@ -66,15 +66,27 @@ live feed if it recurs or lengthens.
 | 2026-08-13 | 3 | 14 |
 | 2026-08-15 | 1 | 15 |
 | 2026-08-18 | 2 | 17 |
+| 2026-08-23 | 0 | 17 |
 
 Cumulative figure derived by counting lines in
-`corpus/manifests/bbc_igbo.jsonl` directly (17), matching 15 + this run's 2.
-No token or character counts apply — no text is stored.
+`corpus/manifests/bbc_igbo.jsonl` directly (17), matching the 2026-08-18
+total plus this run's 0. No token or character counts apply — no text is
+stored.
 
 **2026-08-18 gap check:** the two new items are published 2026-08-17 and
 2026-08-18, a 2-3 day gap since the last recorded item (2026-08-15). This is
 back to the normal cadence the coverage caveat above expects, unlike the
 4-day silent gap flagged on 2026-08-15.
+
+**2026-08-23 gap check:** zero new items this run. The most recent recorded
+`published` date is still 2026-08-18, so this is a **5-day silence
+(2026-08-19 through 2026-08-23) with nothing recorded** — longer than the
+4-day gap flagged on 2026-08-15 and, at the batch-1 long-run rate
+(≈0.65 items/day), enough that a couple of items would statistically be
+expected in that window. Flagged as an observation to check against the live
+feed, not a confirmed miss (RSS feeds do have quiet news days), but this is
+now the second gap of this shape and worth checking whether the sliding
+20-item window is starting to drop items between the weekly-ish runs.
 
 ## Known limitations and quality flags
 

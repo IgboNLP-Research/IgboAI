@@ -78,8 +78,10 @@ prior cards (see flag 21 for why the pre-2026-08-18 rows no longer apply to
 | As of | Documents | Whitespace tokens | Characters | Source |
 |---|---|---|---|---|
 | 2026-08-07 – 2026-08-15 | 19 → 65 | 10,922 → 32,469 | 58,848 → 178,148 | phase-1 API walk; **now archived to `corpus/pilot/`, not `corpus/raw/`** |
-| 2026-08-18, dump | **50,623** | not recoverable this run (flag 23) | not recoverable this run (flag 23) | one-shot XML dump, 11 shards |
+| 2026-08-19, dump (corrected date, see flag 28) | **50,623** | not recoverable this run (flag 23) | not recoverable this run (flag 23) | one-shot XML dump, 11 shards |
 | 2026-08-18, incremental | 21 | 22,827 | 130,182 | `recentchanges`, diacritic ratio 0.06522, this file read directly and in full |
+| 2026-08-23, incremental (raw file) | 21 | 22,845 | 130,231 | `recentchanges`, diacritic ratio 0.06545, this file read directly and in full |
+| 2026-08-23, incremental (deduplicated by title vs 2026-08-18) | **21 unique titles total, 0 net-new** | n/a | n/a | 20 of 21 documents byte-identical to 2026-08-18's; see flag 27 |
 
 The 50,623 figure is not from a file I opened; it is read from
 `mt_probe_summary.json` (`scripts/mt_prevalence_probe.py`, committed at repo
@@ -91,12 +93,15 @@ from a full single-pass read of the one file this run actually added
 `corpus_run_summary.json` exactly, confirming there is nothing else this run
 produced in that file).
 
-**Practical corpus size as of 2026-08-18: on the order of 50,644 documents**
-in `corpus/raw/wikipedia_ig/` (dump + incremental), a roughly 780x increase
-in document count over the phase-1 total, from a single one-shot ingest.
-Token/character/diacritic aggregates for the dump portion are currently
-unknown corpus-wide (flag 23); do not quote a corpus-wide `diacritic_char_ratio`
-until that is fixed.
+**Practical corpus size as of 2026-08-23: still on the order of 50,644
+unique documents** (50,623 dump + 21 unique incremental pages), unchanged
+since 2026-08-18 despite a second incremental run landing in between — see
+flag 27. Raw storage under `corpus/raw/wikipedia_ig/` now holds 42
+incremental records across two dated files for those same 21 pages, so
+document counts read directly off the raw files overstate corpus growth
+unless deduplicated by title. Token/character/diacritic aggregates for the
+dump portion are currently unknown corpus-wide (flag 23); do not quote a
+corpus-wide `diacritic_char_ratio` until that is fixed.
 
 **Backfill status: DONE**, via the dump (`backfill_done: true`,
 `backfill_method: "dump"` in `corpus/state.json`), not via the `allpages`
@@ -115,7 +120,9 @@ are from direct inspection of the 20 documents in
 (run 2)** are from direct inspection of the 22 documents a second same-day
 run appended to that file (indices 4–25). Flags dated **2026-08-18** are
 from the dump ingest and this run's 21-document incremental batch; see each
-flag for which.
+flag for which. Flags dated **2026-08-23** are from this run's 21-document
+incremental batch, read in full and compared directly, document by document,
+against the 2026-08-18 file.
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
@@ -483,6 +490,89 @@ up-tack of flag 2 (U+0355); ogonek marking is characteristic of older
 missionary-era transcription. Worth tracking as its own pattern rather than
 folding into flag 2's "archaic register," since the underlying Unicode
 characters and apparent source register both differ.
+
+### 27. 2026-08-23 — The incremental fetch is not actually advancing: today's batch is 20/21 documents byte-identical to 2026-08-18's
+
+Read directly, in full, both `corpus/raw/wikipedia_ig/2026-08-18.jsonl.gz` and
+`corpus/raw/wikipedia_ig/2026-08-23.jsonl.gz` (21 documents each). Same 21
+titles, same order, in both files. **20 of 21 documents have byte-identical
+`text` across the two files.** The one exception, `Chimamanda Ngozi Adichie`,
+differs only by a genuine small live edit (`na Enugu` → `na obodo Enugu`,
+`O gara` → `Ọ gara`, +49 characters) — evidence this really is the same
+underlying `recentchanges` query re-run, not a coincidence.
+
+`corpus/state.json`'s `rc_ts` explains why: **before this run it still read
+`2026-08-04T19:55:40Z`**, identical to `dump_modified`, meaning the
+2026-08-18 incremental run's `recentchanges` query never advanced the
+watermark it read from, despite that run reporting 21 "new" documents. This
+run advanced `rc_ts` to `2026-08-10T01:59:45Z` — a 6-day step, still 13 days
+behind today (2026-08-23) — and that was not enough to avoid re-surfacing
+almost the same page set.
+
+**Practical effect: the wikipedia_ig corpus has not grown since 2026-08-18**
+despite two incremental runs each logging 21 documents. `corpus/raw/
+wikipedia_ig/` now holds 42 records across the two dated files for only 21
+distinct pages (see the corrected cumulative-size table above).
+
+**Recommend to the reviewer:** verify `scripts/corpus_fetch.py` persists the
+`rc_ts` it actually used (not a stale default) after every run, not just
+this one; and consider deduplicating `corpus/raw/wikipedia_ig/*.jsonl.gz` by
+title/id before counting documents or drawing training data — this is the
+pilot's near-duplicate-stub problem (flag 6) recurring at whole-batch scale
+instead of within one batch.
+
+### 28. 2026-08-23 — Correction: the dump directory is `dump-2026-08-19`, not `dump-2026-08-18` as flags 21–23 state
+
+Confirmed directly against the repository tree
+(`corpus/raw/wikipedia_ig/dump-2026-08-19/`, 11 shards, already present
+before this run started) and `corpus/state.json`'s
+`ingested_at: 2026-08-19T10:01:36Z`. Flags 21–23 above, and the cumulative-
+size table's "dump" row, described the same one-shot ingest under the wrong
+date label ("2026-08-18"). `dump_modified` (2026-08-04T19:55:40Z) is the
+*source dump's own* timestamp, not the ingest date, and is not where the
+"2026-08-18" label came from either — it is simply wrong. Flags 21–23's
+prose is left as originally written, since the events they describe are
+otherwise accurate; the cumulative-size table above is corrected to
+"2026-08-19, dump".
+
+### 29. 2026-08-23 — Zero of the 21 incremental documents carry either heuristic flag, though at least two should
+
+Checked directly: every document in both `2026-08-18.jsonl.gz` and
+`2026-08-23.jsonl.gz` has `"flags": []`. Yet this same 21-document batch
+contains documents this card already flags as clear quality issues:
+
+- `Nnamdi Azikiwe` (flag 26) — this batch's lowest diacritic ratio (0.0103),
+  incoherent proverb-register prose ("Zik na agho aghugho dika mbe"), and
+  legacy ogonek diacritics (ų, ǫ) not used in modern Ọnwụ orthography. This
+  is close to the textbook definition of `archaic_register`, by the flag's
+  own name, and it is not caught.
+- `Karin Lochte` and `Yenagoa` (flag 25) — raw, unclosed markup surviving
+  extraction (`</ref>`, an `href="./Local_government_area"` HTML anchor).
+  Neither existing flag name (`archaic_register`, `mt_suspect_orthography`)
+  obviously covers markup leakage, which suggests it needs its own heuristic
+  rather than being folded into `mt_suspect_orthography`.
+
+**Proposed heuristic patterns, for the reviewer to evaluate against a larger
+sample before wiring in:**
+
+1. `archaic_register`: flag when `diacritic_char_ratio < 0.02` for a
+   document over some minimum length (to avoid penalizing short, legitimately
+   diacritic-light stubs) **and** the text contains at least one of the
+   legacy-orthography markers already catalogued in this card — U+0355
+   (combining up-tack, flag 2), U+0173/U+01EB (ogonek ų/ǫ, flag 26), or the
+   lexical markers `nile`, `we je`, `ulo uku` (flag 2).
+2. A new flag, e.g. `markup_leakage` (distinct from `mt_suspect_orthography`):
+   trigger on residual-markup regexes that have now recurred across four
+   separate documents in this card (flags 3, 18, 22, 25) —
+   `</ref>`, `href="\./`, `data-mw=`, `typeof="mw:`, literal `Templeeti:`.
+   This defect is specific to the `prop=extracts` incremental path (flag 22
+   already notes the dump path has its own, different residue filter), so
+   scoping the heuristic to incremental documents only would reduce false
+   positives.
+
+Not fixed here — this card's author does quality triage, not pipeline edits
+(see the hf_catalog card's flag 2 for the same division of labour applied
+there).
 
 ## Intended uses
 

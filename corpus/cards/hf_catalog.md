@@ -38,6 +38,7 @@ previous file.
 | 2026-08-07 | **0 (fetch failed — see below)** | 0 |
 | 2026-08-15 | 278 | 0 |
 | 2026-08-18 | 278 | 0 |
+| 2026-08-23 | 286 | 8 |
 
 **2026-08-18:** verified directly by diffing dataset ids between this run's
 `corpus/catalog/hf_datasets.json` and the prior commit's: identical 278-id
@@ -94,6 +95,35 @@ rather than a diff. By search term: `igbo` 50, `yoruba` 51, `hausa` 51,
   unverified license and unverified sentence-alignment quality; "verify
   before use" per the license policy below.
 
+## 2026-08-23 — 8 new datasets
+
+All 8 arrived via the `african languages` / `yoruba` search terms rather than
+a direct `igbo` match; one (`0xnu/igbo`) is Igbo-specific by id, the rest are
+multi-language African-language bundles or catalogs that list `ig` among
+many other language codes (or list no `languages` at all).
+
+- **`0xnu/igbo`** — Apache-2.0, tagged `ig` directly. Worth a closer look on
+  its own merits, not just as part of a bundle.
+- **`rufatronics/african-languages-hplt-filtered`, `VelkroLM/african-
+  languages-corpus`** — CC0-1.0 (public-domain-equivalent), both list `ig`
+  alongside ten-plus other African languages (ha, yo, pcm-adjacent kr, ff,
+  am, so, ti, wo, ln, lg, sn). Permissive license; worth checking how much of
+  the bundle is actually Igbo before committing to ingest.
+- **`rufatronics/african-languages-filtered`, `VelkroLM/african-languages-
+  filtered`** — license `other` (not a standard SPDX identifier on the Hub);
+  treat like an unclear license, i.e. read the dataset card before use, even
+  though this is a step above `UNKNOWN`.
+- **`VelkroLM/african-languages-catalog`** — license `UNKNOWN`, no
+  `languages` field populated. **Verify before use.**
+- **`VelkroLM/african-languages-speech`** — CC-BY-4.0 but no `languages`
+  field populated; unclear from the catalog alone whether it actually
+  contains Igbo speech data or just matched the `african languages` search
+  term.
+- **`michsethowusu/kikuyu-yoruba_sentence-pairs`** — license `UNKNOWN`, and
+  not an Igbo pair (Kikuyu-Yoruba); listed here only because it matched a
+  search term. Same `michsethowusu/*_sentence-pairs` family already flagged
+  in the notable-datasets list below for its Igbo-paired siblings.
+
 ## Known limitations and quality flags
 
 ### 1. 2026-08-07 — all seven Hub queries failed; catalog written as `[]`
@@ -141,7 +171,11 @@ when any term failed; surface a `failed_terms` list in the run summary.
 ### 3. Metadata-quality caveats that will apply once the fetch works
 
 - `license` is read from `cardData.license` with a fallback, defaulting to
-  the literal string `UNKNOWN`. Absent ≠ permissive.
+  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-08-23,
+  162 of the 286 catalogued datasets (56.6%) carry `UNKNOWN`** — counted
+  directly from `corpus/catalog/hf_datasets.json` — so this is the majority
+  case, not an edge case; do not filter or sort on license without first
+  routing `UNKNOWN` entries to manual review.
 - `languages` comes from self-declared card metadata and is often missing or
   wrong on African-language datasets; do not filter on it alone.
 - `search` matches names and descriptions, so `naija` and `african languages`
