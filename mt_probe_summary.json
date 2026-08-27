@@ -1,5 +1,5 @@
 {
-  "shard_dir": "corpus/raw/wikipedia_ig/dump-2026-08-18",
+  "shard_dir": "corpus/raw/wikipedia_ig/dump-2026-08-19",
   "documents": 50623,
   "buckets": {
     "clean": {
