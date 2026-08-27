@@ -28,6 +28,7 @@ from pathlib import Path
 
 MODE = sys.argv[1] if len(sys.argv) > 1 else "all"
 MAX_PAGES = int(sys.argv[2]) if len(sys.argv) > 2 else 500  # per language per run
+RC_SCAN_LIMIT = 20000   # change records to scan per run; ~40 API calls at 500/page
 
 WIKI_LANGS = ["ig"]  # Igbo. Add e.g. "yo", "ha", "pcm" deliberately, per data plan.
 HF_TERMS = [
@@ -139,18 +140,51 @@ def fetch_wikipedia(state: dict) -> dict:
                 if not batch:
                     break
         else:
-            params = {
-                "action": "query", "list": "recentchanges", "rcnamespace": 0,
-                "rclimit": min(MAX_PAGES, 500), "rcprop": "title|timestamp",
-                "rcdir": "newer", "format": "json",
-            }
-            if st["rc_ts"]:
-                params["rcstart"] = st["rc_ts"]
-            data = http_json(api + "?" + urllib.parse.urlencode(params))
-            changes = data.get("query", {}).get("recentchanges", [])
+            # recentchanges is paginated. With rcdir=newer, one call returns the
+            # OLDEST rclimit changes after the watermark, so a single call lets
+            # rc_ts creep forward slower than real time and the backlog grows.
+            # (Observed 2026-08-23: watermark stuck 13 days behind, 500 changes
+            # collapsing to 21 unique titles because a few pages are edited
+            # hundreds of times. See wikipedia_ig.md flag 27.)
+            #
+            # RC_SCAN_LIMIT is deliberately separate from MAX_PAGES: one counts
+            # change records to scan, the other counts titles to fetch extracts
+            # for. A few hundred titles can hide tens of thousands of edits.
+            changes: list[dict] = []
+            rccontinue = None
+            while len(changes) < RC_SCAN_LIMIT:
+                params = {
+                    "action": "query", "list": "recentchanges", "rcnamespace": 0,
+                    "rclimit": 500, "rcprop": "title|timestamp",
+                    "rcdir": "newer", "rctype": "new|edit", "format": "json",
+                }
+                if st["rc_ts"]:
+                    params["rcstart"] = st["rc_ts"]   # inclusive; last seen change repeats
+                if rccontinue:
+                    params["rccontinue"] = rccontinue
+                data = http_json(api + "?" + urllib.parse.urlencode(params))
+                batch = data.get("query", {}).get("recentchanges", [])
+                if not batch:
+                    break
+                changes.extend(batch)
+                rccontinue = data.get("continue", {}).get("rccontinue")
+                if not rccontinue:
+                    break            # caught up to the live feed
+
             titles = sorted({c["title"] for c in changes})
             if changes:
                 st["rc_ts"] = max(c["timestamp"] for c in changes)
+            print(f"  recentchanges: {len(changes)} records -> {len(titles)} unique "
+                  f"titles, watermark now {st['rc_ts']}"
+                  f"{'' if not rccontinue else ' (backlog remains)'}", file=sys.stderr)
+
+            # Extract fetching is still bounded by MAX_PAGES; a very edit-heavy
+            # window can otherwise blow the job timeout.
+            if len(titles) > MAX_PAGES:
+                print(f"  capping {len(titles)} titles to MAX_PAGES={MAX_PAGES}; "
+                      f"remainder will be picked up when those pages are next edited",
+                      file=sys.stderr)
+                titles = titles[:MAX_PAGES]
 
         docs, skipped_stub, skipped_markup = [], 0, 0
         for i in range(0, len(titles), 20):  # extracts allows 20 titles/request
