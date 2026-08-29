@@ -117,6 +117,10 @@ jobs:
             Never modify, delete, or rewrite files under corpus/raw/ or
             corpus/manifests/ — the deterministic layer owns those. You write
             data cards, review notes, and the PR.
+            
+            corpus/cards/mt_prevalence.md is a human-authored measurement, not
+            a generated card. Do not modify or renumber it. You may cite its
+            findings in review notes and the PR body.
 
             0. FIRST, before any analysis: create branch corpus/<today's date>,
                commit a placeholder note to corpus/cards/README.md if nothing
