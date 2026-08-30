@@ -39,6 +39,7 @@ previous file.
 | 2026-08-15 | 278 | 0 |
 | 2026-08-18 | 278 | 0 |
 | 2026-08-23 | 286 | 8 |
+| 2026-08-30 | 290 | 4 |
 
 **2026-08-18:** verified directly by diffing dataset ids between this run's
 `corpus/catalog/hf_datasets.json` and the prior commit's: identical 278-id
@@ -124,6 +125,33 @@ many other language codes (or list no `languages` at all).
   search term. Same `michsethowusu/*_sentence-pairs` family already flagged
   in the notable-datasets list below for its Igbo-paired siblings.
 
+## 2026-08-30 — 4 new datasets
+
+- **`michsethowusu/Code-170k-igbo`** — Apache-2.0, tagged `ig` only. By id
+  this reads as ~170k code-generation/instruction examples with Igbo-
+  language text, likely translated (machine or otherwise) from an English
+  code-instruction corpus into the `michsethowusu` uploader's usual
+  translated-pairs style (compare the `*_sentence-pairs` family already
+  flagged in this card). Permissive license; worth a closer look at
+  translation quality before use, same MT-provenance caution as the
+  `ccibeekeoc42` entries above — code-instruction text machine-translated
+  into Igbo is a plausible but unverified source of unnatural or
+  code-switched Igbo.
+- **`McGill-NLP/NaijaS2ST`** — license `UNKNOWN`, audio+text, speech-to-
+  speech translation across English/Hausa/Igbo/Yoruba/Naija-Pidgin
+  (10K-100K scale, per its size-category tag). If the license clears, this
+  is directly relevant to Igbo ASR/TTS and speech-translation work, and is
+  one of the few catalogued datasets pairing Igbo *speech* rather than text
+  alone. **Verify before use.**
+- **`CLEAR-Global/Hausa-Synthetic-ASR-Dataset-XTTS`** (CC-BY-4.0) and
+  **`CLEAR-Global/TWB-voice-TTS-Hausa-1.0-sampleset`** (license `other`) —
+  both Hausa-only (no Igbo tag), synthetic/TTS-derived ASR data from CLEAR
+  Global (Translators without Borders). In scope per this project's
+  Nigerian-language relevance policy, and the XTTS synthetic-ASR generation
+  method is a technique that could transfer to bootstrapping Igbo ASR data
+  where recorded speech is scarcer than text; worth reading the method even
+  though the data itself is Hausa-only.
+
 ## Known limitations and quality flags
 
 ### 1. 2026-08-07 — all seven Hub queries failed; catalog written as `[]`
@@ -171,11 +199,12 @@ when any term failed; surface a `failed_terms` list in the run summary.
 ### 3. Metadata-quality caveats that will apply once the fetch works
 
 - `license` is read from `cardData.license` with a fallback, defaulting to
-  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-08-23,
-  162 of the 286 catalogued datasets (56.6%) carry `UNKNOWN`** — counted
-  directly from `corpus/catalog/hf_datasets.json` — so this is the majority
-  case, not an edge case; do not filter or sort on license without first
-  routing `UNKNOWN` entries to manual review.
+  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-08-30,
+  163 of the 290 catalogued datasets (56.2%) carry `UNKNOWN`** — counted
+  directly from `corpus/catalog/hf_datasets.json` (was 162/286, 56.6%, on
+  2026-08-23) — so this is the majority case, not an edge case, and it is
+  not shrinking; do not filter or sort on license without first routing
+  `UNKNOWN` entries to manual review.
 - `languages` comes from self-declared card metadata and is often missing or
   wrong on African-language datasets; do not filter on it alone.
 - `search` matches names and descriptions, so `naija` and `african languages`
