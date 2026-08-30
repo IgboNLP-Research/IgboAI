@@ -1,56 +1,56 @@
 {
-  "run_date": "2026-08-23",
+  "run_date": "2026-08-30",
   "mode": "all",
   "wikipedia": {
     "wikipedia_ig": {
-      "output": "corpus/raw/wikipedia_ig/2026-08-23.jsonl.gz",
-      "titles_listed": 444,
-      "skipped_stub": 422,
-      "skipped_markup": 1,
-      "documents": 21,
-      "tokens_ws": 22845,
-      "chars": 130231,
-      "diacritic_char_ratio": 0.06545,
+      "output": "corpus/raw/wikipedia_ig/2026-08-30.jsonl.gz",
+      "titles_listed": 500,
+      "skipped_stub": 476,
+      "skipped_markup": 2,
+      "documents": 22,
+      "tokens_ws": 15245,
+      "chars": 88876,
+      "diacritic_char_ratio": 0.06793,
       "samples": [
         {
-          "title": "2003 Nhọrọ gọvanọ Kebbi Steeti",
-          "url": "https://ig.wikipedia.org/wiki/2003_Nh%E1%BB%8Dr%E1%BB%8D_g%E1%BB%8Dvan%E1%BB%8D_Kebbi_Steeti",
-          "excerpt": ".      Nhọpụta mmetụta steeti Kebbi nke afọ 2003 mere na-abụ 19, 2003. Onye ndọrọndọrọ ANPP bụ Adamu Aliero meri na preaka ahụ, meri PDP Saidu Samaila Sambawa na mmadụ abụọ ọzọ    \nNgụkọta ọnụ ọgụgụ ndị debanyere aha votu na steeti ahụ bụ 1,343,549, ngụkọta ndị e mere bụ 886,324, votu ziri ezi bụ 802,509 na votu jụrụ bụ 83,815."
+          "title": "100% eneji emeghariri ọhụrụ",
+          "url": "https://ig.wikipedia.org/wiki/100%25_eneji_emeghariri_%E1%BB%8Dh%E1%BB%A5r%E1%BB%A5",
+          "excerpt": "100% ike emeghariri ọhụrụ pụtara inweta ike niile site na ihe onwunwe a na-emeghari. Mgbalị iji 100% ike emeghariri ọhụrụ maka ọkụ eletrik, okpomọkụ, ịjụ oyi na njem na-akpali mgbanwe ihu igwe, mmetọ na nsogbu gburugburu ebe obibi ndị ọzọ, yana nchegbu akụ na ụba na nchekwa ike. Ịgbanwe ngụkọta nke ike isi ụwa na-enye na isi mmalite na-agbanwe agbanwe chọrọ mgbanwe nke usoro ike, ebe ọ bụ na ọtụtụ ike nke taa sitere na mmanụ ala ndị adịghị emeghari emeghari\nNnyocha banyere isiokwu a bụ ihe ọhụrụ, na nyocha ole na ole e bipụtara tupu afọ 2009, mana enwetala nlebara anya na-arịwanye elu n'afọ nd"
         },
         {
-          "title": "Akwụkwọ Pickwick (ihe nkiri 1952)",
-          "url": "https://ig.wikipedia.org/wiki/Akw%E1%BB%A5kw%E1%BB%8D_Pickwick_(ihe_nkiri_1952)",
-          "excerpt": "The Pickwick Papers bụ Ihe nkiri ihe nkiri na-atọ ọchị nke akụkọ ihe mere eme nke Britain nke afọ 1952 nke Noel Langley dere ma duzie na James Hayter, James Donald, Nigel Patrick na Joyce Grenfell. Ọ dabeere na akwụkwọ akụkọ Charles Dickens nke 1837 nke otu aha ahụ. Ọ bụ Renown Pictures mere ya bụ ndị wepụtara ihe nkiri Dickens ọzọ Scrooge n'afọ gara aga.\nEmere ihe nkiri ahụ na Nettlefold Studios na Walton-on-Thames. E sere ya na oji na ọcha, Onye nduzi nka Frederick Pusey na ejiji Beatrice Dawson mepụtara ihe nkiri ahụ. Emere ya na Gaumont Cinema na Haymarket na London na 14 Nọvemba 1952.  'a"
+          "title": "Abby Jane Morrell",
+          "url": "https://ig.wikipedia.org/wiki/Abby_Jane_Morrell",
+          "excerpt": "Abby Jane Morrell (amuru Febụwarị 17, 1809; ụbọchị ọnwụ amabeghị) bụ onye ode akwụkwọ America wepụtara nkọwa izizi nke njem sub-Antarctic site n'echiche nwanyị.\n\n\n== Akụkọ ndụ ==\nA mụrụ Morrell Abbey Jane Wood na New York na February 17, 1809.[1] Nna ya, Captain John Wood, nwụrụ na Nọvemba 14, 1811, na New Orleans ma bụrụkwa nna ukwu nke ụgbọ mmiri Indian Hunter.[1] Nne ya lụgharịrị di na 1814 nye Mazi Burritt Keeler.\nNa June 29, 1824, ọ lụrụ Captain Benjamin Morrell, onye bụ nwanne nne dị anya, wee bụrụ nwunye ya nke abụọ.[1] Ha nwere nwa nwoke mbụ (amụrụ n'etiti 1825 na 1828) onye Morrell le"
         },
         {
-          "title": "Babafemi Ojudu",
-          "url": "https://ig.wikipedia.org/wiki/Babafemi_Ojudu",
-          "excerpt": "Babafemi Ojudu (amuru 27 Maachị 1961) bu onye nta akuko Naijiria nke a hoputara Senator maka Ekiti Central constituency nke Ekiti State, Nigeria, [1] na ọhụrụ aka mba nke 2011. Ọ gbara ọsọ n'elu ikpo okwu Action Congress of Nigeria.  (ACN).\nA egwuregwu Babafemi Ojudu na 27 Maachị 1961 na Ado-Ekiti dị na steeti Ekiti.  Ọ gara ụlọ akwụkwọ Ado Grammar na Ado-Ekiti (1973–77).  N'afọ 1976, o meri scholarships nke onye ọka iwu onye na-eme ihe ike bụ Gani Fawehinmi na onye egwu Jùjú King Sunny Adé akwụkwọ maka ụmụ akwụkwọ na-enye isi na steeti ahụ, የ nke enyi na Fawehinmi ogologo oge.\nN'afọ 1980, Oju"
+          "title": "Achille Mbembe",
+          "url": "https://ig.wikipedia.org/wiki/Achille_Mbembe",
+          "excerpt": "Joseph-Achille Mbembe, onye a maara dị ka Achille Mbembe (/ əmˈbɛmbeɪ/; amụrụ 1957), bụ onye ọkọ akụkọ ihe mere eme nke Cameroon, onye ndọrọ ndọrọ ọchịchị, na ọgụgụ isi ọha bụ onye prọfesọ nyocha na akụkọ ntolite na ndọrọ ndọrọ ọchịchị na Wits Institute for Social and Economy Research na Mahadum. nke Wiwaterrand. A maara ya nke ọma maka ihe odide ya banyere colonialism na nsonaazụ ya na ọ bụ onye isi na echiche ọhụrụ French dị egwu.\n\n\n== Akụkọ ndụ ==\nA mụrụ Mbembe na nso Otélé na Cameroon na 1957. O nwetara Ph.D. na akụkọ ihe mere eme na Mahadum Sorbonne dị na Paris, France, na 1989. O mechara"
         },
         {
-          "title": "Dona Bertarelli",
-          "url": "https://ig.wikipedia.org/wiki/Dona_Bertarelli",
-          "excerpt": "Dona Bertarelli [lower-alpha 1] (amụrụ 1968) bụ onye ọchụnta ego Switzerland, onye enyemaka na onye na-akwado oke osimiri. Ọ bụ onye isi oche nke Bertarelli Foundation, onye nchoputa nke Sails of Change,  onye nchoputa nke Pew Bertarelli Ocean Legacy  na onye nchoputa nke Global Fishing Watch Marine Manager.  Ọ bụ onye nkwado nke okike nke IUCN . Dịka onye ọkwọ ụgbọ mmiri, ọ bụ onye mmeri nke 2010 na 2014 Bol d'Or Mirabaud  yana, ya na ndị otu ya Spindrift Racing, Fastnet Race na 2013. N'otu afọ ahụ, ya na ndị otu ya mebiri ndekọ maka ụzọ nchọpụta America. N'oge oyi 2016 ọ mezuru ihe ịma aka J"
+          "title": "Aframomum corrorima",
+          "url": "https://ig.wikipedia.org/wiki/Aframomum_corrorima",
+          "excerpt": "Aframomum corrorima  bụ ụdị osisi ifuru na ezinụlọ ginger,    Zingiberaceae. Ọ bụ herbaceous  perennial   nke na-emepụta akwụkwọ ndụ akụkụ ndụ 1-2 mita n'ogologo nke mgbọrọgwụ  rhizomatous.  Akwụkwọ ndị a haziri ahazi bụ akwụkwọ ndụ  gbara ọchịchịrị,10–30 cm long and 2.5–6 cm n'ofe, elliptical ka ọ toro ogologo n'ọdịdị ya. Ọ na-ebu ifuru pink n'akụkụ ala ma na-enye ohere nye mkpụrụ na-acha uhie uhie, mkpụrụ osisi anụ ahụ nwere mkpụrụ aja aja na-egbuke egbuke, nke na-adịkarị 3–5 mm na dayameta.\nNgwa nri, nke a maara dị ka   Ethiopian cardamom, ugha cardamom, ma ọbu korarima, a na-enweta site na"
         },
         {
-          "title": "James G. Spady",
-          "url": "https://ig.wikipedia.org/wiki/James_G._Spady",
-          "excerpt": "James G. Spady (Eprel 2, 1944 - Febụwarị 17, 2020) bụ onye odee, onye ọkọ akụkọ ihe mere eme na onye nta akụkọ meriri. N'ime ọrụ afọ iri ise ya, Spady dere ma dezie ọtụtụ akwụkwọ, rụọ ọrụ na redio, telivishọn, na ihe nkiri, dee ọtụtụ narị akụkọ akụkọ maka mgbasa ozi dị iche iche na-ebipụta, ma nata National Newspaper Publishers Association 's Meritorious Award.   \n\n\n== Ndụ mmalite na ọrụ ==\nDị ka nwa okorobịa, James G. Spady sonyeere Philadelphia NAACP Youth Council, ebe o zutere onye ndu obodo, onye ọka iwu, na Philadelphia NAACP President, Cecil B. Moore . N'okpuru nduzi Moore, Spady sonyeer"
+          "title": "Ahmed Fatimah Bisola",
+          "url": "https://ig.wikipedia.org/wiki/Ahmed_Fatimah_Bisola",
+          "excerpt": "Ahmed Fatimah Bisola bụ Kọmishọna na-ahụ maka agụmakwụkwọ na mmepe ịsị obodo mmadụ, Kwara Steeti ugbu a.   .\n\n\n== Ndụ mmalite na agụmakwụkwọ ==\nFatimah Ahmed nwetara akwụkwọ ikike nkuzi ya n'aka Kansul Ndi Nkụzi Ndebanye aha nke Naijiria dị ka onye nkuzi ọkachamara.  Dị ka kọmishọna na-ahụ maka mmụta na Kwara, ọ kpugheere iji Ozi na teknụzụ nkwukọrịta na Kwara Steeti igbanwe ngalaba agụmakwụkwọ.   o nwetara akwụkwọ ikike nkuzi ya n'aka  Kansụl Ndị Nkụzi Ndebanye aha nke Naijiria.\n\n\n== Ọrụ ==\nN'ime ọrụ ya, o debere oge maka ide ọnụ ụzọ mbata maka ụmụ akwụkwọ praịmarị.  ọ na-ekpughe na ọ nweghị "
         },
         {
-          "title": "Lohana Berkins",
-          "url": "https://ig.wikipedia.org/wiki/Lohana_Berkins",
-          "excerpt": "Lohana Berkins (15 June 1965 - 5 February 2016) bụ onye na-akwado travesti Argentine, onye nhazi na onye na-akwado amụma ọha. Ọ bụ onye guzobere Asociación de Lucha por la Identidad Travesti y Transexual (ALITT) wee rụọ ọrụ etiti n'ịkwalite ikike transgender na travesti na Argentina. \nBerkins nyere aka na arụmụka, iwu ọha na eze, na iwu gbasara njirimara nwoke na nwanyị, ikike ọrụ, na itinye aka na mmekọrịta mmadụ na ibe ya n'ime gọọmentị Argentina, ndị ọrụ, na usoro agụmakwụkwọ. \n\n\n== Akụkọ ndụ ==\nA mụrụ Berkins na 15 June 1965 na Pocitos, Salta. Nna ya, onye agha, chụpụrụ ya mgbe ọ dị afọ ir"
+          "title": "Akpụkpọ anụ a na-atụfu",
+          "url": "https://ig.wikipedia.org/wiki/Akp%E1%BB%A5kp%E1%BB%8D_an%E1%BB%A5_a_na-at%E1%BB%A5fu",
+          "excerpt": "Towel a na-atụfu ya bụ ihe ọzọ a na-eji eme ya na akwa akwa akwa ọzọ.Ebubere ihe ndị a na-atụfu ihe maka nnyefe ahụike ma webata ya na ụlọ ọrụ na-abụghị usoro ahụike, dị ka ebe ntụrụndụ, ụlọ oriri na ọṅụṅụ, ile ọbịa, ụlọ mgbatị ahụ na ezinụlọ.  Campion (2015-05-01). \"Sustainable healthcare and environmental life-cycle impacts of disposable supplies: a focus on disposable custom packs\" (in en). Journal of Cleaner Production 94: 46–55. DOI:10.1016/j.jclepro.2015.01.076. ISSN 0959-6526. </ref>\nA na-eji akwa nhicha atụfu iji kwalite njikwa ọrịa, ịdị mma yana ibelata mmefu akụ na ụba.    A na-eji a"
         },
         {
-          "title": "Musa Usman",
-          "url": "https://ig.wikipedia.org/wiki/Musa_Usman",
-          "excerpt": "Brigadier (nke ndị agha ikuku) Musa Usman bụ gọvanọ mbụ nke North-Eastern Steeti na Naịjirịa, site n'ọnwa Mee afọ 1967 ruo Julaị afọ 1975, mgbe e kewapụrụ steeti ahụ n'akụkụ nke Mpaghara Ugwu n'oge ọchịchị ndị agha nke General Yakubu Gowon.\nUsman gara ụlọ akwụkwọ ndị agha Royal Military.Sandhurst, England wee nweta ọrụ ya na 1962. \nMajor Usman sonyere na nnupụisi ọchịchị nke July 1966 mgbe a chụpụrụ Major General Aguiyi Ironsi, nke General Yakubu Gowon nọchiri.\nA họpụtara ya dịka gọvanọ nke North-East Steeti na Mee 1967, Usman malitere iwu ụlọ ọrụ simenti Ashaka, nke Major-General Shehu Musa Y"
+          "title": "Alida Neave",
+          "url": "https://ig.wikipedia.org/wiki/Alida_Neave",
+          "excerpt": "Alida Neave bụ onye mba Saụt Afrịka bụbu onye egwuregwu tennis.\nNeave ruru nke ikpeazụ na nche French 1929 ya na onye ibe ya bụ Bobbie Heine Miller mana Lili de Alvarez na Kea Bouman meri ya na nke ikpeazụ n'usoro abụọ kwụpụta.  N'afọ 1937, o mere egwuregwu ikpeazụ nke South Africa mana Bobbie Heine Miller tụfuru n'usoro atọ.\n\n\n== Agba ikpeazụ Grand Slam ==\n\n\n=== Ugboro abụọ ===\n\n\n==== Ndị gbara ọsọ (1) ====\n\n\n== Edensibia =="
         },
         {
-          "title": "Orlando Aryee",
-          "url": "https://ig.wikipedia.org/wiki/Orlando_Aryee",
-          "excerpt": "Orlando Aryee bụ onye nkwado ndị Ghana na onye na-eweta akwụkwọ ozi.  Ọ bụ ọrụ dị ka onye otu ndị omeiwu mamba nke mba nke anọ nke Ghana maka mpaghara Okaikwei South na mpaghara Greater Accra nke Ghana.\n\n\n== Mbido ndụ na agụmakwụkwọ ==\nA mụrụ Orlando Aryee na 8 June 1954. Ọ gara Ebenezer Secondary School ebe ọ nwetara GCE Ordinary Level.\n\n\n== Ọrụ ==\nOrlando Aryee bụbu onye otu ndị omeiwu mbụ nke mba nke anọ nke Ghana maka mpaghara Okaikwei South na onye na-eweta akwụkwọ ozi.\n\n\n== ndọrọ ndọrọ ọchịchị ==\nA mgbaàmà Orlando Aryee na mbụ n'oge mbụ aka ndị omeiwu Ghana nke afọ 1992 dị ka onye otu nd"
+          "title": "Amber Robles-Gordon",
+          "url": "https://ig.wikipedia.org/wiki/Amber_Robles-Gordon",
+          "excerpt": "Amber Robles-Gordon (amụrụ 1977 San Juan, Puerto Rico ) bụ onye ihe nkiri mgbasa ozi agwakọta America.   Ọ na-ebi na Washington, DC ma na-ejikarị ihe ndị a chọtara na akwa na-arụ ọrụ iji mepụta mgbakọ, nnukwu ihe ọkpụkpụ, nrụnye na ihe osise ọha.\n\n\n== Agụmakwụkwọ ==\nỌ natara BS na 2005 site na Trinity College, na Washington, DC wee bụrụ MFA (Painting) na 2011 site na Mahadum Howard, nakwa na Washington, DC.  Robles-Gordon abụrụla onye isi na Black Artists DC, (BADC) na-eje ozi dị ka onye nhazi ihe ngosi, osote onye isi ala na Onye isi ala.  Robles-Gordon bụkwa onye nchoputa nke Delusions of Gr"
         }
       ],
       "backfill_done": true
@@ -58,103 +58,44 @@
   },
   "hf_catalog": {
     "output": "corpus/catalog/hf_datasets.json",
-    "total": 286,
+    "total": 290,
     "failed_terms": [],
     "new_since_last_run": [
       {
-        "id": "VelkroLM/african-languages-speech",
-        "url": "https://huggingface.co/datasets/VelkroLM/african-languages-speech",
-        "license": "cc-by-4.0",
-        "languages": []
+        "id": "McGill-NLP/NaijaS2ST",
+        "url": "https://huggingface.co/datasets/McGill-NLP/NaijaS2ST",
+        "license": "UNKNOWN",
+        "languages": [
+          "en",
+          "ha",
+          "ig",
+          "yo",
+          "pcm"
+        ]
       },
       {
-        "id": "0xnu/igbo",
-        "url": "https://huggingface.co/datasets/0xnu/igbo",
+        "id": "michsethowusu/Code-170k-igbo",
+        "url": "https://huggingface.co/datasets/michsethowusu/Code-170k-igbo",
         "license": "apache-2.0",
         "languages": [
           "ig"
         ]
       },
       {
-        "id": "rufatronics/african-languages-filtered",
-        "url": "https://huggingface.co/datasets/rufatronics/african-languages-filtered",
+        "id": "CLEAR-Global/Hausa-Synthetic-ASR-Dataset-XTTS",
+        "url": "https://huggingface.co/datasets/CLEAR-Global/Hausa-Synthetic-ASR-Dataset-XTTS",
+        "license": "cc-by-4.0",
+        "languages": [
+          "ha"
+        ]
+      },
+      {
+        "id": "CLEAR-Global/TWB-voice-TTS-Hausa-1.0-sampleset",
+        "url": "https://huggingface.co/datasets/CLEAR-Global/TWB-voice-TTS-Hausa-1.0-sampleset",
         "license": "other",
         "languages": [
-          "ha",
-          "yo",
-          "ig",
-          "pcm",
-          "kr",
-          "nup",
-          "bin",
-          "ff",
-          "tiv"
-        ]
-      },
-      {
-        "id": "VelkroLM/african-languages-catalog",
-        "url": "https://huggingface.co/datasets/VelkroLM/african-languages-catalog",
-        "license": "UNKNOWN",
-        "languages": []
-      },
-      {
-        "id": "VelkroLM/african-languages-filtered",
-        "url": "https://huggingface.co/datasets/VelkroLM/african-languages-filtered",
-        "license": "other",
-        "languages": [
-          "ha",
-          "yo",
-          "ig",
-          "pcm",
-          "kr",
-          "nup",
-          "bin",
-          "ff",
-          "tiv"
-        ]
-      },
-      {
-        "id": "michsethowusu/kikuyu-yoruba_sentence-pairs",
-        "url": "https://huggingface.co/datasets/michsethowusu/kikuyu-yoruba_sentence-pairs",
-        "license": "UNKNOWN",
-        "languages": []
-      },
-      {
-        "id": "rufatronics/african-languages-hplt-filtered",
-        "url": "https://huggingface.co/datasets/rufatronics/african-languages-hplt-filtered",
-        "license": "cc0-1.0",
-        "languages": [
-          "ha",
-          "yo",
-          "ig",
-          "ff",
-          "kr",
-          "am",
-          "so",
-          "ti",
-          "wo",
-          "ln",
-          "lg",
-          "sn"
-        ]
-      },
-      {
-        "id": "VelkroLM/african-languages-corpus",
-        "url": "https://huggingface.co/datasets/VelkroLM/african-languages-corpus",
-        "license": "cc0-1.0",
-        "languages": [
-          "ha",
-          "yo",
-          "ig",
-          "ff",
-          "kr",
-          "am",
-          "so",
-          "ti",
-          "wo",
-          "ln",
-          "lg",
-          "sn"
+          "hau",
+          "ha"
         ]
       }
     ]
@@ -162,7 +103,7 @@
   "news": {
     "bbc_igbo": {
       "output": "corpus/manifests/bbc_igbo.jsonl",
-      "new_urls": 0
+      "new_urls": 6
     }
   }
 }
