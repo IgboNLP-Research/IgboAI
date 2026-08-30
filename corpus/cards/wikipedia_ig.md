@@ -82,6 +82,8 @@ prior cards (see flag 21 for why the pre-2026-08-18 rows no longer apply to
 | 2026-08-18, incremental | 21 | 22,827 | 130,182 | `recentchanges`, diacritic ratio 0.06522, this file read directly and in full |
 | 2026-08-23, incremental (raw file) | 21 | 22,845 | 130,231 | `recentchanges`, diacritic ratio 0.06545, this file read directly and in full |
 | 2026-08-23, incremental (deduplicated by title vs 2026-08-18) | **21 unique titles total, 0 net-new** | n/a | n/a | 20 of 21 documents byte-identical to 2026-08-18's; see flag 27 |
+| 2026-08-30, incremental (raw file) | 22 | 15,245 | 88,876 | `recentchanges`, diacritic ratio 0.06793, this file read directly and in full; matches `corpus_run_summary.json` exactly |
+| 2026-08-30, incremental (deduplicated by title vs 2026-08-23) | **22 net-new titles, 0 overlap** | n/a | n/a | see flag 30 — the flag-27 stagnation bug appears fixed this run |
 
 The 50,623 figure is not from a file I opened; it is read from
 `mt_probe_summary.json` (`scripts/mt_prevalence_probe.py`, committed at repo
@@ -93,14 +95,15 @@ from a full single-pass read of the one file this run actually added
 `corpus_run_summary.json` exactly, confirming there is nothing else this run
 produced in that file).
 
-**Practical corpus size as of 2026-08-23: still on the order of 50,644
-unique documents** (50,623 dump + 21 unique incremental pages), unchanged
-since 2026-08-18 despite a second incremental run landing in between — see
-flag 27. Raw storage under `corpus/raw/wikipedia_ig/` now holds 42
-incremental records across two dated files for those same 21 pages, so
-document counts read directly off the raw files overstate corpus growth
-unless deduplicated by title. Token/character/diacritic aggregates for the
-dump portion are currently unknown corpus-wide (flag 23); do not quote a
+**Practical corpus size as of 2026-08-30: on the order of 50,666 unique
+documents** (50,623 dump + 21 unique incremental pages from 2026-08-18/23 +
+22 net-new incremental pages from this run, see flag 30), up from the
+50,644 figure that held flat across 2026-08-18 and 2026-08-23 (flag 27).
+Raw storage under `corpus/raw/wikipedia_ig/` now holds 64 incremental
+records across three dated files for those 43 distinct pages, so document
+counts read directly off the raw files still overstate corpus growth unless
+deduplicated by title. Token/character/diacritic aggregates for the dump
+portion are currently unknown corpus-wide (flag 23); do not quote a
 corpus-wide `diacritic_char_ratio` until that is fixed.
 
 **Backfill status: DONE**, via the dump (`backfill_done: true`,
@@ -122,7 +125,9 @@ run appended to that file (indices 4–25). Flags dated **2026-08-18** are
 from the dump ingest and this run's 21-document incremental batch; see each
 flag for which. Flags dated **2026-08-23** are from this run's 21-document
 incremental batch, read in full and compared directly, document by document,
-against the 2026-08-18 file.
+against the 2026-08-18 file. Flags dated **2026-08-30** are from this run's
+22-document incremental batch, read in full and compared directly, title by
+title, against the 2026-08-23 file.
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
@@ -573,6 +578,44 @@ sample before wiring in:**
 Not fixed here — this card's author does quality triage, not pipeline edits
 (see the hf_catalog card's flag 2 for the same division of labour applied
 there).
+
+### 30. 2026-08-30 — The flag-27 stagnation bug appears fixed: this run's 22 documents are all net-new, zero overlap with 2026-08-23
+
+Read both `corpus/raw/wikipedia_ig/2026-08-30.jsonl.gz` (22 documents) and
+`corpus/raw/wikipedia_ig/2026-08-23.jsonl.gz` (21 documents) directly and
+compared titles: **zero title overlap**, all 22 of this run's documents are
+new. `corpus/state.json`'s `rc_ts` advanced from `2026-08-10T01:59:45Z` to
+`2026-08-30T09:01:23Z` — a 20-day jump, versus the 6-day step that still
+left the fetch stuck last run. This is consistent with flag 27's fix
+recommendation (persist the actually-used `rc_ts`) having taken effect, but
+one clean run is not proof the watermark-persistence logic is now correct
+in general; worth another confirming check next run before closing flag 27
+out for good.
+
+### 31. 2026-08-30 — Markup-leakage family (flags 3, 18, 22, 25) recurs in 5 of 22 documents (23%) this run
+
+`</ref>` residue in `Abby Jane Morrell` (×2), `Aize Obayan`, `Akpụkpọ anụ a
+na-atụfu`, and `Alaide Gualberta Beccari` (×4); an unexpanded `Templeeti:`
+token in `100% eneji emeghariri ọhụrụ`. Same `prop=extracts` extraction
+failure on citation templates as previously documented, but the highest
+per-batch incidence rate seen yet for this defect family. Reinforces the
+`markup_leakage` heuristic proposed in flag 29 — with 23% incidence in a
+22-document batch, this is no longer a rare edge case on the incremental
+path.
+
+### 32. 2026-08-30 — `mt_suspect_orthography` fires on `Achille Mbembe`, but the trigger is a legitimate IPA pronunciation guide, not MT residue
+
+The flagged character is U+025B (ɛ) inside `/ əmˈbɛmbeɪ/`, an English-style
+IPA pronunciation gloss for the name "Mbembe" — standard practice on
+Wikipedia biographies, not a translation artifact. This is a false positive
+for the *reason* the heuristic exists (catching Yoruba/IPA-adjacent
+character substitution as an MT signal, flags 5, 19), even though the
+character match is correct. Consistent with `mt_prevalence.md`'s finding
+that `mt_suspect_orthography` has 100% precision on only a single document
+(n=1) in the annotated sample — this run's one hit suggests that precision
+figure was already an overestimate, not just a small sample. Worth
+excluding IPA-slash-delimited spans (`/…/` or `[…]` immediately after a
+proper noun) from the heuristic before trusting its precision further.
 
 ## Intended uses
 
