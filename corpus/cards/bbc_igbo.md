@@ -67,11 +67,12 @@ live feed if it recurs or lengthens.
 | 2026-08-15 | 1 | 15 |
 | 2026-08-18 | 2 | 17 |
 | 2026-08-23 | 0 | 17 |
+| 2026-08-30 | 6 | 23 |
 
 Cumulative figure derived by counting lines in
-`corpus/manifests/bbc_igbo.jsonl` directly (17), matching the 2026-08-18
-total plus this run's 0. No token or character counts apply — no text is
-stored.
+`corpus/manifests/bbc_igbo.jsonl` directly (23), matching the 2026-08-23
+total (17) plus this run's 6. No token or character counts apply — no text
+is stored.
 
 **2026-08-18 gap check:** the two new items are published 2026-08-17 and
 2026-08-18, a 2-3 day gap since the last recorded item (2026-08-15). This is
@@ -87,6 +88,19 @@ expected in that window. Flagged as an observation to check against the live
 feed, not a confirmed miss (RSS feeds do have quiet news days), but this is
 now the second gap of this shape and worth checking whether the sliding
 20-item window is starting to drop items between the weekly-ish runs.
+
+**2026-08-30 gap check:** the 6 new items are published 2026-08-24 through
+2026-08-29 (checked directly against `corpus/manifests/bbc_igbo.jsonl`),
+resuming immediately after the previous run's last recorded date
+(2026-08-18). **The 2026-08-23 flag's suspected gap (2026-08-19 through
+2026-08-23) is not covered by any item in this run either** — this run's
+earliest new `published` date is 2026-08-24, not 2026-08-19. Since this
+poll ran after the RSS window would have long since slid past that date
+range, that 5-day span is now unrecoverable from this feed. Read together
+with flag 2026-08-15's window-adequacy caveat, this is evidence (not proof)
+that the sliding-window risk is real rather than hypothetical: a
+weekly-ish cadence can permanently lose days of coverage, not just delay
+them.
 
 ## Known limitations and quality flags
 
