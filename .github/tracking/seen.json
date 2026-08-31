@@ -342,5 +342,22 @@
   "openalex:W7204580239",
   "openalex:W7204595516",
   "openalex:W7204603309",
-  "openalex:W7204657747"
+  "openalex:W7204657747",
+  "hf:models:PrinceAlhassanNasamu/tekyerema-intent-afroxlmr",
+  "hf:models:Jesujuwon/community-health-feedback-afroxlmr",
+  "hf:models:tadiecool29/STL-afroxlmr-base-stance",
+  "hf:models:withus/afro-xlmr-weighted",
+  "hf:models:Minervus00/afroxlmr-mini-ner-bam-mos-v2-onnx",
+  "openalex:W7163998943",
+  "openalex:W7204722919",
+  "openalex:W7204734659",
+  "openalex:W7204623491",
+  "openalex:W7204661767",
+  "openalex:W7204619628",
+  "openalex:W7204635213",
+  "openalex:W7204649989",
+  "openalex:W7204651200",
+  "openalex:W7204656677",
+  "openalex:W7204668383",
+  "openalex:W7204668935"
 ]
