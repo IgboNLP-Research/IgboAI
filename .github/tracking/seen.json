@@ -395,5 +395,7 @@
   "openalex:W7204733193",
   "openalex:W7204746858",
   "openalex:W7204799102",
-  "openalex:W7204808878"
+  "openalex:W7204808878",
+  "hf:datasets:MeghanaKap/igbo_dataset_encoded",
+  "hf:models:AfriSpeech/african-speech-id"
 ]
