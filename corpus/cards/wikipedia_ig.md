@@ -84,6 +84,8 @@ prior cards (see flag 21 for why the pre-2026-08-18 rows no longer apply to
 | 2026-08-23, incremental (deduplicated by title vs 2026-08-18) | **21 unique titles total, 0 net-new** | n/a | n/a | 20 of 21 documents byte-identical to 2026-08-18's; see flag 27 |
 | 2026-08-30, incremental (raw file) | 22 | 15,245 | 88,876 | `recentchanges`, diacritic ratio 0.06793, this file read directly and in full; matches `corpus_run_summary.json` exactly |
 | 2026-08-30, incremental (deduplicated by title vs 2026-08-23) | **22 net-new titles, 0 overlap** | n/a | n/a | see flag 30 — the flag-27 stagnation bug appears fixed this run |
+| 2026-09-06, incremental (raw file) | 17 | 8,221 | 46,343 | `recentchanges`, diacritic ratio 0.07082, this file read directly and in full; matches `corpus_run_summary.json` exactly |
+| 2026-09-06, incremental (deduplicated by title vs all three prior incremental files) | **17 net-new titles, 0 overlap** | n/a | n/a | checked against the union of 2026-08-18/23/30 titles, not just the immediately preceding file; see flag 33 |
 
 The 50,623 figure is not from a file I opened; it is read from
 `mt_probe_summary.json` (`scripts/mt_prevalence_probe.py`, committed at repo
@@ -95,16 +97,16 @@ from a full single-pass read of the one file this run actually added
 `corpus_run_summary.json` exactly, confirming there is nothing else this run
 produced in that file).
 
-**Practical corpus size as of 2026-08-30: on the order of 50,666 unique
-documents** (50,623 dump + 21 unique incremental pages from 2026-08-18/23 +
-22 net-new incremental pages from this run, see flag 30), up from the
-50,644 figure that held flat across 2026-08-18 and 2026-08-23 (flag 27).
-Raw storage under `corpus/raw/wikipedia_ig/` now holds 64 incremental
-records across three dated files for those 43 distinct pages, so document
-counts read directly off the raw files still overstate corpus growth unless
-deduplicated by title. Token/character/diacritic aggregates for the dump
-portion are currently unknown corpus-wide (flag 23); do not quote a
-corpus-wide `diacritic_char_ratio` until that is fixed.
+**Practical corpus size as of 2026-09-06: on the order of 50,683 unique
+documents** (50,623 dump + 43 unique incremental pages through 2026-08-30 +
+17 net-new incremental pages from this run, see flag 33), up from the
+50,666 figure as of 2026-08-30. Raw storage under `corpus/raw/wikipedia_ig/`
+now holds 81 incremental records across four dated files for those 60
+distinct pages, so document counts read directly off the raw files still
+overstate corpus growth unless deduplicated by title. Token/character/
+diacritic aggregates for the dump portion are currently unknown corpus-wide
+(flag 23); do not quote a corpus-wide `diacritic_char_ratio` until that is
+fixed.
 
 **Backfill status: DONE**, via the dump (`backfill_done: true`,
 `backfill_method: "dump"` in `corpus/state.json`), not via the `allpages`
@@ -127,7 +129,9 @@ flag for which. Flags dated **2026-08-23** are from this run's 21-document
 incremental batch, read in full and compared directly, document by document,
 against the 2026-08-18 file. Flags dated **2026-08-30** are from this run's
 22-document incremental batch, read in full and compared directly, title by
-title, against the 2026-08-23 file.
+title, against the 2026-08-23 file. Flags dated **2026-09-06** are from
+this run's 17-document incremental batch, read in full and title-checked
+against the union of all three prior incremental files.
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
@@ -616,6 +620,82 @@ that `mt_suspect_orthography` has 100% precision on only a single document
 figure was already an overestimate, not just a small sample. Worth
 excluding IPA-slash-delimited spans (`/…/` or `[…]` immediately after a
 proper noun) from the heuristic before trusting its precision further.
+
+### 33. 2026-09-06 — All 17 documents this run are net-new; the raw-title-dedup check now spans all four incremental files, not just the most recent pair
+
+Read all four incremental files directly (`2026-08-18.jsonl.gz`,
+`2026-08-23.jsonl.gz`, `2026-08-30.jsonl.gz`, `2026-09-06.jsonl.gz`, 81
+records total) and title-checked this run's 17 titles against the union of
+the other three (60 unique titles overall): **zero overlap**. `corpus/
+state.json`'s `rc_ts` continuing to advance run over run (flag 30's fix)
+still looks correct three runs later. Raw-file record counts continue to
+overstate unique pages (81 records / 60 titles) purely from the flag-27
+stagnation window, not from anything new this run.
+
+### 34. 2026-09-06 — Markup leakage (flags 3, 18, 22, 25, 31) hits a new high: 7 of 17 documents (41%)
+
+`</ref>` or unexpanded `Templeeti:` residue survives in `1990 Mwakpo bọs
+Cairo`, `2022 Idei mmiri na Kinshasa`, `Akaname` (×2), `Bọmbụ Naciria na
+2008`, `Mgbuchapu na Kawuri`, and `Okporo ụzọ Mba Nile`, e.g. `Templeeti:
+Campaignbox Boko Haram insurgency` prefixing the body of `Mgbuchapu na
+Kawuri` and a bare `</ref>` mid-sentence in `Akaname`'s citation list.
+Flag 31 called 23% (5 of 22) "no longer a rare edge case"; this run's 41%
+is the highest incidence yet recorded on the `prop=extracts` incremental
+path, on a sample too small to call a trend but large enough to reinforce
+the `markup_leakage` heuristic flag 29 already proposed to the reviewer.
+
+### 35. 2026-09-06 — Two independent complete, untranslated English sentences left verbatim mid-paragraph — stronger direct evidence for flag 24's MT-residue estimate
+
+`1990 Mwakpo bọs Cairo`, between two Igbo paragraphs: *"Israel's minister
+Ariel Sharon said the Palestine Liberation Organisation was behind the
+attack."* — a full sentence, correct English, zero Igbo. `Payson R.
+Stevens`, mid-biography: *"Stevens is married to the Indian writer Kamla K.
+Kapur. They live in Del Mar, San Diego County, California."* — two
+consecutive untranslated sentences in the same slot pattern (a spouse/
+residence aside) as the surrounding Igbo prose. Flag 24's 36%-or-worse
+English-residue estimate was built from function-word ratios over the
+dump and is explicitly a lower bound with no confirmed examples read
+directly; these two documents are the first case in this card of a
+complete, unambiguous, untranslated sentence rather than partial residue
+or a wrong-script token substitution (flags 5, 7, 15, 19, 26). Independently,
+in the same batch: `1990 Mwakpo bọs Cairo` also renders numbered citation
+markers as spelled-out Igbo number words instead of digits or removing
+them — `[otu][abụọ]` and `[atọ]` where source Wikipedia would have `[1][2]`
+and `[3]` — a defect not previously catalogued in this card (closest prior
+family is markup leakage, flags 3/18/22/25/31, but this is a translation
+choice on a footnote marker, not raw markup survival). Not the same
+document family as `Akaname`'s three inline Japanese-script bibliographic
+citations (`草野巧 (1997). 幻想動物事典. 新紀元社.`), which are legitimate
+citations for an article about a Japanese folklore topic and should not be
+caught by any non-Igbo-script heuristic aimed at MT/wrong-orthography
+substitution (flags 5, 7, 15, 19).
+
+**Proposed heuristic addition, for the reviewer to evaluate against a
+larger sample:** a regex for bracketed Igbo number words immediately
+following sentence-final punctuation — `\[(otu|abụọ|atọ|ano|anọ|ise|isii|
+asaa|asatọ|itoolu|iri)\]` — as a distinct, low-false-positive signal of
+this specific footnote-translation defect, separate from the `markup_
+leakage` and `mt_suspect_orthography` heuristics already proposed in flag
+29.
+
+### 36. 2026-09-06 — Non-mainspace page leaked into the incremental corpus: `Draft:Ada Omo Daddy`
+
+The dump ingest's method section states it "keeps namespace-0, non-redirect
+pages only," but no equivalent namespace filter is documented for the
+`recentchanges`-based incremental path (`scripts/corpus_fetch.py`), and this
+run's batch includes `Draft:Ada Omo Daddy`
+(`https://ig.wikipedia.org/wiki/Draft:Ada_Omo_Daddy`), a Draft-namespace
+page describing a 2023 Nollywood film — not yet an accepted mainspace
+article. Content quality is otherwise unremarkable (fluent, well-marked
+Igbo prose), so this is a scope gap, not a text-quality defect: draft
+content is unreviewed and can be deleted, rewritten, or never promoted to
+mainspace, which is a weaker provenance guarantee than the rest of this
+card assumes. **Recommend to the reviewer:** confirm whether
+`scripts/corpus_fetch.py`'s `recentchanges` query restricts `rcnamespace=0`;
+if not, either add that restriction or filter titles with a `^[A-Za-z]+:`
+namespace-prefix pattern (excluding legitimate colon-containing article
+titles is the tradeoff to watch for) before this leaks into a training
+split.
 
 ## Intended uses
 
