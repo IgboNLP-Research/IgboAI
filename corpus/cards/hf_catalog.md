@@ -40,6 +40,7 @@ previous file.
 | 2026-08-18 | 278 | 0 |
 | 2026-08-23 | 286 | 8 |
 | 2026-08-30 | 290 | 4 |
+| 2026-09-06 | 292 | 2 |
 
 **2026-08-18:** verified directly by diffing dataset ids between this run's
 `corpus/catalog/hf_datasets.json` and the prior commit's: identical 278-id
@@ -152,6 +153,21 @@ many other language codes (or list no `languages` at all).
   where recorded speech is scarcer than text; worth reading the method even
   though the data itself is Hausa-only.
 
+## 2026-09-06 — 2 new datasets
+
+- **`Ngoziegonu1/ngonu-igbo-proverbs-ai-challenge`** — license `UNKNOWN`, no
+  `languages` field populated, but Igbo-specific by id and name (proverbs,
+  "ai-challenge" suggesting a hackathon/competition dataset). **Verify before
+  use** — both the license and, given the "challenge" framing, whether the
+  proverbs are human-collected or themselves a model's output.
+- **`adedejimakinde/yoruba-normalization-pairs`** — CC-BY-SA-4.0, tagged
+  `yo` only, no Igbo content. In scope under this project's relevance policy
+  as a Nigerian-language resource; text-normalization pair construction is
+  also a methodology that could transfer to an Igbo orthography-normalization
+  task (e.g. reconciling the Union-Igbo/ogonek/modern-Ọnwụ variation this
+  card's Wikipedia sibling documents in flags 2 and 26), independent of the
+  Yoruba-specific content itself.
+
 ## Known limitations and quality flags
 
 ### 1. 2026-08-07 — all seven Hub queries failed; catalog written as `[]`
@@ -199,11 +215,12 @@ when any term failed; surface a `failed_terms` list in the run summary.
 ### 3. Metadata-quality caveats that will apply once the fetch works
 
 - `license` is read from `cardData.license` with a fallback, defaulting to
-  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-08-30,
-  163 of the 290 catalogued datasets (56.2%) carry `UNKNOWN`** — counted
-  directly from `corpus/catalog/hf_datasets.json` (was 162/286, 56.6%, on
-  2026-08-23) — so this is the majority case, not an edge case, and it is
-  not shrinking; do not filter or sort on license without first routing
+  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-09-06,
+  164 of the 292 catalogued datasets (56.2%) carry `UNKNOWN`** — counted
+  directly from `corpus/catalog/hf_datasets.json` (was 163/290, 56.2%, on
+  2026-08-30; 162/286, 56.6%, on 2026-08-23) — so this is the majority case,
+  not an edge case, and the proportion has now held flat for three
+  consecutive runs; do not filter or sort on license without first routing
   `UNKNOWN` entries to manual review.
 - `languages` comes from self-declared card metadata and is often missing or
   wrong on African-language datasets; do not filter on it alone.
