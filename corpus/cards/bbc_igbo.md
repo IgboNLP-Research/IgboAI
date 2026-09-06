@@ -68,10 +68,11 @@ live feed if it recurs or lengthens.
 | 2026-08-18 | 2 | 17 |
 | 2026-08-23 | 0 | 17 |
 | 2026-08-30 | 6 | 23 |
+| 2026-09-06 | 5 | 28 |
 
 Cumulative figure derived by counting lines in
-`corpus/manifests/bbc_igbo.jsonl` directly (23), matching the 2026-08-23
-total (17) plus this run's 6. No token or character counts apply — no text
+`corpus/manifests/bbc_igbo.jsonl` directly (28), matching the 2026-08-30
+total (23) plus this run's 5. No token or character counts apply — no text
 is stored.
 
 **2026-08-18 gap check:** the two new items are published 2026-08-17 and
@@ -101,6 +102,13 @@ with flag 2026-08-15's window-adequacy caveat, this is evidence (not proof)
 that the sliding-window risk is real rather than hypothetical: a
 weekly-ish cadence can permanently lose days of coverage, not just delay
 them.
+
+**2026-09-06 gap check:** the 5 new items are published 2026-08-31 through
+2026-09-04 (checked directly against `corpus/manifests/bbc_igbo.jsonl`),
+picking up **1.75 days after** the previous run's latest recorded item
+(2026-08-29 15:12 UTC) — the smallest gap recorded in this card's history
+of gap checks, and well inside anything the sliding-window risk would
+plausibly drop. No unrecovered span to flag this run.
 
 ## Known limitations and quality flags
 
