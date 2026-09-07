@@ -54,6 +54,7 @@
   "hf:datasets:naijavoices/naijavoices-dataset",
   "hf:datasets:naijavoices/naijavoices-dataset-compressed",
   "hf:datasets:naijavoices/voiceafrica-datasets",
+  "hf:datasets:voicedata/final_igbo",
   "hf:datasets:voicedata/naijavoices-kanitts2-tokenized",
   "hf:datasets:voicedata/naijavoices_yoruba_nanocodec",
   "hf:datasets:voicedata/new-naijavoices-kanitts2-tokenized",
@@ -479,5 +480,13 @@
   "openalex:W7208763214",
   "openalex:W7208770058",
   "openalex:W7208770110",
-  "openalex:W7208778412"
+  "openalex:W7208778412",
+  "openalex:W7208809308",
+  "openalex:W7208813018",
+  "openalex:W7208823252",
+  "openalex:W7208823778",
+  "openalex:W7208826806",
+  "openalex:W7208828362",
+  "openalex:W7208832514",
+  "openalex:W7208836538"
 ]
