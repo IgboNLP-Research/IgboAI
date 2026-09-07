@@ -110,7 +110,10 @@ jobs:
             source, date, tags, languages, summary, igbo_relevance.
             Keep RELATED_WORK.md as a short index: a link per monthly file
             plus total entry counts; update it when a new monthly file is
-            created.
+            created. Do not increment the counts. Derive them: count lines
+            matching '^- \*\*' in each related-work/<month>.md and sum them
+            for the total. If your derived count disagrees with what the file
+            currently says, the derived count wins.
 
             Relevance bar: keep work on Igbo or other African languages, and
             non-African low-resource work ONLY if its method or finding
