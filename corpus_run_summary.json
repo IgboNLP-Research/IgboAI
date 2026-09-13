@@ -1,56 +1,56 @@
 {
-  "run_date": "2026-08-30",
+  "run_date": "2026-09-13",
   "mode": "all",
   "wikipedia": {
     "wikipedia_ig": {
-      "output": "corpus/raw/wikipedia_ig/2026-08-30.jsonl.gz",
+      "output": "corpus/raw/wikipedia_ig/2026-09-13.jsonl.gz",
       "titles_listed": 500,
-      "skipped_stub": 476,
-      "skipped_markup": 2,
-      "documents": 22,
-      "tokens_ws": 15245,
-      "chars": 88876,
-      "diacritic_char_ratio": 0.06793,
+      "skipped_stub": 475,
+      "skipped_markup": 0,
+      "documents": 25,
+      "tokens_ws": 15013,
+      "chars": 84089,
+      "diacritic_char_ratio": 0.07214,
       "samples": [
         {
-          "title": "100% eneji emeghariri ọhụrụ",
-          "url": "https://ig.wikipedia.org/wiki/100%25_eneji_emeghariri_%E1%BB%8Dh%E1%BB%A5r%E1%BB%A5",
-          "excerpt": "100% ike emeghariri ọhụrụ pụtara inweta ike niile site na ihe onwunwe a na-emeghari. Mgbalị iji 100% ike emeghariri ọhụrụ maka ọkụ eletrik, okpomọkụ, ịjụ oyi na njem na-akpali mgbanwe ihu igwe, mmetọ na nsogbu gburugburu ebe obibi ndị ọzọ, yana nchegbu akụ na ụba na nchekwa ike. Ịgbanwe ngụkọta nke ike isi ụwa na-enye na isi mmalite na-agbanwe agbanwe chọrọ mgbanwe nke usoro ike, ebe ọ bụ na ọtụtụ ike nke taa sitere na mmanụ ala ndị adịghị emeghari emeghari\nNnyocha banyere isiokwu a bụ ihe ọhụrụ, na nyocha ole na ole e bipụtara tupu afọ 2009, mana enwetala nlebara anya na-arịwanye elu n'afọ nd"
+          "title": "\"Philippines, Province of China\" ọkọlọtọ",
+          "url": "https://ig.wikipedia.org/wiki/%22Philippines,_Province_of_China%22_%E1%BB%8Dk%E1%BB%8Dl%E1%BB%8Dt%E1%BB%8D",
+          "excerpt": "== Ihe ndị mere n'oge gara aga ==\n\n\n=== Nkọwa ọkọlọtọ ===\nFlaglọ ọkọlọtọ tarpaulin na-acha ọbara ọbara ma gosipụta People's Republic of China\">Flag nke People's Republic of China nke nwere dragọn abụọ. Ọ na-egosipụtakwa ederede \"Welcome to the Philippines, Province of China\" na mkpụrụedemede ọcha  na-egosi mba ndịda ọwụwa anyanwụ Eshia dị ka mpaghara nke People's Republic of China.  Ọ na-egosipụtakwa ederede Chinese na mkpụrụedemede odo n'okpuru ederede Bekee nke na-asụgharị \"Welcome to China's Philippines\". A na-eji mkpụrụedemede ọdịnala ndị China mee ihe na ọkọlọtọ ndị a na-ejighị mee ihe n'"
         },
         {
-          "title": "Abby Jane Morrell",
-          "url": "https://ig.wikipedia.org/wiki/Abby_Jane_Morrell",
-          "excerpt": "Abby Jane Morrell (amuru Febụwarị 17, 1809; ụbọchị ọnwụ amabeghị) bụ onye ode akwụkwọ America wepụtara nkọwa izizi nke njem sub-Antarctic site n'echiche nwanyị.\n\n\n== Akụkọ ndụ ==\nA mụrụ Morrell Abbey Jane Wood na New York na February 17, 1809.[1] Nna ya, Captain John Wood, nwụrụ na Nọvemba 14, 1811, na New Orleans ma bụrụkwa nna ukwu nke ụgbọ mmiri Indian Hunter.[1] Nne ya lụgharịrị di na 1814 nye Mazi Burritt Keeler.\nNa June 29, 1824, ọ lụrụ Captain Benjamin Morrell, onye bụ nwanne nne dị anya, wee bụrụ nwunye ya nke abụọ.[1] Ha nwere nwa nwoke mbụ (amụrụ n'etiti 1825 na 1828) onye Morrell le"
+          "title": "2012 Paros beating and rape",
+          "url": "https://ig.wikipedia.org/wiki/2012_Paros_beating_and_rape",
+          "excerpt": "Paros 2012 na-eti na idina nwa agbọghọ dị afọ iri na ụma n'àgwàetiti Paros, Greece nke Ahmed Waqas (aha ndị ọzọ a kọrọ gụnyere Ahmet Vaka, Ahmet Bakas, na Ahmet Vakash) Okwu ahụ dọtara mmasị zuru ụwa ọnụ n'ihi eziokwu ahụ, onye a na-akpọkarị ya na akwụkwọ akụkọ Greek naanị site na aha mbụ ya bụ \"Myrto\" (Grik: Μυρτώ), merụrụ nnukwu mmerụ ahụ nke butere nkwarụ na-adịgide adịgide.\n\n\n== Ihe omume ahụ ==\nNa 23 July 2012 otu nwa agbọghọ dị afọ iri na ụma, Myrto Papadomichelaki (Greek: Μυρτώ Παπαδομιχελάκη), ka a hụrụ n'ụdị uwe, tie ya na coma, n'otu n'ime osimiri ndị kasị ewu ewu na agwaetiti Gris n"
         },
         {
-          "title": "Achille Mbembe",
-          "url": "https://ig.wikipedia.org/wiki/Achille_Mbembe",
-          "excerpt": "Joseph-Achille Mbembe, onye a maara dị ka Achille Mbembe (/ əmˈbɛmbeɪ/; amụrụ 1957), bụ onye ọkọ akụkọ ihe mere eme nke Cameroon, onye ndọrọ ndọrọ ọchịchị, na ọgụgụ isi ọha bụ onye prọfesọ nyocha na akụkọ ntolite na ndọrọ ndọrọ ọchịchị na Wits Institute for Social and Economy Research na Mahadum. nke Wiwaterrand. A maara ya nke ọma maka ihe odide ya banyere colonialism na nsonaazụ ya na ọ bụ onye isi na echiche ọhụrụ French dị egwu.\n\n\n== Akụkọ ndụ ==\nA mụrụ Mbembe na nso Otélé na Cameroon na 1957. O nwetara Ph.D. na akụkọ ihe mere eme na Mahadum Sorbonne dị na Paris, France, na 1989. O mechara"
+          "title": "Abayomi Sheba",
+          "url": "https://ig.wikipedia.org/wiki/Abayomi_Sheba",
+          "excerpt": "Abayomi Sheba bụ onye ndọrọ ndọrọ ọchịchị Naịjirịa amụrụ na 2 Mee 1961 na Ode Irele, Irele Local Gọọmentị , Ondo Steeti , Naijiria . Ọ gụsịrị akwụkwọ praịmarị na sekọndrị na Ode Irele. Ọ gara Mahadum nke Ilorin, ebe ọ nwetara nzere bachelọ na nchịkwa ọha na eze. Ọ gara n'ihu na agụmakwụkwọ ya na Mahadum Obafemi Awolowo, Ile-Ife, na-enweta nzere masta na nchịkwa ọha na eze site na 1995 ruo 1997. \nSite n'afọ 2007 ruo 2011, Sheba gụrụ akwụkwọ na Mahadum Adekunle Ajasin, ebe o nwetara nzere Bachelor of Laws (LLB) na klas nke abụọ, Upper Division. Ọ lụrụ di na nwunye, nwere ụmụaka. Sheba rụrụ ọrụ d"
         },
         {
-          "title": "Aframomum corrorima",
-          "url": "https://ig.wikipedia.org/wiki/Aframomum_corrorima",
-          "excerpt": "Aframomum corrorima  bụ ụdị osisi ifuru na ezinụlọ ginger,    Zingiberaceae. Ọ bụ herbaceous  perennial   nke na-emepụta akwụkwọ ndụ akụkụ ndụ 1-2 mita n'ogologo nke mgbọrọgwụ  rhizomatous.  Akwụkwọ ndị a haziri ahazi bụ akwụkwọ ndụ  gbara ọchịchịrị,10–30 cm long and 2.5–6 cm n'ofe, elliptical ka ọ toro ogologo n'ọdịdị ya. Ọ na-ebu ifuru pink n'akụkụ ala ma na-enye ohere nye mkpụrụ na-acha uhie uhie, mkpụrụ osisi anụ ahụ nwere mkpụrụ aja aja na-egbuke egbuke, nke na-adịkarị 3–5 mm na dayameta.\nNgwa nri, nke a maara dị ka   Ethiopian cardamom, ugha cardamom, ma ọbu korarima, a na-enweta site na"
+          "title": "Adaeze Atuegwu",
+          "url": "https://ig.wikipedia.org/wiki/Adaeze_Atuegwu",
+          "excerpt": "Adaeze Ifeoma Atuegwu // i (amụrụ na June 5, 1977) bụ onye Naijiria-Amerịka na-ede akwụkwọ akụkọ na onye edemede nke ọrụ ya gụnyere akwụkwọ akụkọ, akụkọ ụmụaka, akụkọ ọgwụ na-abụghị akụkọ ifo, na ihe nkiri. A na-ewere ya dị ka otu n'ime ndị edemede kachasị nta na Naijiria na akwụkwọ iri na asaa e bipụtara mgbe ọ dị afọ iri na asaa.\n\n\n== Ndụ mbụ na ezinụlọ ==\nA mụrụ Atuegwu n'obodo Enugu na Naijiria n'aka onye na-ahụ maka ọgwụ na onye ọrụ ebere Prince Chris Atuegwu nke agbụrụ eze Nnofo na Nnewi na Lady Ifeoma Atuegwu, onye na-emepụta ọgwụ, onye ọrụ ebere, na onye guzobere Bina Foundation, na on"
         },
         {
-          "title": "Ahmed Fatimah Bisola",
-          "url": "https://ig.wikipedia.org/wiki/Ahmed_Fatimah_Bisola",
-          "excerpt": "Ahmed Fatimah Bisola bụ Kọmishọna na-ahụ maka agụmakwụkwọ na mmepe ịsị obodo mmadụ, Kwara Steeti ugbu a.   .\n\n\n== Ndụ mmalite na agụmakwụkwọ ==\nFatimah Ahmed nwetara akwụkwọ ikike nkuzi ya n'aka Kansul Ndi Nkụzi Ndebanye aha nke Naijiria dị ka onye nkuzi ọkachamara.  Dị ka kọmishọna na-ahụ maka mmụta na Kwara, ọ kpugheere iji Ozi na teknụzụ nkwukọrịta na Kwara Steeti igbanwe ngalaba agụmakwụkwọ.   o nwetara akwụkwọ ikike nkuzi ya n'aka  Kansụl Ndị Nkụzi Ndebanye aha nke Naijiria.\n\n\n== Ọrụ ==\nN'ime ọrụ ya, o debere oge maka ide ọnụ ụzọ mbata maka ụmụ akwụkwọ praịmarị.  ọ na-ekpughe na ọ nweghị "
+          "title": "African monetary fund",
+          "url": "https://ig.wikipedia.org/wiki/African_monetary_fund",
+          "excerpt": "Africa Monetary Fund bụ ụlọ ọrụ ego African Union, ọ bụ ezie na ka oge na-aga, a ga-ebufe ọrụ ya na Central Bank nke Africa. Ụlọ ọrụ a bụ otu n'ime ụlọ ọrụ ego atọ nke African Union n'ọdịnihu. Ọ ga-adabere na Yaoundé, Cameroon.\n\n\n== Nchịkọta òkè a tụrụ aro ya ==\nỤlọ akụ ahụ na-atụ anya inwe ego a kwụrụ ụgwọ nke ijeri $ 23.\n\n\n== Ihe odide ==\n\n\n== Njikọ mpụga ==\nNdepụta Iwu nke African Monetary Fund\nMkparịta ụka AU banyere African Monetary Fund"
         },
         {
-          "title": "Akpụkpọ anụ a na-atụfu",
-          "url": "https://ig.wikipedia.org/wiki/Akp%E1%BB%A5kp%E1%BB%8D_an%E1%BB%A5_a_na-at%E1%BB%A5fu",
-          "excerpt": "Towel a na-atụfu ya bụ ihe ọzọ a na-eji eme ya na akwa akwa akwa ọzọ.Ebubere ihe ndị a na-atụfu ihe maka nnyefe ahụike ma webata ya na ụlọ ọrụ na-abụghị usoro ahụike, dị ka ebe ntụrụndụ, ụlọ oriri na ọṅụṅụ, ile ọbịa, ụlọ mgbatị ahụ na ezinụlọ.  Campion (2015-05-01). \"Sustainable healthcare and environmental life-cycle impacts of disposable supplies: a focus on disposable custom packs\" (in en). Journal of Cleaner Production 94: 46–55. DOI:10.1016/j.jclepro.2015.01.076. ISSN 0959-6526. </ref>\nA na-eji akwa nhicha atụfu iji kwalite njikwa ọrịa, ịdị mma yana ibelata mmefu akụ na ụba.    A na-eji a"
+          "title": "Aisha Labib",
+          "url": "https://ig.wikipedia.org/wiki/Aisha_Labib",
+          "excerpt": "Aisha Labib ma ọ bụ Aisha Naguib (Arabic: ; nwụrụ na 1971) bụ nwunye Mohamed Naguib, otu n'ime ndị isi abụọ nke Mgbanwe Ijipt nke 1952, onye ghọrọ onye isi ala mbụ nke Ijipt. Ọ bụ nne nke ụmụ nwoke atọ di na nwunye ahụ, Farouk, Ali, na Youssef.\n\n\n== Akụkọ ndụ ya ==\nAisha Labib bụ nwunye nke abụọ nke Naguib, onye zoro aka na ya na 1955 memoirs 'Egypt's Destiny' (e mechara bipụtaghachi ọtụtụ iri afọ ka e mesịrị n'okpuru aha 'M bụ Onye isi ala Egypt').  Naguib lụrụ ya na 1934, mgbe ọ gbasịrị alụkwaghịm na nwunye mbụ ya mgbe ọ lụsịrị nanị ụbọchị nke iri anọ  Labib bụ ada onye ọchịagha nwụrụ anwụ n"
         },
         {
-          "title": "Alida Neave",
-          "url": "https://ig.wikipedia.org/wiki/Alida_Neave",
-          "excerpt": "Alida Neave bụ onye mba Saụt Afrịka bụbu onye egwuregwu tennis.\nNeave ruru nke ikpeazụ na nche French 1929 ya na onye ibe ya bụ Bobbie Heine Miller mana Lili de Alvarez na Kea Bouman meri ya na nke ikpeazụ n'usoro abụọ kwụpụta.  N'afọ 1937, o mere egwuregwu ikpeazụ nke South Africa mana Bobbie Heine Miller tụfuru n'usoro atọ.\n\n\n== Agba ikpeazụ Grand Slam ==\n\n\n=== Ugboro abụọ ===\n\n\n==== Ndị gbara ọsọ (1) ====\n\n\n== Edensibia =="
+          "title": "Albert Nyathi",
+          "url": "https://ig.wikipedia.org/wiki/Albert_Nyathi",
+          "excerpt": "Albert Nyathi (a mụrụ ya n'ụbọchị 15 n'ọnwa Nọvemba afọ 1962 na Kafusi na Gwanda District na Matabeleland South ) bụ onye Zimbabwe na-ede uri, onye egwu, onye edemede, onye na-eme ihe nkiri, na onye na-enyere ndị mmadụ aka bụ onye ama ama maka uri na abụ \"Senzeni na?\", nke o dere mgbe e gburu Chris Hani . Nyathi lụrụ Caroline ma ha nwere ụmụ atọ.\n\n\n== Agụmakwụkwọ ==\nMaka agụmakwụkwọ sekọndrị ya, Nyathi gara Msitheli Secondary School na Matopo High School. Ọ gara Mahadum nke Zimbabwe ebe ọ gụsịrị akwụkwọ na akwụkwọ Bekee n'etiti afọ 1990.\n\n\n== Ọrụ ==\nNyathi malitere uri otuto mgbe ọ bụ nwata nw"
         },
         {
-          "title": "Amber Robles-Gordon",
-          "url": "https://ig.wikipedia.org/wiki/Amber_Robles-Gordon",
-          "excerpt": "Amber Robles-Gordon (amụrụ 1977 San Juan, Puerto Rico ) bụ onye ihe nkiri mgbasa ozi agwakọta America.   Ọ na-ebi na Washington, DC ma na-ejikarị ihe ndị a chọtara na akwa na-arụ ọrụ iji mepụta mgbakọ, nnukwu ihe ọkpụkpụ, nrụnye na ihe osise ọha.\n\n\n== Agụmakwụkwọ ==\nỌ natara BS na 2005 site na Trinity College, na Washington, DC wee bụrụ MFA (Painting) na 2011 site na Mahadum Howard, nakwa na Washington, DC.  Robles-Gordon abụrụla onye isi na Black Artists DC, (BADC) na-eje ozi dị ka onye nhazi ihe ngosi, osote onye isi ala na Onye isi ala.  Robles-Gordon bụkwa onye nchoputa nke Delusions of Gr"
+          "title": "Aly Tewfik Shousha",
+          "url": "https://ig.wikipedia.org/wiki/Aly_Tewfik_Shousha",
+          "excerpt": "Sir Aly Tewfik Shoulda, Pasha (Templeeti:Lang-ar; 17 Ọgọst 1891 – 31 Mee 1964) bụ dọkịta si mba Ijipt na onye guzobere World Health Organisation .\n\n\n=== Mmalite Ndụ na agụmakwụkwọ Ya ===\nA mụrụ Aly Tewfik Shousha na Cairo, Egypt na 17 August 1891. Ọ gụsịrị akwụkwọ na Ụlọ akwụkwọ ọmụmụ ahụike, Mahadum Humboldt, Berlin n'afọ 1915, na ọkachamara na ọmụmụ bacteriology na Mahadum Zurich. O mechara bụrụ onye inyeaka na Hygienische Institute dị na Zurich (1916–1917).\n\n\n=== Ọrụ Ya ===\nShousha laghachiri Egypt ka ọ rụọ ọrụ dị ka onye na-ahụ maka nje bacteria n'afọ 1924, tupu ọ rụọ ọrụ dị ka onye nduzi "
         }
       ],
       "backfill_done": true
@@ -58,52 +58,21 @@
   },
   "hf_catalog": {
     "output": "corpus/catalog/hf_datasets.json",
-    "total": 290,
+    "total": 291,
     "failed_terms": [],
     "new_since_last_run": [
       {
-        "id": "McGill-NLP/NaijaS2ST",
-        "url": "https://huggingface.co/datasets/McGill-NLP/NaijaS2ST",
+        "id": "voicedata/final_hausa",
+        "url": "https://huggingface.co/datasets/voicedata/final_hausa",
         "license": "UNKNOWN",
-        "languages": [
-          "en",
-          "ha",
-          "ig",
-          "yo",
-          "pcm"
-        ]
-      },
-      {
-        "id": "michsethowusu/Code-170k-igbo",
-        "url": "https://huggingface.co/datasets/michsethowusu/Code-170k-igbo",
-        "license": "apache-2.0",
-        "languages": [
-          "ig"
-        ]
-      },
-      {
-        "id": "CLEAR-Global/Hausa-Synthetic-ASR-Dataset-XTTS",
-        "url": "https://huggingface.co/datasets/CLEAR-Global/Hausa-Synthetic-ASR-Dataset-XTTS",
-        "license": "cc-by-4.0",
-        "languages": [
-          "ha"
-        ]
-      },
-      {
-        "id": "CLEAR-Global/TWB-voice-TTS-Hausa-1.0-sampleset",
-        "url": "https://huggingface.co/datasets/CLEAR-Global/TWB-voice-TTS-Hausa-1.0-sampleset",
-        "license": "other",
-        "languages": [
-          "hau",
-          "ha"
-        ]
+        "languages": []
       }
     ]
   },
   "news": {
     "bbc_igbo": {
       "output": "corpus/manifests/bbc_igbo.jsonl",
-      "new_urls": 6
+      "new_urls": 8
     }
   }
 }

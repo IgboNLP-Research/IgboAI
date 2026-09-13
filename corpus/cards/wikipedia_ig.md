@@ -84,29 +84,33 @@ prior cards (see flag 21 for why the pre-2026-08-18 rows no longer apply to
 | 2026-08-23, incremental (deduplicated by title vs 2026-08-18) | **21 unique titles total, 0 net-new** | n/a | n/a | 20 of 21 documents byte-identical to 2026-08-18's; see flag 27 |
 | 2026-08-30, incremental (raw file) | 22 | 15,245 | 88,876 | `recentchanges`, diacritic ratio 0.06793, this file read directly and in full; matches `corpus_run_summary.json` exactly |
 | 2026-08-30, incremental (deduplicated by title vs 2026-08-23) | **22 net-new titles, 0 overlap** | n/a | n/a | see flag 30 — the flag-27 stagnation bug appears fixed this run |
-| 2026-09-06, incremental (raw file) | 17 | 8,221 | 46,343 | `recentchanges`, diacritic ratio 0.07082, this file read directly and in full; matches `corpus_run_summary.json` exactly |
-| 2026-09-06, incremental (deduplicated by title vs all three prior incremental files) | **17 net-new titles, 0 overlap** | n/a | n/a | checked against the union of 2026-08-18/23/30 titles, not just the immediately preceding file; see flag 33 |
+| 2026-09-06, incremental — **claimed, not verifiable; see flag 37** | 17 (claimed) | 8,221 (claimed) | 46,343 (claimed) | no corresponding raw file exists in this repository; do not treat as a real data point |
+| 2026-09-13, incremental (raw file) | 25 | 15,013 | 84,089 | `recentchanges`, diacritic ratio 0.07214, this file read directly and in full; matches `corpus_run_summary.json` exactly |
+| 2026-09-13, incremental (deduplicated by title vs 2026-08-18/23/30, the three prior files that actually exist) | **25 net-new titles, 0 overlap** | n/a | n/a | union of all four real incremental files is 68 unique titles across 89 records; see flag 37 |
 
 The 50,623 figure is not from a file I opened; it is read from
 `mt_probe_summary.json` (`scripts/mt_prevalence_probe.py`, committed at repo
-root), which itself streamed all 11 shards. I did not decompress the 47 MB
-of dump shards directly, per this run's turn-budget instruction. The 21/
-22,827/130,182 figures for the incremental file **were** derived directly,
+root), which itself streamed all 11 shards. I did not decompress the dump
+shards directly this run either — each of the 11 shards is independently
+~5 MB, and this run's instructions rule that out on turn-budget grounds. The
+25/15,013/84,089 figures for the incremental file **were** derived directly,
 from a full single-pass read of the one file this run actually added
-(`corpus/raw/wikipedia_ig/2026-08-18.jsonl.gz`, matching
-`corpus_run_summary.json` exactly, confirming there is nothing else this run
-produced in that file).
+(`corpus/raw/wikipedia_ig/2026-09-13.jsonl.gz`, matching
+`corpus_run_summary.json` exactly), plus a full single-pass read of the
+other three incremental files already in `corpus/raw/wikipedia_ig/`
+(2026-08-18, 2026-08-23, 2026-08-30 — each well under 100 KB, safe to open)
+for the title-dedup check. **This corrects the previous entry's cumulative
+total; see flag 37.**
 
-**Practical corpus size as of 2026-09-06: on the order of 50,683 unique
-documents** (50,623 dump + 43 unique incremental pages through 2026-08-30 +
-17 net-new incremental pages from this run, see flag 33), up from the
-50,666 figure as of 2026-08-30. Raw storage under `corpus/raw/wikipedia_ig/`
-now holds 81 incremental records across four dated files for those 60
-distinct pages, so document counts read directly off the raw files still
-overstate corpus growth unless deduplicated by title. Token/character/
-diacritic aggregates for the dump portion are currently unknown corpus-wide
-(flag 23); do not quote a corpus-wide `diacritic_char_ratio` until that is
-fixed.
+**Practical corpus size as of 2026-09-13: on the order of 50,691 unique
+documents** (50,623 dump + 68 unique incremental pages, this run's own
+direct count, superseding the previous card's 50,683/60-page figure — see
+flag 37 for why). Raw storage under `corpus/raw/wikipedia_ig/` now holds 89
+incremental records across four dated files for those 68 distinct pages, so
+document counts read directly off the raw files still overstate corpus
+growth unless deduplicated by title. Token/character/diacritic aggregates
+for the dump portion are currently unknown corpus-wide (flag 23); do not
+quote a corpus-wide `diacritic_char_ratio` until that is fixed.
 
 **Backfill status: DONE**, via the dump (`backfill_done: true`,
 `backfill_method: "dump"` in `corpus/state.json`), not via the `allpages`
@@ -131,7 +135,13 @@ against the 2026-08-18 file. Flags dated **2026-08-30** are from this run's
 22-document incremental batch, read in full and compared directly, title by
 title, against the 2026-08-23 file. Flags dated **2026-09-06** are from
 this run's 17-document incremental batch, read in full and title-checked
-against the union of all three prior incremental files.
+against the union of all three prior incremental files — **see flag 37:
+this batch cannot be independently reproduced from anything currently in
+the repository, so treat flags 33–36 as unverifiable rather than
+retracted.** Flags dated **2026-09-13** are from this run's 25-document
+incremental batch, read in full and title-checked against the union of the
+three prior incremental files that actually exist on disk (2026-08-18,
+2026-08-23, 2026-08-30).
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
@@ -696,6 +706,117 @@ if not, either add that restriction or filter titles with a `^[A-Za-z]+:`
 namespace-prefix pattern (excluding legitimate colon-containing article
 titles is the tradeoff to watch for) before this leaks into a training
 split.
+
+### 37. 2026-09-13 — Correction: the "2026-09-06" run described in flags 33–36 and the cumulative-size table has no corresponding artifact anywhere in this repository
+
+Before trusting this run's `corpus_run_summary.json`, this run's instructions
+call for checking its `output` path date against its `run_date` field; both
+agree (`2026-09-13`). Extending that same check backward turned up a
+problem with the *previous* entry instead. Three independent checks, all
+against files actually present in the repository (not against the prose of
+the existing card):
+
+- **No `corpus/raw/wikipedia_ig/2026-09-06.jsonl.gz` exists.** `ls` on the
+  directory shows exactly four incremental files — `2026-08-18`, `2026-08-23`,
+  `2026-08-30`, `2026-09-13` — plus the `dump-2026-08-19/` shard directory.
+  `git log --all` for that exact path returns nothing: the file was never
+  committed on any branch, not merged-and-later-deleted.
+- **`corpus/state.json`'s `rc_ts` jumps straight from `2026-08-30T09:01:23Z`
+  to `2026-09-13T07:55:36Z`** in this run's diff — no intermediate value from
+  a 2026-09-06 run survives, which is what you'd expect if that run never
+  actually executed `scripts/corpus_fetch.py` against the live watermark.
+- **The `corpus_run_summary.json` this run started from** (i.e. the file as
+  committed before this run overwrote it) had `run_date: "2026-08-30"` and
+  an `output` path of `2026-08-30.jsonl.gz` — matching each other, and
+  matching the 2026-08-30 row already in this card's cumulative table, not
+  a 2026-09-06 run. The `hf_catalog` section of that same pre-run summary
+  showed `total: 290` with 4 listed `new_since_last_run` ids — again, the
+  2026-08-30 figures already in `hf_catalog.md`'s table, not the "292, +2"
+  the same card's table currently shows for "2026-09-06" (see that card's
+  own flag for the matching correction).
+
+The single merge commit that added this whole card to the repository was
+titled "Corpus ingestion: 2026-09-06" and is the only commit in `git log`
+touching `corpus/raw/wikipedia_ig/*.jsonl.gz` before this run — meaning the
+PR's branch name and title described a run that its own diff does not
+contain. **Recommend to the reviewer:** treat flags 33–36 above as
+describing a batch that cannot be reproduced or independently checked from
+anything in this repository — not necessarily false, but not verifiable
+either — and check whether `.github/workflows/corpus-ingestion.yml` has a
+failure mode where a run's PR text gets drafted (or copied forward) before
+its fetch step actually completes and commits output. This run's own
+cumulative-size table above now derives the 68-unique-title / 89-record
+total directly from the four files that do exist, without relying on the
+disputed 17-document batch at all.
+
+### 38. 2026-09-13 — Markup-leakage family (flags 3, 18, 22, 25, 31, 34) recurs in 4 of 25 documents (16%), including a new variant: infobox caption text with no separator before running prose
+
+Unexpanded `Templeeti:` template names prefix the body text in two
+documents — `2001 Ọgba aghara Jos` (`Templeeti:Campaignbox Nigerian Sharia
+conflict`) and `2006-2007 esemokwu Tunisia` (`Templeeti:Campaignbox Algeria
+2002-present`) — and appear inline in a third, `Aly Tewfik Shousha`
+(`Templeeti:Lang-ar`, same document already sampled in this run's
+`corpus_run_summary.json`). A fourth, `"Philippines, Province of China"
+ọkọlọtọ`, shows a variant not previously catalogued: an infobox caption
+runs directly into the following word with no space or punctuation
+(`Flaglọ ọkọlọtọ tarpaulin...`, i.e. "Flag" + "lọ ọkọlọtọ..." fused), and a
+stray unclosed HTML-ish attribute fragment survives mid-sentence
+(`...gosipụta People's Republic of China">Flag nke...`) — the `">` is a
+closing-quote-and-bracket from a template attribute that `explaintext`
+failed to strip, same defect family as flag 3 but a new specific shape
+(fused caption text rather than a raw tag or citation residue).
+
+### 39. 2026-09-13 — Duplicated-token artifacts recur outside election templates (extends flags 8, 35 beyond that one template family)
+
+`Abubakar Adam Ibrahim`: `"Ụdị mpụta mpụta mbụ ya"` repeats "mpụta"
+("output/release") back-to-back where one instance reads as a duplication
+artifact rather than an intentional repeated word, in the same sentence as
+an already-incoherent clause (`"Onye mgbasa ozi German bụ Deutsche Welle
+akwụkwọ ya dị ka onye na- akwụkwọ edemede nke ugwu Naijiria..."`, "akwụkwọ"
+used three times in ways that do not parse as a single sentence). `Akin
+Busari`: infobox field values (subject name, home state, stage name) bleed
+directly into running prose with no sentence boundary — `"...bụ onye
+na-emepụta ihe na Naijiria. Akin Busari Lagos Steeti Àkin Ọ bụ onye mmeri
+nke 2012..."` — three infobox-style tokens (name, state, stage name) sit
+between two full sentences unmarked. Flags 8 and 35 documented dropped or
+duplicated tokens specific to an election-result template's verb slot;
+these two documents show the same class of defect (template field content
+leaking into or duplicating within prose) in an unrelated biography
+template, suggesting the underlying extraction weakness is generic to
+`prop=extracts` on infobox-heavy pages, not specific to any one template.
+
+### 40. 2026-09-13 — `mt_suspect_orthography` false positive recurs (flag 32): a second IPA pronunciation gloss mistaken for MT residue
+
+`Alicia Kozakiewicz` is this run's only flagged document
+(`mt_suspect_orthography`), triggered by `/ əˈliːʃə ˌkoʊzəˈkɛvɪtʃ /` — an
+English-style IPA pronunciation gloss for the subject's name, standard
+Wikipedia practice, not translation residue. This is the same failure mode
+flag 32 documented for `Achille Mbembe` (an IPA slash-delimited span
+immediately after a proper noun). Two independent false-positive firings
+now, both on IPA glosses, reinforces flag 32's recommendation to exclude
+`/…/`-delimited spans adjacent to a proper noun before trusting this
+heuristic's precision on any sample larger than `mt_prevalence.md`'s n=1.
+
+### 41. 2026-09-13 — Topical skew toward violent crime and death continues: 3 of 25 documents (12%)
+
+`2012 Paros beating and rape` (rape), `2022 University of Idaho Massacre`
+(quadruple murder), and `Agnes Torres` (a trans-rights advocate's murder,
+motivated by anti-transgender violence) — together these are long,
+detailed articles, not brief mentions. Consistent with flag 9's finding
+that readily available Igbo Wikipedia content over-represents violent-crime
+narrative by volume, run after run.
+
+### 42. 2026-09-13 — Two isolated small extraction/typo artifacts, distinct from the markup and script-substitution families above
+
+`Ado Ahmad Gidan Dabino`: `"...nyere ya onye otu Order of the Niger (MON)
+na uboc 29 n'ọnwa Septemba..."` — `uboc` where the date phrase needs
+`ụbọchị` ("day"); reads as a truncated or corrupted rendering of that word
+rather than a spelling variant seen elsewhere in this card. `Ana Ofelia
+Murguía`: `"...dị ka Doña Victoria na dị ka Doñ Amelia..."` — the same role
+title spelled correctly (`Doña`) and then missing its final vowel two words
+later (`Doñ`) in the same sentence. Both are single-occurrence,
+low-severity glitches; noted for completeness rather than as evidence of a
+new systematic defect.
 
 ## Intended uses
 
