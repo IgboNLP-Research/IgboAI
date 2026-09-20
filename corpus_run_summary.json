@@ -1,56 +1,56 @@
 {
-  "run_date": "2026-08-30",
+  "run_date": "2026-09-20",
   "mode": "all",
   "wikipedia": {
     "wikipedia_ig": {
-      "output": "corpus/raw/wikipedia_ig/2026-08-30.jsonl.gz",
+      "output": "corpus/raw/wikipedia_ig/2026-09-20.jsonl.gz",
       "titles_listed": 500,
       "skipped_stub": 476,
-      "skipped_markup": 2,
-      "documents": 22,
-      "tokens_ws": 15245,
-      "chars": 88876,
-      "diacritic_char_ratio": 0.06793,
+      "skipped_markup": 0,
+      "documents": 24,
+      "tokens_ws": 17420,
+      "chars": 98816,
+      "diacritic_char_ratio": 0.07159,
       "samples": [
         {
-          "title": "100% eneji emeghariri ọhụrụ",
-          "url": "https://ig.wikipedia.org/wiki/100%25_eneji_emeghariri_%E1%BB%8Dh%E1%BB%A5r%E1%BB%A5",
-          "excerpt": "100% ike emeghariri ọhụrụ pụtara inweta ike niile site na ihe onwunwe a na-emeghari. Mgbalị iji 100% ike emeghariri ọhụrụ maka ọkụ eletrik, okpomọkụ, ịjụ oyi na njem na-akpali mgbanwe ihu igwe, mmetọ na nsogbu gburugburu ebe obibi ndị ọzọ, yana nchegbu akụ na ụba na nchekwa ike. Ịgbanwe ngụkọta nke ike isi ụwa na-enye na isi mmalite na-agbanwe agbanwe chọrọ mgbanwe nke usoro ike, ebe ọ bụ na ọtụtụ ike nke taa sitere na mmanụ ala ndị adịghị emeghari emeghari\nNnyocha banyere isiokwu a bụ ihe ọhụrụ, na nyocha ole na ole e bipụtara tupu afọ 2009, mana enwetala nlebara anya na-arịwanye elu n'afọ nd"
+          "title": "\"Philippines, Province of China\" ọkọlọtọ",
+          "url": "https://ig.wikipedia.org/wiki/%22Philippines,_Province_of_China%22_%E1%BB%8Dk%E1%BB%8Dl%E1%BB%8Dt%E1%BB%8D",
+          "excerpt": "== Ihe ndị mere n'oge gara aga ==\n\n\n=== Nkọwa ọkọlọtọ ===\nFlaglọ ọkọlọtọ tarpaulin na-acha ọbara ọbara ma gosipụta People's Republic of China\">Flag nke People's Republic of China nke nwere dragọn abụọ. Ọ na-egosipụtakwa ederede \"Welcome to the Philippines, Province of China\" na mkpụrụedemede ọcha  na-egosi mba ndịda ọwụwa anyanwụ Eshia dị ka mpaghara nke People's Republic of China.  Ọ na-egosipụtakwa ederede Chinese na mkpụrụedemede odo n'okpuru ederede Bekee nke na-asụgharị \"Welcome to China's Philippines\". A na-eji mkpụrụedemede ọdịnala ndị China mee ihe na ọkọlọtọ ndị a na-ejighị mee ihe n'"
         },
         {
-          "title": "Abby Jane Morrell",
-          "url": "https://ig.wikipedia.org/wiki/Abby_Jane_Morrell",
-          "excerpt": "Abby Jane Morrell (amuru Febụwarị 17, 1809; ụbọchị ọnwụ amabeghị) bụ onye ode akwụkwọ America wepụtara nkọwa izizi nke njem sub-Antarctic site n'echiche nwanyị.\n\n\n== Akụkọ ndụ ==\nA mụrụ Morrell Abbey Jane Wood na New York na February 17, 1809.[1] Nna ya, Captain John Wood, nwụrụ na Nọvemba 14, 1811, na New Orleans ma bụrụkwa nna ukwu nke ụgbọ mmiri Indian Hunter.[1] Nne ya lụgharịrị di na 1814 nye Mazi Burritt Keeler.\nNa June 29, 1824, ọ lụrụ Captain Benjamin Morrell, onye bụ nwanne nne dị anya, wee bụrụ nwunye ya nke abụọ.[1] Ha nwere nwa nwoke mbụ (amụrụ n'etiti 1825 na 1828) onye Morrell le"
+          "title": "2010 idei mmiri West Africa",
+          "url": "https://ig.wikipedia.org/wiki/2010_idei_mmiri_West_Africa",
+          "excerpt": "Idei mmiri nke Naijiria nke afọ 2010 bụ idei mmiri gafee Niger nké méré ka ihe karịrị mmadụ 111,000 ghara inwe ébé obibi. Niger enweela oke ụkọ nri na-esote oke ọkọchị na mpaghara Sahel. Ka ọ na-erule ụbọchị iri abụo na anọ n'ọnwa Ọgọstụ afọ 2010, ọ dịkarịa ala mmadụ isií ruo asatọ anwụọla. A chụpụrụ osimiri Niger ruo n'ókè kachasị elu n'ime afọ irí asatọ. Idei mmiri ahụ mechara gbasaa n'akụkụ Osimiri Niger gaa Naịjirịa, Ghana, Burkina Faso, Togo na Benin n'ime ọnwa ole na ole sochirinụ. Oké ifufe ndị ọzọ dakwara na CAR, Morocco na ugwu Algeria.\n\n\n== June 1 - 2 ==\nE gosipụtara n'ubochi abụọ n'"
         },
         {
-          "title": "Achille Mbembe",
-          "url": "https://ig.wikipedia.org/wiki/Achille_Mbembe",
-          "excerpt": "Joseph-Achille Mbembe, onye a maara dị ka Achille Mbembe (/ əmˈbɛmbeɪ/; amụrụ 1957), bụ onye ọkọ akụkọ ihe mere eme nke Cameroon, onye ndọrọ ndọrọ ọchịchị, na ọgụgụ isi ọha bụ onye prọfesọ nyocha na akụkọ ntolite na ndọrọ ndọrọ ọchịchị na Wits Institute for Social and Economy Research na Mahadum. nke Wiwaterrand. A maara ya nke ọma maka ihe odide ya banyere colonialism na nsonaazụ ya na ọ bụ onye isi na echiche ọhụrụ French dị egwu.\n\n\n== Akụkọ ndụ ==\nA mụrụ Mbembe na nso Otélé na Cameroon na 1957. O nwetara Ph.D. na akụkọ ihe mere eme na Mahadum Sorbonne dị na Paris, France, na 1989. O mechara"
+          "title": "ADC Airlines",
+          "url": "https://ig.wikipedia.org/wiki/ADC_Airlines",
+          "excerpt": "ADC Airlines bụ ụlọ ọrụ ụgbọ elu Naijiria nke Aviation Development Company plc nwere. Ha nwere isi ụlọ ọrụ na Ikeja, Lagos State, Nigeria. Ọ na-arụ ọrụ ndị a haziri n'ime ụlọ na ụgbọ elu mpaghara. O tinyere akwụkwọ ka a họpụta ya na ụzọ mba ụwa. Isi ụlọ ọrụ ya bụ Murtala Mohammed International Airport, Lagos.\n\n\n== Akụkọ ihe mere eme ==\nAviation Development Company plc meghere na Disemba 1984. N'afọ 1990, ụlọ ọrụ ahụ malitere ịmepụta ADC Airlines, nke malitere ịrụ ọrụ na 1 Jenụwarị 1991. N'afọ 1994, edepụtara ụlọ ọrụ ụgbọ elu ahụ na Nigerian Stock Exchange.\nNa mbụ, ọ na-enye ọrụ ụlọ na Calabar,"
         },
         {
-          "title": "Aframomum corrorima",
-          "url": "https://ig.wikipedia.org/wiki/Aframomum_corrorima",
-          "excerpt": "Aframomum corrorima  bụ ụdị osisi ifuru na ezinụlọ ginger,    Zingiberaceae. Ọ bụ herbaceous  perennial   nke na-emepụta akwụkwọ ndụ akụkụ ndụ 1-2 mita n'ogologo nke mgbọrọgwụ  rhizomatous.  Akwụkwọ ndị a haziri ahazi bụ akwụkwọ ndụ  gbara ọchịchịrị,10–30 cm long and 2.5–6 cm n'ofe, elliptical ka ọ toro ogologo n'ọdịdị ya. Ọ na-ebu ifuru pink n'akụkụ ala ma na-enye ohere nye mkpụrụ na-acha uhie uhie, mkpụrụ osisi anụ ahụ nwere mkpụrụ aja aja na-egbuke egbuke, nke na-adịkarị 3–5 mm na dayameta.\nNgwa nri, nke a maara dị ka   Ethiopian cardamom, ugha cardamom, ma ọbu korarima, a na-enweta site na"
+          "title": "Abubakar Nurmagomedov",
+          "url": "https://ig.wikipedia.org/wiki/Abubakar_Nurmagomedov",
+          "excerpt": "Abubakar Magomedovich Nurmagomedov (amụrụ na onwa  Nọvemba na ubochi 13, na afọ 1989) bụ onye Russia na-eme egwuregwu agha, onye na-asọmupi ugbu a na ngalaba Welterweight nke Ultimate Fighting Championship.  bụ onye mmeri ọla nchara nke Combat Sambo World Championship ugboro atọ na onye mmeri mba Russia nke ọgụ sambo.\nA mụrụ Abubakar Nurmagomedov na onwa Nọvemba na ubochi 13, na afọ 1989 n'obodo Goksuv na Khasavyurtovsky District, Dagestan. 'ụlọ akwụkwọ praịmarị, Abubakar malitere ọzụzụ na ịgba mgba, mgbe ọ gụsịrị akwụkwọ sekọndrị, ọ gbanwere Combat Sambo n'okpuru Abdulmanap Nurmagomedov. N'af"
         },
         {
-          "title": "Ahmed Fatimah Bisola",
-          "url": "https://ig.wikipedia.org/wiki/Ahmed_Fatimah_Bisola",
-          "excerpt": "Ahmed Fatimah Bisola bụ Kọmishọna na-ahụ maka agụmakwụkwọ na mmepe ịsị obodo mmadụ, Kwara Steeti ugbu a.   .\n\n\n== Ndụ mmalite na agụmakwụkwọ ==\nFatimah Ahmed nwetara akwụkwọ ikike nkuzi ya n'aka Kansul Ndi Nkụzi Ndebanye aha nke Naijiria dị ka onye nkuzi ọkachamara.  Dị ka kọmishọna na-ahụ maka mmụta na Kwara, ọ kpugheere iji Ozi na teknụzụ nkwukọrịta na Kwara Steeti igbanwe ngalaba agụmakwụkwọ.   o nwetara akwụkwọ ikike nkuzi ya n'aka  Kansụl Ndị Nkụzi Ndebanye aha nke Naijiria.\n\n\n== Ọrụ ==\nN'ime ọrụ ya, o debere oge maka ide ọnụ ụzọ mbata maka ụmụ akwụkwọ praịmarị.  ọ na-ekpughe na ọ nweghị "
+          "title": "Adeline de Monseignat",
+          "url": "https://ig.wikipedia.org/wiki/Adeline_de_Monseignat",
+          "excerpt": "Adeline de Monseignat (amụrụ 1987) bụ onye omenkà nke oge a Dutch-Monegasque nke bi ma na-arụ ọrụ n'etiti London na Mexico City.[1]  Emere site na ihe ndị sitere n'okike dị ka ajị anụgharị,[2] ala, textiles, iko na marble, ihe osise ya na nrụnye ya na-egosi mmasị na akụkọ ifo, nkà mmụta ihe ọmụmụ na akparamàgwà mmadụ, karịsịa Uncanny.\n\n\n== Agụmakwụkwọ na ọrụ ==\nAdeline de Monseignat nwetara nzere bachelọ nke Arts na Asụsụ na Omenala site na Mahadum University London na 2009, ya na afọ Erasmus na 2007 nọrọ na-amụ Architecture na Design na Politecnico di Milano.  Ọ gụchara nkuzi nke Fine Art Fou"
         },
         {
-          "title": "Akpụkpọ anụ a na-atụfu",
-          "url": "https://ig.wikipedia.org/wiki/Akp%E1%BB%A5kp%E1%BB%8D_an%E1%BB%A5_a_na-at%E1%BB%A5fu",
-          "excerpt": "Towel a na-atụfu ya bụ ihe ọzọ a na-eji eme ya na akwa akwa akwa ọzọ.Ebubere ihe ndị a na-atụfu ihe maka nnyefe ahụike ma webata ya na ụlọ ọrụ na-abụghị usoro ahụike, dị ka ebe ntụrụndụ, ụlọ oriri na ọṅụṅụ, ile ọbịa, ụlọ mgbatị ahụ na ezinụlọ.  Campion (2015-05-01). \"Sustainable healthcare and environmental life-cycle impacts of disposable supplies: a focus on disposable custom packs\" (in en). Journal of Cleaner Production 94: 46–55. DOI:10.1016/j.jclepro.2015.01.076. ISSN 0959-6526. </ref>\nA na-eji akwa nhicha atụfu iji kwalite njikwa ọrịa, ịdị mma yana ibelata mmefu akụ na ụba.    A na-eji a"
+          "title": "Afua Richardson",
+          "url": "https://ig.wikipedia.org/wiki/Afua_Richardson",
+          "excerpt": "Afua Richardson bụ ónyé na-ese ihe n'Afrịka. O mèrè mkpuchi màkà mbipụta ise nke Marvel's World of Wakanda na nka màkà ndabere akụkọ dị mkpirikpi na mbipụta mbụ.  Ihe ọchị ya, Genius, ya na ndị édémédé Marc Bernardin na Adam Freeman meriri Top Cow's 2008 Pilot Season. O gosipụtara uri Langston Hughes na 2014 màkà NPR's Black History Month, ma mee mkpuchi dị iche iche màkà ọtụtụ aha akwụkwọ na-atọ ọchị gụnyere All Star Batman màkà DC comics, Attack on Titan maka Kodansha, Mad Max maka Vertigo, yana mkpuchi / mkpuchi dịgasị íchè íchè màkà X-Men '92, Totally Awesome Hulk, Shuri, na Captain Americ"
         },
         {
-          "title": "Alida Neave",
-          "url": "https://ig.wikipedia.org/wiki/Alida_Neave",
-          "excerpt": "Alida Neave bụ onye mba Saụt Afrịka bụbu onye egwuregwu tennis.\nNeave ruru nke ikpeazụ na nche French 1929 ya na onye ibe ya bụ Bobbie Heine Miller mana Lili de Alvarez na Kea Bouman meri ya na nke ikpeazụ n'usoro abụọ kwụpụta.  N'afọ 1937, o mere egwuregwu ikpeazụ nke South Africa mana Bobbie Heine Miller tụfuru n'usoro atọ.\n\n\n== Agba ikpeazụ Grand Slam ==\n\n\n=== Ugboro abụọ ===\n\n\n==== Ndị gbara ọsọ (1) ====\n\n\n== Edensibia =="
+          "title": "Air Peace",
+          "url": "https://ig.wikipedia.org/wiki/Air_Peace",
+          "excerpt": "Air Peace bụ ụlọ ọrụ ụgbọ elu Naijiria nke onwe ya nke e guzobere na 2013 na isi ụlọ ọrụ ya na Ikeja, Lagos State, Naijiria, onye na-ebu ọkọlọtọ na ụlọ ọrụ ụgbọelu kachasị ukwuu na Naijiria na West Africa. Air Peace, nke na-enye ndị njem na ọrụ ụgbọ ala, na-ejere obodo ukwu ndị dị na Naịjirịa ozi ma na-efega ọtụtụ ebe West Africa na Middle East. Ụlọ ọrụ ụgbọelu ahụ guzobekwara enyemaka, Air Peace Hopper, na 2018.\n\n\n== Akụkọ ihe mere eme ==\n\n\n=== Ntọala ===\nAir Peace bụ onye ọka iwu Naijiria na onye ọchụnta ego Allen Onyema guzobere na 2013. Onyema na-ekwu na ọ malitere ụlọ ọrụ ụgbọ elu ahụ na "
         },
         {
-          "title": "Amber Robles-Gordon",
-          "url": "https://ig.wikipedia.org/wiki/Amber_Robles-Gordon",
-          "excerpt": "Amber Robles-Gordon (amụrụ 1977 San Juan, Puerto Rico ) bụ onye ihe nkiri mgbasa ozi agwakọta America.   Ọ na-ebi na Washington, DC ma na-ejikarị ihe ndị a chọtara na akwa na-arụ ọrụ iji mepụta mgbakọ, nnukwu ihe ọkpụkpụ, nrụnye na ihe osise ọha.\n\n\n== Agụmakwụkwọ ==\nỌ natara BS na 2005 site na Trinity College, na Washington, DC wee bụrụ MFA (Painting) na 2011 site na Mahadum Howard, nakwa na Washington, DC.  Robles-Gordon abụrụla onye isi na Black Artists DC, (BADC) na-eje ozi dị ka onye nhazi ihe ngosi, osote onye isi ala na Onye isi ala.  Robles-Gordon bụkwa onye nchoputa nke Delusions of Gr"
+          "title": "Akwụkwọ ndị e dere n'ọnụ",
+          "url": "https://ig.wikipedia.org/wiki/Akw%E1%BB%A5kw%E1%BB%8D_nd%E1%BB%8B_e_dere_n%27%E1%BB%8Dn%E1%BB%A5",
+          "excerpt": "Edemede ọnụ, orature, ma ọ bụ akwụkwọ ọdịnala bụ ụdị akwụkwọ a na-ekwu ma ọ bụ bụrụ abụ dị iche na nke e dere, ọ bụ ezie na edepụtala ọtụtụ akwụkwọ ọnụ.[1] Enweghị nkọwa ọkọlọtọ, dịka ndị ọkà mmụta gbasara mmadụ ejirila nkọwa dị iche iche maka akwụkwọ ọnụ ma ọ bụ akwụkwọ ndị mmadụ. Echiche sara mbara na-ezo aka na ya dị ka akwụkwọ e ji na-ebufe ọnụ na enweghị ụdị ọ bụla edoziri. Ọ na-agụnye akụkọ, akụkọ ifo, na akụkọ ihe mere eme gafere n'ọgbọ n'ụdị a na-ekwu okwu..\n\n\n== Ihe ndị mere n'oge gara aga ==\nObodo ndị na-agụbeghị akwụkwọ, site na nkọwa, enweghị akwụkwọ e dere ede, mana ha nwere ike ị"
         }
       ],
       "backfill_done": true
@@ -58,44 +58,23 @@
   },
   "hf_catalog": {
     "output": "corpus/catalog/hf_datasets.json",
-    "total": 290,
+    "total": 292,
     "failed_terms": [],
     "new_since_last_run": [
       {
-        "id": "McGill-NLP/NaijaS2ST",
-        "url": "https://huggingface.co/datasets/McGill-NLP/NaijaS2ST",
-        "license": "UNKNOWN",
-        "languages": [
-          "en",
-          "ha",
-          "ig",
-          "yo",
-          "pcm"
-        ]
-      },
-      {
-        "id": "michsethowusu/Code-170k-igbo",
-        "url": "https://huggingface.co/datasets/michsethowusu/Code-170k-igbo",
+        "id": "0xnu/hausa",
+        "url": "https://huggingface.co/datasets/0xnu/hausa",
         "license": "apache-2.0",
         "languages": [
-          "ig"
-        ]
-      },
-      {
-        "id": "CLEAR-Global/Hausa-Synthetic-ASR-Dataset-XTTS",
-        "url": "https://huggingface.co/datasets/CLEAR-Global/Hausa-Synthetic-ASR-Dataset-XTTS",
-        "license": "cc-by-4.0",
-        "languages": [
           "ha"
         ]
       },
       {
-        "id": "CLEAR-Global/TWB-voice-TTS-Hausa-1.0-sampleset",
-        "url": "https://huggingface.co/datasets/CLEAR-Global/TWB-voice-TTS-Hausa-1.0-sampleset",
-        "license": "other",
+        "id": "David-A-Amoo/naijavoices_dataset_85_hours_tts_best",
+        "url": "https://huggingface.co/datasets/David-A-Amoo/naijavoices_dataset_85_hours_tts_best",
+        "license": "cc-by-nc-sa-4.0",
         "languages": [
-          "hau",
-          "ha"
+          "yo"
         ]
       }
     ]
@@ -103,7 +82,7 @@
   "news": {
     "bbc_igbo": {
       "output": "corpus/manifests/bbc_igbo.jsonl",
-      "new_urls": 6
+      "new_urls": 8
     }
   }
 }
