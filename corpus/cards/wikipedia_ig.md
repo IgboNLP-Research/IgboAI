@@ -86,6 +86,8 @@ prior cards (see flag 21 for why the pre-2026-08-18 rows no longer apply to
 | 2026-08-30, incremental (deduplicated by title vs 2026-08-23) | **22 net-new titles, 0 overlap** | n/a | n/a | see flag 30 — the flag-27 stagnation bug appears fixed this run |
 | 2026-09-06, incremental (raw file) | 17 | 8,221 | 46,343 | `recentchanges`, diacritic ratio 0.07082, this file read directly and in full; matches `corpus_run_summary.json` exactly |
 | 2026-09-06, incremental (deduplicated by title vs all three prior incremental files) | **17 net-new titles, 0 overlap** | n/a | n/a | checked against the union of 2026-08-18/23/30 titles, not just the immediately preceding file; see flag 33 |
+| 2026-09-20, incremental (raw file) | 24 | 17,420 | 98,816 | `recentchanges`, diacritic ratio 0.07159, this file read directly and in full; matches `corpus_run_summary.json` exactly |
+| 2026-09-20, incremental (deduplicated by title vs the three prior incremental files that actually exist in `corpus/raw/`) | **24 net-new titles, 0 overlap** | n/a | n/a | checked against the union of 2026-08-18/23/30 titles (43 unique); the 2026-09-06 batch this card describes in flags 33–36 is **not one of those files** — see flag 37, it does not exist in the repository and could not be included in this check |
 
 The 50,623 figure is not from a file I opened; it is read from
 `mt_probe_summary.json` (`scripts/mt_prevalence_probe.py`, committed at repo
@@ -97,11 +99,13 @@ from a full single-pass read of the one file this run actually added
 `corpus_run_summary.json` exactly, confirming there is nothing else this run
 produced in that file).
 
-**Practical corpus size as of 2026-09-06: on the order of 50,683 unique
-documents** (50,623 dump + 43 unique incremental pages through 2026-08-30 +
-17 net-new incremental pages from this run, see flag 33), up from the
-50,666 figure as of 2026-08-30. Raw storage under `corpus/raw/wikipedia_ig/`
-now holds 81 incremental records across four dated files for those 60
+**Practical corpus size as of 2026-09-20: on the order of 50,690 unique
+documents** (50,623 dump + 67 unique incremental titles, counted directly
+from the four incremental files that actually exist in `corpus/raw/
+wikipedia_ig/`: 2026-08-18, 2026-08-23, 2026-08-30, 2026-09-20 — 88 records
+total, deduplicated by title). This figure **does not build on** the
+previous card's "50,683" (2026-09-06) figure; see flag 37 below for why. Raw
+storage under `corpus/raw/wikipedia_ig/` holds those 88 records for 67
 distinct pages, so document counts read directly off the raw files still
 overstate corpus growth unless deduplicated by title. Token/character/
 diacritic aggregates for the dump portion are currently unknown corpus-wide
@@ -131,7 +135,12 @@ against the 2026-08-18 file. Flags dated **2026-08-30** are from this run's
 22-document incremental batch, read in full and compared directly, title by
 title, against the 2026-08-23 file. Flags dated **2026-09-06** are from
 this run's 17-document incremental batch, read in full and title-checked
-against the union of all three prior incremental files.
+against the union of all three prior incremental files. Flags dated
+**2026-09-20** are from this run's 24-document incremental batch, read in
+full via a single-pass script and title-checked against the union of the
+2026-08-18/23/30 files (the only prior incremental files that actually exist
+in `corpus/raw/`; see flag 37 on why 2026-09-06 is excluded from that
+union).
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
@@ -696,6 +705,106 @@ if not, either add that restriction or filter titles with a `^[A-Za-z]+:`
 namespace-prefix pattern (excluding legitimate colon-containing article
 titles is the tradeoff to watch for) before this leaks into a training
 split.
+
+### 37. 2026-09-20 — The 2026-09-06 run this card documents in flags 33–36 cannot be verified from the current repository, and hf_catalog.md's matching section has the same problem
+
+`corpus/raw/wikipedia_ig/2026-09-06.jsonl.gz` does not exist anywhere in
+`corpus/raw/wikipedia_ig/` at the start of this run — only 2026-08-18,
+2026-08-23, 2026-08-30, and (as of this run) 2026-09-20 are present.
+`corpus/state.json`'s `rc_ts` went directly from `2026-08-30T09:01:23Z` (the
+value flag 30 recorded) to `2026-09-20T07:59:09Z` with this run; no
+intermediate value survived. Flags 33–36 describe reading a 17-document
+2026-09-06 file "directly and in full," quoting specific titles and body
+text (`Draft:Ada Omo Daddy`, `1990 Mwakpo bọs Cairo`, etc.) that cannot be
+checked against anything currently in this repository.
+
+The same problem recurs in `hf_catalog.md`: its "2026-09-06 — 2 new
+datasets" section names `Ngoziegonu1/ngonu-igbo-proverbs-ai-challenge` and
+`adedejimakinde/yoruba-normalization-pairs`, neither of which appears in
+the 292-entry catalog committed at the start of this run — and that catalog
+held **290** entries before this run added the 2 datasets
+`corpus_run_summary.json` names for 2026-09-20 (`0xnu/hausa`,
+`David-A-Amoo/naijavoices_dataset_85_hours_tts_best`), not the 292 the
+card's own cumulative table already recorded as of 2026-09-06.
+
+This card's practical-corpus-size figure above is computed from what is
+actually in `corpus/raw/` today and does not build on the "50,683
+(2026-09-06)" figure the previous version of this card reported. **Recommend
+to the reviewer:** confirm whether the PR documented as `corpus/2026-09-06`
+was fully merged with its stated data outputs, or whether the card and
+catalog text describing it were written against a run whose file/catalog
+changes did not land. Until resolved, treat flags 33–36 and the hf_catalog
+"2026-09-06" section as unverified narrative, not confirmed corpus content.
+
+### 38. 2026-09-20 — A more direct MT-provenance signal than flag 24's function-word ratio: `cx-link` markup names the MediaWiki Content Translation tool by name
+
+`Activin na inhibin` contains `<A class="cx-link" data-linkid="522"
+href="./INHBC" id="mwXA" rel="mw:WikiLink" title="INHBC">βC nwere ike
+ịmepụta activin...`. `cx-link` and `data-linkid=` are markup that MediaWiki's
+**Content Translation (CX)** extension emits for links inside
+machine-assisted translations — unlike the generic `mt_suspect_orthography`
+heuristic (character-substitution guesswork) or flag 24's function-word
+ratio (a statistical lower bound), this is direct, unambiguous evidence
+that the specific article was produced through a translation tool.
+**Proposed heuristic, distinct from flag 29's `markup_leakage` regex:** a
+`cx_translated` flag on `cx-link|data-linkid=` residue, since it identifies
+tool-of-origin rather than merely unclean extraction.
+
+### 39. 2026-09-20 — Markup leakage (flags 3, 18, 22, 25, 31, 34) recurs in 5 of 24 documents (20.8%) this run
+
+`Templeeti:Campaignbox Terrorism in Egypt` prefixing `2005 Bọmbụ Sharm El
+Sheikh`; flag 38's `cx-link`/`href="./INHBC"` in `Activin na inhibin`; a
+bare `</link>` in both `Afaf El-Hodhod` (`Arabic  </link> ;`) and `Alamgir
+Welfare Trust` (`Urdu </link>`); a bare `</ref>` in `Ahmadiyya`. 20.8% sits
+inside the range flags 31 (23%) and 34 (41%) already established as
+"no longer a rare edge case," reinforcing the `markup_leakage` heuristic
+flag 29 proposed rather than establishing a new trend on its own.
+
+### 40. 2026-09-20 — Ethiopic-script substitution (flags 7, 15) recurs a third time, again in unrelated descriptive prose
+
+`Ajuan Mance`: `"...ndị na- መሪ ọrịa na ndị na-eme..."` — three Amharic
+syllable characters (U+1218, U+1229, U+12ED) standing in for what should be
+an Igbo word in a plain descriptive clause (compare the surrounding parallel
+list structure `ndị na-ese ihe, ndị na- <X> ọrịa na ndị na-eme...`, X should
+be an Igbo participle). Flags 7 and 15 already found this in an election
+template and a birth-parenthetical; a third instance in an unrelated
+sentence pattern strengthens the case that this is a systematic defect in
+whatever upstream MT/template pipeline occasionally emits Ethiopic script
+for a missing token, per flag 15's hypothesis.
+
+### 41. 2026-09-20 — Two leakage sub-patterns in one document (`Ahmadiyya`), one recurring, one new
+
+Recurring: a U+FFFC object-replacement character survives inline (flag 12's
+family) — `"...ntughari nke Islam.[5]￼"`. New: an Arabic-script fragment
+fused directly onto an English word with no separating space — `"Urdu:
+Softمدیہ Jamyah"` (`Soft` + `مدیہ`, no space). Unlike the wrong-script
+*substitution* pattern of flags 5/7/15/19/40, the Arabic here is legitimate
+glossing content (an Urdu-script rendering of a term) corrupted by a
+concatenation/bidi-serialization artifact during extraction, not a missing
+Igbo token replaced by the wrong script. Worth tracking as its own pattern
+rather than folding into the Ethiopic-substitution flags.
+
+### 42. 2026-09-20 — Stray leading-period artifact (flag 5's family) recurs
+
+`2019 Nchịkọta ndị nnọchi anya Naijiria na steeti Nasarawa` opens
+`".Emere ụlọaka ụlọ omebe iwu Naijiria..."` — same leading stray-period
+pattern flag 5 documented in two 2026-08-07 election-result stubs, now in an
+unrelated document type, three runs and six weeks later.
+
+### 43. 2026-09-20 — `archaic_register`'s one hit this run looks like a genuine positive, not flag 32's false-positive pattern
+
+`Abike Dabiri` is this run's only flagged document (`archaic_register`).
+It contains `nile` — flag 2's cited archaic lexical marker for modern
+`niile` — in `"Alhaja Alimotu Erogbogbo nile sitere na Bello Solebo
+ezinụlọ..."`. Diacritic ratio is 0.0606, well above flag 29's proposed
+`<0.02` gate, so whatever the fetch-time heuristic actually keys on caught
+this one on lexical grounds, not a low-ratio trigger. Separately in the same
+document: the subject's name is spelled three ways (`Dabiri Erewa`,
+`Dabiri-Erewa`, `Dabari-Erawa`), the same title/body spelling-inconsistency
+pattern flag 17 documented elsewhere. `mt_suspect_orthography` did not fire
+on `Ahmadiyya`'s IPA-slash pronunciation gloss (`/ˌɑːməˈdiːə/`) this run,
+consistent with flag 32's recommendation to exclude such spans, though one
+non-firing instance is not confirmation the heuristic was actually changed.
 
 ## Intended uses
 
