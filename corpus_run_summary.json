@@ -1,56 +1,56 @@
 {
-  "run_date": "2026-08-30",
+  "run_date": "2026-09-27",
   "mode": "all",
   "wikipedia": {
     "wikipedia_ig": {
-      "output": "corpus/raw/wikipedia_ig/2026-08-30.jsonl.gz",
+      "output": "corpus/raw/wikipedia_ig/2026-09-27.jsonl.gz",
       "titles_listed": 500,
       "skipped_stub": 476,
-      "skipped_markup": 2,
-      "documents": 22,
-      "tokens_ws": 15245,
-      "chars": 88876,
-      "diacritic_char_ratio": 0.06793,
+      "skipped_markup": 0,
+      "documents": 24,
+      "tokens_ws": 18860,
+      "chars": 104916,
+      "diacritic_char_ratio": 0.07121,
       "samples": [
         {
-          "title": "100% eneji emeghariri ọhụrụ",
-          "url": "https://ig.wikipedia.org/wiki/100%25_eneji_emeghariri_%E1%BB%8Dh%E1%BB%A5r%E1%BB%A5",
-          "excerpt": "100% ike emeghariri ọhụrụ pụtara inweta ike niile site na ihe onwunwe a na-emeghari. Mgbalị iji 100% ike emeghariri ọhụrụ maka ọkụ eletrik, okpomọkụ, ịjụ oyi na njem na-akpali mgbanwe ihu igwe, mmetọ na nsogbu gburugburu ebe obibi ndị ọzọ, yana nchegbu akụ na ụba na nchekwa ike. Ịgbanwe ngụkọta nke ike isi ụwa na-enye na isi mmalite na-agbanwe agbanwe chọrọ mgbanwe nke usoro ike, ebe ọ bụ na ọtụtụ ike nke taa sitere na mmanụ ala ndị adịghị emeghari emeghari\nNnyocha banyere isiokwu a bụ ihe ọhụrụ, na nyocha ole na ole e bipụtara tupu afọ 2009, mana enwetala nlebara anya na-arịwanye elu n'afọ nd"
+          "title": "2011 Nhọrọ Senate nke Naijiria na Kaduna Steeti",
+          "url": "https://ig.wikipedia.org/wiki/2011_Nh%E1%BB%8Dr%E1%BB%8D_Senate_nke_Naijiria_na_Kaduna_Steeti",
+          "excerpt": ".Emere ntuli aka ndị Sineti nke afọ 2011 na Kaduna steeti n'abalị itoolu n'ọnwa Eprel, afọ 2011, iji họpụta ndị otu Sineti na Naijiria ga-anọchi anya steeti Kaduna.  Yusuf Datti Baba-Ahmed na-anọchi anya Kaduna North na Mohammed Saleh na-anọchite anya Kaduna Central meriri n'usoro Congress for Progressive Change, ebe Nenadi Usman nọchitere Kaduna South n'ọkwa ndị Peoples Democratic Party.\n."
         },
         {
-          "title": "Abby Jane Morrell",
-          "url": "https://ig.wikipedia.org/wiki/Abby_Jane_Morrell",
-          "excerpt": "Abby Jane Morrell (amuru Febụwarị 17, 1809; ụbọchị ọnwụ amabeghị) bụ onye ode akwụkwọ America wepụtara nkọwa izizi nke njem sub-Antarctic site n'echiche nwanyị.\n\n\n== Akụkọ ndụ ==\nA mụrụ Morrell Abbey Jane Wood na New York na February 17, 1809.[1] Nna ya, Captain John Wood, nwụrụ na Nọvemba 14, 1811, na New Orleans ma bụrụkwa nna ukwu nke ụgbọ mmiri Indian Hunter.[1] Nne ya lụgharịrị di na 1814 nye Mazi Burritt Keeler.\nNa June 29, 1824, ọ lụrụ Captain Benjamin Morrell, onye bụ nwanne nne dị anya, wee bụrụ nwunye ya nke abụọ.[1] Ha nwere nwa nwoke mbụ (amụrụ n'etiti 1825 na 1828) onye Morrell le"
+          "title": "Akwụkwọ Pickwick (ihe nkiri 1952)",
+          "url": "https://ig.wikipedia.org/wiki/Akw%E1%BB%A5kw%E1%BB%8D_Pickwick_(ihe_nkiri_1952)",
+          "excerpt": "The Pickwick Papers bụ Ihe nkiri ihe nkiri na-atọ ọchị nke akụkọ ihe mere eme nke Britain nke afọ 1952 nke Noel Langley dere ma duzie na James Hayter, James Donald, Nigel Patrick na Joyce Grenfell. Ọ dabeere na akwụkwọ akụkọ Charles Dickens nke 1837 nke otu aha ahụ. Ọ bụ Renown Pictures mere ya bụ ndị wepụtara ihe nkiri Dickens ọzọ Scrooge n'afọ gara aga.\nEmere ihe nkiri ahụ na Nettlefold Studios na Walton-on-Thames. E sere ya na oji na ọcha, Onye nduzi nka Frederick Pusey na ejiji Beatrice Dawson mepụtara ihe nkiri ahụ. Emere ya na Gaumont Cinema na Haymarket na London na 14 Nọvemba 1952.  'a"
         },
         {
-          "title": "Achille Mbembe",
-          "url": "https://ig.wikipedia.org/wiki/Achille_Mbembe",
-          "excerpt": "Joseph-Achille Mbembe, onye a maara dị ka Achille Mbembe (/ əmˈbɛmbeɪ/; amụrụ 1957), bụ onye ọkọ akụkọ ihe mere eme nke Cameroon, onye ndọrọ ndọrọ ọchịchị, na ọgụgụ isi ọha bụ onye prọfesọ nyocha na akụkọ ntolite na ndọrọ ndọrọ ọchịchị na Wits Institute for Social and Economy Research na Mahadum. nke Wiwaterrand. A maara ya nke ọma maka ihe odide ya banyere colonialism na nsonaazụ ya na ọ bụ onye isi na echiche ọhụrụ French dị egwu.\n\n\n== Akụkọ ndụ ==\nA mụrụ Mbembe na nso Otélé na Cameroon na 1957. O nwetara Ph.D. na akụkọ ihe mere eme na Mahadum Sorbonne dị na Paris, France, na 1989. O mechara"
+          "title": "Asha Khemka",
+          "url": "https://ig.wikipedia.org/wiki/Asha_Khemka",
+          "excerpt": "Dame Asha Khemka DBE DL (amụrụ n'ọnwa Ọktoba n'afọ 1951,  na Sitamarhi, Bihar)   bụ onye bụbu onye nkuzi nke gbara arụkwaghịm dị ka onye isi na onye isi oche na West Nottinghamshire College na ngwụcha afọ 2018 mgbe kọleji ahụ nwere nsogbu ego.    Ọ sonyeere kọleji na 2006, nọchiri Di McEvoy-Robinson. Tupu ọ gbaa arụkwaghịm n'ọnwa Ọktoba afọ 2018 ọ bụ otu n'ime ndị a na-akwụ ụgwọ kachasị elu na ngalaba ahụ. \n\n\n== Nsọpụrụ ==\nE nyere Khemka ihe nrite OBE (Order of the British Empire) dị ka akụkụ nke 2009 New Year Honours, nke Elizabeth nke Abụọ, mgbe ahụ The Queen, gosipụtara na Buckingham Palace"
         },
         {
-          "title": "Aframomum corrorima",
-          "url": "https://ig.wikipedia.org/wiki/Aframomum_corrorima",
-          "excerpt": "Aframomum corrorima  bụ ụdị osisi ifuru na ezinụlọ ginger,    Zingiberaceae. Ọ bụ herbaceous  perennial   nke na-emepụta akwụkwọ ndụ akụkụ ndụ 1-2 mita n'ogologo nke mgbọrọgwụ  rhizomatous.  Akwụkwọ ndị a haziri ahazi bụ akwụkwọ ndụ  gbara ọchịchịrị,10–30 cm long and 2.5–6 cm n'ofe, elliptical ka ọ toro ogologo n'ọdịdị ya. Ọ na-ebu ifuru pink n'akụkụ ala ma na-enye ohere nye mkpụrụ na-acha uhie uhie, mkpụrụ osisi anụ ahụ nwere mkpụrụ aja aja na-egbuke egbuke, nke na-adịkarị 3–5 mm na dayameta.\nNgwa nri, nke a maara dị ka   Ethiopian cardamom, ugha cardamom, ma ọbu korarima, a na-enweta site na"
+          "title": "Brian Murray (onye na-eme ihe nkiri)",
+          "url": "https://ig.wikipedia.org/wiki/Brian_Murray_(onye_na-eme_ihe_nkiri)",
+          "excerpt": "Brian Murray (onye a  Bell; ubochi iri Septemba otu puku narị itoolu iri atọ na asaa ruo ụbọchị iri abụo Ọgọst afọ puku abuo na iri na asatọ)  bụ onye na-eme ihe nkiri na onye nduzi ihe nkiri nke Ndịda Afrika nke a nabatara na Aulo ọmụma ebe nkiri Amerika na afọ puku abụọ na anọ .  \n\n\n== Akụkọ ndụ ==\nA mụrụ Murray dị ka Brian Bell na Johannesburg, nwa Mary Dickson (née Murray) na Alfred Bell, onye na-egwu golf.\n\n\n== Ọrụ ==\nMurray mere nke mbụ ya na Broadway na egwuregwu ihe nile n'oge dị mma na afo otu puku narị itoolu iri isii na ise N'afọ otu puku narị itoolu iri isii na isii, ọ pụtara dị ka"
         },
         {
-          "title": "Ahmed Fatimah Bisola",
-          "url": "https://ig.wikipedia.org/wiki/Ahmed_Fatimah_Bisola",
-          "excerpt": "Ahmed Fatimah Bisola bụ Kọmishọna na-ahụ maka agụmakwụkwọ na mmepe ịsị obodo mmadụ, Kwara Steeti ugbu a.   .\n\n\n== Ndụ mmalite na agụmakwụkwọ ==\nFatimah Ahmed nwetara akwụkwọ ikike nkuzi ya n'aka Kansul Ndi Nkụzi Ndebanye aha nke Naijiria dị ka onye nkuzi ọkachamara.  Dị ka kọmishọna na-ahụ maka mmụta na Kwara, ọ kpugheere iji Ozi na teknụzụ nkwukọrịta na Kwara Steeti igbanwe ngalaba agụmakwụkwọ.   o nwetara akwụkwọ ikike nkuzi ya n'aka  Kansụl Ndị Nkụzi Ndebanye aha nke Naijiria.\n\n\n== Ọrụ ==\nN'ime ọrụ ya, o debere oge maka ide ọnụ ụzọ mbata maka ụmụ akwụkwọ praịmarị.  ọ na-ekpughe na ọ nweghị "
+          "title": "Conjestina Achieng",
+          "url": "https://ig.wikipedia.org/wiki/Conjestina_Achieng",
+          "excerpt": "Conjestina Achieng (amụrụ na 20 Ọktoba 1977 n'obodo Umiru, Yala division, Siaya District. Conjestina bụ nwa nke ise a mụrụ n'ezinụlọ dị mmadụ iri. Nna ya Clement Adalo bụ onye ọrụ ahụike lara ezumike nká na nne ya bụ Gertrude Auma. Nwanne ya nwoke nke okenye, Joseph Kusimba bụbu onye na-akụ ọkpọ nke na-elekọta klọb ịkụ ọkpọ na Mathare, Nairobi.Ọ bụ nwanyị Kenya na-akụ ọkpọ nke a na-akpọ \"Hands of Stone\" ma bụrụ onye nke ise n'ụwa. Ọ ghọrọ nwanyị Afrịka mbụ nwere aha mba ụwa mgbe ọ meriri Ugandan Fiona Tugume iji nweta aha WIBF Middleweight. Ọ nwetakwara mmeri n'ọnọdụ esemokwu na WBC nke oge ah"
         },
         {
-          "title": "Akpụkpọ anụ a na-atụfu",
-          "url": "https://ig.wikipedia.org/wiki/Akp%E1%BB%A5kp%E1%BB%8D_an%E1%BB%A5_a_na-at%E1%BB%A5fu",
-          "excerpt": "Towel a na-atụfu ya bụ ihe ọzọ a na-eji eme ya na akwa akwa akwa ọzọ.Ebubere ihe ndị a na-atụfu ihe maka nnyefe ahụike ma webata ya na ụlọ ọrụ na-abụghị usoro ahụike, dị ka ebe ntụrụndụ, ụlọ oriri na ọṅụṅụ, ile ọbịa, ụlọ mgbatị ahụ na ezinụlọ.  Campion (2015-05-01). \"Sustainable healthcare and environmental life-cycle impacts of disposable supplies: a focus on disposable custom packs\" (in en). Journal of Cleaner Production 94: 46–55. DOI:10.1016/j.jclepro.2015.01.076. ISSN 0959-6526. </ref>\nA na-eji akwa nhicha atụfu iji kwalite njikwa ọrịa, ịdị mma yana ibelata mmefu akụ na ụba.    A na-eji a"
+          "title": "Eco Creatures: Save the Forest",
+          "url": "https://ig.wikipedia.org/wiki/Eco_Creatures:_Save_the_Forest",
+          "excerpt": "Eco Creatures: Save the Forest, nke a maara dị ka Ecolis na Japan nakwa dị ka E Colis: Save the forest na Europe, bụ egwuregwu vidio na-eme n'oge maka Nintendo DS video game console. Ọ bụ LightWeight na Headlock Corporation mepụtara ya ma wepụta ya na Japan na August 23, 2007 site na Interchannel; na North America na March 4, 2008 site na Majesco Entertainment; na Europe na June 13, 2008 site na Rising Star Games. Eco Creatures bụ nke World Wide Fund for Nature na-akwado.\n\n\n== Nkọwa ==\nNdị bi n’Osisi Mana biri n’udo na nkwekọ ruo ọtụtụ afọ mgbe Alaeze ahụ dị nso malitere ibibi osisi iji gbasaa"
         },
         {
-          "title": "Alida Neave",
-          "url": "https://ig.wikipedia.org/wiki/Alida_Neave",
-          "excerpt": "Alida Neave bụ onye mba Saụt Afrịka bụbu onye egwuregwu tennis.\nNeave ruru nke ikpeazụ na nche French 1929 ya na onye ibe ya bụ Bobbie Heine Miller mana Lili de Alvarez na Kea Bouman meri ya na nke ikpeazụ n'usoro abụọ kwụpụta.  N'afọ 1937, o mere egwuregwu ikpeazụ nke South Africa mana Bobbie Heine Miller tụfuru n'usoro atọ.\n\n\n== Agba ikpeazụ Grand Slam ==\n\n\n=== Ugboro abụọ ===\n\n\n==== Ndị gbara ọsọ (1) ====\n\n\n== Edensibia =="
+          "title": "Fifi Cooper",
+          "url": "https://ig.wikipedia.org/wiki/Fifi_Cooper",
+          "excerpt": "Refilwe Boingotlo Moeketsi (amụrụ n'abalị̀ iri abụọ na anọ nke ọ̀nwa Ọktoba afo 1991), nke a maara dịka Fifi Cooper bụ onye na-edekọ egwu na South Africa. Fifi Cooper malitere ọrụ egwu ya dị ka onye na-agụ egwu R&B tupu mgbasasi egwu ya ahụ ya ka ọ wepụtara egwu rap ya \"Chechela Morago\" n'afọ 2010. N'afọ 2015, o wepụtara abọm studio mbụ ya nke nwetara ihe nrite 20FIFI .\n\n\n== Mbido ndụ na agụmakwụkwọ ==\nFifi Cooper bụ nwa ikpeazụ n'ime ụmụ atọ. Ọ gụrụ akwụkwọ n'oge ọ bụ nwata na Montshiwa, Mahikeng, South Africa, ebe o jikwa mgbalị ya na-ịbụ abụ na ịgba egwú mee ihe. Ọ gụsịrị akwụkwọ sekọndrị y"
         },
         {
-          "title": "Amber Robles-Gordon",
-          "url": "https://ig.wikipedia.org/wiki/Amber_Robles-Gordon",
-          "excerpt": "Amber Robles-Gordon (amụrụ 1977 San Juan, Puerto Rico ) bụ onye ihe nkiri mgbasa ozi agwakọta America.   Ọ na-ebi na Washington, DC ma na-ejikarị ihe ndị a chọtara na akwa na-arụ ọrụ iji mepụta mgbakọ, nnukwu ihe ọkpụkpụ, nrụnye na ihe osise ọha.\n\n\n== Agụmakwụkwọ ==\nỌ natara BS na 2005 site na Trinity College, na Washington, DC wee bụrụ MFA (Painting) na 2011 site na Mahadum Howard, nakwa na Washington, DC.  Robles-Gordon abụrụla onye isi na Black Artists DC, (BADC) na-eje ozi dị ka onye nhazi ihe ngosi, osote onye isi ala na Onye isi ala.  Robles-Gordon bụkwa onye nchoputa nke Delusions of Gr"
+          "title": "Hilda Tadria",
+          "url": "https://ig.wikipedia.org/wiki/Hilda_Tadria",
+          "excerpt": "Hilda M. Tadria bụ onye na-ahụ maka ihe ndị ruuru ụmụ nwanyị na Uganda, ọkachamara na mmepe mmekọrịta mmadụ na ibe ya, na onye isi nchịkwa nke Mentoring and Empowerment Programme for Young Women in Uganda (MEMPROW). Ọ na-adụ ndị NGO ọdụ n'ụwa niile gbasara okike, njikwa ụlọ ọrụ na mmepe mmekọrịta mmadụ na ibe ya, ọ bụkwa osote prọfesọ na Mahadum Makerere.\n\n\n== Oge ọ malitere ==\nTadria nwere nzere bachelọ na Sociology site na Mahadum Makerere, nzere mastas na Social Anthropology site na Newnham College, Cambridge, England, yana nzere PhD na Social Anthropology site na Mahadum Minnesota, US..\n\n\n"
         }
       ],
       "backfill_done": true
@@ -58,44 +58,15 @@
   },
   "hf_catalog": {
     "output": "corpus/catalog/hf_datasets.json",
-    "total": 290,
+    "total": 291,
     "failed_terms": [],
     "new_since_last_run": [
       {
-        "id": "McGill-NLP/NaijaS2ST",
-        "url": "https://huggingface.co/datasets/McGill-NLP/NaijaS2ST",
-        "license": "UNKNOWN",
-        "languages": [
-          "en",
-          "ha",
-          "ig",
-          "yo",
-          "pcm"
-        ]
-      },
-      {
-        "id": "michsethowusu/Code-170k-igbo",
-        "url": "https://huggingface.co/datasets/michsethowusu/Code-170k-igbo",
-        "license": "apache-2.0",
+        "id": "9jatesters/9javoice-igbo",
+        "url": "https://huggingface.co/datasets/9jatesters/9javoice-igbo",
+        "license": "cc-by-nc-4.0",
         "languages": [
           "ig"
-        ]
-      },
-      {
-        "id": "CLEAR-Global/Hausa-Synthetic-ASR-Dataset-XTTS",
-        "url": "https://huggingface.co/datasets/CLEAR-Global/Hausa-Synthetic-ASR-Dataset-XTTS",
-        "license": "cc-by-4.0",
-        "languages": [
-          "ha"
-        ]
-      },
-      {
-        "id": "CLEAR-Global/TWB-voice-TTS-Hausa-1.0-sampleset",
-        "url": "https://huggingface.co/datasets/CLEAR-Global/TWB-voice-TTS-Hausa-1.0-sampleset",
-        "license": "other",
-        "languages": [
-          "hau",
-          "ha"
         ]
       }
     ]
@@ -103,7 +74,7 @@
   "news": {
     "bbc_igbo": {
       "output": "corpus/manifests/bbc_igbo.jsonl",
-      "new_urls": 6
+      "new_urls": 8
     }
   }
 }
