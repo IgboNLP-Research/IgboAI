@@ -68,12 +68,27 @@ live feed if it recurs or lengthens.
 | 2026-08-18 | 2 | 17 |
 | 2026-08-23 | 0 | 17 |
 | 2026-08-30 | 6 | 23 |
-| 2026-09-06 | 5 | 28 |
+| 2026-09-27 | 8 | 31 |
 
-Cumulative figure derived by counting lines in
-`corpus/manifests/bbc_igbo.jsonl` directly (28), matching the 2026-08-30
-total (23) plus this run's 5. No token or character counts apply — no text
-is stored.
+Cumulative figure derived directly by counting and grouping lines in
+`corpus/manifests/bbc_igbo.jsonl` by `recorded` date (31 total, 8 of them
+`recorded: "2026-09-27"`), not accumulated from the prior card.
+
+**2026-09-27 correction: the "2026-09-06" row this table previously
+showed (5 new, cumulative 28) does not exist in the manifest.** Grouping
+every line by `recorded` date finds exactly seven distinct dates —
+2026-08-07, 08-13, 08-15, 08-18, 08-23, 08-30, 2026-09-27 — with zero lines
+recorded 2026-09-06. This run's 8 new lines bring the file from 23 to 31,
+not from a prior 28 to 33. The previous card's 28/2026-09-06 figures, and
+the matching flags 33–36 in `wikipedia_ig.md` (which describe a same-dated
+Wikipedia run "read directly, in full"), describe a run that left no trace
+in any of this run's three source files (this manifest, the HF catalog,
+or the Wikipedia raw files — see the equivalent correction in
+`wikipedia_ig.md`'s cumulative-size section and flag 37 there). Old value:
+28. New value: 31 (23 verified real + 8 this run). Recommend to the
+reviewer: check whether a 2026-09-06 commit was made and later reverted,
+or whether that prior card update was written without a matching data
+commit.
 
 **2026-08-18 gap check:** the two new items are published 2026-08-17 and
 2026-08-18, a 2-3 day gap since the last recorded item (2026-08-15). This is
@@ -103,12 +118,30 @@ that the sliding-window risk is real rather than hypothetical: a
 weekly-ish cadence can permanently lose days of coverage, not just delay
 them.
 
-**2026-09-06 gap check:** the 5 new items are published 2026-08-31 through
-2026-09-04 (checked directly against `corpus/manifests/bbc_igbo.jsonl`),
-picking up **1.75 days after** the previous run's latest recorded item
-(2026-08-29 15:12 UTC) — the smallest gap recorded in this card's history
-of gap checks, and well inside anything the sliding-window risk would
-plausibly drop. No unrecovered span to flag this run.
+**2026-09-06 gap check — retracted, see the cumulative-size correction
+above.** This entry described a run and a manifest state that do not
+exist in `corpus/manifests/bbc_igbo.jsonl`; left here struck through in
+spirit (not deleted, per this project's policy of correcting in place with
+old/new values) rather than silently removed.
+
+**2026-09-27 gap check: a ~25-day silent gap, the largest yet recorded.**
+Checked directly against `corpus/manifests/bbc_igbo.jsonl`: this run's 8
+new items are published 2026-09-23 15:12 UTC through 2026-09-27 07:24 UTC;
+the previous real batch (`recorded: "2026-08-30"`) tops out at 2026-08-29
+15:12 UTC. That leaves **2026-08-29 through 2026-09-23, roughly 25 days,
+with zero recorded items** — five times longer than the 5-day gap flagged
+on 2026-08-23 and the largest gap this card has observed. At the
+batch-1 long-run rate (≈0.65 items/day) this window would statistically be
+expected to contain quite a few articles. Unlike the earlier, shorter gaps,
+a 25-day span is almost certainly wider than the RSS feed's sliding window
+(typically ~10–20 items), meaning this coverage loss is very likely
+**permanent and unrecoverable from this feed** — not a "check next run"
+observation. **Recommend to the reviewer:** treat this as confirmation, not
+just a repeat of the standing coverage caveat, and consider whether the
+ingestion workflow actually ran on its stated cadence between 2026-08-30
+and 2026-09-27 — a 28-day span between runs would itself explain a gap
+this size even with a healthy feed window, independent of the window-size
+question.
 
 ## Known limitations and quality flags
 
