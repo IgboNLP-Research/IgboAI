@@ -84,8 +84,9 @@ prior cards (see flag 21 for why the pre-2026-08-18 rows no longer apply to
 | 2026-08-23, incremental (deduplicated by title vs 2026-08-18) | **21 unique titles total, 0 net-new** | n/a | n/a | 20 of 21 documents byte-identical to 2026-08-18's; see flag 27 |
 | 2026-08-30, incremental (raw file) | 22 | 15,245 | 88,876 | `recentchanges`, diacritic ratio 0.06793, this file read directly and in full; matches `corpus_run_summary.json` exactly |
 | 2026-08-30, incremental (deduplicated by title vs 2026-08-23) | **22 net-new titles, 0 overlap** | n/a | n/a | see flag 30 — the flag-27 stagnation bug appears fixed this run |
-| 2026-09-06, incremental (raw file) | 17 | 8,221 | 46,343 | `recentchanges`, diacritic ratio 0.07082, this file read directly and in full; matches `corpus_run_summary.json` exactly |
-| 2026-09-06, incremental (deduplicated by title vs all three prior incremental files) | **17 net-new titles, 0 overlap** | n/a | n/a | checked against the union of 2026-08-18/23/30 titles, not just the immediately preceding file; see flag 33 |
+| 2026-09-06, incremental — **retracted, see flag 37** | ~~17~~ | ~~8,221~~ | ~~46,343~~ | no `corpus/raw/wikipedia_ig/2026-09-06.jsonl.gz` exists in this run's working tree |
+| 2026-09-27, incremental (raw file) | 24 | 18,860 | 104,916 | `recentchanges`, diacritic ratio 0.0712, this file read directly and in full; matches `corpus_run_summary.json` exactly |
+| 2026-09-27, incremental (deduplicated by title vs the three files that actually exist on disk: 2026-08-18/23/30) | **22 net-new titles, 2 repeats** | n/a | n/a | see flag 37 for the repeats, one of which is the flag-27 stagnation pattern recurring on a single title three runs later |
 
 The 50,623 figure is not from a file I opened; it is read from
 `mt_probe_summary.json` (`scripts/mt_prevalence_probe.py`, committed at repo
@@ -97,16 +98,17 @@ from a full single-pass read of the one file this run actually added
 `corpus_run_summary.json` exactly, confirming there is nothing else this run
 produced in that file).
 
-**Practical corpus size as of 2026-09-06: on the order of 50,683 unique
-documents** (50,623 dump + 43 unique incremental pages through 2026-08-30 +
-17 net-new incremental pages from this run, see flag 33), up from the
-50,666 figure as of 2026-08-30. Raw storage under `corpus/raw/wikipedia_ig/`
-now holds 81 incremental records across four dated files for those 60
-distinct pages, so document counts read directly off the raw files still
-overstate corpus growth unless deduplicated by title. Token/character/
-diacritic aggregates for the dump portion are currently unknown corpus-wide
-(flag 23); do not quote a corpus-wide `diacritic_char_ratio` until that is
-fixed.
+**Practical corpus size as of 2026-09-27: on the order of 50,688 unique
+documents** (50,623 dump + 65 unique incremental titles — see flag 37 for
+why this is 65, not the previously-claimed 60). Raw storage under
+`corpus/raw/wikipedia_ig/` holds 88 incremental records (21 + 21 + 22 + 24)
+across the four dated files that actually exist on disk, for those 65
+distinct titles — one of which, `Akwụkwọ Pickwick (ihe nkiri 1952)`, was
+fetched three separate times with fully byte-identical text each time (see
+flag 37), so raw record counts overstate corpus growth even more than
+title deduplication alone suggests. Token/character/diacritic aggregates
+for the dump portion are currently unknown corpus-wide (flag 23); do not
+quote a corpus-wide `diacritic_char_ratio` until that is fixed.
 
 **Backfill status: DONE**, via the dump (`backfill_done: true`,
 `backfill_method: "dump"` in `corpus/state.json`), not via the `allpages`
@@ -129,9 +131,13 @@ flag for which. Flags dated **2026-08-23** are from this run's 21-document
 incremental batch, read in full and compared directly, document by document,
 against the 2026-08-18 file. Flags dated **2026-08-30** are from this run's
 22-document incremental batch, read in full and compared directly, title by
-title, against the 2026-08-23 file. Flags dated **2026-09-06** are from
-this run's 17-document incremental batch, read in full and title-checked
-against the union of all three prior incremental files.
+title, against the 2026-08-23 file. Flags dated **2026-09-06** describe a
+batch that, per flag 37, is not present in this repository; treat their
+content as unverifiable rather than authoritative. Flags dated
+**2026-09-27** are from this run's 24-document incremental batch, read in
+full and title-checked against the union of the three prior incremental
+files that actually exist on disk (2026-08-18, 2026-08-23, 2026-08-30 —
+not 2026-09-06).
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
@@ -696,6 +702,97 @@ if not, either add that restriction or filter titles with a `^[A-Za-z]+:`
 namespace-prefix pattern (excluding legitimate colon-containing article
 titles is the tradeoff to watch for) before this leaks into a training
 split.
+
+### 37. 2026-09-27 — Correction: the "2026-09-06" incremental batch (flags 33–36, cumulative-size table) is not present in this repository
+
+`corpus/raw/wikipedia_ig/` contains exactly four dated files:
+`2026-08-18.jsonl.gz`, `2026-08-23.jsonl.gz`, `2026-08-30.jsonl.gz`, and
+this run's `2026-09-27.jsonl.gz` — no `2026-09-06.jsonl.gz`. The same
+absence holds for the other two sources this project ingests: `hf_catalog.
+md`'s "2026-09-06, 292 datasets" row and `bbc_igbo.md`'s "2026-09-06, 5 new
+URLs" row are both arithmetically inconsistent with this run's actual
+files (see the corrections in each of those cards). All three sources
+agree on the same story: whatever ran on 2026-09-06 either was never
+committed or was committed and later reverted; either way, its 17-document
+count, its specific document citations in flags 33–36, and its "60 unique
+titles" cumulative claim are not independently verifiable from the current
+working tree and should not be relied on. This run's own dedup check
+(direct read of all four files that do exist) finds **65 unique titles
+across 88 raw records** among the incremental files — treat that as the
+current, verified figure, superseding the 60/81 figures flag 33 reported.
+**Recommend to the reviewer:** check CI/workflow run history for
+2026-09-06 to determine whether that run's commit was lost, reverted, or
+simply never made; this card cannot distinguish those cases from its own
+vantage point.
+
+### 38. 2026-09-27 — One title fetched three times with byte-identical text; a second recurs with small live edits (flag 27's pattern, now at a longer interval)
+
+Read all four on-disk incremental files directly. Two of this run's 24
+titles were already seen in earlier batches: `Akwụkwọ Pickwick (ihe nkiri
+1952)` (also in 2026-08-18 and 2026-08-23) and `Chimamanda Ngozi Adichie`
+(same two prior files). `Akwụkwọ Pickwick`'s `text` field is **fully
+byte-identical across all three sightings** (2,180 characters each) —
+the `recentchanges` query is still occasionally re-surfacing a page with no
+actual content change, the same failure mode flag 27 diagnosed, but here
+isolated to one page rather than the whole batch, and recurring roughly
+six weeks after flag 30 reported the underlying watermark-advance bug
+fixed. `corpus/state.json`'s `rc_ts` did advance normally this run (to
+2026-09-27T09:34:38Z, i.e. it now tracks the current date rather than
+lagging), so this is not a reversion of that fix — more likely a null-edit
+or template-touch event puts a page back into `recentchanges` without
+changing its extracted text. `Chimamanda Ngozi Adichie`, by contrast,
+differs in length on every sighting (44,483 → 44,532 → 44,336 characters),
+confirming genuine ongoing live edits on a frequently-updated biography, as
+flag 27 already established for this same article. **Practical effect:**
+22 of this run's 24 documents (91.7%) are genuinely net-new; deduplicate by
+title, not by raw record count, before counting corpus growth.
+
+### 39. 2026-09-27 — Unexpanded `Templeeti:` markup recurs in 4 of 24 documents (16.7%), including in the one document the pipeline's own heuristic flagged
+
+Direct text search for `Templeeti:` finds it in `Akwụkwọ Pickwick (ihe
+nkiri 1952)` (`Templeeti:The Pickwick Papers`), `Aṅụrị nke nwere (Mmetụta
+na ihe nlereanya ya).` (`Templeeti:Album ratings`), `Conjestina Achieng`
+(`Templeeti:BoxingRecordSummary`), and `Brian Murray (onye na-eme ihe
+nkiri)` (`Templeeti:DramaDesk PlayFeaturedActor 1975–2000`) — same defect
+family as flags 3, 18, 22, 25, 31, 34, all unexpanded-template residue on
+the `prop=extracts` incremental path. 16.7% sits between flag 31's 23% and
+flag 34's 41%, consistent with this being a persistent, moderately common
+defect rather than a one-off. None of these four documents carry a
+`markup_leakage` flag — the heuristic proposed in flag 29 still has not
+been implemented — including `Brian Murray`, which the pipeline *did* flag
+for a different reason (see flag 40): a single document can need more than
+one quality flag simultaneously, and today's schema only records one hit
+per document type it happens to catch.
+
+### 40. 2026-09-27 — First confirmed true positive for the `archaic_register` heuristic since it started firing
+
+`Brian Murray (onye na-eme ihe nkiri)` carries `"flags": ["archaic_register"]`
+in the raw file — the first time this run's triage has found this heuristic
+firing at all (flag 29 noted it fired zero times through 2026-08-23; the
+2026-08-30 and 2026-09-06 batches are not independently checkable, per flag
+37). Reading the document directly, the flag looks correct: dates are
+spelled out as number words rather than digits or Ọnwụ numerals (`ubochi
+iri Septemba otu puku narị itoolu iri atọ na asaa` for "10 September 1937"),
+and the text uses `ihe nile` (archaic, modern `ihe niile`) — the exact
+lexical marker flag 2 already catalogued for archaic register. Diacritic
+ratio (0.0479) is on the low side but not near-zero. This is one data point
+in favor of the heuristic's precision, not a reversal of flag 29's broader
+finding that it under-fires; `Nnamdi Azikiwe` (flag 26), a clearer case by
+this card's own reading, still went unflagged in its own batch.
+
+### 41. 2026-09-27 — A citation-footnote number leaked into a section heading, a new manifestation of the extraction-residue family
+
+`Brian Murray`'s otherwise well-formed `== Ihe nkiri redio ==`-style
+heading list includes one heading rendered `== 1Ihe nkiri redio ==` — a
+stray leading `1` (almost certainly a footnote marker `[1]` that lost its
+brackets and merged into the following heading text during extraction).
+Distinct from the bracketed-Igbo-number-word footnote defect flag 35
+catalogued (`[otu]`, `[abụọ]`) — this is a bare digit fused directly into
+a heading, not a translated bracketed marker in running text — but the
+same broader family of citation-marker extraction residue. Cosmetic at
+the single-document level; worth folding into the `markup_leakage`
+heuristic's evidence base (flag 29) rather than treating as its own
+pattern.
 
 ## Intended uses
 

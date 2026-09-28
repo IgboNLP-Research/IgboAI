@@ -40,7 +40,17 @@ previous file.
 | 2026-08-18 | 278 | 0 |
 | 2026-08-23 | 286 | 8 |
 | 2026-08-30 | 290 | 4 |
-| 2026-09-06 | 292 | 2 |
+| 2026-09-27 | 291 | 1 |
+
+**2026-09-27 correction: the previous "2026-09-06" row (292, +2) does not
+match `corpus/catalog/hf_datasets.json`.** This run's summary reports
+`"total": 291"` with exactly one `new_since_last_run` entry, which only
+arithmetically works out (290 + 1 = 291) if the catalog actually stood at
+290 — the 2026-08-30 figure — going into this run, not 292. Read together
+with the same-dated correction in `bbc_igbo.md` and flag 37 in
+`wikipedia_ig.md`, all three sources agree: nothing from a "2026-09-06" run
+is present in any committed file this run can see. Old value: 292. New
+value: 291 (290 carried over + 1 new).
 
 **2026-08-18:** verified directly by diffing dataset ids between this run's
 `corpus/catalog/hf_datasets.json` and the prior commit's: identical 278-id
@@ -153,7 +163,17 @@ many other language codes (or list no `languages` at all).
   where recorded speech is scarcer than text; worth reading the method even
   though the data itself is Hausa-only.
 
-## 2026-09-06 — 2 new datasets
+## 2026-09-06 — 2 new datasets (retracted, 2026-09-27)
+
+**Retracted, not deleted, per this card's correction policy** (see the
+cumulative-size table above): neither `Ngoziegonu1/ngonu-igbo-proverbs-
+ai-challenge` nor `adedejimakinde/yoruba-normalization-pairs` appears in
+the current `corpus/catalog/hf_datasets.json`, and the arithmetic in the
+cumulative table only balances if this run never happened. Left in place
+so a reviewer who has already acted on the original entries (e.g. started
+a license check on either dataset) can see what changed; do not treat
+either dataset as catalogued until a future run's `new_since_last_run`
+surfaces it again.
 
 - **`Ngoziegonu1/ngonu-igbo-proverbs-ai-challenge`** — license `UNKNOWN`, no
   `languages` field populated, but Igbo-specific by id and name (proverbs,
@@ -167,6 +187,17 @@ many other language codes (or list no `languages` at all).
   task (e.g. reconciling the Union-Igbo/ogonek/modern-Ọnwụ variation this
   card's Wikipedia sibling documents in flags 2 and 26), independent of the
   Yoruba-specific content itself.
+
+## 2026-09-27 — 1 new dataset
+
+- **`9jatesters/9javoice-igbo`** — CC-BY-NC-4.0, tagged `ig`. By name and id
+  this is Igbo speech/voice data — directly relevant to Igbo ASR/TTS work
+  per this project's core tasks, and one of only a handful of catalogued
+  datasets pairing Igbo *audio* rather than text alone (compare
+  `McGill-NLP/NaijaS2ST`, already flagged in this card's 2026-08-30
+  section). Non-commercial license restricts downstream use; the catalog
+  entry does not indicate sample count or hours of audio, so scale is
+  unknown until someone opens the dataset card directly.
 
 ## Known limitations and quality flags
 
@@ -215,13 +246,14 @@ when any term failed; surface a `failed_terms` list in the run summary.
 ### 3. Metadata-quality caveats that will apply once the fetch works
 
 - `license` is read from `cardData.license` with a fallback, defaulting to
-  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-09-06,
-  164 of the 292 catalogued datasets (56.2%) carry `UNKNOWN`** — counted
-  directly from `corpus/catalog/hf_datasets.json` (was 163/290, 56.2%, on
-  2026-08-30; 162/286, 56.6%, on 2026-08-23) — so this is the majority case,
-  not an edge case, and the proportion has now held flat for three
-  consecutive runs; do not filter or sort on license without first routing
-  `UNKNOWN` entries to manual review.
+  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-09-27,
+  163 of the 291 catalogued datasets (56.0%) carry `UNKNOWN`** — counted
+  directly from `corpus/catalog/hf_datasets.json` (the prior "164/292,
+  56.2%, 2026-09-06" figure is retracted along with the rest of that run,
+  see above; the last verified figure before this run was 163/290, 56.2%,
+  on 2026-08-30) — so this remains the majority case, not an edge case; do
+  not filter or sort on license without first routing `UNKNOWN` entries to
+  manual review.
 - `languages` comes from self-declared card metadata and is often missing or
   wrong on African-language datasets; do not filter on it alone.
 - `search` matches names and descriptions, so `naija` and `african languages`
