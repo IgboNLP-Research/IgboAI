@@ -87,6 +87,7 @@ prior cards (see flag 21 for why the pre-2026-08-18 rows no longer apply to
 | 2026-09-06, incremental — **retracted, see flag 37** | ~~17~~ | ~~8,221~~ | ~~46,343~~ | no `corpus/raw/wikipedia_ig/2026-09-06.jsonl.gz` exists in this run's working tree |
 | 2026-09-27, incremental (raw file) | 24 | 18,860 | 104,916 | `recentchanges`, diacritic ratio 0.0712, this file read directly and in full; matches `corpus_run_summary.json` exactly |
 | 2026-09-27, incremental (deduplicated by title vs the three files that actually exist on disk: 2026-08-18/23/30) | **22 net-new titles, 2 repeats** | n/a | n/a | see flag 37 for the repeats, one of which is the flag-27 stagnation pattern recurring on a single title three runs later |
+| 2026-10-04, incremental (figures from `corpus_run_summary.json` only, not a direct file read — see flag 42) | 24 | 9,525 | 53,086 | `recentchanges`, diacritic ratio 0.06591; titles_listed 500, skipped_stub 475, skipped_markup 1 (4.8% keep rate, see flag 43) |
 
 The 50,623 figure is not from a file I opened; it is read from
 `mt_probe_summary.json` (`scripts/mt_prevalence_probe.py`, committed at repo
@@ -109,6 +110,15 @@ flag 37), so raw record counts overstate corpus growth even more than
 title deduplication alone suggests. Token/character/diacritic aggregates
 for the dump portion are currently unknown corpus-wide (flag 23); do not
 quote a corpus-wide `diacritic_char_ratio` until that is fixed.
+
+**2026-09-27 → 2026-10-04 title-dedup check was not performed this run**
+(flag 42): this run's 24 new records bring incremental raw storage to 112
+records across five dated files, but whether any of those 24 titles repeat
+an earlier incremental batch (the flag-27/flag-38 stagnation pattern) is
+**unverified** this run. Treat the practical unique-title count as
+somewhere between 87 (65 + 22 net-new from flag 38, if all 24 of this run's
+titles happen to repeat) and 111 (65 + 22 + 24, if all are net-new) until a
+future run reads the file directly and resolves it.
 
 **Backfill status: DONE**, via the dump (`backfill_done: true`,
 `backfill_method: "dump"` in `corpus/state.json`), not via the `allpages`
@@ -137,7 +147,10 @@ content as unverifiable rather than authoritative. Flags dated
 **2026-09-27** are from this run's 24-document incremental batch, read in
 full and title-checked against the union of the three prior incremental
 files that actually exist on disk (2026-08-18, 2026-08-23, 2026-08-30 —
-not 2026-09-06).
+not 2026-09-06). Flags dated **2026-10-04** are from the 8 samples and
+aggregate statistics in that run's `corpus_run_summary.json` only — see
+flag 42 for why this run did not read `corpus/raw/wikipedia_ig/
+2026-10-04.jsonl.gz` directly.
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
@@ -793,6 +806,67 @@ same broader family of citation-marker extraction residue. Cosmetic at
 the single-document level; worth folding into the `markup_leakage`
 heuristic's evidence base (flag 29) rather than treating as its own
 pattern.
+
+### 42. 2026-10-04 — Methodology change: this run's figures come from the run summary only, not a direct file read
+
+Prior incremental flags (27, 30, 33, 37, 38) were established by reading
+each dated `.jsonl.gz` directly, in full, and comparing titles across
+files — that is how the flag-27/flag-38 stagnation pattern (a page
+re-surfacing in `recentchanges` with no text change) was caught. This
+run's task instructions explicitly direct against opening, scanning, or
+decompressing anything under `corpus/raw/` and say to work from
+`corpus_run_summary.json` instead. That summary gives the aggregate
+(24 documents, 9,525 whitespace tokens, 53,086 characters, diacritic
+ratio 0.06591) and 8 sampled excerpts, but not the full 24-document text,
+so this run **cannot** perform the title-overlap check that caught the
+stagnation bug twice before. Everything below is drawn only from the 8
+samples. **Recommend to the reviewer:** have a future run (or a
+dedicated, budget-exempt dedup pass) confirm whether any of this batch's
+24 titles repeat earlier incremental files, since that check lapsed here
+not because the bug is believed fixed, but because this run was not
+configured to look.
+
+### 43. 2026-10-04 — Very high stub-skip rate: 95.0% of listed titles discarded, far more than kept
+
+Of 500 titles listed via `recentchanges`, 475 (95.0%) were skipped as
+stubs and 1 for unresolved markup, leaving 24 kept (4.8% keep rate). No
+prior run's surviving `corpus_run_summary.json` recorded this breakdown
+(flag 23 notes the dump's own summary was lost, and no incremental-run
+card to date reports a skip rate), so there is no historical baseline to
+compare against; flagged here as the first data point; a future run
+should note whether 4.8% is typical or an outlier once a second
+measurement exists.
+
+### 44. 2026-10-04 — Under-marked, dotless orthography recurs in sample (`Alexx Ekubo`)
+
+The sampled excerpt reads *"amuru Alex Ekubo-Okwaraeke ; 10 Eprel, 1986)
+bu onye omee ihe nkiri na ihe nlereanya..."* — `amuru`/`bu` for
+`amụrụ`/`bụ`, no tone or dot-below marks anywhere in the excerpt. Same
+dotless-orthography pattern as flags 6 and 10, here in an ordinary
+biography rather than a date-stub template, consistent with this card's
+standing caution that under-marking is spread across document types, not
+confined to one template family.
+
+### 45. 2026-10-04 — A raw citation page-number fragment leaks into running prose (`Ego ihu igwe na Naịjirịa`)
+
+The sampled excerpt ends *"...gụnyere idei mmiri, ọzara, na ịdabere na
+mmanụ ọkụ, nke na-emetụta akụ na ụba ya na nchekwa nri. : 54  Mba a
+na-achọ..."* — a bare `: 54` (almost certainly a stripped citation's
+page-number remnant) sits mid-paragraph between two sentences, with no
+surrounding brackets or attribution. Same extraction-residue family as
+the footnote-marker defects already catalogued (flags 35, 39, 41), a
+different specific artifact (a leaked page number rather than a leaked
+template name or bracketed number word).
+
+### 46. 2026-10-04 — No non-Igbo-script or wrong-orthography-character substitution in this run's 8 samples, unlike several prior runs
+
+None of the 8 sampled documents show the Ethiopic-script substitution
+(flags 7, 15), open-o/IPA character substitution (flags 5, 19), or
+encoding damage (flag 4) patterns that recurred across several earlier
+batches. Noted as an observation, not a resolution: 8 samples out of 24
+kept documents is too small to conclude the defect has stopped, and this
+run's methodology change (flag 42) means the other 16 documents were
+never inspected at all.
 
 ## Intended uses
 
