@@ -41,6 +41,7 @@ previous file.
 | 2026-08-23 | 286 | 8 |
 | 2026-08-30 | 290 | 4 |
 | 2026-09-27 | 291 | 1 |
+| 2026-10-04 | 294 | 3 |
 
 **2026-09-27 correction: the previous "2026-09-06" row (292, +2) does not
 match `corpus/catalog/hf_datasets.json`.** This run's summary reports
@@ -199,6 +200,28 @@ surfaces it again.
   entry does not indicate sample count or hours of audio, so scale is
   unknown until someone opens the dataset card directly.
 
+## 2026-10-04 — 3 new datasets
+
+- **`ahmadabdulnasir/naijaPidgin`** — license `UNKNOWN`, tagged `en`, `ha`,
+  `ig`, `yo`. Igbo-tagged, likely a Nigerian-Pidgin-centric multi-language
+  bundle given the name; **verify before use**, and check how much of the
+  bundle (if any) is actually Igbo text rather than Pidgin/English/Hausa/
+  Yoruba matched only by a shared tag.
+- **`rukiga-yoruba-datacuration/rukiga-yoruba-short-text-proverbs`** —
+  CC-BY-4.0, tagged `cgg` (Rukiga) and `yor`. No Igbo content, but in scope
+  under this project's relevance policy as a Nigerian/African-language
+  resource; short-text proverb curation is a methodology (not just a
+  dataset) that could transfer directly to building an equivalent Igbo
+  proverb corpus, a genre this catalog has not yet seen a dedicated
+  Igbo-specific entry for.
+- **`artaoheed/yoruba-proverb-blindspot`** — license `UNKNOWN`, no
+  `languages` field populated, but Yoruba proverb material by name. Same
+  in-scope reasoning as above (proverb-curation methodology, Nigerian
+  language); "blindspot" in the name suggests this may be an LLM-evaluation
+  or adversarial-probe set rather than a plain corpus — worth reading the
+  dataset card to confirm before treating it as training data. **Verify
+  license before use.**
+
 ## Known limitations and quality flags
 
 ### 1. 2026-08-07 — all seven Hub queries failed; catalog written as `[]`
@@ -246,14 +269,12 @@ when any term failed; surface a `failed_terms` list in the run summary.
 ### 3. Metadata-quality caveats that will apply once the fetch works
 
 - `license` is read from `cardData.license` with a fallback, defaulting to
-  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-09-27,
-  163 of the 291 catalogued datasets (56.0%) carry `UNKNOWN`** — counted
-  directly from `corpus/catalog/hf_datasets.json` (the prior "164/292,
-  56.2%, 2026-09-06" figure is retracted along with the rest of that run,
-  see above; the last verified figure before this run was 163/290, 56.2%,
-  on 2026-08-30) — so this remains the majority case, not an edge case; do
-  not filter or sort on license without first routing `UNKNOWN` entries to
-  manual review.
+  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-10-04,
+  165 of the 294 catalogued datasets (56.1%) carry `UNKNOWN`** — counted
+  directly from `corpus/catalog/hf_datasets.json` (prior figure: 163/291,
+  56.0%, on 2026-09-27) — so this remains the majority case, not an edge
+  case; do not filter or sort on license without first routing `UNKNOWN`
+  entries to manual review.
 - `languages` comes from self-declared card metadata and is often missing or
   wrong on African-language datasets; do not filter on it alone.
 - `search` matches names and descriptions, so `naija` and `african languages`
