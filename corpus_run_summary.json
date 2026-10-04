@@ -1,56 +1,56 @@
 {
-  "run_date": "2026-09-27",
+  "run_date": "2026-10-04",
   "mode": "all",
   "wikipedia": {
     "wikipedia_ig": {
-      "output": "corpus/raw/wikipedia_ig/2026-09-27.jsonl.gz",
+      "output": "corpus/raw/wikipedia_ig/2026-10-04.jsonl.gz",
       "titles_listed": 500,
-      "skipped_stub": 476,
-      "skipped_markup": 0,
+      "skipped_stub": 475,
+      "skipped_markup": 1,
       "documents": 24,
-      "tokens_ws": 18860,
-      "chars": 104916,
-      "diacritic_char_ratio": 0.07121,
+      "tokens_ws": 9525,
+      "chars": 53086,
+      "diacritic_char_ratio": 0.06591,
       "samples": [
         {
-          "title": "2011 Nhọrọ Senate nke Naijiria na Kaduna Steeti",
-          "url": "https://ig.wikipedia.org/wiki/2011_Nh%E1%BB%8Dr%E1%BB%8D_Senate_nke_Naijiria_na_Kaduna_Steeti",
-          "excerpt": ".Emere ntuli aka ndị Sineti nke afọ 2011 na Kaduna steeti n'abalị itoolu n'ọnwa Eprel, afọ 2011, iji họpụta ndị otu Sineti na Naijiria ga-anọchi anya steeti Kaduna.  Yusuf Datti Baba-Ahmed na-anọchi anya Kaduna North na Mohammed Saleh na-anọchite anya Kaduna Central meriri n'usoro Congress for Progressive Change, ebe Nenadi Usman nọchitere Kaduna South n'ọkwa ndị Peoples Democratic Party.\n."
+          "title": "\"Philippines, Province of China\" ọkọlọtọ",
+          "url": "https://ig.wikipedia.org/wiki/%22Philippines,_Province_of_China%22_%E1%BB%8Dk%E1%BB%8Dl%E1%BB%8Dt%E1%BB%8D",
+          "excerpt": "== Ihe ndị mere n'oge gara aga ==\n\n\n=== Nkọwa ọkọlọtọ ===\nFlaglọ ọkọlọtọ tarpaulin na-acha ọbara ọbara ma gosipụta People's Republic of China\">Flag nke People's Republic of China nke nwere dragọn abụọ. Ọ na-egosipụtakwa ederede \"Welcome to the Philippines, Province of China\" na mkpụrụedemede ọcha  na-egosi mba ndịda ọwụwa anyanwụ Eshia dị ka mpaghara nke People's Republic of China.  Ọ na-egosipụtakwa ederede Chinese na mkpụrụedemede odo n'okpuru ederede Bekee nke na-asụgharị \"Welcome to China's Philippines\". A na-eji mkpụrụedemede ọdịnala ndị China mee ihe na ọkọlọtọ ndị a na-ejighị mee ihe n'"
         },
         {
-          "title": "Akwụkwọ Pickwick (ihe nkiri 1952)",
-          "url": "https://ig.wikipedia.org/wiki/Akw%E1%BB%A5kw%E1%BB%8D_Pickwick_(ihe_nkiri_1952)",
-          "excerpt": "The Pickwick Papers bụ Ihe nkiri ihe nkiri na-atọ ọchị nke akụkọ ihe mere eme nke Britain nke afọ 1952 nke Noel Langley dere ma duzie na James Hayter, James Donald, Nigel Patrick na Joyce Grenfell. Ọ dabeere na akwụkwọ akụkọ Charles Dickens nke 1837 nke otu aha ahụ. Ọ bụ Renown Pictures mere ya bụ ndị wepụtara ihe nkiri Dickens ọzọ Scrooge n'afọ gara aga.\nEmere ihe nkiri ahụ na Nettlefold Studios na Walton-on-Thames. E sere ya na oji na ọcha, Onye nduzi nka Frederick Pusey na ejiji Beatrice Dawson mepụtara ihe nkiri ahụ. Emere ya na Gaumont Cinema na Haymarket na London na 14 Nọvemba 1952.  'a"
+          "title": "Adeola Emmanuel Abolaji",
+          "url": "https://ig.wikipedia.org/wiki/Adeola_Emmanuel_Abolaji",
+          "excerpt": "Adeola Emmanuel Abolaji (amụrụ na 11 Nọvemba 1993) bụ onye ọrụ gọọmentị, onye na-eje ozi dị ka osote onye isi oche nke ụlọ omebe iwu, Obafemi Owode LGA, Ogun State nke All Progressive Congress yana onye isi ụkọchukwu nke RCCG Living Seed Church Omole na egwu egwu, Spirit Of Prophecy.\n\n\n== Mbido ndụ na ọrụ ==\nỌ gụsịrị akwụkwọ na biochemistry na Mahadum Babcock, na MBA na Mahadim Redeemers. Ọ bụ ugbu a Onye isi nke Digital Communications na Office of the Principal Executive Assistant to the General Overseer of RCCG.\n\n\n=== ndọrọ ndọrọ ọchịchị ===\nỌ bụ onye ndụmọdụ na-anọchite anya Ofada Ward na O"
         },
         {
-          "title": "Asha Khemka",
-          "url": "https://ig.wikipedia.org/wiki/Asha_Khemka",
-          "excerpt": "Dame Asha Khemka DBE DL (amụrụ n'ọnwa Ọktoba n'afọ 1951,  na Sitamarhi, Bihar)   bụ onye bụbu onye nkuzi nke gbara arụkwaghịm dị ka onye isi na onye isi oche na West Nottinghamshire College na ngwụcha afọ 2018 mgbe kọleji ahụ nwere nsogbu ego.    Ọ sonyeere kọleji na 2006, nọchiri Di McEvoy-Robinson. Tupu ọ gbaa arụkwaghịm n'ọnwa Ọktoba afọ 2018 ọ bụ otu n'ime ndị a na-akwụ ụgwọ kachasị elu na ngalaba ahụ. \n\n\n== Nsọpụrụ ==\nE nyere Khemka ihe nrite OBE (Order of the British Empire) dị ka akụkụ nke 2009 New Year Honours, nke Elizabeth nke Abụọ, mgbe ahụ The Queen, gosipụtara na Buckingham Palace"
+          "title": "Alexx Ekubo",
+          "url": "https://ig.wikipedia.org/wiki/Alexx_Ekubo",
+          "excerpt": "Alexx Ekubo (amuru Alex Ekubo-Okwaraeke ; 10 Eprel, 1986) bu onye omee ihe nkiri na ihe nlereanya nke Naijiria.  Ọ bụ onye mbụ gbagoro na asọmpi Mr Nigeria nke afọ 2010. Ọ meriri onye na- eme ihe nkiri kachasị mma na onyinye nkwado na 2013 Best of Nollywood Awards maka ọrụ ya na Weekend Gateway.   \n\n\n== Ndụ onwe onye ==\nEkubo bu onye Arochukwu, Abia State . Ọ gara Federal Government College Daura, Katsina State . Ọ gụrụ akwụkwọ gbasara iwu na Mahadum Calabar wee nweta diplọma na iwu na Calabar Polytechnic.   \nNa 10th nke Mee 2021, Alex Ekubo na onye ọ chọrọ elụ Fancy Acholonu kwupụtara ụbọchị "
         },
         {
-          "title": "Brian Murray (onye na-eme ihe nkiri)",
-          "url": "https://ig.wikipedia.org/wiki/Brian_Murray_(onye_na-eme_ihe_nkiri)",
-          "excerpt": "Brian Murray (onye a  Bell; ubochi iri Septemba otu puku narị itoolu iri atọ na asaa ruo ụbọchị iri abụo Ọgọst afọ puku abuo na iri na asatọ)  bụ onye na-eme ihe nkiri na onye nduzi ihe nkiri nke Ndịda Afrika nke a nabatara na Aulo ọmụma ebe nkiri Amerika na afọ puku abụọ na anọ .  \n\n\n== Akụkọ ndụ ==\nA mụrụ Murray dị ka Brian Bell na Johannesburg, nwa Mary Dickson (née Murray) na Alfred Bell, onye na-egwu golf.\n\n\n== Ọrụ ==\nMurray mere nke mbụ ya na Broadway na egwuregwu ihe nile n'oge dị mma na afo otu puku narị itoolu iri isii na ise N'afọ otu puku narị itoolu iri isii na isii, ọ pụtara dị ka"
+          "title": "Ani Kayode Somtochukwu",
+          "url": "https://ig.wikipedia.org/wiki/Ani_Kayode_Somtochukwu",
+          "excerpt": "Ani Kayode Somtochukwu (amụrụ ya n'afọ 2000) bụ onye Naijiria n’ede edemede na akwukwo ifo . N'afọ 2023, mgbe ọ dị afọ iri abụọ na atọ, o bipụtara akwụkwọ akụkọ edemede LGBTQ+ mbụ ya, And Then He Sang A Lullaby .  Akwụkwọ akụkọ ahụ mechera nweta nturu ugo Edmund White Award for Debut Fiction n’afọ 2024.  E bipụtara ya  n’okpuru akara mbipụta akwụkwọ nke Roxane Gay, ma Cassava Republic na Narrative Landscape bipụtakwara ya na Naịjira.   \n\n\n== Ndụ Mbido na Agụmakwụkwọ ==\nAni gara Command Children’s School Awkunanaw dị na Enugu tupu ọ gaa Union Secondary School. Mgbe ọ gụsịrị akwụkwọ praịmarị na "
         },
         {
-          "title": "Conjestina Achieng",
-          "url": "https://ig.wikipedia.org/wiki/Conjestina_Achieng",
-          "excerpt": "Conjestina Achieng (amụrụ na 20 Ọktoba 1977 n'obodo Umiru, Yala division, Siaya District. Conjestina bụ nwa nke ise a mụrụ n'ezinụlọ dị mmadụ iri. Nna ya Clement Adalo bụ onye ọrụ ahụike lara ezumike nká na nne ya bụ Gertrude Auma. Nwanne ya nwoke nke okenye, Joseph Kusimba bụbu onye na-akụ ọkpọ nke na-elekọta klọb ịkụ ọkpọ na Mathare, Nairobi.Ọ bụ nwanyị Kenya na-akụ ọkpọ nke a na-akpọ \"Hands of Stone\" ma bụrụ onye nke ise n'ụwa. Ọ ghọrọ nwanyị Afrịka mbụ nwere aha mba ụwa mgbe ọ meriri Ugandan Fiona Tugume iji nweta aha WIBF Middleweight. Ọ nwetakwara mmeri n'ọnọdụ esemokwu na WBC nke oge ah"
+          "title": "Awkat Hossain",
+          "url": "https://ig.wikipedia.org/wiki/Awkat_Hossain",
+          "excerpt": "Awkat Hossain bụ onye nchịkọta akụkọ ihe nkiri Bangladesh, onye ode akwụkwọ na onye ntụzi.[1][2][3]  Ọ meriri ihe nrite ihe nkiri mba Bangladesh maka ndezi kacha mma maka ihe nkiri Dui Poisar Alta (1982)Mkpurụ okwu sélénsé[4]\n\n\n== Ihe nkiri ==\n\n\n=== Dị ka onye edemede ===\nMayer Dabi – 1986\nBondhu Amar – 1992\n\n\n=== Dị ka onye nduzi ===\nMayer Dabi – 1986\nBondhu Amar – 1992\n\n\n=== Dị ka ndị editọ ==="
         },
         {
-          "title": "Eco Creatures: Save the Forest",
-          "url": "https://ig.wikipedia.org/wiki/Eco_Creatures:_Save_the_Forest",
-          "excerpt": "Eco Creatures: Save the Forest, nke a maara dị ka Ecolis na Japan nakwa dị ka E Colis: Save the forest na Europe, bụ egwuregwu vidio na-eme n'oge maka Nintendo DS video game console. Ọ bụ LightWeight na Headlock Corporation mepụtara ya ma wepụta ya na Japan na August 23, 2007 site na Interchannel; na North America na March 4, 2008 site na Majesco Entertainment; na Europe na June 13, 2008 site na Rising Star Games. Eco Creatures bụ nke World Wide Fund for Nature na-akwado.\n\n\n== Nkọwa ==\nNdị bi n’Osisi Mana biri n’udo na nkwekọ ruo ọtụtụ afọ mgbe Alaeze ahụ dị nso malitere ibibi osisi iji gbasaa"
+          "title": "Carl-A. Fechner",
+          "url": "https://ig.wikipedia.org/wiki/Carl-A._Fechner",
+          "excerpt": "Carl-A Fechner bụ onye nta akụkọ German, onye na-eme ihe nkiri na Onye na-emepụta ihe nkiri, nke a maara maka ihe ngosi banyere Energiewende nke Germany na Ike na-adịgide adịgide n'ozuzu.\n\n\n== Ndụ ==\nFechner nwetara akara ugo mmụta na agụmakwụkwọ mgbasa ozi, gụsịrị akwụkwọ na 1980 na diplọma.   N'oge Agha Gulf Mbụ, ọ rụrụ ọrụ dị ka onye nnọchi anya ARD.   Kemgbe afọ 1988 ọ bụ onye njikwa nke fechnerMEDIA GmbH (nke bụbu focus-film GmbH).    Nlebara anya ya kemgbe ahụ bụ mmepụta nke ihe ngosi banyere nkwado.    Dị ka onye nduzi nchịkọta akụkọ, Fechner bụ onye na-ahụ maka ọdịnaya na imewe nka nke"
         },
         {
-          "title": "Fifi Cooper",
-          "url": "https://ig.wikipedia.org/wiki/Fifi_Cooper",
-          "excerpt": "Refilwe Boingotlo Moeketsi (amụrụ n'abalị̀ iri abụọ na anọ nke ọ̀nwa Ọktoba afo 1991), nke a maara dịka Fifi Cooper bụ onye na-edekọ egwu na South Africa. Fifi Cooper malitere ọrụ egwu ya dị ka onye na-agụ egwu R&B tupu mgbasasi egwu ya ahụ ya ka ọ wepụtara egwu rap ya \"Chechela Morago\" n'afọ 2010. N'afọ 2015, o wepụtara abọm studio mbụ ya nke nwetara ihe nrite 20FIFI .\n\n\n== Mbido ndụ na agụmakwụkwọ ==\nFifi Cooper bụ nwa ikpeazụ n'ime ụmụ atọ. Ọ gụrụ akwụkwọ n'oge ọ bụ nwata na Montshiwa, Mahikeng, South Africa, ebe o jikwa mgbalị ya na-ịbụ abụ na ịgba egwú mee ihe. Ọ gụsịrị akwụkwọ sekọndrị y"
+          "title": "Crystal-Donna Roberts",
+          "url": "https://ig.wikipedia.org/wiki/Crystal-Donna_Roberts",
+          "excerpt": "Crystal-Donna Roberts (amụrụ 13 Ọktoba 1984 wee nwụọ na Machị 6, 2025) bụ onye omere South Africa, onye ngosi na onye ode akwụkwọ. A maara ya nke ọma maka ọrụ ya na fim The Endless River (2015) na Krotoa (2017). \n\n\n== Ndụ mbido ==\nRoberts nọrọ n'oge ọ bụ nwata na Cape Town, bi na Bonteheuwel, Kensington, na Factreton. Ọ gụsịrị akwụkwọ sekọndrị na Bloemfontein . Ọ gara n'ihu gụsịrị akwụkwọ na Bachelor of Arts na Drama na Ụlọ ihe nkiri na Mahadum nke Free State na 2005. Otu afọ ka e mesịrị, ọ laghachiri na Cape Town ebe ọ rụrụ ọrụ nwa oge dị ka onye nkuzi ihe nkiri ụlọ akwụkwọ sekọndrị tupu ọ ma"
         },
         {
-          "title": "Hilda Tadria",
-          "url": "https://ig.wikipedia.org/wiki/Hilda_Tadria",
-          "excerpt": "Hilda M. Tadria bụ onye na-ahụ maka ihe ndị ruuru ụmụ nwanyị na Uganda, ọkachamara na mmepe mmekọrịta mmadụ na ibe ya, na onye isi nchịkwa nke Mentoring and Empowerment Programme for Young Women in Uganda (MEMPROW). Ọ na-adụ ndị NGO ọdụ n'ụwa niile gbasara okike, njikwa ụlọ ọrụ na mmepe mmekọrịta mmadụ na ibe ya, ọ bụkwa osote prọfesọ na Mahadum Makerere.\n\n\n== Oge ọ malitere ==\nTadria nwere nzere bachelọ na Sociology site na Mahadum Makerere, nzere mastas na Social Anthropology site na Newnham College, Cambridge, England, yana nzere PhD na Social Anthropology site na Mahadum Minnesota, US..\n\n\n"
+          "title": "Ego ihu igwe na Naịjirịa",
+          "url": "https://ig.wikipedia.org/wiki/Ego_ihu_igwe_na_Na%E1%BB%8Bjir%E1%BB%8Ba",
+          "excerpt": "Ego maka ihu igwe na Naịjirịa gụnyere ngwakọta nke ego sitere n'ime obodo na nke mba ụwa maka mgbanwe ihu igwe, ibelata ya na iguzogide ya.  \nDịka akụnụba kachasị na Afrịka na otu n'ime ndị na-emepụta mmanụ na kọntinent a, Naịjirịa na-eche nnukwu ihe ịma aka metụtara mgbanwe ihu igwe ihu, gụnyere idei mmiri, ọzara, na ịdabere na mmanụ ọkụ, nke na-emetụta akụ na ụba ya na nchekwa nri. : 54  Mba a na-achọ ime ka amụma ihu igwe ya kwekọọ na ebumnuche nke Nkwekọrịta Paris, site n'iji njikọta nke ego ọha na nkeonwe na mmekorita mba ụwa iji mezuo ebumnuche ndị e depụtara na Ntinye Aka nke Mba (NDC) "
         }
       ],
       "backfill_done": true
@@ -58,15 +58,33 @@
   },
   "hf_catalog": {
     "output": "corpus/catalog/hf_datasets.json",
-    "total": 291,
+    "total": 294,
     "failed_terms": [],
     "new_since_last_run": [
       {
-        "id": "9jatesters/9javoice-igbo",
-        "url": "https://huggingface.co/datasets/9jatesters/9javoice-igbo",
-        "license": "cc-by-nc-4.0",
+        "id": "rukiga-yoruba-datacuration/rukiga-yoruba-short-text-proverbs",
+        "url": "https://huggingface.co/datasets/rukiga-yoruba-datacuration/rukiga-yoruba-short-text-proverbs",
+        "license": "cc-by-4.0",
         "languages": [
-          "ig"
+          "cgg",
+          "yor"
+        ]
+      },
+      {
+        "id": "artaoheed/yoruba-proverb-blindspot",
+        "url": "https://huggingface.co/datasets/artaoheed/yoruba-proverb-blindspot",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "ahmadabdulnasir/naijaPidgin",
+        "url": "https://huggingface.co/datasets/ahmadabdulnasir/naijaPidgin",
+        "license": "UNKNOWN",
+        "languages": [
+          "en",
+          "ha",
+          "ig",
+          "yo"
         ]
       }
     ]
@@ -74,7 +92,7 @@
   "news": {
     "bbc_igbo": {
       "output": "corpus/manifests/bbc_igbo.jsonl",
-      "new_urls": 8
+      "new_urls": 9
     }
   }
 }
