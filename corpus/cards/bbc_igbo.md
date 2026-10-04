@@ -68,11 +68,31 @@ live feed if it recurs or lengthens.
 | 2026-08-18 | 2 | 17 |
 | 2026-08-23 | 0 | 17 |
 | 2026-08-30 | 6 | 23 |
-| 2026-09-27 | 8 | 31 |
+| 2026-09-13 | 8 | 31 |
+| 2026-09-20 | 8 | 39 |
+| 2026-09-27 | 7 | 46 |
+| 2026-10-04 | 9 | 55 |
 
-Cumulative figure derived directly by counting and grouping lines in
-`corpus/manifests/bbc_igbo.jsonl` by `recorded` date (31 total, 8 of them
-`recorded: "2026-09-27"`), not accumulated from the prior card.
+Cumulative figure derived directly by counting and grouping all 55 lines in
+`corpus/manifests/bbc_igbo.jsonl` by `recorded` date, not accumulated from
+the prior card.
+
+**2026-10-04 correction: the previous "2026-09-27: 8 new, cumulative 31"
+row was wrong on both numbers, and two entire runs (2026-09-13 and
+2026-09-20) were missing from this card.** Grouping the current manifest
+by `recorded` finds nine distinct dates, not seven: the two dates above
+that no prior version of this card ever mentioned sit between 2026-08-30
+and 2026-09-27, each with 8 new URLs. The `2026-09-27` group itself has 7
+records, not 8. Old values: 2026-09-27 row read "8 new, cumulative 31".
+New values: 2026-09-13 "8 new, cumulative 31" (the old row's numbers
+match this date, not 2026-09-27 — the two were likely conflated when
+that card update was written), 2026-09-20 "8 new, cumulative 39",
+2026-09-27 "7 new, cumulative 46". Unlike the 2026-09-06 case (flag-
+equivalent correction above, and `wikipedia_ig.md` flag 37), this is not
+a phantom run: 2026-09-13 and 2026-09-20 are real, their records are on
+disk, and the practical effect is the opposite of that case — real
+ingested data went undocumented for two cycles rather than fictitious
+data being documented.
 
 **2026-09-27 correction: the "2026-09-06" row this table previously
 showed (5 new, cumulative 28) does not exist in the manifest.** Grouping
@@ -124,24 +144,25 @@ exist in `corpus/manifests/bbc_igbo.jsonl`; left here struck through in
 spirit (not deleted, per this project's policy of correcting in place with
 old/new values) rather than silently removed.
 
-**2026-09-27 gap check: a ~25-day silent gap, the largest yet recorded.**
-Checked directly against `corpus/manifests/bbc_igbo.jsonl`: this run's 8
-new items are published 2026-09-23 15:12 UTC through 2026-09-27 07:24 UTC;
-the previous real batch (`recorded: "2026-08-30"`) tops out at 2026-08-29
-15:12 UTC. That leaves **2026-08-29 through 2026-09-23, roughly 25 days,
-with zero recorded items** — five times longer than the 5-day gap flagged
-on 2026-08-23 and the largest gap this card has observed. At the
-batch-1 long-run rate (≈0.65 items/day) this window would statistically be
-expected to contain quite a few articles. Unlike the earlier, shorter gaps,
-a 25-day span is almost certainly wider than the RSS feed's sliding window
-(typically ~10–20 items), meaning this coverage loss is very likely
-**permanent and unrecoverable from this feed** — not a "check next run"
-observation. **Recommend to the reviewer:** treat this as confirmation, not
-just a repeat of the standing coverage caveat, and consider whether the
-ingestion workflow actually ran on its stated cadence between 2026-08-30
-and 2026-09-27 — a 28-day span between runs would itself explain a gap
-this size even with a healthy feed window, independent of the window-size
-question.
+**2026-09-27 gap check — retracted, see the cumulative-size correction
+above.** The "~25-day silent gap" this entry previously reported was an
+artifact of this card never having recorded the 2026-09-13 and 2026-09-20
+runs, not a real coverage loss. With those two batches included, the
+actual sequence is 2026-08-30 (tops out 2026-08-29) → 2026-09-13 (2026-09-
+04 to 2026-09-12, gap ~5.9 days) → 2026-09-20 (2026-09-15 to 2026-09-19,
+gap ~3.0 days) → 2026-09-27 (2026-09-23 to 2026-09-27, gap ~4.0 days) —
+three ordinary gaps in the same 5-ish-day range already seen elsewhere in
+this table, not one 25-day gap. Left here struck through in spirit rather
+than deleted, per this card's correction policy; the standing coverage
+caveat above (sliding-window risk) is unaffected, but the claim that this
+specific window was "almost certainly permanent and unrecoverable" is
+withdrawn — it was never missing in the first place.
+
+**2026-10-04 gap check: normal, ~3.1-day gap.** This run's 9 new items are
+published 2026-09-30 08:49 UTC through 2026-10-04 10:18 UTC; the previous
+batch (2026-09-27) tops out 2026-09-27 07:24 UTC, a gap of roughly 3 days
+1 hour — in the same range as the other gaps in this table and no cause
+for concern.
 
 ## Known limitations and quality flags
 
