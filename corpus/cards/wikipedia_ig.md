@@ -87,6 +87,10 @@ prior cards (see flag 21 for why the pre-2026-08-18 rows no longer apply to
 | 2026-09-06, incremental — **retracted, see flag 37** | ~~17~~ | ~~8,221~~ | ~~46,343~~ | no `corpus/raw/wikipedia_ig/2026-09-06.jsonl.gz` exists in this run's working tree |
 | 2026-09-27, incremental (raw file) | 24 | 18,860 | 104,916 | `recentchanges`, diacritic ratio 0.0712, this file read directly and in full; matches `corpus_run_summary.json` exactly |
 | 2026-09-27, incremental (deduplicated by title vs the three files that actually exist on disk: 2026-08-18/23/30) | **22 net-new titles, 2 repeats** | n/a | n/a | see flag 37 for the repeats, one of which is the flag-27 stagnation pattern recurring on a single title three runs later |
+| 2026-09-13, incremental (raw file) — **previously undocumented, see flag 42** | 25 | 15,013 | 84,089 | `recentchanges`, diacritic ratio 0.07214, this file read directly and in full this run |
+| 2026-09-20, incremental (raw file) — **previously undocumented, see flag 42** | 24 | 17,420 | 98,816 | `recentchanges`, diacritic ratio 0.07159, this file read directly and in full this run |
+| 2026-10-11, incremental (raw file) | 23 | 22,262 | 123,839 | `recentchanges`, diacritic ratio 0.07532, this file read directly and in full; matches `corpus_run_summary.json` exactly |
+| 2026-10-11, incremental (deduplicated by title vs all six prior incremental files on disk) | **21 net-new titles, 2 repeats** | n/a | n/a | see flag 42 — one repeat (`2006-2007 esemokwu Tunisia`, vs 2026-09-13) is byte-identical; the other (`Chimamanda Ngozi Adichie`) continues the ongoing-live-edit pattern from flags 27/38 |
 
 The 50,623 figure is not from a file I opened; it is read from
 `mt_probe_summary.json` (`scripts/mt_prevalence_probe.py`, committed at repo
@@ -98,17 +102,25 @@ from a full single-pass read of the one file this run actually added
 `corpus_run_summary.json` exactly, confirming there is nothing else this run
 produced in that file).
 
-**Practical corpus size as of 2026-09-27: on the order of 50,688 unique
-documents** (50,623 dump + 65 unique incremental titles — see flag 37 for
-why this is 65, not the previously-claimed 60). Raw storage under
-`corpus/raw/wikipedia_ig/` holds 88 incremental records (21 + 21 + 22 + 24)
-across the four dated files that actually exist on disk, for those 65
-distinct titles — one of which, `Akwụkwọ Pickwick (ihe nkiri 1952)`, was
-fetched three separate times with fully byte-identical text each time (see
-flag 37), so raw record counts overstate corpus growth even more than
-title deduplication alone suggests. Token/character/diacritic aggregates
-for the dump portion are currently unknown corpus-wide (flag 23); do not
-quote a corpus-wide `diacritic_char_ratio` until that is fixed.
+**Practical corpus size as of 2026-10-11: on the order of 50,757 unique
+documents** (50,623 dump + 134 unique incremental titles, this run's direct
+count — see flag 42). Raw storage under `corpus/raw/wikipedia_ig/` holds
+160 incremental records (21 + 21 + 22 + 25 + 24 + 24 + 23) across the seven
+dated files that actually exist on disk (two of which, 2026-09-13 and
+2026-09-20, were never previously read into this card — flag 42), for those
+134 distinct titles. 23 titles recur across files, including `Akwụkwọ
+Pickwick (ihe nkiri 1952)` (now seen 2026-08-18/23 and 2026-09-27, still
+byte-identical each time, flag 37/38) and `2006-2007 esemokwu Tunisia`
+(2026-09-13 and 2026-10-11, also byte-identical, flag 42) — so raw record
+counts continue to overstate corpus growth beyond title deduplication.
+Summing chars/tokens/diacritic hits directly across all seven incremental
+files (excluding the dump shards, per this run's turn-budget instruction):
+760,949 characters, 134,472 whitespace tokens, diacritic ratio **0.06964**
+— the first time this card reports a diacritic ratio pooled across more
+than one batch; still dwarfed by the dump's 50,623 undocumented documents,
+so still not a corpus-wide figure. Token/character/diacritic aggregates for
+the dump portion remain unknown corpus-wide (flag 23); do not quote a
+corpus-wide `diacritic_char_ratio` until that is fixed.
 
 **Backfill status: DONE**, via the dump (`backfill_done: true`,
 `backfill_method: "dump"` in `corpus/state.json`), not via the `allpages`
@@ -137,7 +149,12 @@ content as unverifiable rather than authoritative. Flags dated
 **2026-09-27** are from this run's 24-document incremental batch, read in
 full and title-checked against the union of the three prior incremental
 files that actually exist on disk (2026-08-18, 2026-08-23, 2026-08-30 —
-not 2026-09-06).
+not 2026-09-06). Flags dated **2026-09-13** and **2026-09-20** are from
+this run's direct read of two incremental files that exist on disk but
+were never previously opened by any card update (flag 42). Flags dated
+**2026-10-11** are from this run's 23-document incremental batch, read in
+full and title-checked against the union of all six prior incremental
+files on disk.
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
@@ -793,6 +810,116 @@ same broader family of citation-marker extraction residue. Cosmetic at
 the single-document level; worth folding into the `markup_leakage`
 heuristic's evidence base (flag 29) rather than treating as its own
 pattern.
+
+### 42. 2026-10-11 — Two incremental batches (2026-09-13, 2026-09-20) existed on disk but were never triaged into this card
+
+`corpus/raw/wikipedia_ig/` contains `2026-09-13.jsonl.gz` (25 documents) and
+`2026-09-20.jsonl.gz` (24 documents) alongside the four files this card
+already tracked. Neither run's existence, document count, or stats
+appeared in any prior version of this card, `bbc_igbo.md`, or
+`hf_catalog.md` — unlike flag 37's "2026-09-06" case, these files **do**
+exist and were read directly, in full, this run. This is the opposite
+failure from flag 37: not a phantom run being reported, but two real runs
+going unreported. Combined with flag 37, the pattern across this card's
+history is that the correspondence between "a workflow run happened" and
+"a card update happened" has been unreliable in both directions.
+**Recommend to the reviewer:** check whether PRs for 2026-09-13 and
+2026-09-20 were opened and merged without a card-triage step, or whether
+triage ran but its output was lost before being committed.
+
+Title-deduplication against all six prior incremental files finds this
+run's 23 documents contain **21 net-new titles and 2 repeats**:
+`2006-2007 esemokwu Tunisia` (also in 2026-09-13, text fully byte-identical
+— the flag-27/38 null-edit-resurfacing pattern recurring on a new title)
+and `Chimamanda Ngozi Adichie` (also in 2026-08-18, 2026-08-23, and
+2026-09-27, length changing on every sighting — continues the genuine
+ongoing-live-edit pattern flags 27/38 already established for this
+particular, frequently-updated article).
+
+### 43. 2026-09-20 — A fourth independent sighting of the Ethiopic-script substitution defect (flags 7, 15), in a birth-date construction again
+
+`Ajuan Mance` reads: `"...onyinye nke ụmụ ojii dị ka ndị na-ese ihe, ndị
+na- **መሪ** ọrịa na ndị na-eme nsogbu nsogbu na eze n'okpuru ihe mere..."` —
+one Ethiopic (Amharic) syllable character (U+1265 "mä", confusingly reading
+as part of a longer expected word) standing in for a dropped token, the
+same defect family flags 7 and 15 documented in 2026-08-13/15 batches.
+Unlike flag 15's birth-parenthetical case, this document's `flags` field is
+empty — this heuristic gap (the existing `mt_suspect_orthography` pattern
+does not catch Ethiopic-range characters, only Yoruba/IPA open-o/epsilon)
+is now confirmed across four separate documents and three separate runs,
+strengthening flag 29's recommendation to add an explicit non-Latin-script
+detector rather than relying on the current character set.
+
+### 44. 2026-09-13/09-20/10-11 — Markup-leakage incidence continues to fluctuate batch to batch, no trend, still far above zero
+
+Direct `Templeeti:`/`</ref>` search: 5 of 25 documents (20%) on 2026-09-13,
+3 of 24 (12.5%) on 2026-09-20, 1 of 23 (4.3%) on 2026-10-11. `Alicia
+Kozakiewicz` (2026-09-13) is the worst single instance yet recorded: **7
+separate `</ref>` citation-tag leaks** in one document (e.g. `"...Retrieved
+18 March 2015.</ref>\n\n\n== Ntọrọ =="` — the closing tag of a citation
+template surviving straight into running text, repeated across seven
+different footnotes). Joining flags 29/31/34/39's incidence figures (0%,
+23%, 41%, 16.7%) with this run's three new data points (20%, 12.5%, 4.3%)
+gives eight batches ranging from 0% to 41% with no consistent direction —
+consistent with flag 39's reading that this is a persistent, moderately
+common defect on the `prop=extracts` path rather than a trend in either
+direction. The `markup_leakage` heuristic proposed in flag 29 still has not
+been implemented.
+
+### 45. 2026-09-20 — Second confirmed true positive for `archaic_register`, plus a same-marker case the heuristic still misses
+
+`Abike Dabiri` carries `"flags": ["archaic_register"]` and contains `nile`
+(archaic, modern `niile`): `"...Alhaja Alimotu Erogbogbo **nile** sitere na
+Bello Solebo ezinụlọ..."` — the same lexical marker flag 2 catalogued and
+flag 40 first confirmed as a true positive (`Brian Murray`, 2026-09-27).
+Two true positives in two consecutive triaged runs is a better signal for
+this heuristic than flag 29's original "fired zero times" reading. However,
+in this run's own 2026-10-11 batch, `School Strike for Climate` contains
+the identical marker (`"...3000 bịanyere aka na ya n'ụwa **nile**..."`) in
+an otherwise modern-register 2019-news article, and its `flags` field is
+empty — a single incidental `nile` in current-affairs prose, not a
+systematically archaic document, so this is weaker evidence than `Abike
+Dabiri` and should not be read as a third confirmed miss of the same
+severity as flag 29's `Nnamdi Azikiwe` case.
+
+### 46. 2026-10-11 — Two more probable false positives for `mt_suspect_orthography`, and one likely genuine hit, extending flag 32's precision concern
+
+Three documents this run carry `mt_suspect_orthography`. Reading each
+directly:
+
+- `Asụsụ Oko`: the trigger is `ɔ́kɔ́` (open-o, U+0254, with acute tone marks)
+  in `"Oko (ɔ́kɔ́), nke a makwaara dị ka Ogori-Magongo..."` — a tonal
+  phonetic gloss of the language's own name in its own (non-Igbo, Edoid)
+  orthographic convention, the same "legitimate linguistic notation, not MT
+  residue" pattern flag 32 found for `Achille Mbembe`'s IPA gloss.
+- `Alicia Kozakiewicz` (2026-09-13, not flagged by the heuristic this run
+  but carries the character): `/ əˈliːʃə ˌkoʊzəˈkɛvɪtʃ /` is an English IPA
+  pronunciation gloss, same class again.
+- `Mafuta (ụgbọ mmiri)`: the trigger is `tɔn` in `"...na-ebute ihe dị ka
+  **tɔn** 250 nke a ga-hazi..."` — open-o substituting for `ọ` in a borrowed
+  unit word (`tọn`, "ton"), structurally identical to flag 5/19's confirmed
+  MT-residue pattern, not a pronunciation gloss. This one reads as a likely
+  genuine hit.
+
+Net: of the heuristic's hits reviewed directly across this card to date
+(flag 32's one, plus this run's two to three), a majority are IPA/phonetic
+notation rather than MT residue. Flag 32's suggested fix (exclude
+`/…/`-delimited spans immediately after a proper noun) would correctly
+clear `Asụsụ Oko` and `Alicia Kozakiewicz` here but would not by itself
+distinguish `Mafuta`'s bare `tɔn` from a similarly bare, non-delimited
+genuine gloss, so the exclusion rule likely needs to also check for
+IPA bracket/slash delimiters specifically, not just proximity to a name.
+
+### 47. 2026-10-11 — This run's stub-skip rate (95.2%) is the highest yet recorded, consistent with a `recentchanges` watermark now surfacing deeper into low-activity pages
+
+`corpus_run_summary.json` reports 500 titles listed, 476 skipped as stubs,
+1 skipped for markup, 23 kept (476 + 1 + 23 = 500). This card has not
+previously tracked the skip breakdown; recorded here as a first data point,
+not a trend, since there is nothing to compare it to yet. Worth tracking in
+future runs: a rising stub-skip rate over time would be consistent with the
+`recentchanges` feed surfacing more marginal/low-activity pages as the
+watermark advances, which would make each run's kept-document count an
+increasingly unreliable proxy for Igbo Wikipedia's overall edit volume.
 
 ## Intended uses
 
