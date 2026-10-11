@@ -41,6 +41,11 @@ previous file.
 | 2026-08-23 | 286 | 8 |
 | 2026-08-30 | 290 | 4 |
 | 2026-09-27 | 291 | 1 |
+| 2026-10-11 | 294 | 3 |
+
+**2026-10-11:** verified directly against `corpus/catalog/hf_datasets.json`
+(294 entries, 294 unique ids — no duplicates). `new_since_last_run` lists
+exactly 3 entries, consistent with 291 + 3 = 294.
 
 **2026-09-27 correction: the previous "2026-09-06" row (292, +2) does not
 match `corpus/catalog/hf_datasets.json`.** This run's summary reports
@@ -199,6 +204,34 @@ surfaces it again.
   entry does not indicate sample count or hours of audio, so scale is
   unknown until someone opens the dataset card directly.
 
+## 2026-10-11 — 3 new datasets
+
+- **`michsethowusu/yoruba-speech-text-parallel`** — CC-BY-4.0, tagged `yo`
+  only, no Igbo content. In scope under this project's relevance policy as
+  a Nigerian-language resource; speech-text parallel construction for a
+  tonal Niger-Congo language is a methodology that could transfer directly
+  to building an equivalent Igbo speech-text resource, independent of the
+  Yoruba-specific content (same transfer logic already applied to the
+  `adedejimakinde/yoruba-normalization-pairs` entry above).
+- **`abdulfatah740/Hausa_Healthcare_LLM_Preference_Evaluation_Dataset`** —
+  license `other` (not a standard SPDX identifier), no `languages` field
+  populated despite the Hausa-specific name. Domain-specific (healthcare)
+  LLM preference-evaluation data is a resource type this catalog has not
+  previously surfaced for any Nigerian language; the construction
+  methodology (preference pairs for evaluating LLM outputs in a
+  low-resource language) could transfer to an Igbo healthcare-LLM
+  evaluation set if the license clears. **Verify before use.**
+- **`ketanmore/LLaVA-Instruct-150K-13-African-Languages`** — CC-BY-NC-4.0,
+  13 languages including `ha` (Hausa) and `pcm` (Naija/Pidgin) but no
+  Igbo. A multimodal (image + instruction) visual-instruction-tuning
+  dataset machine-translated or adapted into 13 African languages from the
+  English LLaVA-Instruct-150K — in scope per this project's relevance
+  policy as a data-efficient cross-lingual adaptation technique (translating
+  an existing large instruction-tuning set into low-resource languages
+  rather than collecting new instructions natively) that could transfer to
+  Igbo multimodal instruction data, even though Igbo itself is absent from
+  this release. Non-commercial license restricts downstream use.
+
 ## Known limitations and quality flags
 
 ### 1. 2026-08-07 — all seven Hub queries failed; catalog written as `[]`
@@ -246,12 +279,12 @@ when any term failed; surface a `failed_terms` list in the run summary.
 ### 3. Metadata-quality caveats that will apply once the fetch works
 
 - `license` is read from `cardData.license` with a fallback, defaulting to
-  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-09-27,
-  163 of the 291 catalogued datasets (56.0%) carry `UNKNOWN`** — counted
-  directly from `corpus/catalog/hf_datasets.json` (the prior "164/292,
-  56.2%, 2026-09-06" figure is retracted along with the rest of that run,
-  see above; the last verified figure before this run was 163/290, 56.2%,
-  on 2026-08-30) — so this remains the majority case, not an edge case; do
+  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-10-11,
+  163 of the 294 catalogued datasets (55.4%) carry `UNKNOWN`** — counted
+  directly from `corpus/catalog/hf_datasets.json`. The UNKNOWN count is
+  unchanged from 2026-09-27 (still 163); the percentage only moved because
+  all 3 datasets added this run have a non-`UNKNOWN` license (`cc-by-4.0`,
+  `other`, `cc-by-nc-4.0`). Still the majority case, not an edge case; do
   not filter or sort on license without first routing `UNKNOWN` entries to
   manual review.
 - `languages` comes from self-declared card metadata and is often missing or

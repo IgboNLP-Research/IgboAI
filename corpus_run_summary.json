@@ -1,56 +1,56 @@
 {
-  "run_date": "2026-09-27",
+  "run_date": "2026-10-11",
   "mode": "all",
   "wikipedia": {
     "wikipedia_ig": {
-      "output": "corpus/raw/wikipedia_ig/2026-09-27.jsonl.gz",
+      "output": "corpus/raw/wikipedia_ig/2026-10-11.jsonl.gz",
       "titles_listed": 500,
       "skipped_stub": 476,
-      "skipped_markup": 0,
-      "documents": 24,
-      "tokens_ws": 18860,
-      "chars": 104916,
-      "diacritic_char_ratio": 0.07121,
+      "skipped_markup": 1,
+      "documents": 23,
+      "tokens_ws": 22262,
+      "chars": 123839,
+      "diacritic_char_ratio": 0.07532,
       "samples": [
         {
-          "title": "2011 Nhọrọ Senate nke Naijiria na Kaduna Steeti",
-          "url": "https://ig.wikipedia.org/wiki/2011_Nh%E1%BB%8Dr%E1%BB%8D_Senate_nke_Naijiria_na_Kaduna_Steeti",
-          "excerpt": ".Emere ntuli aka ndị Sineti nke afọ 2011 na Kaduna steeti n'abalị itoolu n'ọnwa Eprel, afọ 2011, iji họpụta ndị otu Sineti na Naijiria ga-anọchi anya steeti Kaduna.  Yusuf Datti Baba-Ahmed na-anọchi anya Kaduna North na Mohammed Saleh na-anọchite anya Kaduna Central meriri n'usoro Congress for Progressive Change, ebe Nenadi Usman nọchitere Kaduna South n'ọkwa ndị Peoples Democratic Party.\n."
+          "title": "2006-2007 esemokwu Tunisia",
+          "url": "https://ig.wikipedia.org/wiki/2006-2007_esemokwu_Tunisia",
+          "excerpt": "Templeeti:Campaignbox Algeria 2002-presentNa 23 ọnwa Disemba afọ 2006 na 3 Jenụwarị afọ 2007, ndị ọrụ nchekwa Tunis na ndị otu nwere njikọ na otu ndị na-eyi ọha egwu Islamist Salafist Group for Preaching and Combat (GSPC) na obodo Soliman na Hammam-Lif ndịda isi obodo Tunis, na-egbu ihe karịrị mmadụ iri na abụọ.\n\n\n== Esemokwu ==\nN'abalị iri abụọ na atọ n'ọnwa Disemba, e gburu ndị Alakụba abụọ ma jide abụọ n'ọgụ ha na ndị uwe ojii na obodo Hammam-Lif n'ebe ndịda Tunis.\nN'ọnwa Jenụwarị 3, e gburu ma ọ dịkarịa ala ndị ọrụ nchekwa Tunisia abụọ na ndị Alakụba iri na abụọ, ma jide mmadụ iri na ise n"
         },
         {
-          "title": "Akwụkwọ Pickwick (ihe nkiri 1952)",
-          "url": "https://ig.wikipedia.org/wiki/Akw%E1%BB%A5kw%E1%BB%8D_Pickwick_(ihe_nkiri_1952)",
-          "excerpt": "The Pickwick Papers bụ Ihe nkiri ihe nkiri na-atọ ọchị nke akụkọ ihe mere eme nke Britain nke afọ 1952 nke Noel Langley dere ma duzie na James Hayter, James Donald, Nigel Patrick na Joyce Grenfell. Ọ dabeere na akwụkwọ akụkọ Charles Dickens nke 1837 nke otu aha ahụ. Ọ bụ Renown Pictures mere ya bụ ndị wepụtara ihe nkiri Dickens ọzọ Scrooge n'afọ gara aga.\nEmere ihe nkiri ahụ na Nettlefold Studios na Walton-on-Thames. E sere ya na oji na ọcha, Onye nduzi nka Frederick Pusey na ejiji Beatrice Dawson mepụtara ihe nkiri ahụ. Emere ya na Gaumont Cinema na Haymarket na London na 14 Nọvemba 1952.  'a"
+          "title": "Andrianna Campbell-LaFleur",
+          "url": "https://ig.wikipedia.org/wiki/Andrianna_Campbell-LaFleur",
+          "excerpt": "Andrianna Tamara Campbell-LaFleur ( née Campbell ) bụ onye nkatọ nka America, onye na-ahụ maka ihe na onye ọkụkọ ihe mere eme bụ ihe na nka America nke ike apụ nke ndụ na nke iri abụọ.\n\n\n== Ndụ mmalite na agụmakwụkwọ ==\nCampbell-LaFleur akwụkwọ akwụkwọ na Rhode Island School of Design (RISD), ebe ọ akara nzere BFA ya na akwụkwọ akwụkwọ na 2001. [1] Mgbe ọ nọ na RISD, RISD Museum nyere ya nri Carnegie Fellowship .  Ọ na-arụ ọrụ dị ka onye na-arụkọ ọrụ na Forbes, bụ ebe o jikwaa nchịkọta ihe osise mba ụwa.\nỌ natara akara ugo doctorate site na Ngalaba Art History na Graduate Center, CUNY na 2020,"
         },
         {
-          "title": "Asha Khemka",
-          "url": "https://ig.wikipedia.org/wiki/Asha_Khemka",
-          "excerpt": "Dame Asha Khemka DBE DL (amụrụ n'ọnwa Ọktoba n'afọ 1951,  na Sitamarhi, Bihar)   bụ onye bụbu onye nkuzi nke gbara arụkwaghịm dị ka onye isi na onye isi oche na West Nottinghamshire College na ngwụcha afọ 2018 mgbe kọleji ahụ nwere nsogbu ego.    Ọ sonyeere kọleji na 2006, nọchiri Di McEvoy-Robinson. Tupu ọ gbaa arụkwaghịm n'ọnwa Ọktoba afọ 2018 ọ bụ otu n'ime ndị a na-akwụ ụgwọ kachasị elu na ngalaba ahụ. \n\n\n== Nsọpụrụ ==\nE nyere Khemka ihe nrite OBE (Order of the British Empire) dị ka akụkụ nke 2009 New Year Honours, nke Elizabeth nke Abụọ, mgbe ahụ The Queen, gosipụtara na Buckingham Palace"
+          "title": "Blanca de Castejón",
+          "url": "https://ig.wikipedia.org/wiki/Blanca_de_Castej%C3%B3n",
+          "excerpt": "Blanca de Castejón (Mee 13, 1906 - Disemba 26, 1969) bụ onye na-eme ihe nkiri na Puerto Rican nke rụrụ ọrụ na Golden Age nke sinima Argentina n'ime 1930 na karịsịa Golden Age nke sinima Mexico kemgbe ime 1940, ebe ihe gaara ya nke ọma na nweta nkwanye ùgwù nke ukwuu. A mụrụ ya na Comerío, Puerto Rico, ma nwụọ na Mexico City. \nCastejón malitere ọrụ ya na-arụ ọrụ na FOX na 1931. Ka ọ na-erute n'afọ sochirinụ, ọ malitela gosipụta ọrụ ya na Mexico dị ka akụkụ nke ọrụ mba ụwa nke ga-akpọrọ ya gaa Spain, Uruguay na Argentina. Ọ pụtara na Crimen a las tres (1935), Carnival del Diablo (1936), Mis dos "
         },
         {
-          "title": "Brian Murray (onye na-eme ihe nkiri)",
-          "url": "https://ig.wikipedia.org/wiki/Brian_Murray_(onye_na-eme_ihe_nkiri)",
-          "excerpt": "Brian Murray (onye a  Bell; ubochi iri Septemba otu puku narị itoolu iri atọ na asaa ruo ụbọchị iri abụo Ọgọst afọ puku abuo na iri na asatọ)  bụ onye na-eme ihe nkiri na onye nduzi ihe nkiri nke Ndịda Afrika nke a nabatara na Aulo ọmụma ebe nkiri Amerika na afọ puku abụọ na anọ .  \n\n\n== Akụkọ ndụ ==\nA mụrụ Murray dị ka Brian Bell na Johannesburg, nwa Mary Dickson (née Murray) na Alfred Bell, onye na-egwu golf.\n\n\n== Ọrụ ==\nMurray mere nke mbụ ya na Broadway na egwuregwu ihe nile n'oge dị mma na afo otu puku narị itoolu iri isii na ise N'afọ otu puku narị itoolu iri isii na isii, ọ pụtara dị ka"
+          "title": "Drexel University",
+          "url": "https://ig.wikipedia.org/wiki/Drexel_University",
+          "excerpt": "Drexel University bụ mahadum nyocha nkeonwe nke nwere nnukwu ogige ya dị na Philadelphia, Pennsylvania, USA. Anthony J. Drexel, onye na-ahụ maka ego na onye na-eme ebere, hiwere ya na 1891. E hiwere ya na mbụ dị ka Drexel Institute of Art, Science and Industry, aha ya bụ Drexel Institute of Technology na 1936 tupu o jiri aha ya ugbu a na 1970. Ruo 2020, ihe karịrị ụmụ akwụkwọ 24,000 debanyere aha na ihe karịrị mmemme mahadum 70 na ihe karịrị mmemme masters, doctoral, na ọkachamara 100 na mahadum ahụ. A maara Mahadum Drexel maka mmemme agụmakwụkwọ mmekorita ya (co-op)."
         },
         {
-          "title": "Conjestina Achieng",
-          "url": "https://ig.wikipedia.org/wiki/Conjestina_Achieng",
-          "excerpt": "Conjestina Achieng (amụrụ na 20 Ọktoba 1977 n'obodo Umiru, Yala division, Siaya District. Conjestina bụ nwa nke ise a mụrụ n'ezinụlọ dị mmadụ iri. Nna ya Clement Adalo bụ onye ọrụ ahụike lara ezumike nká na nne ya bụ Gertrude Auma. Nwanne ya nwoke nke okenye, Joseph Kusimba bụbu onye na-akụ ọkpọ nke na-elekọta klọb ịkụ ọkpọ na Mathare, Nairobi.Ọ bụ nwanyị Kenya na-akụ ọkpọ nke a na-akpọ \"Hands of Stone\" ma bụrụ onye nke ise n'ụwa. Ọ ghọrọ nwanyị Afrịka mbụ nwere aha mba ụwa mgbe ọ meriri Ugandan Fiona Tugume iji nweta aha WIBF Middleweight. Ọ nwetakwara mmeri n'ọnọdụ esemokwu na WBC nke oge ah"
+          "title": "Ihe mkpofu efu",
+          "url": "https://ig.wikipedia.org/wiki/Ihe_mkpofu_efu",
+          "excerpt": "Ihe mkpofu efu bụ usoro ụkpụrụ ndị lekwasịrị anya na mgbochi mkpofu nke na-agba ume imezigharị usoro ndụ ihe onwunwe ka e wee jiri ngwaahịa niile e kwesiri ikpofu ekpofu mee ihe (ya bụ, na-eji ya eme ihe) na / ma ọ bụ jiri ya mee ihe ọzọ. Ebumnuche nke mmegharị ahụ bụ izere izipu ihe mkpofu n'ebe a na-ekpofu ahịhịa, ebe a na-ere ọkụ, oké osimiri, ma ọ bụ akụkụ ọ bụla ọzọ nke gburugburu ebe obibi. Ka ọ dị ugbu a, ọ bụ naanị 9% nke plastik zuru ụwa ọnụ ka a na-emegharị. N'ime usoro ihe mkpofu efu, a ga-eji ihe mee ihe ndị ọzọga ba ụrụ ruo mgbe a ga-enweta ọkwa kachasị mma. Nkọwa nke Zero Waste I"
         },
         {
-          "title": "Eco Creatures: Save the Forest",
-          "url": "https://ig.wikipedia.org/wiki/Eco_Creatures:_Save_the_Forest",
-          "excerpt": "Eco Creatures: Save the Forest, nke a maara dị ka Ecolis na Japan nakwa dị ka E Colis: Save the forest na Europe, bụ egwuregwu vidio na-eme n'oge maka Nintendo DS video game console. Ọ bụ LightWeight na Headlock Corporation mepụtara ya ma wepụta ya na Japan na August 23, 2007 site na Interchannel; na North America na March 4, 2008 site na Majesco Entertainment; na Europe na June 13, 2008 site na Rising Star Games. Eco Creatures bụ nke World Wide Fund for Nature na-akwado.\n\n\n== Nkọwa ==\nNdị bi n’Osisi Mana biri n’udo na nkwekọ ruo ọtụtụ afọ mgbe Alaeze ahụ dị nso malitere ibibi osisi iji gbasaa"
+          "title": "Jewish Neo-Aramaic dialect of Dohok",
+          "url": "https://ig.wikipedia.org/wiki/Jewish_Neo-Aramaic_dialect_of_Dohok",
+          "excerpt": "Asụsụ Neo-Aramaic nke Ndị Juu nke Dohok bụ asụsụ Judeo-Aramaic nke sitere na obodo ndị Juu dị na Duhok, Kurdistan nke Iraq. Ndị Juu si Izrel pụọ na Iraq na-asụkwa ya n'afọ 1950.\n\n\n== Akụkọ ihe mere eme ==\n.\n\n\n== Ihe ndị e ji mara ya ==\nJudeo-Dohoki Aramaic nwere ọtụtụ ihe pụrụ iche nke na-eme ka ọ dị iche na asụsụ ndị ọzọ dị n'ebe ugwu ọwụwa anyanwụ Neo-Aramaic nke gụnyere: Inwe ụdị ọdịdị-ọdịdị-ụdị, ịsọ mpi na-agafe agafe, na ịkewapụta okwu omume na nke kwụ otu ebe.\n\n\n== Ihe odide ihe atụ ==\n\n\n== Edensibia =="
         },
         {
-          "title": "Fifi Cooper",
-          "url": "https://ig.wikipedia.org/wiki/Fifi_Cooper",
-          "excerpt": "Refilwe Boingotlo Moeketsi (amụrụ n'abalị̀ iri abụọ na anọ nke ọ̀nwa Ọktoba afo 1991), nke a maara dịka Fifi Cooper bụ onye na-edekọ egwu na South Africa. Fifi Cooper malitere ọrụ egwu ya dị ka onye na-agụ egwu R&B tupu mgbasasi egwu ya ahụ ya ka ọ wepụtara egwu rap ya \"Chechela Morago\" n'afọ 2010. N'afọ 2015, o wepụtara abọm studio mbụ ya nke nwetara ihe nrite 20FIFI .\n\n\n== Mbido ndụ na agụmakwụkwọ ==\nFifi Cooper bụ nwa ikpeazụ n'ime ụmụ atọ. Ọ gụrụ akwụkwọ n'oge ọ bụ nwata na Montshiwa, Mahikeng, South Africa, ebe o jikwa mgbalị ya na-ịbụ abụ na ịgba egwú mee ihe. Ọ gụsịrị akwụkwọ sekọndrị y"
+          "title": "Josephine Casey",
+          "url": "https://ig.wikipedia.org/wiki/Josephine_Casey",
+          "excerpt": "Josephine Casey (1 Jenụwarị 1878 (?) - 27 Jenụwarụ 1950) bụ onye nhazi ọrụ na onye ndú, na onye na-akwado ikike ụmụ nwanyị.\n\n\n== Oge ọ malitere ==\nA mụrụ Casey, nwa ikpeazụ n'ime ụmụ anọ, na Memphis, Tennessee na [1878?] ma zụlite ya na Chicago. Nne na nna ya bụ ndị Katọlik, Cornelius na Bridget Stephens Casey, bụ ndị Irish kwagara mba ọzọ.\n\n\n== Ọrụ ==\n\nMgbe ọ na-arụ ọrụ dị ka onye na-ahụ maka tiketi ụgbọ okporo ígwè na Chicago na 1904 ọ gwara ụmụ nwanyị ya na ha na-arụkọ ọrụ ka ha guzobe otu. Ọ rụrụ ọrụ dị ka onye nhazi maka Boston Women's Trade Union League site na 1906 ruo 1909. Mgbe ahụ, ọ"
         },
         {
-          "title": "Hilda Tadria",
-          "url": "https://ig.wikipedia.org/wiki/Hilda_Tadria",
-          "excerpt": "Hilda M. Tadria bụ onye na-ahụ maka ihe ndị ruuru ụmụ nwanyị na Uganda, ọkachamara na mmepe mmekọrịta mmadụ na ibe ya, na onye isi nchịkwa nke Mentoring and Empowerment Programme for Young Women in Uganda (MEMPROW). Ọ na-adụ ndị NGO ọdụ n'ụwa niile gbasara okike, njikwa ụlọ ọrụ na mmepe mmekọrịta mmadụ na ibe ya, ọ bụkwa osote prọfesọ na Mahadum Makerere.\n\n\n== Oge ọ malitere ==\nTadria nwere nzere bachelọ na Sociology site na Mahadum Makerere, nzere mastas na Social Anthropology site na Newnham College, Cambridge, England, yana nzere PhD na Social Anthropology site na Mahadum Minnesota, US..\n\n\n"
+          "title": "Kaṇita Tīpikai",
+          "url": "https://ig.wikipedia.org/wiki/Ka%E1%B9%87ita_T%C4%ABpikai",
+          "excerpt": "Kaṇita Tīpikai (Gaṇita Dīpika) bụ akwụkwọ Tamil nke Paṇṭala Ramasvāmi Nāykkar dere ma bipụta ya na 1825 na-ekwu maka mgbakọ na mwepụ. Ọ bụ akwụkwọ Tamil mbụ na mgbakọ na mwepụ a na-ebipụta ma ọ bụ akwụkwọ Tamil nke mbụ na-ewebata akara maka efu yana ikwurịta akara ọnụọgụ ọnụọgụ ma ọ bụ akara ọnụọụọgụ site na iji nọmba Tamil. Iravatham Mahadevan, onye India a ma ama, na M. V. Bhaskar kwuru n'otu edemede e bipụtara na The Hindu na Disemba 2011: \"Nkwekọrịta nke iji akara maka 10, 100, na 1000 na-egosipụta nọmba ndị dị elu dị ugbu a na Tamil Nadu ruo mgbe obibi akwụkwọ na nnabata nke ụdị mba ụwa n"
         }
       ],
       "backfill_done": true
@@ -58,15 +58,41 @@
   },
   "hf_catalog": {
     "output": "corpus/catalog/hf_datasets.json",
-    "total": 291,
+    "total": 294,
     "failed_terms": [],
     "new_since_last_run": [
       {
-        "id": "9jatesters/9javoice-igbo",
-        "url": "https://huggingface.co/datasets/9jatesters/9javoice-igbo",
+        "id": "michsethowusu/yoruba-speech-text-parallel",
+        "url": "https://huggingface.co/datasets/michsethowusu/yoruba-speech-text-parallel",
+        "license": "cc-by-4.0",
+        "languages": [
+          "yo"
+        ]
+      },
+      {
+        "id": "abdulfatah740/Hausa_Healthcare_LLM_Preference_Evaluation_Dataset",
+        "url": "https://huggingface.co/datasets/abdulfatah740/Hausa_Healthcare_LLM_Preference_Evaluation_Dataset",
+        "license": "other",
+        "languages": []
+      },
+      {
+        "id": "ketanmore/LLaVA-Instruct-150K-13-African-Languages",
+        "url": "https://huggingface.co/datasets/ketanmore/LLaVA-Instruct-150K-13-African-Languages",
         "license": "cc-by-nc-4.0",
         "languages": [
-          "ig"
+          "am",
+          "ha",
+          "ln",
+          "st",
+          "zu",
+          "ny",
+          "kam",
+          "ary",
+          "sw",
+          "arz",
+          "kg",
+          "pcm",
+          "umb"
         ]
       }
     ]
