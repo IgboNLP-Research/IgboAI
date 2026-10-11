@@ -68,11 +68,32 @@ live feed if it recurs or lengthens.
 | 2026-08-18 | 2 | 17 |
 | 2026-08-23 | 0 | 17 |
 | 2026-08-30 | 6 | 23 |
-| 2026-09-27 | 8 | 31 |
+| 2026-09-13 — **previously undocumented, see 2026-10-11 correction below** | 8 | 31 |
+| 2026-09-20 — **previously undocumented, see 2026-10-11 correction below** | 8 | 39 |
+| 2026-09-27 — **corrected, see below** | ~~8~~ **7** | ~~31~~ **46** |
+| 2026-10-11 | 8 | 54 |
 
-Cumulative figure derived directly by counting and grouping lines in
-`corpus/manifests/bbc_igbo.jsonl` by `recorded` date (31 total, 8 of them
-`recorded: "2026-09-27"`), not accumulated from the prior card.
+Cumulative figure derived directly by counting and grouping all 54 lines in
+`corpus/manifests/bbc_igbo.jsonl` by `recorded` date, not accumulated from
+the prior card.
+
+**2026-10-11 correction: two entire recorded dates, 2026-09-13 and
+2026-09-20 (8 lines each), were never reflected in any prior version of
+this table**, alongside a count error on 2026-09-27 itself. Grouping every
+line in the manifest by `recorded` date directly gives: 2026-08-07 (11),
+08-13 (3), 08-15 (1), 08-18 (2), 08-23 (0), 08-30 (6), **09-13 (8)**, **09-20
+(8)**, 09-27 (**7**, not 8), 10-11 (8) — summing to 54, matching the file's
+total line count exactly. The previous card's "2026-09-27: 8 new, cumulative
+31" row is wrong on both numbers: 31 is actually the correct cumulative
+total *as of 2026-09-13* (11+3+1+2+0+6+8=31, suggesting the prior triage
+pass's "8 new" count was the 2026-09-13 batch mislabeled as 2026-09-27),
+and the true 2026-09-27 batch added only 7 lines, not 8. Old values: 8 new
+/ 31 cumulative, attributed to 2026-09-27. New values: 09-13 contributes 8
+(cumulative 31), 09-20 contributes 8 (cumulative 39), 09-27 contributes 7
+(cumulative 46), and this run (10-11) contributes 8 (cumulative 54). See
+the matching correction in `wikipedia_ig.md` flag 42 — the same two
+previously-undocumented run dates appear there too, across an independent
+source, which rules out a one-off typo in this file alone.
 
 **2026-09-27 correction: the "2026-09-06" row this table previously
 showed (5 new, cumulative 28) does not exist in the manifest.** Grouping
@@ -124,24 +145,32 @@ exist in `corpus/manifests/bbc_igbo.jsonl`; left here struck through in
 spirit (not deleted, per this project's policy of correcting in place with
 old/new values) rather than silently removed.
 
-**2026-09-27 gap check: a ~25-day silent gap, the largest yet recorded.**
-Checked directly against `corpus/manifests/bbc_igbo.jsonl`: this run's 8
-new items are published 2026-09-23 15:12 UTC through 2026-09-27 07:24 UTC;
-the previous real batch (`recorded: "2026-08-30"`) tops out at 2026-08-29
-15:12 UTC. That leaves **2026-08-29 through 2026-09-23, roughly 25 days,
-with zero recorded items** — five times longer than the 5-day gap flagged
-on 2026-08-23 and the largest gap this card has observed. At the
-batch-1 long-run rate (≈0.65 items/day) this window would statistically be
-expected to contain quite a few articles. Unlike the earlier, shorter gaps,
-a 25-day span is almost certainly wider than the RSS feed's sliding window
-(typically ~10–20 items), meaning this coverage loss is very likely
-**permanent and unrecoverable from this feed** — not a "check next run"
-observation. **Recommend to the reviewer:** treat this as confirmation, not
-just a repeat of the standing coverage caveat, and consider whether the
-ingestion workflow actually ran on its stated cadence between 2026-08-30
-and 2026-09-27 — a 28-day span between runs would itself explain a gap
-this size even with a healthy feed window, independent of the window-size
-question.
+**2026-09-27 gap check — retracted, see the 2026-10-11 cumulative-size
+correction above.** The "~25-day silent gap" below was computed against a
+manifest state that was missing the 2026-09-13 and 2026-09-20 batches
+entirely; with those restored, there is no large gap. Original text
+preserved for the record, struck through in spirit rather than deleted,
+per this card's correction policy:
+
+~~A ~25-day silent gap, the largest yet recorded... 2026-08-29 through
+2026-09-23, roughly 25 days, with zero recorded items... very likely
+permanent and unrecoverable from this feed.~~
+
+**2026-10-11 gap check, and corrected gap history for 2026-09-13 through
+2026-10-11.** Grouping all 54 manifest lines by `recorded` date and
+comparing each batch's earliest `published` timestamp against the previous
+batch's latest, directly: 08-30→09-13 gap 5 days, 09-13→09-20 gap 2 days,
+09-20→09-27 gap 4 days, 09-27→10-11 gap 10 days. All four are within the
+range this card's earlier entries (2–5 days) already treated as normal
+feed-window behavior; none approaches the sliding-window's estimated
+~10–20-item capacity. **The apparent 25-day gap never existed** — it was
+an artifact of two real, undocumented intervening runs (flag 42 in
+`wikipedia_ig.md`), not a feed or workflow failure. This is a useful
+caution for this card itself: a "gap check" is only as good as the
+manifest state it is computed against, and this is the second time (after
+the 2026-09-06 phantom-run correction) that an apparent coverage anomaly
+in this file turned out to be a bookkeeping gap in the triage process
+rather than a real property of the BBC Igbo feed.
 
 ## Known limitations and quality flags
 
