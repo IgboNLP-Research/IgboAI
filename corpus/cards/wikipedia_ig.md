@@ -87,6 +87,9 @@ prior cards (see flag 21 for why the pre-2026-08-18 rows no longer apply to
 | 2026-09-06, incremental — **retracted, see flag 37** | ~~17~~ | ~~8,221~~ | ~~46,343~~ | no `corpus/raw/wikipedia_ig/2026-09-06.jsonl.gz` exists in this run's working tree |
 | 2026-09-27, incremental (raw file) | 24 | 18,860 | 104,916 | `recentchanges`, diacritic ratio 0.0712, this file read directly and in full; matches `corpus_run_summary.json` exactly |
 | 2026-09-27, incremental (deduplicated by title vs the three files that actually exist on disk: 2026-08-18/23/30) | **22 net-new titles, 2 repeats** | n/a | n/a | see flag 37 for the repeats, one of which is the flag-27 stagnation pattern recurring on a single title three runs later |
+| 2026-09-13, incremental — **newly discovered this run, see flag 42; content unverified** | unknown | unknown | unknown | `corpus/raw/wikipedia_ig/2026-09-13.jsonl.gz` exists (34,438 bytes) but this run's instructions prohibit opening `corpus/raw/`; no prior card version ever listed this file |
+| 2026-09-20, incremental — **newly discovered this run, see flag 42; content unverified** | unknown | unknown | unknown | `corpus/raw/wikipedia_ig/2026-09-20.jsonl.gz` exists (41,165 bytes) but this run's instructions prohibit opening `corpus/raw/`; no prior card version ever listed this file |
+| 2026-10-18, incremental (run-reported, not independently verified, see flag 44) | 13 | 25,758 | 142,620 | `recentchanges`, diacritic ratio 0.07585, titles_listed 242, skipped_stub 229 (94.6%); figures are `corpus_run_summary.json`'s own report, not a direct file read |
 
 The 50,623 figure is not from a file I opened; it is read from
 `mt_probe_summary.json` (`scripts/mt_prevalence_probe.py`, committed at repo
@@ -98,17 +101,25 @@ from a full single-pass read of the one file this run actually added
 `corpus_run_summary.json` exactly, confirming there is nothing else this run
 produced in that file).
 
-**Practical corpus size as of 2026-09-27: on the order of 50,688 unique
-documents** (50,623 dump + 65 unique incremental titles — see flag 37 for
-why this is 65, not the previously-claimed 60). Raw storage under
-`corpus/raw/wikipedia_ig/` holds 88 incremental records (21 + 21 + 22 + 24)
-across the four dated files that actually exist on disk, for those 65
-distinct titles — one of which, `Akwụkwọ Pickwick (ihe nkiri 1952)`, was
-fetched three separate times with fully byte-identical text each time (see
-flag 37), so raw record counts overstate corpus growth even more than
-title deduplication alone suggests. Token/character/diacritic aggregates
-for the dump portion are currently unknown corpus-wide (flag 23); do not
-quote a corpus-wide `diacritic_char_ratio` until that is fixed.
+**Practical corpus size as of 2026-09-27 (last date with a verified direct
+read): on the order of 50,688 unique documents** (50,623 dump + 65 unique
+incremental titles — see flag 37 for why this is 65, not the
+previously-claimed 60). Raw storage under `corpus/raw/wikipedia_ig/` holds
+88 incremental records (21 + 21 + 22 + 24) across the four dated files
+that were directly verified, for those 65 distinct titles — one of which,
+`Akwụkwọ Pickwick (ihe nkiri 1952)`, was fetched three separate times with
+fully byte-identical text each time (see flag 37), so raw record counts
+overstate corpus growth even more than title deduplication alone suggests.
+Token/character/diacritic aggregates for the dump portion are currently
+unknown corpus-wide (flag 23); do not quote a corpus-wide
+`diacritic_char_ratio` until that is fixed.
+
+**This total is now known to be incomplete, not just stale (see flag 42):**
+two more incremental files (`2026-09-13.jsonl.gz`, `2026-09-20.jsonl.gz`)
+exist on disk and were never counted into any version of this table. Their
+document counts are unknown, so a corrected "practical size" figure cannot
+be stated this run — treat 50,688 as a floor, not a current estimate, until
+a future run reads those two files directly.
 
 **Backfill status: DONE**, via the dump (`backfill_done: true`,
 `backfill_method: "dump"` in `corpus/state.json`), not via the `allpages`
@@ -137,7 +148,13 @@ content as unverifiable rather than authoritative. Flags dated
 **2026-09-27** are from this run's 24-document incremental batch, read in
 full and title-checked against the union of the three prior incremental
 files that actually exist on disk (2026-08-18, 2026-08-23, 2026-08-30 —
-not 2026-09-06).
+not 2026-09-06). Flags dated **2026-10-18** are from `corpus_run_summary.json`'s
+aggregates and its 8 excerpted samples only, **not** a direct read of
+`corpus/raw/wikipedia_ig/2026-10-18.jsonl.gz` — this run's instructions
+prohibit opening files under `corpus/raw/` (see flag 45) — and that same
+run also discovered (by directory listing only) two previously-undocumented
+incremental files, `2026-09-13.jsonl.gz` and `2026-09-20.jsonl.gz` (see
+flag 42), whose content remains unverified.
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
@@ -793,6 +810,79 @@ same broader family of citation-marker extraction residue. Cosmetic at
 the single-document level; worth folding into the `markup_leakage`
 heuristic's evidence base (flag 29) rather than treating as its own
 pattern.
+
+### 42. 2026-10-18 — Correction: flag 37's "exactly four dated files" was wrong; two undocumented incremental batches exist on disk
+
+Listing `corpus/raw/wikipedia_ig/` directly (filenames and sizes only, not
+contents — this run's instructions prohibit opening files under
+`corpus/raw/`) finds **seven** dated incremental files, not the four flag
+37 reported: `2026-08-18.jsonl.gz`, `2026-08-23.jsonl.gz`,
+`2026-08-30.jsonl.gz`, `2026-09-13.jsonl.gz` (34,438 bytes),
+`2026-09-20.jsonl.gz` (41,165 bytes), `2026-09-27.jsonl.gz`, and this run's
+`2026-10-18.jsonl.gz`. Flag 37's narrower claim — that no
+`2026-09-06.jsonl.gz` exists — is still correct; only the "exactly four"
+count was wrong, by omitting the 09-13 and 09-20 files. `git log` shows
+both arrived in the same commit as the rest of this card's own history
+(`4e77905`), so they were not silently added after flag 37's triage pass;
+they were present then and went unnoticed and undocumented through two
+subsequent card revisions. The two files are comparable in size to the
+verified 21-24-document incremental batches (34-41 KB vs. 36-52 KB), so a
+handful more net-new or repeated titles likely sit in them, but this is an
+inference from file size, not a verified count. **Recommend to the
+reviewer:** a future run with budget to open `corpus/raw/` should read
+these two files directly, title-dedup them against the existing 65-title
+set (flag 37), and fold the result into the cumulative-size table above.
+This same gap (2026-09-13, 2026-09-20) is independently visible in
+`bbc_igbo.md`'s manifest, where it also went undocumented — see the
+correction there — which rules out a Wikipedia-specific cause and points
+at the card-authoring step generally, not this source's fetch pipeline.
+
+### 43. 2026-10-18 — Markup leakage recurs in this run's samples: a citation-tag fragment survives in `2015`
+
+Of the 8 samples in `corpus_run_summary.json`, `2015`'s excerpt ends with
+`P_BI>"Boko Haram destroys at least 16 villages in NE Nigeria: officials".
+Business Insider. Agence France-Presse. January 8, 2015. Archived from the
+orig` embedded directly in running text — `P_BI` reads like a stray
+`ref name="P_BI"` attribute value whose surrounding tag delimiters were
+stripped but the value itself was not. Same unexpanded-citation defect
+family as flags 3, 18, 22, 25, 31, 34, 39. Separately, `2015`'s body opens
+with a complete English sentence immediately followed by what is evidently
+its own Igbo translation of the same sentence — the bilingual-lead pattern
+already catalogued for templated date stubs (flag 6), here on a year
+article rather than a day article.
+
+### 44. 2026-10-18 — A sample excerpt is 100% untranslated English, with no indication (from the excerpt alone) that Igbo prose follows
+
+`Fatima Sana Shaikh`'s 500-character sample excerpt in
+`corpus_run_summary.json` is entirely English — "Fatima Sana Shaikh (born
+11 January 1992) is an Indian actress, who works in Hindi films... She has
+since starred in the streaming anthology projects Ludo (2020), Ajeeb
+Daastaans (2021), and Modern Love Mumbai (2022)." — zero Igbo words, zero
+diacritics, no section break visible before the excerpt's cutoff. Flag 35
+(2026-09-06) found complete English sentences embedded *mid-paragraph*
+inside an otherwise-Igbo document; this excerpt gives no such contrast, so
+it is unconfirmed whether this document is Igbo-with-an-English-residue-lead
+or substantially untranslated throughout. This run's instructions prohibit
+opening `corpus/raw/wikipedia_ig/2026-10-18.jsonl.gz` to check the rest of
+the document. **Recommend to the reviewer:** prioritise this title in the
+next run's direct-read pass.
+
+### 45. 2026-10-18 — Methodology note: this run's figures are not independently verified, unlike flags 27-41
+
+Every dated figure and flag in this entry is drawn from
+`corpus_run_summary.json`'s aggregates and its 8 excerpted samples, per
+this run's explicit instruction not to open, scan, or decompress anything
+under `corpus/raw/` (turn-budget rationale). This departs from the
+direct-full-file-read method flags 27 through 41 used, which is also how
+those flags caught the flag-27/30/38 watermark-stagnation bugs and the
+flag-38 byte-identical-repeat pattern — none of which this run's method
+can detect. Concretely: the "documents: 13" figure for
+`2026-10-18.jsonl.gz` is `corpus_run_summary.json`'s self-report, not a
+line count this card's author verified, and no title-level dedup check
+against the other six incremental files was possible. Treat this run's row
+in the cumulative-size table with correspondingly less confidence than
+earlier rows, and see flag 42 for why that gap compounds with an
+already-incomplete prior count.
 
 ## Intended uses
 
