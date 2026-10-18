@@ -41,6 +41,7 @@ previous file.
 | 2026-08-23 | 286 | 8 |
 | 2026-08-30 | 290 | 4 |
 | 2026-09-27 | 291 | 1 |
+| 2026-10-18 | 305 | 14 |
 
 **2026-09-27 correction: the previous "2026-09-06" row (292, +2) does not
 match `corpus/catalog/hf_datasets.json`.** This run's summary reports
@@ -199,6 +200,68 @@ surfaces it again.
   entry does not indicate sample count or hours of audio, so scale is
   unknown until someone opens the dataset card directly.
 
+## 2026-10-18 — 14 new datasets
+
+Two are Igbo-specific by id (always in scope per this project's relevance
+policy); most of the rest are Nigerian-language (Hausa, Yoruba, Naija
+Pidgin) resources, also in scope; three are ASR sets for non-Nigerian
+West African tonal languages, in scope as methodology that could transfer
+to Igbo ASR/TTS rather than as direct-use data. **10 of the 14 (71%) carry
+`UNKNOWN` license — verify before use** on every one of those.
+
+- **`michsethowusu/igbo-chichewa_sentence-pairs`,
+  `michsethowusu/igbo-ganda_sentence-pairs`** — license `UNKNOWN`, no
+  `languages` field populated, but Igbo-specific by id, extending the same
+  `michsethowusu/*_sentence-pairs` family already flagged in this card's
+  notable-datasets list (Igbo paired with Shona, Tumbuka, Xhosa, Pedi,
+  Yoruba, Kikuyu) with two more low-resource pairing languages (Chichewa,
+  Ganda). Same caution applies: plausible bitext, unverified license and
+  sentence-alignment quality. **Verify before use.**
+- **`ketanmore/LLaVA-Instruct-150K-13-African-Languages`** —
+  cc-by-nc-4.0, a 13-language multimodal instruction set that includes
+  `pcm` (Naija Pidgin) alongside Amharic, Hausa, Lingala, Sesotho, Zulu,
+  Nyanja, Kamba, Darija, Swahili, Egyptian Arabic, Kikongo, and Umbundu.
+  Non-commercial license. In scope via the Pidgin component; multimodal
+  instruction-tuning data is a different use case from this project's
+  current MT/ASR/NER focus, so relevance is narrow until that changes.
+- **`ffatty/plaintext-wikipedia-full-nigerian-pidgin`** — cc-by-sa-3.0,
+  `pcm` only. A full Wikipedia-Pidgin plaintext dump, methodologically the
+  Pidgin analogue of this project's own `wikipedia_ig` source (see
+  [wikipedia_ig.md](wikipedia_ig.md)) — worth comparing extraction/cleaning
+  approaches if this is ingested, since that card documents extensive
+  markup-leakage and MT-residue defects in the equivalent Igbo pipeline
+  that a Pidgin dump plausibly shares.
+- **`Britzzy/nigerian-pidgin-evaluation`,
+  `Ekobwoy/nigerian-pidgin-biology-evaluation`** — both license `UNKNOWN`,
+  Pidgin evaluation sets (the second domain-specific to biology). **Verify
+  before use**; potentially useful as held-out evaluation data for Pidgin
+  NLP work, which this project tracks as an in-scope Nigerian language.
+- **`EYEDOL/naija-voices-hausa-split_0-0`, `EYEDOL/naija-voices-hausa-split_0-1`**
+  — both license `UNKNOWN`, Hausa speech data by id ("naija-voices"
+  suggests a shared recording effort with other Nigerian-language splits
+  not yet in this catalog). **Verify before use**; if the license clears,
+  directly relevant as a possible companion resource for Igbo ASR/TTS data
+  collection methodology.
+- **`michsethowusu/hausa-tumbuka_sentence-pairs`,
+  `michsethowusu/hausa-tswana_sentence-pairs`** — both license `UNKNOWN`,
+  Hausa paired with non-Nigerian languages (Tumbuka, Tswana), same uploader
+  family as the Igbo-paired sets above. In scope via the Hausa side only.
+- **`Aletheia-ng/TinyStories_yoruba`** — license `UNKNOWN`, a Yoruba
+  translation of TinyStories, the same source text already catalogued for
+  Igbo via `ccibeekeoc42/TinyStories_igbo` (see the notable-datasets list
+  above). Likely machine-translated by the same MT-provenance reasoning
+  already applied to that Igbo sibling; the same MT-laundering caution
+  would apply if this or the Igbo version is used for MT training.
+- **`African-Languages-Lab/baoule-asr`, `African-Languages-Lab/fon-asr`,
+  `African-Languages-Lab/gun-asr`** — all cc-by-4.0, ASR data for Baoulé
+  (Côte d'Ivoire), Fon, and Gun (both Benin, both tonal Gbe languages). Not
+  Nigerian and not Igbo, so in scope here only under the methodology-
+  transfer clause of this project's relevance policy: Fon and Gun are
+  tonal Niger-Congo languages comparable in that respect to Igbo, and a
+  consistently-licensed, same-uploader ASR series across three low-resource
+  tonal languages is worth reading for its data-collection method even
+  though none of the three languages is directly usable here.
+
 ## Known limitations and quality flags
 
 ### 1. 2026-08-07 — all seven Hub queries failed; catalog written as `[]`
@@ -246,14 +309,16 @@ when any term failed; surface a `failed_terms` list in the run summary.
 ### 3. Metadata-quality caveats that will apply once the fetch works
 
 - `license` is read from `cardData.license` with a fallback, defaulting to
-  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-09-27,
-  163 of the 291 catalogued datasets (56.0%) carry `UNKNOWN`** — counted
-  directly from `corpus/catalog/hf_datasets.json` (the prior "164/292,
-  56.2%, 2026-09-06" figure is retracted along with the rest of that run,
-  see above; the last verified figure before this run was 163/290, 56.2%,
-  on 2026-08-30) — so this remains the majority case, not an edge case; do
-  not filter or sort on license without first routing `UNKNOWN` entries to
-  manual review.
+  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-10-18,
+  172 of the 305 catalogued datasets (56.4%) carry `UNKNOWN`** — counted
+  directly from `corpus/catalog/hf_datasets.json` (previous verified
+  figure: 163/291, 56.0%, on 2026-09-27) — so this remains the majority
+  case, not an edge case; do not filter or sort on license without first
+  routing `UNKNOWN` entries to manual review. This run's 14 new entries are
+  10/14 (71%) `UNKNOWN`, higher than the standing baseline, consistent with
+  this run's new-dataset mix skewing toward small, recently-uploaded
+  community re-uploads (see the 2026-10-18 section above) rather than
+  established releases.
 - `languages` comes from self-declared card metadata and is often missing or
   wrong on African-language datasets; do not filter on it alone.
 - `search` matches names and descriptions, so `naija` and `african languages`
