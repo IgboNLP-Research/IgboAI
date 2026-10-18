@@ -1,56 +1,56 @@
 {
-  "run_date": "2026-09-27",
+  "run_date": "2026-10-18",
   "mode": "all",
   "wikipedia": {
     "wikipedia_ig": {
-      "output": "corpus/raw/wikipedia_ig/2026-09-27.jsonl.gz",
-      "titles_listed": 500,
-      "skipped_stub": 476,
+      "output": "corpus/raw/wikipedia_ig/2026-10-18.jsonl.gz",
+      "titles_listed": 242,
+      "skipped_stub": 229,
       "skipped_markup": 0,
-      "documents": 24,
-      "tokens_ws": 18860,
-      "chars": 104916,
-      "diacritic_char_ratio": 0.07121,
+      "documents": 13,
+      "tokens_ws": 25758,
+      "chars": 142620,
+      "diacritic_char_ratio": 0.07585,
       "samples": [
         {
-          "title": "2011 Nhọrọ Senate nke Naijiria na Kaduna Steeti",
-          "url": "https://ig.wikipedia.org/wiki/2011_Nh%E1%BB%8Dr%E1%BB%8D_Senate_nke_Naijiria_na_Kaduna_Steeti",
-          "excerpt": ".Emere ntuli aka ndị Sineti nke afọ 2011 na Kaduna steeti n'abalị itoolu n'ọnwa Eprel, afọ 2011, iji họpụta ndị otu Sineti na Naijiria ga-anọchi anya steeti Kaduna.  Yusuf Datti Baba-Ahmed na-anọchi anya Kaduna North na Mohammed Saleh na-anọchite anya Kaduna Central meriri n'usoro Congress for Progressive Change, ebe Nenadi Usman nọchitere Kaduna South n'ọkwa ndị Peoples Democratic Party.\n."
+          "title": "2015",
+          "url": "https://ig.wikipedia.org/wiki/2015",
+          "excerpt": "2015 (MMXV) was a common year starting on Tọọzde of the Gregorian calendar, the 2015th year of the Common Era (CE) and Anno Domini (AD) designations, the 15th  year of the 3rd millennium and the 21st century, and the  6th   year of the 2010s decade.  2015 (MMXV) bụ afọ na-amalite na Tọọzde nke kalenda Gregorian, afọ 2015 nke Common Era (CE) na aha Anno Domini (AD), afọ 15 nke narị afọ nke atọ nke narị afọ 21, na afọ nke isii nke 2010 afọ iri\n\nP_BI>\"Boko Haram destroys at least 16 villages in NE Nigeria: officials\". Business Insider. Agence France-Presse. January 8, 2015. Archived from the orig"
         },
         {
-          "title": "Akwụkwọ Pickwick (ihe nkiri 1952)",
-          "url": "https://ig.wikipedia.org/wiki/Akw%E1%BB%A5kw%E1%BB%8D_Pickwick_(ihe_nkiri_1952)",
-          "excerpt": "The Pickwick Papers bụ Ihe nkiri ihe nkiri na-atọ ọchị nke akụkọ ihe mere eme nke Britain nke afọ 1952 nke Noel Langley dere ma duzie na James Hayter, James Donald, Nigel Patrick na Joyce Grenfell. Ọ dabeere na akwụkwọ akụkọ Charles Dickens nke 1837 nke otu aha ahụ. Ọ bụ Renown Pictures mere ya bụ ndị wepụtara ihe nkiri Dickens ọzọ Scrooge n'afọ gara aga.\nEmere ihe nkiri ahụ na Nettlefold Studios na Walton-on-Thames. E sere ya na oji na ọcha, Onye nduzi nka Frederick Pusey na ejiji Beatrice Dawson mepụtara ihe nkiri ahụ. Emere ya na Gaumont Cinema na Haymarket na London na 14 Nọvemba 1952.  'a"
+          "title": "Asụsụ Kituba",
+          "url": "https://ig.wikipedia.org/wiki/As%E1%BB%A5s%E1%BB%A5_Kituba",
+          "excerpt": "Kituba ( Kituba  , Kituba   ) bụ asụsụ a na-asụkarị na Central Africa . Ọ bụ asụsụ creole  dabere na Kikongo, asụsụ Bantu . Ọ bụ asụsụ obodo na Republic of the Congo na Democratic Republic of the Congo .\n\n\n== Aha ==\nA maara Kituba n'ọtụtụ aha n'etiti ndị na-asụ ya. Na gburugburu agụmakwụkwọ a na-akpọ asụsụ Kikongo-Kituba .\nNa Republic of the Congo a na-akpọ ya Munukutuba, nkebi ahịrịokwu nke pụtara n'ụzọ nkịtị \"M na-ekwu\",  na-eji na Republic's 1992 iwu.  Nke ikpeazụ ( Kituba ) pụtara \"ụzọ ikwu okwu\"  : 213 a na-ejikwa ya na iwu 2015. \nNa Democratic Republic of the Congo a na-akpọ ya Kikongo y"
         },
         {
-          "title": "Asha Khemka",
-          "url": "https://ig.wikipedia.org/wiki/Asha_Khemka",
-          "excerpt": "Dame Asha Khemka DBE DL (amụrụ n'ọnwa Ọktoba n'afọ 1951,  na Sitamarhi, Bihar)   bụ onye bụbu onye nkuzi nke gbara arụkwaghịm dị ka onye isi na onye isi oche na West Nottinghamshire College na ngwụcha afọ 2018 mgbe kọleji ahụ nwere nsogbu ego.    Ọ sonyeere kọleji na 2006, nọchiri Di McEvoy-Robinson. Tupu ọ gbaa arụkwaghịm n'ọnwa Ọktoba afọ 2018 ọ bụ otu n'ime ndị a na-akwụ ụgwọ kachasị elu na ngalaba ahụ. \n\n\n== Nsọpụrụ ==\nE nyere Khemka ihe nrite OBE (Order of the British Empire) dị ka akụkụ nke 2009 New Year Honours, nke Elizabeth nke Abụọ, mgbe ahụ The Queen, gosipụtara na Buckingham Palace"
+          "title": "Chuka Umunna",
+          "url": "https://ig.wikipedia.org/wiki/Chuka_Umunna",
+          "excerpt": "Chuka Harrison Umunna // (na-ege ntị) (/ˈtʃʊkə əˈmuːnə/; amụrụ na'abali iri na asaa nke  ọnwa iri n;afọ otu puku, narị iteolu na iri asaa n'asatọ) (17/10/1978) bụ onye ọchụnta ego Britain na onye bụbu onye ndọrọ ndọrọ ọchịchị jere ozi dị ka onye omeiwu (MP) maka Streatham site n'afọ puku abụọ na iri ruo n'afọ puku abụọ na iri n'iteolu (2010 - 2019). Onye bụbu onye otu Lebọ Patị, ọ bụ akụkụ nke Shadow Kabinet site na afọ puku abụọ, na iri n'otu ruo n'afọ puku abụọ na iri n'se (2011- 2015). Ọ hapụrụ ọrụ n'ime ọnwa abụọ na afọ puku abụọ, na iri n'iteolu (February 2019), mgbe ọ gbara arụkwaghịm ij"
         },
         {
-          "title": "Brian Murray (onye na-eme ihe nkiri)",
-          "url": "https://ig.wikipedia.org/wiki/Brian_Murray_(onye_na-eme_ihe_nkiri)",
-          "excerpt": "Brian Murray (onye a  Bell; ubochi iri Septemba otu puku narị itoolu iri atọ na asaa ruo ụbọchị iri abụo Ọgọst afọ puku abuo na iri na asatọ)  bụ onye na-eme ihe nkiri na onye nduzi ihe nkiri nke Ndịda Afrika nke a nabatara na Aulo ọmụma ebe nkiri Amerika na afọ puku abụọ na anọ .  \n\n\n== Akụkọ ndụ ==\nA mụrụ Murray dị ka Brian Bell na Johannesburg, nwa Mary Dickson (née Murray) na Alfred Bell, onye na-egwu golf.\n\n\n== Ọrụ ==\nMurray mere nke mbụ ya na Broadway na egwuregwu ihe nile n'oge dị mma na afo otu puku narị itoolu iri isii na ise N'afọ otu puku narị itoolu iri isii na isii, ọ pụtara dị ka"
+          "title": "Dwayne McDuffie",
+          "url": "https://ig.wikipedia.org/wiki/Dwayne_McDuffie",
+          "excerpt": "Dwayne Glenn McDuffie (February 20, 1962  February 21, 2011) bụ onye America na-ede akwụkwọ na-atọ ọchị na telivishọn.   O guzobere ụlọ ọrụ na-eme ihe ọchị nke ndị pere mpe nwere na ndị na-arụ ọrụ Milestone Media, nke lekwasịrị anya na ndị pere mpe na-anọchite anya na ndị America na-eme egwuregwu. O mepụtara ma soro mepụta ihe odide dịka Icon, Rocket, Static, na Hardware. McDuffie bụkwa onye edemede na onye na-emepụta ihe nkiri maka usoro ihe nkiri dịka Static Shock (dabere na onye Static), Damage Control, Justice League Unlimited na Ben 10 franchise.\nMcDuffie nwetara nhọpụta Eisner Award atọ "
         },
         {
-          "title": "Conjestina Achieng",
-          "url": "https://ig.wikipedia.org/wiki/Conjestina_Achieng",
-          "excerpt": "Conjestina Achieng (amụrụ na 20 Ọktoba 1977 n'obodo Umiru, Yala division, Siaya District. Conjestina bụ nwa nke ise a mụrụ n'ezinụlọ dị mmadụ iri. Nna ya Clement Adalo bụ onye ọrụ ahụike lara ezumike nká na nne ya bụ Gertrude Auma. Nwanne ya nwoke nke okenye, Joseph Kusimba bụbu onye na-akụ ọkpọ nke na-elekọta klọb ịkụ ọkpọ na Mathare, Nairobi.Ọ bụ nwanyị Kenya na-akụ ọkpọ nke a na-akpọ \"Hands of Stone\" ma bụrụ onye nke ise n'ụwa. Ọ ghọrọ nwanyị Afrịka mbụ nwere aha mba ụwa mgbe ọ meriri Ugandan Fiona Tugume iji nweta aha WIBF Middleweight. Ọ nwetakwara mmeri n'ọnọdụ esemokwu na WBC nke oge ah"
+          "title": "Fatima Sana Shaikh",
+          "url": "https://ig.wikipedia.org/wiki/Fatima_Sana_Shaikh",
+          "excerpt": "Fatima Sana Shaikh (born 11 January 1992)  is an Indian actress, who works in Hindi films. Shaikh appeared as a child artist in such films as Chachi 420 (1997) and One 2 Ka 4 (2001). In 2016, she portrayed wrestler Geeta Phogat in the top-grossing sports film Dangal. She has since starred in the streaming anthology projects Ludo (2020), Ajeeb Daastaans (2021), and Modern Love Mumbai (2022).\n\n\n== Mbido na ndụ onwe onye ==\nA mụrụ Fatima Sana Shaikh na 11 Jenụwarị 1992 a mụrụ ya ma zụlite ya na Mumbai. Nne , Raj Tabassum, si Srinagar, nna ya, Vipin Sharma, si Jammu.  bụ ezie na a zụlitere nna ya "
         },
         {
-          "title": "Eco Creatures: Save the Forest",
-          "url": "https://ig.wikipedia.org/wiki/Eco_Creatures:_Save_the_Forest",
-          "excerpt": "Eco Creatures: Save the Forest, nke a maara dị ka Ecolis na Japan nakwa dị ka E Colis: Save the forest na Europe, bụ egwuregwu vidio na-eme n'oge maka Nintendo DS video game console. Ọ bụ LightWeight na Headlock Corporation mepụtara ya ma wepụta ya na Japan na August 23, 2007 site na Interchannel; na North America na March 4, 2008 site na Majesco Entertainment; na Europe na June 13, 2008 site na Rising Star Games. Eco Creatures bụ nke World Wide Fund for Nature na-akwado.\n\n\n== Nkọwa ==\nNdị bi n’Osisi Mana biri n’udo na nkwekọ ruo ọtụtụ afọ mgbe Alaeze ahụ dị nso malitere ibibi osisi iji gbasaa"
+          "title": "Ingrid Sinclair",
+          "url": "https://ig.wikipedia.org/wiki/Ingrid_Sinclair",
+          "excerpt": "Ingrid Sinclair bụ onye nduzi, onye edemede na onye na-emepụta ihe nkiri nke a maara nke ọma maka ịbụ onye na-eme ihe nkiri dị mkpa nke African Renaissance. A maara ya n'ụwa niile maka ihe nkiri ya nke afọ 1996, Flame, ihe nkiri banyere Zimbabwe War of Liberation na ihe ngosi ya banyere Zimbabwe. A họọrọ Flame maka ngalaba Fortnight nke onye nduzi na Cannes Film Festival na Nestor Almendros Award na Human Rights Watch International Film Festival na New York City.\n\n\n== Akụkọ ndụ ==\nA mụrụ Ingrid Sinclar na Weston-Super-Mare na 1948.  zụlitere ya na Great Britain ebe ọ gụrụ Ọgwụ na Akwụkwọ edeme"
         },
         {
-          "title": "Fifi Cooper",
-          "url": "https://ig.wikipedia.org/wiki/Fifi_Cooper",
-          "excerpt": "Refilwe Boingotlo Moeketsi (amụrụ n'abalị̀ iri abụọ na anọ nke ọ̀nwa Ọktoba afo 1991), nke a maara dịka Fifi Cooper bụ onye na-edekọ egwu na South Africa. Fifi Cooper malitere ọrụ egwu ya dị ka onye na-agụ egwu R&B tupu mgbasasi egwu ya ahụ ya ka ọ wepụtara egwu rap ya \"Chechela Morago\" n'afọ 2010. N'afọ 2015, o wepụtara abọm studio mbụ ya nke nwetara ihe nrite 20FIFI .\n\n\n== Mbido ndụ na agụmakwụkwọ ==\nFifi Cooper bụ nwa ikpeazụ n'ime ụmụ atọ. Ọ gụrụ akwụkwọ n'oge ọ bụ nwata na Montshiwa, Mahikeng, South Africa, ebe o jikwa mgbalị ya na-ịbụ abụ na ịgba egwú mee ihe. Ọ gụsịrị akwụkwọ sekọndrị y"
+          "title": "Jona",
+          "url": "https://ig.wikipedia.org/wiki/Jona",
+          "excerpt": "'Jona' nwa Amittai ma ọ bụ Jona (Hibru: יוֹנָה Yōnā, lit. 'ikuku') [a] bụ onye amụma Ndị Juu na Bible Hibru nke sitere na Gath-hepher na Alaeze Ugwu nke Israel n'ihe dị ka narị afọ nke 8 BCE. Ọ bụ onye dị n'etiti Akwụkwọ Jona, otu n'ime Ndị amụma nta-eto eto, nke na-akọwapụta na ọ chọghị inyefe ikpe Chineke n'obodo Nineveh (nke dị nso na Mosul nke oge a) na Alaeze Ukwu Asiria. Mgbe nnukwu ihe e kere eke n'oké osimiri (Hibru: דג גדול,  , lit. '') riri ya wee hapụ ya, ọ laghachiri n'ọrụ Chineke.\nN'Okpukpe ndị Juu, akụkọ Jona na-anọchite anya ozizi nke nchegharị na okpukpe ndị Juu, ikike icheghar"
         },
         {
-          "title": "Hilda Tadria",
-          "url": "https://ig.wikipedia.org/wiki/Hilda_Tadria",
-          "excerpt": "Hilda M. Tadria bụ onye na-ahụ maka ihe ndị ruuru ụmụ nwanyị na Uganda, ọkachamara na mmepe mmekọrịta mmadụ na ibe ya, na onye isi nchịkwa nke Mentoring and Empowerment Programme for Young Women in Uganda (MEMPROW). Ọ na-adụ ndị NGO ọdụ n'ụwa niile gbasara okike, njikwa ụlọ ọrụ na mmepe mmekọrịta mmadụ na ibe ya, ọ bụkwa osote prọfesọ na Mahadum Makerere.\n\n\n== Oge ọ malitere ==\nTadria nwere nzere bachelọ na Sociology site na Mahadum Makerere, nzere mastas na Social Anthropology site na Newnham College, Cambridge, England, yana nzere PhD na Social Anthropology site na Mahadum Minnesota, US..\n\n\n"
+          "title": "Leymah Gbowee",
+          "url": "https://ig.wikipedia.org/wiki/Leymah_Gbowee",
+          "excerpt": "Leymah Roberta Gbowee (a mụrụ ya n'ụbọchị 1 nke ọnwa Febụwarị, afọ 1972) bụ onye Liberia na-akwado udo, onye duziri otu ụmụ nwanyị na-achọ udo n'ụzọ na-adịghị eme ihe ike, nke a maara dị ka \"Women of Liberia Mass Action for Peace\" (Mgbakọ Ụmụ Nwanyị Liberia maka Udo). Otu a nyeere aka n'ịkwụsị Agha Obodo Liberia nke Abụọ n'afọ 2003. Mgbalị ya na nke onye ha na ya rụkọrọ ọrụ, bụ Ellen Johnson Sirleaf, nyeere aka iweta oge udo ma mee ka e nwee ntuli aka n'efu na nke ziri ezi n'afọ 2005, nke Sirleaf meriri. E nyere Gbowee na Sirleaf, tinyere Tawakkul Karman, ihe nrite Nobel Peace Prize nke afọ 20"
         }
       ],
       "backfill_done": true
@@ -58,15 +58,113 @@
   },
   "hf_catalog": {
     "output": "corpus/catalog/hf_datasets.json",
-    "total": 291,
+    "total": 305,
     "failed_terms": [],
     "new_since_last_run": [
       {
-        "id": "9jatesters/9javoice-igbo",
-        "url": "https://huggingface.co/datasets/9jatesters/9javoice-igbo",
+        "id": "EYEDOL/naija-voices-hausa-split_0-1",
+        "url": "https://huggingface.co/datasets/EYEDOL/naija-voices-hausa-split_0-1",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "ketanmore/LLaVA-Instruct-150K-13-African-Languages",
+        "url": "https://huggingface.co/datasets/ketanmore/LLaVA-Instruct-150K-13-African-Languages",
         "license": "cc-by-nc-4.0",
         "languages": [
-          "ig"
+          "am",
+          "ha",
+          "ln",
+          "st",
+          "zu",
+          "ny",
+          "kam",
+          "ary",
+          "sw",
+          "arz",
+          "kg",
+          "pcm",
+          "umb"
+        ]
+      },
+      {
+        "id": "ffatty/plaintext-wikipedia-full-nigerian-pidgin",
+        "url": "https://huggingface.co/datasets/ffatty/plaintext-wikipedia-full-nigerian-pidgin",
+        "license": "cc-by-sa-3.0",
+        "languages": [
+          "pcm"
+        ]
+      },
+      {
+        "id": "Britzzy/nigerian-pidgin-evaluation",
+        "url": "https://huggingface.co/datasets/Britzzy/nigerian-pidgin-evaluation",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "michsethowusu/igbo-chichewa_sentence-pairs",
+        "url": "https://huggingface.co/datasets/michsethowusu/igbo-chichewa_sentence-pairs",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "EYEDOL/naija-voices-hausa-split_0-0",
+        "url": "https://huggingface.co/datasets/EYEDOL/naija-voices-hausa-split_0-0",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "Ekobwoy/nigerian-pidgin-biology-evaluation",
+        "url": "https://huggingface.co/datasets/Ekobwoy/nigerian-pidgin-biology-evaluation",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "michsethowusu/hausa-tumbuka_sentence-pairs",
+        "url": "https://huggingface.co/datasets/michsethowusu/hausa-tumbuka_sentence-pairs",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "Aletheia-ng/TinyStories_yoruba",
+        "url": "https://huggingface.co/datasets/Aletheia-ng/TinyStories_yoruba",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "michsethowusu/igbo-ganda_sentence-pairs",
+        "url": "https://huggingface.co/datasets/michsethowusu/igbo-ganda_sentence-pairs",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "michsethowusu/hausa-tswana_sentence-pairs",
+        "url": "https://huggingface.co/datasets/michsethowusu/hausa-tswana_sentence-pairs",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "African-Languages-Lab/baoule-asr",
+        "url": "https://huggingface.co/datasets/African-Languages-Lab/baoule-asr",
+        "license": "cc-by-4.0",
+        "languages": [
+          "bci"
+        ]
+      },
+      {
+        "id": "African-Languages-Lab/fon-asr",
+        "url": "https://huggingface.co/datasets/African-Languages-Lab/fon-asr",
+        "license": "cc-by-4.0",
+        "languages": [
+          "fon"
+        ]
+      },
+      {
+        "id": "African-Languages-Lab/gun-asr",
+        "url": "https://huggingface.co/datasets/African-Languages-Lab/gun-asr",
+        "license": "cc-by-4.0",
+        "languages": [
+          "guw"
         ]
       }
     ]
@@ -74,7 +172,7 @@
   "news": {
     "bbc_igbo": {
       "output": "corpus/manifests/bbc_igbo.jsonl",
-      "new_urls": 8
+      "new_urls": 10
     }
   }
 }
