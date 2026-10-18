@@ -68,11 +68,33 @@ live feed if it recurs or lengthens.
 | 2026-08-18 | 2 | 17 |
 | 2026-08-23 | 0 | 17 |
 | 2026-08-30 | 6 | 23 |
-| 2026-09-27 | 8 | 31 |
+| 2026-09-13 | 8 | 31 |
+| 2026-09-20 | 8 | 39 |
+| 2026-09-27 | 7 | 46 |
+| 2026-10-18 | 10 | 56 |
 
-Cumulative figure derived directly by counting and grouping lines in
-`corpus/manifests/bbc_igbo.jsonl` by `recorded` date (31 total, 8 of them
-`recorded: "2026-09-27"`), not accumulated from the prior card.
+Cumulative figure derived directly by grouping all 56 lines in
+`corpus/manifests/bbc_igbo.jsonl` by `recorded` date (9 distinct dates:
+2026-08-07, 08-13, 08-15, 08-18, 08-30, 09-13, 09-20, 09-27, 10-18 — note
+2026-08-23 contributed 0 new and so has no group of its own), not
+accumulated from the prior card.
+
+**2026-10-18 correction: the previous table skipped two entire runs
+(2026-09-13 and 2026-09-20, 8 new items each) and understated 2026-09-27's
+count.** Grouping every line directly, rather than trusting the previous
+card's running total, finds `recorded: "2026-09-13"` (8 lines) and
+`recorded: "2026-09-20"` (8 lines) between 2026-08-30 and 2026-09-27 —
+neither previously appeared in this table at all. `recorded: "2026-09-27"`
+itself has **7** lines, not 8. Old cumulative value after 2026-09-27: 31.
+New value: 46 (23 + 8 + 8 + 7). This is a different and more mundane
+failure than the 2026-09-06 case below: these two runs' commits plainly
+exist in the manifest (unlike 2026-09-06, which left no trace anywhere),
+so this was a card-maintenance gap — two triage passes were skipped or
+under-counted — not a lost or reverted commit. The matching gap also
+exists in `wikipedia_ig.md` (see flag 42 there): `corpus/raw/wikipedia_ig/`
+holds `2026-09-13.jsonl.gz` and `2026-09-20.jsonl.gz` that no prior version
+of that card ever counted either, which rules out this being
+manifest-specific and points at the triage step generally.
 
 **2026-09-27 correction: the "2026-09-06" row this table previously
 showed (5 new, cumulative 28) does not exist in the manifest.** Grouping
@@ -124,24 +146,46 @@ exist in `corpus/manifests/bbc_igbo.jsonl`; left here struck through in
 spirit (not deleted, per this project's policy of correcting in place with
 old/new values) rather than silently removed.
 
-**2026-09-27 gap check: a ~25-day silent gap, the largest yet recorded.**
-Checked directly against `corpus/manifests/bbc_igbo.jsonl`: this run's 8
-new items are published 2026-09-23 15:12 UTC through 2026-09-27 07:24 UTC;
-the previous real batch (`recorded: "2026-08-30"`) tops out at 2026-08-29
-15:12 UTC. That leaves **2026-08-29 through 2026-09-23, roughly 25 days,
-with zero recorded items** — five times longer than the 5-day gap flagged
-on 2026-08-23 and the largest gap this card has observed. At the
-batch-1 long-run rate (≈0.65 items/day) this window would statistically be
-expected to contain quite a few articles. Unlike the earlier, shorter gaps,
-a 25-day span is almost certainly wider than the RSS feed's sliding window
-(typically ~10–20 items), meaning this coverage loss is very likely
-**permanent and unrecoverable from this feed** — not a "check next run"
-observation. **Recommend to the reviewer:** treat this as confirmation, not
-just a repeat of the standing coverage caveat, and consider whether the
-ingestion workflow actually ran on its stated cadence between 2026-08-30
-and 2026-09-27 — a 28-day span between runs would itself explain a gap
-this size even with a healthy feed window, independent of the window-size
-question.
+**2026-09-27 gap check — retracted, 2026-10-18: the "~25-day gap" was an
+artifact of the same missing-runs bug the cumulative-size correction above
+describes, not a real feed gap.** This entry was written against a
+cumulative table that skipped the 2026-09-13 and 2026-09-20 runs entirely,
+so it compared 2026-09-27's items against 2026-08-30's as if they were
+adjacent. They were not: `recorded: "2026-09-13"` items are published
+2026-09-04 to 2026-09-12, and `recorded: "2026-09-20"` items are published
+2026-09-15 to 2026-09-19 — both checked directly against
+`corpus/manifests/bbc_igbo.jsonl`. The real sequence is contiguous:
+08-30 batch ends 2026-08-29 -> 09-13 batch runs 09-04 to 09-12 (6-day gap,
+unremarkable) -> 09-20 batch runs 09-15 to 09-19 (3-day gap) -> 09-27 batch
+runs 09-23 to 09-27 (4-day gap). There was no 25-day silence; coverage in
+this window looks healthy. Left here struck through in spirit rather than
+deleted, per this card's correction policy — the lesson (verify the
+cumulative table against a fresh group-by before trusting a gap
+calculation built on it) is worth keeping even though the specific alarm
+was false.
+
+**2026-10-18 gap check: an ~18-day gap, smaller than the retracted
+2026-09-27 claim but real this time.** This run's 10 new items are
+published 2026-10-15 10:14 UTC through 2026-10-18 07:50 UTC; the previous
+batch (`recorded: "2026-09-27"`) tops out at 2026-09-27 07:24 UTC. That
+leaves **2026-09-27 through 2026-10-15, about 18 days, with zero recorded
+items** — verified directly against the manifest, with no missing-run
+explanation found this time (the manifest's 9 `recorded` dates are
+contiguous with this run's). Unlike the retracted 25-day claim, this gap
+survives a direct check. It is also harder to dismiss than the shorter
+early gaps: this run's 10 items span only 3 days (10-15 to 10-18, ≈3.3
+items/day), well above the batch-1 long-run rate of ≈0.65/day used in
+earlier gap assessments — if that faster rate held during the silent
+window, a 10-20 item sliding RSS window could already have fully cycled
+past whatever published in the first half of the gap, meaning some of this
+loss may be permanent and unrecoverable from the feed, similar in kind to
+the concern the (retracted) 2026-09-27 entry raised, just smaller in
+degree. **Recommend to the reviewer:** check whether the ingestion workflow
+actually ran on its stated cadence between 2026-09-27 and 2026-10-18 (a
+21-day span between runs would itself explain most of this gap regardless
+of feed-window size), and re-verify this card's running cumulative table
+against a direct group-by every time, given the two-run undercount just
+found above.
 
 ## Known limitations and quality flags
 
