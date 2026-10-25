@@ -41,6 +41,7 @@ previous file.
 | 2026-08-23 | 286 | 8 |
 | 2026-08-30 | 290 | 4 |
 | 2026-09-27 | 291 | 1 |
+| 2026-10-25 | 307 | 16 |
 
 **2026-09-27 correction: the previous "2026-09-06" row (292, +2) does not
 match `corpus/catalog/hf_datasets.json`.** This run's summary reports
@@ -199,6 +200,68 @@ surfaces it again.
   entry does not indicate sample count or hours of audio, so scale is
   unknown until someone opens the dataset card directly.
 
+## 2026-10-25 — 16 new datasets
+
+All 16 are read directly from `new_since_last_run` in
+`corpus_run_summary.json`. Grouped by relevance rather than arrival order:
+
+- **`Eterniti/NaijaScamBench`** — CC-BY-4.0, tagged `en`, `pcm`, `yo`, `ha`,
+  `ig`. Igbo-specific among a Nigerian multilingual set and permissively
+  licensed; a scam/fraud-text classification benchmark is a usable
+  evaluation resource for Igbo NLP, not just a text source.
+- **`michsethowusu/igbo-chichewa_sentence-pairs`**,
+  **`michsethowusu/igbo-ganda_sentence-pairs`** — both `UNKNOWN`, Igbo
+  paired with Chichewa and Luganda respectively. Same uploader family
+  already flagged in this card's "notable datasets" list for unverified
+  license and unverified sentence-alignment quality; two more entries in
+  that pattern, not a new concern. **Verify before use.**
+  (`michsethowusu/hausa-tumbuka_sentence-pairs` and
+  `michsethowusu/hausa-tswana_sentence-pairs` are the same family but
+  Hausa-paired, not Igbo; listed here only because they matched a search
+  term, same caveat as the family's non-Igbo siblings flagged on
+  2026-08-23.)
+- **`African-Languages-Lab/fon-asr`, `African-Languages-Lab/gun-asr`,
+  `African-Languages-Lab/baoule-asr`** — all CC-BY-4.0 speech/ASR data for
+  Fon, Gun (Gbe languages, Benin/Togo/Nigeria border region), and Baoulé
+  (Côte d'Ivoire). None is Nigerian or Igbo, but Fon and Gun are tonal
+  Niger-Congo languages like Igbo: per this project's relevance policy,
+  ASR methodology for tonal low-resource languages is in scope even where
+  the data itself is not. Worth a methods-level look (how tone is handled
+  in the ASR pipeline, if documented) rather than as a data source.
+- **`ketanmore/LLaVA-Instruct-150K-13-African-Languages`** — CC-BY-NC-4.0,
+  13 languages including `pcm` (Naija Pidgin) but not `ig`. Multi-modal
+  (image+instruction) data; relevant to this project only insofar as the
+  translation/construction method could transfer to an Igbo multi-modal
+  instruction set, not as a usable Igbo resource itself. Non-commercial.
+- **`ffatty/plaintext-wikipedia-full-nigerian-pidgin`** — CC-BY-SA-3.0, a
+  full Pidgin-Wikipedia plaintext dump. Same source type and license
+  family (Wikipedia, share-alike) as this project's own `wikipedia_ig`
+  pipeline; worth comparing extraction method against
+  `scripts/corpus_dump_ingest.py` if Naija Pidgin is ever added as a
+  target language, since the share-alike handling this card already
+  documents for Igbo Wikipedia would apply identically here.
+- **`Ekobwoy/nigerian-pidgin-biology-evaluation`**,
+  **`Britzzy/nigerian-pidgin-evaluation`**,
+  **`ALIPHATIC/nigerian-pidgin-blindspot`**,
+  **`Seniorprfect/nigerian-pidgin-blindspot-eval`** — all `UNKNOWN`
+  license, all Naija Pidgin evaluation sets (domain-specific or
+  "blindspot"-style probing). In scope under the Nigerian-language
+  relevance policy; evaluation-methodology construction (blindspot probing
+  in particular) is the kind of transferable technique CLAUDE.md's policy
+  calls out, independent of the Pidgin-specific content. **Verify license
+  before use**, and note `ALIPHATIC`'s and `Seniorprfect`'s near-identical
+  naming/framing suggests they may be related submissions rather than
+  independent resources — worth checking before double-counting either.
+- **`EYEDOL/naija-voices-hausa-split_0-0`** — `UNKNOWN`, Hausa speech data.
+  In scope (Nigerian language, ASR-relevant); split-numbered naming
+  suggests this is one shard of a larger voice dataset, so the catalog
+  entry likely understates total scale. **Verify before use.**
+- **`Aletheia-ng/TinyStories_yoruba`** — `UNKNOWN`, Yoruba. Same
+  MT-provenance caution already on file for `ccibeekeoc42/TinyStories_igbo`
+  (translated-children's-story data): likely machine-translated from the
+  English TinyStories corpus, so the same laundering risk applies if ever
+  used for MT training.
+
 ## Known limitations and quality flags
 
 ### 1. 2026-08-07 — all seven Hub queries failed; catalog written as `[]`
@@ -253,7 +316,10 @@ when any term failed; surface a `failed_terms` list in the run summary.
   see above; the last verified figure before this run was 163/290, 56.2%,
   on 2026-08-30) — so this remains the majority case, not an edge case; do
   not filter or sort on license without first routing `UNKNOWN` entries to
-  manual review.
+  manual review. **As of 2026-10-25, 173 of 307 (56.4%)** — counted
+  directly from the current `corpus/catalog/hf_datasets.json` — holds
+  essentially steady; the `UNKNOWN` majority is not shrinking as the
+  catalog grows.
 - `languages` comes from self-declared card metadata and is often missing or
   wrong on African-language datasets; do not filter on it alone.
 - `search` matches names and descriptions, so `naija` and `african languages`
