@@ -69,10 +69,11 @@ live feed if it recurs or lengthens.
 | 2026-08-23 | 0 | 17 |
 | 2026-08-30 | 6 | 23 |
 | 2026-09-27 | 8 | 31 |
+| 2026-10-25 | 8 | 39 |
 
 Cumulative figure derived directly by counting and grouping lines in
-`corpus/manifests/bbc_igbo.jsonl` by `recorded` date (31 total, 8 of them
-`recorded: "2026-09-27"`), not accumulated from the prior card.
+`corpus/manifests/bbc_igbo.jsonl` by `recorded` date (39 total, 8 of them
+`recorded: "2026-10-25"`), not accumulated from the prior card.
 
 **2026-09-27 correction: the "2026-09-06" row this table previously
 showed (5 new, cumulative 28) does not exist in the manifest.** Grouping
@@ -142,6 +143,28 @@ ingestion workflow actually ran on its stated cadence between 2026-08-30
 and 2026-09-27 — a 28-day span between runs would itself explain a gap
 this size even with a healthy feed window, independent of the window-size
 question.
+
+**2026-10-25 gap check: a second large silent gap, ~27 days, now the
+largest yet recorded.** Checked directly against the 8 new lines added
+this run: they are published 2026-10-22 12:48 UTC through 2026-10-24
+13:49 UTC. The previous batch's latest recorded item (`recorded:
+"2026-09-27"`) tops out at 2026-09-25 18:27 UTC. That leaves **2026-09-25
+through 2026-10-22, roughly 27 days, with zero recorded items** —
+slightly longer than the 25-day gap flagged on 2026-09-27 and, like that
+one, almost certainly wider than the RSS feed's sliding window, meaning
+this coverage loss is very likely permanent. Two consecutive runs now
+each show a ~25-30 day silent gap immediately preceding a dense 2-day
+cluster of recorded items (22-24 Oct this run; 23-27 Sep last run) — this
+shape (long silence, then a tight cluster right before the run) is
+consistent with the workflow polling on an actual cadence much longer
+than weekly, catching only whatever is still in the feed's sliding window
+at poll time, rather than with the feed itself going quiet for weeks.
+**Recommend to the reviewer:** check the actual run history of
+`.github/workflows/corpus-ingestion.yml` (not just its stated Sunday
+04:00 UTC schedule) — if runs are genuinely landing roughly monthly
+instead of weekly, that alone explains both gaps without needing a
+feed-side explanation, and is a scheduling problem worth fixing in the
+workflow itself rather than continuing to re-flag the symptom each run.
 
 ## Known limitations and quality flags
 
