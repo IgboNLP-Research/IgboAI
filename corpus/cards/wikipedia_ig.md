@@ -87,6 +87,7 @@ prior cards (see flag 21 for why the pre-2026-08-18 rows no longer apply to
 | 2026-09-06, incremental — **retracted, see flag 37** | ~~17~~ | ~~8,221~~ | ~~46,343~~ | no `corpus/raw/wikipedia_ig/2026-09-06.jsonl.gz` exists in this run's working tree |
 | 2026-09-27, incremental (raw file) | 24 | 18,860 | 104,916 | `recentchanges`, diacritic ratio 0.0712, this file read directly and in full; matches `corpus_run_summary.json` exactly |
 | 2026-09-27, incremental (deduplicated by title vs the three files that actually exist on disk: 2026-08-18/23/30) | **22 net-new titles, 2 repeats** | n/a | n/a | see flag 37 for the repeats, one of which is the flag-27 stagnation pattern recurring on a single title three runs later |
+| 2026-10-25, incremental (run-reported figures only, see flag 42) | 20 | 16,097 | 90,004 | `recentchanges`, diacritic ratio 0.0762, **taken from `corpus_run_summary.json` as given, not independently verified against the raw file** |
 
 The 50,623 figure is not from a file I opened; it is read from
 `mt_probe_summary.json` (`scripts/mt_prevalence_probe.py`, committed at repo
@@ -109,6 +110,20 @@ flag 37), so raw record counts overstate corpus growth even more than
 title deduplication alone suggests. Token/character/diacritic aggregates
 for the dump portion are currently unknown corpus-wide (flag 23); do not
 quote a corpus-wide `diacritic_char_ratio` until that is fixed.
+
+**2026-10-25: this run's figures above (20 documents, 16,097 tokens, 90,004
+characters, diacritic ratio 0.0762) are quoted directly from
+`corpus_run_summary.json` and have not been cross-checked against
+`corpus/raw/wikipedia_ig/2026-10-25.jsonl.gz` or deduplicated by title
+against the prior incremental files, unlike every dated row above through
+2026-09-27.** This run's instructions explicitly direct against opening,
+scanning, or decompressing anything under `corpus/raw/`, so the title-dedup
+and direct-read verification this card has performed for every incremental
+batch since 2026-08-23 (flags 27, 30, 33, 38) was not possible this time.
+Treat the "practical corpus size" figure below as **not updated** for this
+run's 20 documents — it still reflects the 2026-09-27 count — and recommend
+a future run perform the dedup check this run skipped, covering two
+incremental files' worth of title overlap at once if needed.
 
 **Backfill status: DONE**, via the dump (`backfill_done: true`,
 `backfill_method: "dump"` in `corpus/state.json`), not via the `allpages`
@@ -137,7 +152,10 @@ content as unverifiable rather than authoritative. Flags dated
 **2026-09-27** are from this run's 24-document incremental batch, read in
 full and title-checked against the union of the three prior incremental
 files that actually exist on disk (2026-08-18, 2026-08-23, 2026-08-30 —
-not 2026-09-06).
+not 2026-09-06). Flags dated **2026-10-25** are from the 8 samples and
+corpus-wide stats in `corpus_run_summary.json` only — this run's
+instructions prohibited opening the raw `.jsonl.gz` file, so these flags
+are sample-level qualitative observations, not full-batch verification.
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
@@ -793,6 +811,74 @@ same broader family of citation-marker extraction residue. Cosmetic at
 the single-document level; worth folding into the `markup_leakage`
 heuristic's evidence base (flag 29) rather than treating as its own
 pattern.
+
+### 42. 2026-10-25 — This run's skip breakdown is the first with a stub/markup split visible to this card, and the stub-skip rate is extremely high (95.4%)
+
+`corpus_run_summary.json` reports, for the first time in a form this card
+can cite, a per-run candidate breakdown: 500 titles listed, 477 dropped as
+stubs, 3 dropped for residual markup, 20 kept — a 4.0% keep rate. Flag 23
+regretted that the dump path's equivalent breakdown was lost; this run
+shows the incremental path now surfaces one, at least in the run summary.
+Not independently verified against the raw file (prohibited this run, see
+the cumulative-size section above), so this is the pipeline's own count,
+taken as given. Worth tracking over future runs: a 95.4% stub rate is far
+higher than anything this card has previously quantified, though prior
+runs never reported `titles_listed` so there is no same-method baseline to
+compare it against — treat as the first data point, not yet a trend.
+
+### 43. 2026-10-25 — `Linda Bond`: multiple wrong-word substitutions and a duplicated noun, consistent with the MT/template-garble family (flags 5, 6, 8)
+
+The excerpt opens `"Linda Bond ( ọrịa 22 June 1946) bụ onye bụbu General nke
+ndị agha agha"` — `ọrịa` ("sickness/illness") stands in for what should be a
+birth-date marker (compare `amụrụ`/`a mụrụ` used correctly elsewhere in this
+same batch, e.g. `Mary Renfrew`), and `ndị agha agha` duplicates `agha`
+("army army"), the same duplicated-noun shape flag 6 found in `Nhọpụta
+steeti steeti Kuros Riva`. Further in: `"ọ bụ ya bụ onye nke iri na mberede
+n'ọkwa ahụ"` does not parse as a sensible ordinal ("iri" = ten, "mberede" =
+"sudden"), the same templated-ordinal corruption family as flag 6's `"nke
+iri na out"`; and `"wee weghara ọrụ na 2 foto 2011"` uses `foto` ("photo")
+where a month name belongs, echoing flag 5's garbled-date pattern. Four
+distinct instances of the same defect family in one short document is a
+higher concentration than any single document previously catalogued in
+this card.
+
+### 44. 2026-10-25 — `Mary Renfrew`: a fluent biography breaks down mid-sentence into unrelated, incoherent text
+
+The first two-thirds of the excerpt is clean, well-formed modern Igbo
+biographical prose (Renfrew's nursing and midwifery career). It then
+degrades sharply: `"...ọ bụ prọfesọ na na ụdị nke ụwa họrọ site n'ime ụmụ
+ndị ogbi ozi ọma alaeze ahụ n'ebe nile site n'ime ụmụ gị Ihe nk"` —
+a duplicated `na na`, a non-parsing `ụdị nke ụwa họrọ`, and the phrase
+`ụmụ ndị ogbi ozi ọma alaeze` ("children of the messengers of the kingdom's
+good news"), which is religious-register language with no connection to a
+midwifery-research biography. Unlike flag 2's archaic-register mixing
+(which alternates between two legitimate registers), this reads as
+unrelated boilerplate spliced into the article body — a new manifestation
+of the extraction/template-contamination family (flags 3, 18, 22, 25) but
+affecting running prose rather than markup residue. Worth flagging to the
+reviewer as a candidate example for whatever mechanism is producing flags
+25/31/34's markup leakage, since fluent-to-incoherent splicing partway
+through a document is a different failure shape than a stray tag.
+
+### 45. 2026-10-25 — Diacritic ratio (0.0762) looks unremarkable, but coexists with the flag 43/44 fluency problems — reinforces flag 10's caution
+
+This run's headline ratio sits comfortably inside the range flag 10 already
+called normal for small batches, and none of the 8 sampled documents show
+the near-zero ratio that flagged date-stub templates in flag 6. But two of
+the same 8 samples (`Linda Bond`, `Mary Renfrew`) have real fluency defects
+that a diacritic-ratio check would never catch, since neither document is
+diacritic-light. Confirms flag 10's point from the other direction: a
+normal-looking ratio is evidence of nothing beyond diacritic marking itself,
+not of translation fluency or textual coherence.
+
+### 46. 2026-10-25 — `John Earle Sullivan` continues the violent/political-crime topical skew already flagged at 9
+
+This run's sample includes a fluent, well-formed article about the January
+6, 2021 US Capitol attack. One document in an 8-sample draw is not on its
+own a skew signal, but it is consistent with flag 9's finding (2026-08-13)
+that readily available Igbo text sources over-represent violent and
+crime-adjacent events relative to general prose — noted here only to keep
+that running observation current, not as a new finding.
 
 ## Intended uses
 
