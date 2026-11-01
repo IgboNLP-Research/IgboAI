@@ -87,6 +87,8 @@ prior cards (see flag 21 for why the pre-2026-08-18 rows no longer apply to
 | 2026-09-06, incremental — **retracted, see flag 37** | ~~17~~ | ~~8,221~~ | ~~46,343~~ | no `corpus/raw/wikipedia_ig/2026-09-06.jsonl.gz` exists in this run's working tree |
 | 2026-09-27, incremental (raw file) | 24 | 18,860 | 104,916 | `recentchanges`, diacritic ratio 0.0712, this file read directly and in full; matches `corpus_run_summary.json` exactly |
 | 2026-09-27, incremental (deduplicated by title vs the three files that actually exist on disk: 2026-08-18/23/30) | **22 net-new titles, 2 repeats** | n/a | n/a | see flag 37 for the repeats, one of which is the flag-27 stagnation pattern recurring on a single title three runs later |
+| 2026-09-13 and 2026-09-20, incremental (raw files, discovered this run) | not verified | not verified | not verified | present on disk but never mentioned in any prior version of this card, see flag 42; not opened this run per the turn-budget instruction below |
+| 2026-11-01, incremental, from `corpus_run_summary.json` only (not opened directly, see flag 42) | 22 | 21,845 | 123,135 | `recentchanges`, diacritic ratio 0.06603; titles_listed 456, skipped_stub 434 (95.2%), skipped_markup 0 |
 
 The 50,623 figure is not from a file I opened; it is read from
 `mt_probe_summary.json` (`scripts/mt_prevalence_probe.py`, committed at repo
@@ -137,7 +139,12 @@ content as unverifiable rather than authoritative. Flags dated
 **2026-09-27** are from this run's 24-document incremental batch, read in
 full and title-checked against the union of the three prior incremental
 files that actually exist on disk (2026-08-18, 2026-08-23, 2026-08-30 —
-not 2026-09-06).
+not 2026-09-06). Flags dated **2026-11-01** are from `corpus_run_summary.json`
+and its eight samples **only**: this run's instructions explicitly prohibit
+opening, scanning, or decompressing anything under `corpus/raw/`, so unlike
+every prior dated batch above, nothing this run reports was verified by a
+direct full read of a raw file, and no title-overlap or dedup check against
+prior files was performed.
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
@@ -793,6 +800,64 @@ same broader family of citation-marker extraction residue. Cosmetic at
 the single-document level; worth folding into the `markup_leakage`
 heuristic's evidence base (flag 29) rather than treating as its own
 pattern.
+
+### 42. 2026-11-01: Two incremental files on disk were never mentioned in any prior version of this card; the following four weeks show no file at all
+
+`ls corpus/raw/wikipedia_ig/` (directory listing only, not opened) shows
+dated files for 2026-08-18, 08-23, 08-30, **09-13, 09-20**, 09-27, and
+today's 11-01, alongside `dump-2026-08-19/`. The 09-13 and 09-20 files
+predate the 2026-09-27 card update above, which only accounted for three
+prior incremental files (08-18/23/30) plus 09-27 itself; the 09-13 and
+09-20 batches were apparently never read or carried into a cumulative-size
+row or a flag, a documentation gap rather than a data-loss one, since the
+files themselves exist. Separately, there is no file dated 2026-10-04,
+10-11, 10-18, or 10-25, despite this branch's base commit being titled
+"sync corpus/state.json from corpus/2026-10-25", the most likely
+explanation is a `recentchanges` poll on that date returning zero new
+titles (the fetcher only writes a dated file when there is something to
+write, the same reason 2026-08-23's zero-new run produced no file), but
+this cannot be confirmed without the pipeline's own logs. **This run's
+instructions prohibit opening or decompressing anything under
+`corpus/raw/`** to protect the turn budget, so none of this (file sizes,
+titles, dedup against prior files) could be verified by direct read the
+way flags 27, 30, 33, and 38 were; this card is accordingly thinner on
+independent verification for 2026-11-01 than for any prior dated entry.
+**Recommend to the reviewer:** schedule a dedicated pass (outside the
+per-PR triage budget) to open the 09-13 and 09-20 files, fold them into
+the title-dedup count, and confirm whether 2026-10-25 was a genuine
+zero-new week or a lost run.
+
+### 43. 2026-11-01: Sample evidence of two MT-style artifacts not previously catalogued by exact shape
+
+`Krismas jọgburu onwe ya` (from this run's samples) opens: "ekeresimesi
+Savage bụ ihe nkiri ihe nkiri ihe nkiri na-atọ ọchị Australia 2023", with
+`ihe nkiri` ("film/show") repeated three times in a row, a more extreme
+case of the duplicated-noun pattern already seen once in flag 5
+("steeti steeti"). The article's own title is a second, distinct defect:
+the English surname "Savage" (the film is about a character named Davina
+Savage) appears to have been translated as a common adjective/verb
+(`jọgburu onwe ya` reads roughly as "that kills itself"), i.e. a proper
+noun mistranslated as ordinary vocabulary, a specific MT failure mode this
+card has not previously named even though flags 5, 7, 15, 19, 24, and 35
+already document several other MT-residue shapes. Separately, `Nnyocha
+Bio` ends a sentence "...ma ọ bụrụ na ọ bụghị, ọ bụ **ọnụọụọgụ**." where
+the expected word is closer to `ọnụọgụgụ` ("a number/quantity"); the
+repeated `ọụ` sequence matches the shape of the repeated-character garble
+flag 24 already quantified at 0.35% of the dump (178 of 50,623 documents)
+via regex, giving that figure one more concrete example. Both
+observations are from the eight samples in `corpus_run_summary.json`
+only, not a full-batch read (see flag 42).
+
+### 44. 2026-11-01: Stub-skip rate this run is 95.2%, the first run this card has had a figure to compare it against
+
+This run's summary reports `titles_listed: 456`, `skipped_stub: 434`,
+`skipped_markup: 0`, `documents: 22`, i.e. 95.2% of titles surfaced by
+`recentchanges` were dropped as stubs. No prior run's `corpus_run_summary.json`
+survived for this card to compare against (each run overwrites that file,
+flag 23), so there is no trend to confirm or refute yet; worth carrying
+this figure forward in future cards to see whether it is typical of the
+`recentchanges` path or a one-off spike from, e.g., a bot editing run of
+short stub pages.
 
 ## Intended uses
 

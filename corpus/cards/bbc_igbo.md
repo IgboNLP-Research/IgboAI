@@ -68,11 +68,29 @@ live feed if it recurs or lengthens.
 | 2026-08-18 | 2 | 17 |
 | 2026-08-23 | 0 | 17 |
 | 2026-08-30 | 6 | 23 |
-| 2026-09-27 | 8 | 31 |
+| 2026-09-13 | 8 | 31 |
+| 2026-09-20 | 8 | 39 |
+| 2026-09-27 (corrected, see below) | 7 | 46 |
+| 2026-11-01 | 15 | 61 |
 
-Cumulative figure derived directly by counting and grouping lines in
-`corpus/manifests/bbc_igbo.jsonl` by `recorded` date (31 total, 8 of them
-`recorded: "2026-09-27"`), not accumulated from the prior card.
+Cumulative figure derived directly by counting and grouping every line in
+`corpus/manifests/bbc_igbo.jsonl` by `recorded` date: nine distinct dates,
+61 lines total as of this run.
+
+**2026-11-01 correction, two parts.** First, **the 2026-09-13 and
+2026-09-20 rows above are new to this table**: both dates are already
+present in the manifest with 8 lines each, but no prior version of this
+card mentioned either batch, even though both predate the 2026-09-27
+update. This is the same kind of documentation gap flagged in
+`wikipedia_ig.md` flag 42 for the same date range, discovered the same
+way (grouping the file directly rather than trusting the previous card's
+running total). Second, **the 2026-09-27 row is corrected from 8 new
+(cumulative 31) to 7 new (cumulative 46)**: grouping the manifest by
+`recorded` date finds exactly 7 lines with `recorded: "2026-09-27"`, not
+8, and the two newly surfaced rows above push the correct cumulative
+total well past the old 31 figure regardless. Old value: 8 new, 31
+cumulative. New value: 7 new, 46 cumulative (31 of which the card is only
+now accounting for from 09-13 and 09-20).
 
 **2026-09-27 correction: the "2026-09-06" row this table previously
 showed (5 new, cumulative 28) does not exist in the manifest.** Grouping
@@ -124,24 +142,38 @@ exist in `corpus/manifests/bbc_igbo.jsonl`; left here struck through in
 spirit (not deleted, per this project's policy of correcting in place with
 old/new values) rather than silently removed.
 
-**2026-09-27 gap check: a ~25-day silent gap, the largest yet recorded.**
-Checked directly against `corpus/manifests/bbc_igbo.jsonl`: this run's 8
-new items are published 2026-09-23 15:12 UTC through 2026-09-27 07:24 UTC;
-the previous real batch (`recorded: "2026-08-30"`) tops out at 2026-08-29
-15:12 UTC. That leaves **2026-08-29 through 2026-09-23, roughly 25 days,
-with zero recorded items** — five times longer than the 5-day gap flagged
-on 2026-08-23 and the largest gap this card has observed. At the
-batch-1 long-run rate (≈0.65 items/day) this window would statistically be
-expected to contain quite a few articles. Unlike the earlier, shorter gaps,
-a 25-day span is almost certainly wider than the RSS feed's sliding window
-(typically ~10–20 items), meaning this coverage loss is very likely
-**permanent and unrecoverable from this feed** — not a "check next run"
-observation. **Recommend to the reviewer:** treat this as confirmation, not
-just a repeat of the standing coverage caveat, and consider whether the
-ingestion workflow actually ran on its stated cadence between 2026-08-30
-and 2026-09-27 — a 28-day span between runs would itself explain a gap
-this size even with a healthy feed window, independent of the window-size
-question.
+**2026-09-27 gap check, retracted 2026-11-01: there was no 25-day gap.**
+The claim below was based on comparing the 2026-09-27 batch directly
+against the 2026-08-30 batch, skipping the 2026-09-13 and 2026-09-20
+batches that, per the cumulative-size correction above, were sitting in
+the manifest the whole time. Published-date ranges computed directly from
+`corpus/manifests/bbc_igbo.jsonl` this run: 09-13 spans 2026-09-04 to
+2026-09-12, 09-20 spans 2026-09-15 to 2026-09-19, and 09-27 spans
+2026-09-23 to 2026-09-27, each batch starting within a few days of the
+previous one's end, the normal cadence this card's caveat expects, not a
+gap. Original text, left in place per this card's correction policy:
+"a ~25-day silent gap, the largest yet recorded. Checked directly against
+`corpus/manifests/bbc_igbo.jsonl`: this run's 8 new items are published
+2026-09-23 15:12 UTC through 2026-09-27 07:24 UTC; the previous real batch
+(`recorded: "2026-08-30"`) tops out at 2026-08-29 15:12 UTC. That leaves
+2026-08-29 through 2026-09-23, roughly 25 days, with zero recorded items."
+
+**2026-11-01 gap check: a genuine ~29-day silent gap, now the largest this
+card has actually confirmed.** This run's 15 new items are published
+2026-10-26 22:56 UTC through 2026-11-01 09:43 UTC; the previous batch
+(`recorded: "2026-09-27"`) tops out at 2026-09-27 07:24 UTC. Unlike the
+retracted 09-27 claim above, there is no other recorded date in between
+to bridge this one: grouping the full manifest by `recorded` date (done
+for this same run, see the cumulative-size table) finds nothing between
+09-27 and 11-01. That leaves **2026-09-27 through 2026-10-26, roughly 29
+days, with zero recorded items**, longer than any previously confirmed
+gap, and, per the same reasoning as the retracted claim above, almost
+certainly wider than the RSS feed's sliding window, meaning this coverage
+loss is very likely permanent and unrecoverable from this feed.
+**Recommend to the reviewer:** given that the last gap of this apparent
+size turned out to be a documentation gap rather than a real one, verify
+this one against the live feed or workflow run history before treating
+it as confirmed data loss.
 
 ## Known limitations and quality flags
 
