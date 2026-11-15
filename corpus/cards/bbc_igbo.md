@@ -68,11 +68,33 @@ live feed if it recurs or lengthens.
 | 2026-08-18 | 2 | 17 |
 | 2026-08-23 | 0 | 17 |
 | 2026-08-30 | 6 | 23 |
-| 2026-09-27 | 8 | 31 |
+| 2026-09-13 | 8 | 31 |
+| 2026-09-20 | 8 | 39 |
+| 2026-09-27 | 7 | 46 |
+| 2026-11-15 | 16 | 62 |
 
 Cumulative figure derived directly by counting and grouping lines in
-`corpus/manifests/bbc_igbo.jsonl` by `recorded` date (31 total, 8 of them
-`recorded: "2026-09-27"`), not accumulated from the prior card.
+`corpus/manifests/bbc_igbo.jsonl` by `recorded` date (62 total, 16 of them
+`recorded: "2026-11-15"`), not accumulated from the prior card.
+
+**2026-11-15 correction: the previous card's "2026-09-27" row (8 new,
+cumulative 31) undercounted — it skipped two entire recorded batches.**
+Grouping every line in the manifest by `recorded` date directly finds
+**nine** distinct dates, not seven: the previous card's table jumped
+straight from `2026-08-30` to `2026-09-27` and omitted `2026-09-13` (8
+lines) and `2026-09-20` (8 lines) entirely, and it also overstated the
+2026-09-27 batch itself as 8 new lines when the manifest shows exactly 7
+recorded on that date. Old values: 2026-09-27 row read "8 new, cumulative
+31". New values: 2026-09-13 "8 new, cumulative 31", 2026-09-20 "8 new,
+cumulative 39", 2026-09-27 "7 new, cumulative 46" — the cumulative-46
+figure is what this run's 16 new lines are added to, giving 62, not the
+47 a naive 31+16 would suggest. This is a different failure shape from the
+2026-09-06 retraction earlier in this card (a batch the card claimed that
+the manifest never actually contained): here the manifest genuinely holds
+the data, and it was the card-writing step that missed two real batches.
+**Recommend to the reviewer:** when next updating this table, regenerate
+it by grouping the full manifest rather than appending one row per run, to
+avoid this class of card/data divergence recurring.
 
 **2026-09-27 correction: the "2026-09-06" row this table previously
 showed (5 new, cumulative 28) does not exist in the manifest.** Grouping
@@ -142,6 +164,33 @@ ingestion workflow actually ran on its stated cadence between 2026-08-30
 and 2026-09-27 — a 28-day span between runs would itself explain a gap
 this size even with a healthy feed window, independent of the window-size
 question.
+
+**2026-09-13 and 2026-09-20 gap check (filled in retroactively, see the
+cumulative-size correction above): both unremarkable.** `2026-09-13`'s 8
+items are published 2026-09-04 through 2026-09-12 (6-day gap since the
+prior batch's 2026-08-29 maximum, within the normal range); `2026-09-20`'s
+8 items are published 2026-09-15 through 2026-09-19 (3-day gap). Neither
+shows the sliding-window-loss symptom; this note exists only because the
+batches themselves were missing from the previous card, not because
+either run's own coverage was in question.
+
+**2026-11-15 gap check: a ~45-day silent gap, the largest yet recorded,
+superseding the 2026-09-27 entry above.** This run's 16 new items are
+published 2026-11-11 08:13 UTC through 2026-11-15 10:13 UTC; the prior
+batch (`recorded: "2026-09-27"`) tops out at 2026-09-27 07:24 UTC. That
+leaves **2026-09-27 through 2026-11-11, roughly 45 days**, with zero
+recorded items — nearly double the 25-day gap flagged above, and like
+that gap, far wider than the RSS feed's sliding window (~10-20 items), so
+this coverage loss is almost certainly **permanent and unrecoverable**.
+`corpus/state.json`'s `rc_ts` for the Wikipedia source (a different feed,
+but driven by the same ingestion workflow) shows an intervening run on
+2026-10-25 that touched no BBC-Igbo data at all — consistent with the
+workflow having run on a longer-than-weekly cadence through this window
+rather than the feed itself going quiet for 45 days. **Recommend to the
+reviewer:** check the ingestion workflow's actual run history between
+2026-09-27 and 2026-11-15 to confirm whether this is a workflow-cadence
+gap (fixable by running more often) or a feed/window problem (not
+fixable by cadence alone).
 
 ## Known limitations and quality flags
 

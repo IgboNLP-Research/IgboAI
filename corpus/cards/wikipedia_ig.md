@@ -87,6 +87,7 @@ prior cards (see flag 21 for why the pre-2026-08-18 rows no longer apply to
 | 2026-09-06, incremental — **retracted, see flag 37** | ~~17~~ | ~~8,221~~ | ~~46,343~~ | no `corpus/raw/wikipedia_ig/2026-09-06.jsonl.gz` exists in this run's working tree |
 | 2026-09-27, incremental (raw file) | 24 | 18,860 | 104,916 | `recentchanges`, diacritic ratio 0.0712, this file read directly and in full; matches `corpus_run_summary.json` exactly |
 | 2026-09-27, incremental (deduplicated by title vs the three files that actually exist on disk: 2026-08-18/23/30) | **22 net-new titles, 2 repeats** | n/a | n/a | see flag 37 for the repeats, one of which is the flag-27 stagnation pattern recurring on a single title three runs later |
+| 2026-11-15, incremental | 23 | 17,006 | 97,511 | from `corpus_run_summary.json`'s aggregate only, diacritic ratio 0.06348 — **not an independent full-file read**, see flag 42 |
 
 The 50,623 figure is not from a file I opened; it is read from
 `mt_probe_summary.json` (`scripts/mt_prevalence_probe.py`, committed at repo
@@ -109,6 +110,14 @@ flag 37), so raw record counts overstate corpus growth even more than
 title deduplication alone suggests. Token/character/diacritic aggregates
 for the dump portion are currently unknown corpus-wide (flag 23); do not
 quote a corpus-wide `diacritic_char_ratio` until that is fixed.
+
+**Practical corpus size as of 2026-11-15: at most 50,711 unique documents**
+(the 2026-09-27 figure above, 50,688, plus this run's 23 incremental
+documents, counted as an upper bound because — see flag 42 — this run's
+instructions prohibit opening files under `corpus/raw/`, so no title-dedup
+against the four prior incremental files was possible this run. Treat
+50,711 as a ceiling, not a verified count, until a future run reads the
+raw files directly again.
 
 **Backfill status: DONE**, via the dump (`backfill_done: true`,
 `backfill_method: "dump"` in `corpus/state.json`), not via the `allpages`
@@ -793,6 +802,70 @@ same broader family of citation-marker extraction residue. Cosmetic at
 the single-document level; worth folding into the `markup_leakage`
 heuristic's evidence base (flag 29) rather than treating as its own
 pattern.
+
+### 42. 2026-11-15 — This run's triage is based on `corpus_run_summary.json`'s aggregates and 8 samples only, not a direct read of the raw file
+
+Unlike every prior dated entry in this card, this run's instructions
+explicitly prohibit opening, scanning, or decompressing anything under
+`corpus/raw/` to conserve turn budget. All figures and observations dated
+2026-11-15 in this card (the cumulative-size row above and flags 43–46
+below) come from `corpus_run_summary.json`'s per-run aggregate counters and
+its 8 sample excerpts, not from a full read of
+`corpus/raw/wikipedia_ig/2026-11-15.jsonl.gz` as flags 27/30/33/38
+established for prior runs. Consequently: no title-level dedup against
+the four prior incremental files was possible (see the revised practical
+corpus-size estimate above), and the flags below describe only the 8
+sampled documents, not the full 23-document batch — treat them as spot
+checks, not a batch census.
+
+### 43. 2026-11-15 — Markup leakage (flags 3, 18, 22, 25, 31, 34, 39) recurs in two of 8 samples, two different manifestations
+
+`Azu Nwagbogu`'s excerpt opens with `Mba">Azu Nwagbogu (amụrụ n'afọ
+1975)...` — an unclosed infobox attribute fragment (reads like the tail of
+`|country="Nigeria">`) surviving ahead of the actual body text, a markup
+shape not previously catalogued in this card (prior examples were
+`</ref>`, `Templeeti:`, or `href="..."`, not a leading attribute-value
+fragment). `Asụsụ Munda`'s excerpt contains a bare, orphaned citation
+marker on its own line mid-paragraph — `...Santali bụ asụsụ Munda ama ama.
+\n\n[2]\n\nna-ekewa ezinụlọ ahụ...` — the numeral survived with its
+brackets (unlike flag 41's digit-fused-into-heading variant, or flag 35's
+Igbo-number-word variant); here it is a plain `[2]` with no surrounding
+text at all. Both reinforce the standing `markup_leakage` heuristic
+proposal (flag 29) rather than requiring a new pattern.
+
+### 44. 2026-11-15 — A sample reads as raw, garbled MT output: untranslated English terms, an incoherent clause, and a stray leading period
+
+`Akụkọ banyere mbara igwe` ("History of astronomy") opens `.Astronomy bụ
+nke kacha ochie na ihe ngosi, ihe na mgbe ochie, na oge ya na na-hàrechi,
+ịjụ ifo, cosmological, calendrical, na ịgụ akwụkwọ na isi na omume nke
+prehistory...`. Three English technical terms (`cosmological`,
+`calendrical`, `prehistory`) are left untranslated mid-sentence, `na
+na-hàrechi, ịjụ ifo` does not parse as a coherent Igbo clause, and the
+excerpt opens with a stray leading period before the first word — the
+same leading-period artifact flag 5 already associated with MT-suspect
+documents. Adds a concrete example to the standing MT-prevalence concern
+(flags 5, 24, 35) rather than a new defect family.
+
+### 45. 2026-11-15 — A birth-date template slot renders an unrelated English word instead of a date marker
+
+`Braja Kishore Goswami` opens `Braja Kishore Goswami ( opera 03 Disemba
+1988) bụ onye ikike inwe India...` — the parenthetical birth-date slot,
+which elsewhere in this card's samples reads `amụrụ` or similar, instead
+contains the bare English word `opera`. Flags 7 and 15 already documented
+this same templated slot substituting wrong-script (Ethiopic) text; this
+is a third instance of the slot failing, this time with an unrelated
+English word rather than a script substitution, reinforcing that the
+defect is in the slot-filling step itself rather than tied to one failure
+mode.
+
+### 46. 2026-11-15 — An untranslated English section heading alongside Igbo ones
+
+`Chinwendu Ihezuo` uses the heading `== Early life ==` in English, while
+its other sections and other biographies in this same sample batch use
+Igbo headings. A partial-localization gap in whatever template or
+extraction step generates section headings for biography articles;
+distinct from the markup-leakage family (flags 3 etc.) since the heading
+itself is well-formed, just not translated.
 
 ## Intended uses
 

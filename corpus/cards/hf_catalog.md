@@ -41,6 +41,7 @@ previous file.
 | 2026-08-23 | 286 | 8 |
 | 2026-08-30 | 290 | 4 |
 | 2026-09-27 | 291 | 1 |
+| 2026-11-15 | 307 | 16 |
 
 **2026-09-27 correction: the previous "2026-09-06" row (292, +2) does not
 match `corpus/catalog/hf_datasets.json`.** This run's summary reports
@@ -199,6 +200,59 @@ surfaces it again.
   entry does not indicate sample count or hours of audio, so scale is
   unknown until someone opens the dataset card directly.
 
+## 2026-11-15 — 16 new datasets
+
+Arithmetic checks out cleanly this run (290 carried over from 2026-08-30,
++1 from 2026-09-27 = 291, +16 this run = 307, matching
+`corpus_run_summary.json`'s `"total": 307`) — unlike the 2026-09-06
+episode, nothing here needed retracting.
+
+- **`Africanvoice/igbo_african_voice`** — CC-BY-4.0, tagged `ig` directly.
+  By name this reads as Igbo speech/voice data, joining
+  `McGill-NLP/NaijaS2ST` and `9jatesters/9javoice-igbo` (both already
+  flagged in this card) as one of the still-small set of catalogued
+  datasets pairing Igbo *audio* rather than text alone, and the first of
+  the three with an unambiguous permissive license. Worth opening the
+  dataset card directly to check hours/sample count before relying on it.
+- **`ahmadabdulnasir/naijaPidgin`** — license `UNKNOWN`, but tagged
+  `en, ha, ig, yo` — an Igbo-inclusive multi-language Nigerian-Pidgin-
+  adjacent resource. **Verify before use.**
+- **`michsethowusu/igbo-ganda_sentence-pairs`** — license `UNKNOWN`. Same
+  uploader and `*_sentence-pairs` naming pattern already flagged in this
+  card's notable-datasets list (which cited the Shona/Tumbuka/Xhosa/Pedi/
+  Yoruba/Kikuyu siblings); this entry pairs Igbo with Ganda (Uganda),
+  another instance of the same plausible-but-unverified bitext family.
+- **`African-Languages-Lab/fon-asr`, `African-Languages-Lab/baoule-asr`,
+  `African-Languages-Lab/gun-asr`** — all CC-BY-4.0, covering Fon (Benin),
+  Baoulé (Côte d'Ivoire), and Gun (Benin/Nigeria) respectively. None is
+  Igbo or Nigerian, but all are African-language ASR releases from what
+  reads as a single new, systematically-named contributor organization;
+  in scope under this project's relevance policy for African languages
+  generally, and worth watching for an Igbo entry from the same org in
+  future runs.
+- **`ffatty/plaintext-wikipedia-full-nigerian-pidgin`** — CC-BY-SA-3.0,
+  `pcm`. A Wikipedia-dump-derived Pidgin corpus, structurally analogous to
+  this project's own `wikipedia_ig` source — its extraction method or
+  known failure modes could be worth comparing against
+  [wikipedia_ig.md](wikipedia_ig.md)'s markup-leakage and MT-residue
+  findings if the dataset card documents either.
+- **`ketanmore/LLaVA-Instruct-150K-13-African-Languages`** — CC-BY-NC-4.0.
+  Matched the `african languages` search term but its 13 listed language
+  codes (am, ha, ln, st, zu, ny, kam, ary, sw, arz, kg, pcm, umb) do
+  **not** include `ig` — flagged here only to note the search-matching
+  caveat already in this card's limitations section (below) catching a
+  concrete case.
+- **Remaining 8 entries** (`Britzzy/nigerian-pidgin-evaluation`,
+  `Ekobwoy/nigerian-pidgin-biology-evaluation`, `ALIPHATIC/nigerian-
+  pidgin-blindspot`, `Seniorprfect/nigerian-pidgin-blindspot-eval`,
+  `EYEDOL/naija-voices-hausa-split_0-0`, `Aletheia-ng/TinyStories_yoruba`,
+  `michsethowusu/hausa-tswana_sentence-pairs`,
+  `michsethowusu/hausa-tumbuka_sentence-pairs`) — Nigerian-Pidgin or
+  Hausa/Yoruba evaluation and bitext sets, none Igbo-specific; seven of
+  the eight carry `UNKNOWN` license (`Britzzy/nigerian-pidgin-evaluation`
+  is the one exception, CC-BY-4.0). In scope under the Nigerian-language
+  relevance policy but lower priority than the Igbo-tagged entries above.
+
 ## Known limitations and quality flags
 
 ### 1. 2026-08-07 — all seven Hub queries failed; catalog written as `[]`
@@ -246,12 +300,11 @@ when any term failed; surface a `failed_terms` list in the run summary.
 ### 3. Metadata-quality caveats that will apply once the fetch works
 
 - `license` is read from `cardData.license` with a fallback, defaulting to
-  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-09-27,
-  163 of the 291 catalogued datasets (56.0%) carry `UNKNOWN`** — counted
-  directly from `corpus/catalog/hf_datasets.json` (the prior "164/292,
-  56.2%, 2026-09-06" figure is retracted along with the rest of that run,
-  see above; the last verified figure before this run was 163/290, 56.2%,
-  on 2026-08-30) — so this remains the majority case, not an edge case; do
+  the literal string `UNKNOWN`. Absent ≠ permissive. **As of 2026-11-15,
+  172 of the 307 catalogued datasets (56.0%) carry `UNKNOWN`** — counted
+  directly from `corpus/catalog/hf_datasets.json` (prior verified figure:
+  163/291, 56.0%, on 2026-09-27) — so this remains the majority case, not
+  an edge case, and the proportion has held steady across four runs; do
   not filter or sort on license without first routing `UNKNOWN` entries to
   manual review.
 - `languages` comes from self-declared card metadata and is often missing or
