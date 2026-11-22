@@ -87,6 +87,76 @@ prior cards (see flag 21 for why the pre-2026-08-18 rows no longer apply to
 | 2026-09-06, incremental — **retracted, see flag 37** | ~~17~~ | ~~8,221~~ | ~~46,343~~ | no `corpus/raw/wikipedia_ig/2026-09-06.jsonl.gz` exists in this run's working tree |
 | 2026-09-27, incremental (raw file) | 24 | 18,860 | 104,916 | `recentchanges`, diacritic ratio 0.0712, this file read directly and in full; matches `corpus_run_summary.json` exactly |
 | 2026-09-27, incremental (deduplicated by title vs the three files that actually exist on disk: 2026-08-18/23/30) | **22 net-new titles, 2 repeats** | n/a | n/a | see flag 37 for the repeats, one of which is the flag-27 stagnation pattern recurring on a single title three runs later |
+| 2026-11-22, incremental (`corpus_run_summary.json` figures) | 22 | 14,077 | 78,824 | `recentchanges`, diacritic ratio 0.06942; **not independently verified against the raw file this run, see flag 42** |
+
+**Methodology change, 2026-11-22: this run did not open, scan, or decompress
+any file under `corpus/raw/`**, per this run's explicit turn-budget
+instruction (corpus/raw/ shards are large enough that re-opening them every
+run risks exhausting the triage budget, which is exactly what produced the
+41-flag history below). The figures in the row above are taken as-is from
+`corpus_run_summary.json` and are **not** independently verified by a direct
+read, unlike every incremental row above it. This means the title-dedup
+checks that caught the flag-27/30/38 stagnation and repeat-fetch bugs were
+not performed this run — if `2026-11-22.jsonl.gz` substantially overlaps a
+prior batch, this run's triage would not detect it.
+
+### 42. 2026-11-22 — Two prior incremental runs (2026-09-13, 2026-09-20) exist on disk but were never triaged in this card
+
+`corpus/raw/wikipedia_ig/` (filenames only; see the methodology note above
+for why contents were not read) contains `2026-09-13.jsonl.gz` and
+`2026-09-20.jsonl.gz` in addition to the four files this card already
+documents. Neither date appears anywhere in this card's flag history or
+cumulative-size table, and both sort **before** flag 37's "exactly four
+dated files" claim chronologically yet were evidently added to the
+repository after that claim was written. `corpus/manifests/bbc_igbo.jsonl`
+has matching gaps for the same two dates (8 new URLs each, see
+[bbc_igbo.md](bbc_igbo.md)'s cumulative-size correction) — the same
+two runs' worth of BBC output is also sitting undocumented. This looks
+like two ingestion runs whose PRs were merged without the triage steps
+(data-card updates) ever happening, the same failure shape as the
+2026-09-06 run flag 37 could not find any trace of, except this time the
+files genuinely exist rather than having vanished. **Recommend to the
+reviewer:** schedule a dedicated catch-up triage pass over
+`2026-09-13.jsonl.gz` and `2026-09-20.jsonl.gz` — outside this run's
+turn budget, which is scoped to 2026-11-22's own output.
+
+### 43. 2026-11-22 — Severe coordinate-template corruption in `Asụsụ Abom`, a new manifestation of the markup-leakage family
+
+The sample excerpt for `Asụsụ Abom` (a short article on an endangered
+Papua New Guinea language, included only as general Wikipedia content, no
+particular Igbo relevance) renders a geographic-coordinate template as
+garbled digit soup: `Mutam (8°25′30′′S 142′′55′′ 49°9°4°9°9°9°9°°
+143.930364°E / 82.424996; 142.9303646 (M))`. Degree/minute/second
+fragments are duplicated, a run of nine `9`s appears where a single
+coordinate digit should be, and hemisphere/value pairs are mismatched
+(`-8.3352-25` for what should be a signed latitude). This is the same
+underlying defect family as flags 3, 18, 22, 25, 31, 34, 39 (template
+output surviving `explaintext` extraction unexpanded or malformed), but
+the first instance in this card specifically involving a `Coord`-style
+geographic-coordinate template rather than a citation, pronunciation, or
+wikilink template. Worth adding `Coord`-template residue (repeated-digit
+runs adjacent to `°`/`′`/`″` glyphs) to the `markup_leakage` heuristic
+evidence base proposed in flag 29.
+
+### 44. 2026-11-22 — Per-document `flags` could not be checked against sample content this run
+
+`corpus_run_summary.json`'s `samples` entries carry `title`, `url`, and
+`excerpt` only — no `flags` field — so this run cannot perform the
+flags-vs-sample verification the project's quality-triage policy calls
+for without opening the raw file, which this run's instructions forbid.
+The other seven samples otherwise read as fluent, well-diacriticised
+modern Igbo (two biographies of academics, a food article, a plant
+article with heavy untranslated botanical Latin, a renewable-energy stub,
+a second short language stub) with no script-substitution, stub-template,
+or MT-residue signal of the kind flags 5–20 catalogue; this is a
+small-n, non-representative observation given the batch's own skip-heavy
+shape (titles_listed 500, skipped_stub 477, skipped_markup 1, kept 22 —
+a 4.4% keep rate, the lowest yet reported in this card, though n is too
+small and the `recentchanges` candidate set too variable run-to-run to
+call this a trend rather than noise). **Recommend to the reviewer:** have
+`scripts/corpus_fetch.py` include each sampled document's `flags` value in
+`corpus_run_summary.json` so future triage passes can check flag precision
+without opening the raw file.
 
 The 50,623 figure is not from a file I opened; it is read from
 `mt_probe_summary.json` (`scripts/mt_prevalence_probe.py`, committed at repo
@@ -109,6 +179,14 @@ flag 37), so raw record counts overstate corpus growth even more than
 title deduplication alone suggests. Token/character/diacritic aggregates
 for the dump portion are currently unknown corpus-wide (flag 23); do not
 quote a corpus-wide `diacritic_char_ratio` until that is fixed.
+
+**This "practical corpus size" figure is not updated as of 2026-11-22.**
+Three more incremental files exist on disk beyond the four this estimate
+counted — `2026-09-13.jsonl.gz` and `2026-09-20.jsonl.gz` (previously
+undocumented, see flag 42) and this run's own `2026-11-22.jsonl.gz` — and
+per the methodology change above, this run did not open any of them to
+recompute title-deduplicated totals. Treat 50,688 as stale pending a
+dedicated catch-up pass.
 
 **Backfill status: DONE**, via the dump (`backfill_done: true`,
 `backfill_method: "dump"` in `corpus/state.json`), not via the `allpages`
@@ -137,7 +215,10 @@ content as unverifiable rather than authoritative. Flags dated
 **2026-09-27** are from this run's 24-document incremental batch, read in
 full and title-checked against the union of the three prior incremental
 files that actually exist on disk (2026-08-18, 2026-08-23, 2026-08-30 —
-not 2026-09-06).
+not 2026-09-06). Flags dated **2026-11-22** are from `corpus_run_summary.json`
+only (samples and corpus-wide aggregates) — **not** from a direct read of
+`2026-11-22.jsonl.gz`, per this run's turn-budget instruction; see the
+methodology note in the cumulative-size section above.
 
 ### 1. One document is 86% of the batch — batch-level statistics are meaningless
 
