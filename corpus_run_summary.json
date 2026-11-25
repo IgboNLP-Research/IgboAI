@@ -1,56 +1,56 @@
 {
-  "run_date": "2026-09-27",
+  "run_date": "2026-11-22",
   "mode": "all",
   "wikipedia": {
     "wikipedia_ig": {
-      "output": "corpus/raw/wikipedia_ig/2026-09-27.jsonl.gz",
+      "output": "corpus/raw/wikipedia_ig/2026-11-22.jsonl.gz",
       "titles_listed": 500,
-      "skipped_stub": 476,
-      "skipped_markup": 0,
-      "documents": 24,
-      "tokens_ws": 18860,
-      "chars": 104916,
-      "diacritic_char_ratio": 0.07121,
+      "skipped_stub": 477,
+      "skipped_markup": 1,
+      "documents": 22,
+      "tokens_ws": 14077,
+      "chars": 78824,
+      "diacritic_char_ratio": 0.06942,
       "samples": [
         {
-          "title": "2011 Nhọrọ Senate nke Naijiria na Kaduna Steeti",
-          "url": "https://ig.wikipedia.org/wiki/2011_Nh%E1%BB%8Dr%E1%BB%8D_Senate_nke_Naijiria_na_Kaduna_Steeti",
-          "excerpt": ".Emere ntuli aka ndị Sineti nke afọ 2011 na Kaduna steeti n'abalị itoolu n'ọnwa Eprel, afọ 2011, iji họpụta ndị otu Sineti na Naijiria ga-anọchi anya steeti Kaduna.  Yusuf Datti Baba-Ahmed na-anọchi anya Kaduna North na Mohammed Saleh na-anọchite anya Kaduna Central meriri n'usoro Congress for Progressive Change, ebe Nenadi Usman nọchitere Kaduna South n'ọkwa ndị Peoples Democratic Party.\n."
+          "title": "100% eneji emeghariri ọhụrụ",
+          "url": "https://ig.wikipedia.org/wiki/100%25_eneji_emeghariri_%E1%BB%8Dh%E1%BB%A5r%E1%BB%A5",
+          "excerpt": "100% ike emeghariri ọhụrụ pụtara inweta ike niile site na ihe onwunwe a na-emeghari. Mgbalị iji 100% ike emeghariri ọhụrụ maka ọkụ eletrik, okpomọkụ, ịjụ oyi na njem na-akpali mgbanwe ihu igwe, mmetọ na nsogbu gburugburu ebe obibi ndị ọzọ, yana nchegbu akụ na ụba na nchekwa ike. Ịgbanwe ngụkọta nke ike isi ụwa na-enye na isi mmalite na-agbanwe agbanwe chọrọ mgbanwe nke usoro ike, ebe ọ bụ na ọtụtụ ike nke taa sitere na mmanụ ala ndị adịghị emeghari emeghari\nNnyocha banyere isiokwu a bụ ihe ọhụrụ, na nyocha ole na ole e bipụtara tupu afọ 2009, mana enwetala nlebara anya na-arịwanye elu n'afọ nd"
         },
         {
-          "title": "Akwụkwọ Pickwick (ihe nkiri 1952)",
-          "url": "https://ig.wikipedia.org/wiki/Akw%E1%BB%A5kw%E1%BB%8D_Pickwick_(ihe_nkiri_1952)",
-          "excerpt": "The Pickwick Papers bụ Ihe nkiri ihe nkiri na-atọ ọchị nke akụkọ ihe mere eme nke Britain nke afọ 1952 nke Noel Langley dere ma duzie na James Hayter, James Donald, Nigel Patrick na Joyce Grenfell. Ọ dabeere na akwụkwọ akụkọ Charles Dickens nke 1837 nke otu aha ahụ. Ọ bụ Renown Pictures mere ya bụ ndị wepụtara ihe nkiri Dickens ọzọ Scrooge n'afọ gara aga.\nEmere ihe nkiri ahụ na Nettlefold Studios na Walton-on-Thames. E sere ya na oji na ọcha, Onye nduzi nka Frederick Pusey na ejiji Beatrice Dawson mepụtara ihe nkiri ahụ. Emere ya na Gaumont Cinema na Haymarket na London na 14 Nọvemba 1952.  'a"
+          "title": "Abunuabunu",
+          "url": "https://ig.wikipedia.org/wiki/Abunuabunu",
+          "excerpt": "Abunuabunu bụ ofe obodo nke ndị si na mpaghara Brong Ahafo nke Ghana. A na-eme ya site na akwụkwọ ede (nke a na-akpọ kontomire) tinyere ihe ndị ọzọ (, tomato ejula azụ a na-ese anwụrụ, yabasị, ose na-acha akwụkwọ ndụ akwụkwọ ndụ, turkey berries (Asante - twi kwahu nsusua) na nnu).\n \n\n\n== Ụzọ e si eje ozi ==\nA na-ahụkarị Abunuabunu ma kwadebe ya n'etiti ndị mmadụ na Kumasi. A na-ejikarị akpu ma ọ bụ banku enye ya mana enwere ike inye ya ihe ọ bụla ị họọrọ.\n\n\n== Ihe ndị e ji mee ya ==\nIgurube\nAzụ a na-ese siga\nMushrooms\nKoobi (tilapia nnu kpọrọ nkụ)\n10-15 nke dị n'etiti akwụkwọ cocoyam (Kontomir"
         },
         {
-          "title": "Asha Khemka",
-          "url": "https://ig.wikipedia.org/wiki/Asha_Khemka",
-          "excerpt": "Dame Asha Khemka DBE DL (amụrụ n'ọnwa Ọktoba n'afọ 1951,  na Sitamarhi, Bihar)   bụ onye bụbu onye nkuzi nke gbara arụkwaghịm dị ka onye isi na onye isi oche na West Nottinghamshire College na ngwụcha afọ 2018 mgbe kọleji ahụ nwere nsogbu ego.    Ọ sonyeere kọleji na 2006, nọchiri Di McEvoy-Robinson. Tupu ọ gbaa arụkwaghịm n'ọnwa Ọktoba afọ 2018 ọ bụ otu n'ime ndị a na-akwụ ụgwọ kachasị elu na ngalaba ahụ. \n\n\n== Nsọpụrụ ==\nE nyere Khemka ihe nrite OBE (Order of the British Empire) dị ka akụkụ nke 2009 New Year Honours, nke Elizabeth nke Abụọ, mgbe ahụ The Queen, gosipụtara na Buckingham Palace"
+          "title": "Aframomum corrorima",
+          "url": "https://ig.wikipedia.org/wiki/Aframomum_corrorima",
+          "excerpt": "Aframomum corrorima  bụ ụdị osisi ifuru na ezinụlọ ginger,    Zingiberaceae. Ọ bụ herbaceous  perennial   nke na-emepụta akwụkwọ ndụ akụkụ ndụ 1-2 mita n'ogologo nke mgbọrọgwụ  rhizomatous.  Akwụkwọ ndị a haziri ahazi bụ akwụkwọ ndụ  gbara ọchịchịrị,10–30 cm long and 2.5–6 cm n'ofe, elliptical ka ọ toro ogologo n'ọdịdị ya. Ọ na-ebu ifuru pink n'akụkụ ala ma na-enye ohere nye mkpụrụ na-acha uhie uhie, mkpụrụ osisi anụ ahụ nwere mkpụrụ aja aja na-egbuke egbuke, nke na-adịkarị 3–5 mm na dayameta.\nNgwa nri, nke a maara dị ka   Ethiopian cardamom, ugha cardamom, ma ọbu korarima, a na-enweta site na"
         },
         {
-          "title": "Brian Murray (onye na-eme ihe nkiri)",
-          "url": "https://ig.wikipedia.org/wiki/Brian_Murray_(onye_na-eme_ihe_nkiri)",
-          "excerpt": "Brian Murray (onye a  Bell; ubochi iri Septemba otu puku narị itoolu iri atọ na asaa ruo ụbọchị iri abụo Ọgọst afọ puku abuo na iri na asatọ)  bụ onye na-eme ihe nkiri na onye nduzi ihe nkiri nke Ndịda Afrika nke a nabatara na Aulo ọmụma ebe nkiri Amerika na afọ puku abụọ na anọ .  \n\n\n== Akụkọ ndụ ==\nA mụrụ Murray dị ka Brian Bell na Johannesburg, nwa Mary Dickson (née Murray) na Alfred Bell, onye na-egwu golf.\n\n\n== Ọrụ ==\nMurray mere nke mbụ ya na Broadway na egwuregwu ihe nile n'oge dị mma na afo otu puku narị itoolu iri isii na ise N'afọ otu puku narị itoolu iri isii na isii, ọ pụtara dị ka"
+          "title": "Aletta E. Schutte",
+          "url": "https://ig.wikipedia.org/wiki/Aletta_E._Schutte",
+          "excerpt": "Aletta E. \"Alta\" Schutte bụ ọkachamara n'ọrịa ọbara mgbali elu na ọrịa obi dabere na Sydney, Australia. Ọ bụ Prọfesọ SHARP na Isi Okwu Nduzi nke Ọrịa obi, Vascular na Metabolic Medicine na Mahadum New South Wales na Sydney, yana nhọpụta nkwonkwo dị ka onye otu Prọfesọ na George Institute for Global Health. Ruo n'afọ 2019 ọ bụ onye isi otu ụlọ ọrụ nyocha ọbara mgbali elu na Africa (HART), Onye isi oche nyocha South Africa (SARChI) na onye isi ngalaba nke Medical Research Council Extramural Unit maka ọbara mgbali elu na ọrịa obi na Mahadum North-West na South Africa. Ọ rụzuwo ọtụtụ ọrụ iduzi, gụ"
         },
         {
-          "title": "Conjestina Achieng",
-          "url": "https://ig.wikipedia.org/wiki/Conjestina_Achieng",
-          "excerpt": "Conjestina Achieng (amụrụ na 20 Ọktoba 1977 n'obodo Umiru, Yala division, Siaya District. Conjestina bụ nwa nke ise a mụrụ n'ezinụlọ dị mmadụ iri. Nna ya Clement Adalo bụ onye ọrụ ahụike lara ezumike nká na nne ya bụ Gertrude Auma. Nwanne ya nwoke nke okenye, Joseph Kusimba bụbu onye na-akụ ọkpọ nke na-elekọta klọb ịkụ ọkpọ na Mathare, Nairobi.Ọ bụ nwanyị Kenya na-akụ ọkpọ nke a na-akpọ \"Hands of Stone\" ma bụrụ onye nke ise n'ụwa. Ọ ghọrọ nwanyị Afrịka mbụ nwere aha mba ụwa mgbe ọ meriri Ugandan Fiona Tugume iji nweta aha WIBF Middleweight. Ọ nwetakwara mmeri n'ọnọdụ esemokwu na WBC nke oge ah"
+          "title": "Amanda Chetwynd",
+          "url": "https://ig.wikipedia.org/wiki/Amanda_Chetwynd",
+          "excerpt": "Amanda G. Chetwynd PFHEA bụ onye Britain na-eme mgbakọ na mwepụ nakwa onye na-ahụ maka ọnụ ọgụgụ nke ngalaba ọkachamara ya bụ na combinatorics na ọnụ ọgụgụ mbara igwe. Ọ bụ Prọfesọ nke mgbakọ na mwepụ na ọnụ ọgụgụ na Provost maka ahụmịhe ụmụ akwụkwọ, kọleji na ọbá akwụkwọ na Mahadum Lancaster, nakwa onye òtù ndị isi nke Higher Education Academy . \n\n\n== Agụmakwụkwọ na Nnyocha ==\nChetwynd nwetara nzere Ph.D. site na Mahadum Open n'afọ 1985. Anthony Hilton na Robin Wilson jikọrọ aka lekọta edemede ya, Edge-colourings of graphs. O mere nnyocha onye nwetarala nzere ọkankuzi ya na Mahadum Stockholm "
         },
         {
-          "title": "Eco Creatures: Save the Forest",
-          "url": "https://ig.wikipedia.org/wiki/Eco_Creatures:_Save_the_Forest",
-          "excerpt": "Eco Creatures: Save the Forest, nke a maara dị ka Ecolis na Japan nakwa dị ka E Colis: Save the forest na Europe, bụ egwuregwu vidio na-eme n'oge maka Nintendo DS video game console. Ọ bụ LightWeight na Headlock Corporation mepụtara ya ma wepụta ya na Japan na August 23, 2007 site na Interchannel; na North America na March 4, 2008 site na Majesco Entertainment; na Europe na June 13, 2008 site na Rising Star Games. Eco Creatures bụ nke World Wide Fund for Nature na-akwado.\n\n\n== Nkọwa ==\nNdị bi n’Osisi Mana biri n’udo na nkwekọ ruo ọtụtụ afọ mgbe Alaeze ahụ dị nso malitere ibibi osisi iji gbasaa"
+          "title": "Ann Trindade",
+          "url": "https://ig.wikipedia.org/wiki/Ann_Trindade",
+          "excerpt": "Ann Trindade bụ onye isi na ngalaba Akụkọ ihe mere eme na Mahadum Melbourne, Victoria, Australia. Ọ gụrụ akwụkwọ na Lady Margaret Hall, Oxford, ma bụrụkwa onye dere akụkọ ndụ Berengaria nke Navarre.\n\n\n== Akwụkwọ ndi o dere ==\nBerengaria: Na-achọ Eze Nwanyị Richard nke Obi Ọdụm. (1999) Four Courts Press. ISBN 9781851824342. \n\n\n== Edensibia ==\n\n\n== Njikọ mpụga ==\n\"Ann Trindade page at University of Melbourne\". Archived from the original on 23 December 2002."
         },
         {
-          "title": "Fifi Cooper",
-          "url": "https://ig.wikipedia.org/wiki/Fifi_Cooper",
-          "excerpt": "Refilwe Boingotlo Moeketsi (amụrụ n'abalị̀ iri abụọ na anọ nke ọ̀nwa Ọktoba afo 1991), nke a maara dịka Fifi Cooper bụ onye na-edekọ egwu na South Africa. Fifi Cooper malitere ọrụ egwu ya dị ka onye na-agụ egwu R&B tupu mgbasasi egwu ya ahụ ya ka ọ wepụtara egwu rap ya \"Chechela Morago\" n'afọ 2010. N'afọ 2015, o wepụtara abọm studio mbụ ya nke nwetara ihe nrite 20FIFI .\n\n\n== Mbido ndụ na agụmakwụkwọ ==\nFifi Cooper bụ nwa ikpeazụ n'ime ụmụ atọ. Ọ gụrụ akwụkwọ n'oge ọ bụ nwata na Montshiwa, Mahikeng, South Africa, ebe o jikwa mgbalị ya na-ịbụ abụ na ịgba egwú mee ihe. Ọ gụsịrị akwụkwọ sekọndrị y"
+          "title": "Asụsụ Abom",
+          "url": "https://ig.wikipedia.org/wiki/As%E1%BB%A5s%E1%BB%A5_Abom",
+          "excerpt": "Abom bụ nsogbu nke nta ka ọ mba na Western Province nke Papua New Guinea.  Dị ka ọnụ ọgụgụ mmadụ nke afọ 2002 si kwuo, ọ bụ naanị mmadụ iri na ise ka na-asụ a.  Ndị niile na-ekwu okwu bụ ndị okenye.  Ndị na-eto eto n'agbata afọ iri na ụma nwere okwukwe ụfọdụ ya, mana ọ na-ewepụ na-ekwu ma ọ bụ na-ahụ Abom.\nA na-asụ Abom na Lewada ( 142°46′50′′E / 8.335225°S 142.780449°E / -8.3352-25; 142.770449 (Lewada)), Mutam (8°25′30′′S 142′′55′′ 49°9°4°9°9°9°9°°  143.930364°E / 82.424996; 142.9303646 (M)), na Tewara (8°22′27′27′′S 143844) (M2.43) / 144.\n\n\n== Nchịkọta ==\nAbom bụghị nso na ndị ọzọ.  Pawley n"
         },
         {
-          "title": "Hilda Tadria",
-          "url": "https://ig.wikipedia.org/wiki/Hilda_Tadria",
-          "excerpt": "Hilda M. Tadria bụ onye na-ahụ maka ihe ndị ruuru ụmụ nwanyị na Uganda, ọkachamara na mmepe mmekọrịta mmadụ na ibe ya, na onye isi nchịkwa nke Mentoring and Empowerment Programme for Young Women in Uganda (MEMPROW). Ọ na-adụ ndị NGO ọdụ n'ụwa niile gbasara okike, njikwa ụlọ ọrụ na mmepe mmekọrịta mmadụ na ibe ya, ọ bụkwa osote prọfesọ na Mahadum Makerere.\n\n\n== Oge ọ malitere ==\nTadria nwere nzere bachelọ na Sociology site na Mahadum Makerere, nzere mastas na Social Anthropology site na Newnham College, Cambridge, England, yana nzere PhD na Social Anthropology site na Mahadum Minnesota, US..\n\n\n"
+          "title": "Asụsụ Modang",
+          "url": "https://ig.wikipedia.org/wiki/As%E1%BB%A5s%E1%BB%A5_Modang",
+          "excerpt": "Modang bụ asụsụ Kayan a na-asụ na East Kalimantan, Indonesia..\n\n\n== Ihe odide ==\n\n\n== Ịgụ ihe ọzọ ==\nGuerreiro, Antonio (1996). \"Homophony, sound changes and dialectal variations in some central Bornean languages\" (PDF). Mon-Khmer Studies. 25: 205–226. Archived from the original (PDF) on 2024-12-13. Retrieved 2025-03-20.\n \nSellato, Bernard (1980). \"The Upper Mahakam area\". Borneo Research Bulletin. 12 (2): 40–46."
         }
       ],
       "backfill_done": true
@@ -58,23 +58,155 @@
   },
   "hf_catalog": {
     "output": "corpus/catalog/hf_datasets.json",
-    "total": 291,
+    "total": 307,
     "failed_terms": [],
     "new_since_last_run": [
       {
-        "id": "9jatesters/9javoice-igbo",
-        "url": "https://huggingface.co/datasets/9jatesters/9javoice-igbo",
+        "id": "ketanmore/LLaVA-Instruct-150K-13-African-Languages",
+        "url": "https://huggingface.co/datasets/ketanmore/LLaVA-Instruct-150K-13-African-Languages",
         "license": "cc-by-nc-4.0",
         "languages": [
-          "ig"
+          "am",
+          "ha",
+          "ln",
+          "st",
+          "zu",
+          "ny",
+          "kam",
+          "ary",
+          "sw",
+          "arz",
+          "kg",
+          "pcm",
+          "umb"
         ]
+      },
+      {
+        "id": "HYUKI5/masakhane__masakhanews",
+        "url": "https://huggingface.co/datasets/HYUKI5/masakhane__masakhanews",
+        "license": [
+          "afl-3.0"
+        ],
+        "languages": [
+          "am",
+          "en",
+          "fr",
+          "ha",
+          "ig",
+          "ln",
+          "lg",
+          "om",
+          "pcm",
+          "rn",
+          "sn",
+          "so",
+          "sw",
+          "ti",
+          "xh",
+          "yo"
+        ]
+      },
+      {
+        "id": "Britzzy/nigerian-pidgin-evaluation",
+        "url": "https://huggingface.co/datasets/Britzzy/nigerian-pidgin-evaluation",
+        "license": "cc-by-4.0",
+        "languages": [
+          "pcm",
+          "en"
+        ]
+      },
+      {
+        "id": "ffatty/plaintext-wikipedia-full-nigerian-pidgin",
+        "url": "https://huggingface.co/datasets/ffatty/plaintext-wikipedia-full-nigerian-pidgin",
+        "license": "cc-by-sa-3.0",
+        "languages": [
+          "pcm"
+        ]
+      },
+      {
+        "id": "African-Languages-Lab/baoule-asr",
+        "url": "https://huggingface.co/datasets/African-Languages-Lab/baoule-asr",
+        "license": "cc-by-4.0",
+        "languages": [
+          "bci"
+        ]
+      },
+      {
+        "id": "African-Languages-Lab/fon-asr",
+        "url": "https://huggingface.co/datasets/African-Languages-Lab/fon-asr",
+        "license": "cc-by-4.0",
+        "languages": [
+          "fon"
+        ]
+      },
+      {
+        "id": "michsethowusu/igbo-chichewa_sentence-pairs",
+        "url": "https://huggingface.co/datasets/michsethowusu/igbo-chichewa_sentence-pairs",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "African-Languages-Lab/gun-asr",
+        "url": "https://huggingface.co/datasets/African-Languages-Lab/gun-asr",
+        "license": "cc-by-4.0",
+        "languages": [
+          "guw"
+        ]
+      },
+      {
+        "id": "Ekobwoy/nigerian-pidgin-biology-evaluation",
+        "url": "https://huggingface.co/datasets/Ekobwoy/nigerian-pidgin-biology-evaluation",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "EYEDOL/naija-voices-hausa-split_0-0",
+        "url": "https://huggingface.co/datasets/EYEDOL/naija-voices-hausa-split_0-0",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "Seniorprfect/nigerian-pidgin-blindspot-eval",
+        "url": "https://huggingface.co/datasets/Seniorprfect/nigerian-pidgin-blindspot-eval",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "michsethowusu/igbo-ganda_sentence-pairs",
+        "url": "https://huggingface.co/datasets/michsethowusu/igbo-ganda_sentence-pairs",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "Aletheia-ng/TinyStories_yoruba",
+        "url": "https://huggingface.co/datasets/Aletheia-ng/TinyStories_yoruba",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "michsethowusu/hausa-tswana_sentence-pairs",
+        "url": "https://huggingface.co/datasets/michsethowusu/hausa-tswana_sentence-pairs",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "ALIPHATIC/nigerian-pidgin-blindspot",
+        "url": "https://huggingface.co/datasets/ALIPHATIC/nigerian-pidgin-blindspot",
+        "license": "UNKNOWN",
+        "languages": []
+      },
+      {
+        "id": "michsethowusu/hausa-tumbuka_sentence-pairs",
+        "url": "https://huggingface.co/datasets/michsethowusu/hausa-tumbuka_sentence-pairs",
+        "license": "UNKNOWN",
+        "languages": []
       }
     ]
   },
   "news": {
     "bbc_igbo": {
       "output": "corpus/manifests/bbc_igbo.jsonl",
-      "new_urls": 8
+      "new_urls": 9
     }
   }
 }
